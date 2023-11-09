@@ -203,38 +203,6 @@ def create_structure(parent_path, metakernel_path='input_mk.tm', ptr_content='in
     with open(session_file_path, "w") as session_json_file:
         json.dump(session_json, session_json_file, indent=2)
 
-    # Finally scene catalog
-
-    scene_json = {
-        "version": "1.0",
-        "name": "Cosmographia BEPIC Example",
-        "require": [
-                "./spice.json",
-                "../config/cosmo/spacecraft_JUICE_arcs.json",
-                "../config/cosmo/spacecraft_JUICE_MGA_arcs.json",
-                "../config/cosmo/spacecraft_JUICE_SOLAR_ARRAYS_arcs.json"
-            ]
-    }
-
-    scene_file_path = os.path.abspath(os.path.join(parent_path, "scene.json"))
-    with open(scene_file_path, "w") as scene_json_file:
-        json.dump(scene_json, scene_json_file, indent=2)
-
-
-    spice_json = {
-        "version": "1.0",
-        "name": "Cebreros Kernel",
-        "spiceKernels": [
-        "./kernel/" + os.path.basename(metakernel_path),
-        "./output/juice_sc_ptr.bc"
-        ]
-    }
-
-    spice_file_path = os.path.abspath(os.path.join(parent_path, "spice.json"))
-    with open(spice_file_path, "w") as spice_json_file:
-        json.dump(spice_json, spice_json_file, indent=2)
-
-
     return session_file_path
 
 

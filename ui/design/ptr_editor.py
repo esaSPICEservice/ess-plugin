@@ -15,37 +15,56 @@ class Ui_ptrEditorWidget(object):
     def setupUi(self, ptrEditorWidget):
         ptrEditorWidget.setObjectName("ptrEditorWidget")
         ptrEditorWidget.resize(515, 396)
-        ptrEditorWidget.setStyleSheet(" QPushButton {\n"
-"                background-color: #4CAF50;\n"
-"                color:white;\n"
-"                font-size:18px;\n"
-"                border:none;\n"
-"                border-radius:10px;\n"
-"            }\n"
-"            \n"
-"            QPushButton:hover {\n"
-"                background-color: #45a049;\n"
-"            }\n"
-"            \n"
-"            QPushButton:pressed {\n"
-"                background-color: #367c39;\n"
+        ptrEditorWidget.setStyleSheet("QPushButton {\n"
+"    background-color: #4CAF50;\n"
+"    color:white;\n"
+"    font-size:14px;\n"
+"    border:none;\n"
+"    border-radius:5px;\n"
+"    padding-right: 5px;\n"
+"    padding-left: 5px;\n"
+"    padding-bottom: 2px;\n"
+"}\n"
 "\n"
-"            }")
-        self.gridLayout = QtWidgets.QGridLayout(ptrEditorWidget)
-        self.gridLayout.setVerticalSpacing(1)
-        self.gridLayout.setObjectName("gridLayout")
-        self.mkButton = QtWidgets.QPushButton(ptrEditorWidget)
-        self.mkButton.setObjectName("mkButton")
-        self.gridLayout.addWidget(self.mkButton, 2, 0, 1, 1)
-        self.ptrEditor = QtWidgets.QTextEdit(ptrEditorWidget)
-        self.ptrEditor.setObjectName("ptrEditor")
-        self.gridLayout.addWidget(self.ptrEditor, 3, 0, 1, 1)
+"QPushButton:hover {\n"
+"    background-color: #45a049;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: #367c39;\n"
+"}\n"
+"\n"
+"QLabel {\n"
+"    font-size: 14px;\n"
+"    color: gray;\n"
+"}")
+        self.verticalLayout = QtWidgets.QVBoxLayout(ptrEditorWidget)
+        self.verticalLayout.setObjectName("verticalLayout")
+        self.label = QtWidgets.QLabel(ptrEditorWidget)
+        self.label.setObjectName("label")
+        self.verticalLayout.addWidget(self.label)
+        self.horizontalLayout = QtWidgets.QHBoxLayout()
+        self.horizontalLayout.setObjectName("horizontalLayout")
         self.mkInput = QtWidgets.QLineEdit(ptrEditorWidget)
         self.mkInput.setObjectName("mkInput")
-        self.gridLayout.addWidget(self.mkInput, 1, 0, 1, 1)
+        self.horizontalLayout.addWidget(self.mkInput)
+        self.mkButton = QtWidgets.QPushButton(ptrEditorWidget)
+        self.mkButton.setSizeIncrement(QtCore.QSize(3, 3))
+        self.mkButton.setStyleSheet("QPushButton {\n"
+"    background-color: gray;\n"
+"}")
+        self.mkButton.setObjectName("mkButton")
+        self.horizontalLayout.addWidget(self.mkButton)
+        self.verticalLayout.addLayout(self.horizontalLayout)
+        self.label_2 = QtWidgets.QLabel(ptrEditorWidget)
+        self.label_2.setObjectName("label_2")
+        self.verticalLayout.addWidget(self.label_2)
+        self.ptrEditor = QtWidgets.QTextEdit(ptrEditorWidget)
+        self.ptrEditor.setObjectName("ptrEditor")
+        self.verticalLayout.addWidget(self.ptrEditor)
         self.visualizeButton = QtWidgets.QPushButton(ptrEditorWidget)
         self.visualizeButton.setObjectName("visualizeButton")
-        self.gridLayout.addWidget(self.visualizeButton, 4, 0, 1, 1)
+        self.verticalLayout.addWidget(self.visualizeButton)
 
         self.retranslateUi(ptrEditorWidget)
         QtCore.QMetaObject.connectSlotsByName(ptrEditorWidget)
@@ -53,5 +72,7 @@ class Ui_ptrEditorWidget(object):
     def retranslateUi(self, ptrEditorWidget):
         _translate = QtCore.QCoreApplication.translate
         ptrEditorWidget.setWindowTitle(_translate("ptrEditorWidget", "PTR Editor"))
-        self.mkButton.setText(_translate("ptrEditorWidget", "Browse Metakernel"))
+        self.label.setText(_translate("ptrEditorWidget", "Metakernel File"))
+        self.mkButton.setText(_translate("ptrEditorWidget", " Browse "))
+        self.label_2.setText(_translate("ptrEditorWidget", "PTR editor"))
         self.visualizeButton.setText(_translate("ptrEditorWidget", "Visualize"))

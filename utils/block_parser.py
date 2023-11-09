@@ -12,8 +12,7 @@ class BlockParser:
         try:
             self.root = ET.fromstring(xml_content)
         except Exception as e:
-            print(repr(e))
-            raise ValueError("The string cannot be parsed as XML: %s" % xml_content)
+            raise ValueError(f"The string cannot be parsed as XML: {e}")
 
         self.start_times = list()
         self.end_times = list()

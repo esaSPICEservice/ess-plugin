@@ -1,24 +1,66 @@
 """PTR Command Line Interface module."""
 import os
-
+import json
 from .utils import create_structure
 from .utils import timestamp
-
+from utils.generators import Sensor, SensorGenerator
 from simulator.osve import osve
 
-def execute(root_scenario_path, session_file_path):
+def generate_sensor(name, parent_path):
+    generator = SensorGenerator(
+        Sensor(
+                name, 'Jupiter', 
+                [0, 0.6, 0], None),
+        'JUICE')
+    generator.save(os.path.abspath(os.path.join(parent_path, f"{name}.json")))
+    return f'./sensors/{name}.json'
+
+def create_cosmo_scene(parent_path, metakernel):
+
+    scene_json = {
+        "version": "1.0",
+        "name": "ESS-Plugin Scene",
+        "require": [
+                "./spice.json",
+                "../config/cosmo/spacecraft_JUICE_arcs.json",
+                "../config/cosmo/spacecraft_JUICE_MGA_arcs.json",
+                "../config/cosmo/spacecraft_JUICE_SOLAR_ARRAYS_arcs.json"
+            ]
+    }
+
+    sensor_folder = os.path.join(parent_path, 'sensors')
+    os.makedirs(sensor_folder)
+    for instrument in ['JUICE_JANUS']:
+        scene_json.get('require').append(generate_sensor(instrument, sensor_folder))
+
+    scene_file_path = os.path.abspath(os.path.join(parent_path, "scene.json"))
+    with open(scene_file_path, "w") as scene_json_file:
+        json.dump(scene_json, scene_json_file, indent=2)
+
+
+    spice_json = {
+        "version": "1.0",
+        "name": "ESS-Plugin Kernel",
+        "spiceKernels": [
+        "./kernel/" + os.path.basename(metakernel),
+        "./output/juice_sc_ptr.bc"
+        ]
+    }
+
+    spice_file_path = os.path.abspath(os.path.join(parent_path, "spice.json"))
+    with open(spice_file_path, "w") as spice_json_file:
+        json.dump(spice_json, spice_json_file, indent=2)
+
+    return scene_file_path
+
+def simulate(meta_kernel, ptr_content):
     sim = osve.osve()
-    sim.execute(root_scenario_path, session_file_path)
-
-
-def test(meta_kernel, ptr_content):
-    the_osve = osve.osve()
-    print("")
-    print("OSVE LIB VERSION:       ", the_osve.get_app_version())
-    print("OSVE AGM VERSION:       ", the_osve.get_agm_version())
-    print("OSVE EPS VERSION:       ", the_osve.get_eps_version())
-    print("")
     
+    print("")
+    print("OSVE LIB VERSION:       ", sim.get_app_version())
+    print("OSVE AGM VERSION:       ", sim.get_agm_version())
+    print("OSVE EPS VERSION:       ", sim.get_eps_version())
+    print("")
 
     working_dir = os.path.join(os.path.dirname(__file__), timestamp())
     os.makedirs(working_dir)
@@ -26,10 +68,8 @@ def test(meta_kernel, ptr_content):
                                          step=5,
                                          no_power=False,
                                          quaternions=False)
+
     root_scenario_path = os.path.dirname(session_file_path)
+    sim.execute(root_scenario_path, session_file_path)
 
-    print("ptwrapper session execution")
-
-    execute(root_scenario_path, session_file_path)
-
-    return os.path.abspath(os.path.join(root_scenario_path, "scene.json"))
+    return create_cosmo_scene(root_scenario_path, meta_kernel)

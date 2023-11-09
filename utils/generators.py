@@ -13,13 +13,11 @@ class Generator:
 
 @dataclass
 class Sensor:
-    """Class for describing an action."""
+    """Class for describing a sensor."""
     instr_name: str
     target: str
     frustum_color: str
     sensor_position: str
-
-
 
 class SensorGenerator(Generator):
     '''Sensor representation'''
