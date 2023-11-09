@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>538</width>
-    <height>376</height>
+    <width>515</width>
+    <height>396</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -31,29 +31,31 @@
 
             }</string>
   </property>
-  <widget class="QPushButton" name="visualizeButton">
-   <property name="geometry">
-    <rect>
-     <x>220</x>
-     <y>330</y>
-     <width>100</width>
-     <height>32</height>
-    </rect>
+  <layout class="QGridLayout" name="gridLayout">
+   <property name="verticalSpacing">
+    <number>1</number>
    </property>
-   <property name="text">
-    <string>Visualize</string>
-   </property>
-  </widget>
-  <widget class="QTextEdit" name="ptrEditor">
-   <property name="geometry">
-    <rect>
-     <x>3</x>
-     <y>3</y>
-     <width>531</width>
-     <height>311</height>
-    </rect>
-   </property>
-  </widget>
+   <item row="2" column="0">
+    <widget class="QPushButton" name="mkButton">
+     <property name="text">
+      <string>Browse Metakernel</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="0">
+    <widget class="QTextEdit" name="ptrEditor"/>
+   </item>
+   <item row="1" column="0">
+    <widget class="QLineEdit" name="mkInput"/>
+   </item>
+   <item row="4" column="0">
+    <widget class="QPushButton" name="visualizeButton">
+     <property name="text">
+      <string>Visualize</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
  </widget>
  <resources/>
  <connections/>

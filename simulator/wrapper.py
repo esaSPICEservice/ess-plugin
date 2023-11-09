@@ -4,7 +4,7 @@ import os
 from .utils import create_structure
 from .utils import timestamp
 
-from osve import osve
+from simulator.osve import osve
 
 def execute(root_scenario_path, session_file_path):
     sim = osve.osve()

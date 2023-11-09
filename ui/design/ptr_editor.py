@@ -11,11 +11,11 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
-class Ui_Form(object):
-    def setupUi(self, Form):
-        Form.setObjectName("Form")
-        Form.resize(538, 376)
-        Form.setStyleSheet(" QPushButton {\n"
+class Ui_ptrEditorWidget(object):
+    def setupUi(self, ptrEditorWidget):
+        ptrEditorWidget.setObjectName("ptrEditorWidget")
+        ptrEditorWidget.resize(515, 396)
+        ptrEditorWidget.setStyleSheet(" QPushButton {\n"
 "                background-color: #4CAF50;\n"
 "                color:white;\n"
 "                font-size:18px;\n"
@@ -31,17 +31,27 @@ class Ui_Form(object):
 "                background-color: #367c39;\n"
 "\n"
 "            }")
-        self.visualizeButton = QtWidgets.QPushButton(Form)
-        self.visualizeButton.setGeometry(QtCore.QRect(220, 330, 100, 32))
-        self.visualizeButton.setObjectName("visualizeButton")
-        self.ptrEditor = QtWidgets.QTextEdit(Form)
-        self.ptrEditor.setGeometry(QtCore.QRect(3, 3, 531, 311))
+        self.gridLayout = QtWidgets.QGridLayout(ptrEditorWidget)
+        self.gridLayout.setVerticalSpacing(1)
+        self.gridLayout.setObjectName("gridLayout")
+        self.mkButton = QtWidgets.QPushButton(ptrEditorWidget)
+        self.mkButton.setObjectName("mkButton")
+        self.gridLayout.addWidget(self.mkButton, 2, 0, 1, 1)
+        self.ptrEditor = QtWidgets.QTextEdit(ptrEditorWidget)
         self.ptrEditor.setObjectName("ptrEditor")
+        self.gridLayout.addWidget(self.ptrEditor, 3, 0, 1, 1)
+        self.mkInput = QtWidgets.QLineEdit(ptrEditorWidget)
+        self.mkInput.setObjectName("mkInput")
+        self.gridLayout.addWidget(self.mkInput, 1, 0, 1, 1)
+        self.visualizeButton = QtWidgets.QPushButton(ptrEditorWidget)
+        self.visualizeButton.setObjectName("visualizeButton")
+        self.gridLayout.addWidget(self.visualizeButton, 4, 0, 1, 1)
 
-        self.retranslateUi(Form)
-        QtCore.QMetaObject.connectSlotsByName(Form)
+        self.retranslateUi(ptrEditorWidget)
+        QtCore.QMetaObject.connectSlotsByName(ptrEditorWidget)
 
-    def retranslateUi(self, Form):
+    def retranslateUi(self, ptrEditorWidget):
         _translate = QtCore.QCoreApplication.translate
-        Form.setWindowTitle(_translate("Form", "Form"))
-        self.visualizeButton.setText(_translate("Form", "Visualize"))
+        ptrEditorWidget.setWindowTitle(_translate("ptrEditorWidget", "PTR Editor"))
+        self.mkButton.setText(_translate("ptrEditorWidget", "Browse Metakernel"))
+        self.visualizeButton.setText(_translate("ptrEditorWidget", "Visualize"))
