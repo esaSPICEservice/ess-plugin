@@ -1,0 +1,428 @@
+{
+   "version": "1.0",
+   "name": "Cosmographia JUICE Example",
+   "items": [
+      {
+         "class": "spacecraft",
+         "name": "JUICE",
+         "startTime": "2022-05-31 23:59:59.999 UTC",
+         "arcs": [
+            {
+               "endTime": "2033-06-04 02:49:00 UTC",
+               "center": "Sun",
+               "trajectoryFrame": "ICRF",
+               "trajectory": {
+                  "type": "Spice",
+                  "target": "JUICE",
+                  "center": "Sun"
+               },
+               "bodyFrame": {
+                 "type": "Spice",
+                  "name": "JUICE_SPACECRAFT"
+               }
+            },
+            {
+               "center": "Ganymede",
+               "trajectory": {
+                  "type": "Spice",
+                  "target": "JUICE",
+                  "center": "Ganymede"
+               },
+               "bodyFrame": {
+                  "type": "Spice",
+                  "name": "JUICE_SPACECRAFT"
+               }
+            }
+         ],
+      "geometry": {
+        "type": "Mesh",
+        "source": "./models/juice_bus.3ds",
+        "scale": 10
+      },
+      "label": {
+        "color": [
+          1,
+          1,
+          1
+        ]
+      },
+      "trajectoryPlot": {
+        "color": [
+          1,
+          1,
+          1
+        ],
+        "duration": "5d",
+        "lead": 0,
+        "fade": 1,
+        "sampleCount": 500
+
+      }
+    },
+    {
+         "class": "spacecraft",
+         "name": "JUICE_MGA_PHASE_CENTER",
+         "startTime": "2022-05-31 23:59:59.999 UTC",
+         "arcs": [
+            {
+               "center": "JUICE",
+               "trajectoryFrame": "ICRF",
+               "trajectory": {
+                  "type": "Spice",
+                  "target": "JUICE_MGA",
+                  "center": "JUICE_SPACECRAFT"
+               },
+               "bodyFrame": {
+                 "type": "Spice",
+                  "name": "JUICE_MGA"
+               }
+            }
+         ],
+       "label": {
+                    "showText": false
+       }
+      },
+      {
+         "class": "spacecraft",
+         "name": "JUICE_STR1",
+         "startTime": "2022-05-31 23:59:59.999 UTC",
+         "arcs": [
+            {
+               "center": "JUICE",
+               "trajectoryFrame": "ICRF",
+               "trajectory": {
+                  "type": "Spice",
+                  "target": "JUICE_STR-OH1",
+                  "center": "JUICE_SPACECRAFT"
+               }
+            }
+         ],
+       "label": {
+                    "showText": false
+       }
+      },
+      {
+         "class": "spacecraft",
+         "name": "JUICE_STR2",
+         "startTime": "2022-05-31 23:59:59.999 UTC",
+         "arcs": [
+            {
+               "center": "JUICE",
+               "trajectoryFrame": "ICRF",
+               "trajectory": {
+                  "type": "Spice",
+                  "target": "JUICE_STR-OH2",
+                  "center": "JUICE_SPACECRAFT"
+               }
+            }
+         ],
+       "label": {
+                    "showText": false
+       }
+      },
+      {
+         "class": "spacecraft",
+         "name": "JUICE_STR3",
+         "startTime": "2022-05-31 23:59:59.999 UTC",
+         "arcs": [
+            {
+               "center": "JUICE",
+               "trajectoryFrame": "ICRF",
+               "trajectory": {
+                  "type": "Spice",
+                  "target": "JUICE_STR-OH3",
+                  "center": "JUICE_SPACECRAFT"
+               }
+            }
+         ],
+       "label": {
+                    "showText": false
+       }
+      },
+      {
+         "class": "spacecraft",
+         "name": "JUICE_JMC1",
+         "startTime": "2022-05-31 23:59:59.999 UTC",
+         "arcs": [
+            {
+               "center": "JUICE",
+               "trajectoryFrame": "ICRF",
+               "trajectory": {
+                  "type": "Spice",
+                  "target": "JUICE_JMC-1",
+                  "center": "JUICE_SPACECRAFT"
+               }
+            }
+         ],
+       "label": {
+                    "showText": false
+       }
+      },
+      {
+         "class": "spacecraft",
+         "name": "JUICE_JMC2",
+         "startTime": "2022-05-31 23:59:59.999 UTC",
+         "arcs": [
+            {
+               "center": "JUICE",
+               "trajectoryFrame": "ICRF",
+               "trajectory": {
+                  "type": "Spice",
+                  "target": "JUICE_JMC-2",
+                  "center": "JUICE_SPACECRAFT"
+               }
+            }
+         ],
+       "label": {
+                    "showText": false
+       }
+      },
+      {
+         "class": "spacecraft",
+         "name": "JUICE_PEP_JDC",
+         "startTime": "2022-05-31 23:59:59.999 UTC",
+         "arcs": [
+            {
+               "center": "JUICE",
+               "trajectoryFrame": "ICRF",
+               "trajectory": {
+                  "type": "Spice",
+                  "target": "JUICE_PEP_JDC",
+                  "center": "JUICE_SPACECRAFT"
+               }
+            }
+         ],
+       "label": {
+                    "showText": false
+       }
+      },
+      {
+         "class": "spacecraft",
+         "name": "JUICE_PEP_JNA",
+         "startTime": "2022-05-31 23:59:59.999 UTC",
+         "arcs": [
+            {
+               "center": "JUICE",
+               "trajectoryFrame": "ICRF",
+               "trajectory": {
+                  "type": "Spice",
+                  "target": "JUICE_PEP_JNA",
+                  "center": "JUICE_SPACECRAFT"
+               }
+            }
+         ],
+       "label": {
+                    "showText": false
+       }
+      },
+      {
+         "class": "spacecraft",
+         "name": "JUICE_PEP_JEI",
+         "startTime": "2022-05-31 23:59:59.999 UTC",
+         "arcs": [
+            {
+               "center": "JUICE",
+               "trajectoryFrame": "ICRF",
+               "trajectory": {
+                  "type": "Spice",
+                  "target": "JUICE_PEP_JEI",
+                  "center": "JUICE_SPACECRAFT"
+               }
+            }
+         ],
+       "label": {
+                    "showText": false
+       }
+      },
+      {
+         "class": "spacecraft",
+         "name": "JUICE_PEP_NIM",
+         "startTime": "2022-05-31 23:59:59.999 UTC",
+         "arcs": [
+            {
+               "center": "JUICE",
+               "trajectoryFrame": "ICRF",
+               "trajectory": {
+                  "type": "Spice",
+                  "target": "JUICE_PEP_NIM",
+                  "center": "JUICE_SPACECRAFT"
+               }
+            }
+         ],
+       "label": {
+                    "showText": false
+       }
+      },
+      {
+         "class": "spacecraft",
+         "name": "JUICE_PEP_JENI",
+         "startTime": "2022-05-31 23:59:59.999 UTC",
+         "arcs": [
+            {
+               "center": "JUICE",
+               "trajectoryFrame": "ICRF",
+               "trajectory": {
+                  "type": "Spice",
+                  "target": "JUICE_PEP_JENI",
+                  "center": "JUICE_SPACECRAFT"
+               }
+            }
+         ],
+       "label": {
+                    "showText": false
+       }
+      },
+      {
+         "class": "spacecraft",
+         "name": "JUICE_PEP_JOEE",
+         "startTime": "2022-05-31 23:59:59.999 UTC",
+         "arcs": [
+            {
+               "center": "JUICE",
+               "trajectoryFrame": "ICRF",
+               "trajectory": {
+                  "type": "Spice",
+                  "target": "JUICE_PEP_JOEE",
+                  "center": "JUICE_SPACECRAFT"
+               }
+            }
+         ],
+       "label": {
+                    "showText": false
+       }
+      },
+      {
+         "class": "spacecraft",
+         "name": "JUICE_MAJIS",
+         "startTime": "2022-05-31 23:59:59.999 UTC",
+         "arcs": [
+            {
+               "center": "JUICE",
+               "trajectoryFrame": "ICRF",
+               "trajectory": {
+                  "type": "Spice",
+                  "target": "JUICE_MAJIS",
+                  "center": "JUICE_SPACECRAFT"
+               }
+            }
+         ],
+       "label": {
+                    "showText": false
+       }
+      },
+      {
+         "class": "spacecraft",
+         "name": "JUICE_GALA",
+         "startTime": "2022-05-31 23:59:59.999 UTC",
+         "arcs": [
+            {
+               "center": "JUICE",
+               "trajectoryFrame": "ICRF",
+               "trajectory": {
+                  "type": "Spice",
+                  "target": "JUICE_GALA",
+                  "center": "JUICE_SPACECRAFT"
+               }
+            }
+         ],
+       "label": {
+                    "showText": false
+       }
+      },
+      {
+         "class": "spacecraft",
+         "name": "JUICE_JANUS",
+         "startTime": "2022-05-31 23:59:59.999 UTC",
+         "arcs": [
+            {
+               "center": "JUICE",
+               "trajectoryFrame": "ICRF",
+               "trajectory": {
+                  "type": "Spice",
+                  "target": "JUICE_JANUS",
+                  "center": "JUICE_SPACECRAFT"
+               }
+            }
+         ],
+       "label": {
+                    "showText": false
+       }
+      },
+      {
+         "class": "spacecraft",
+         "name": "JUICE_SWI",
+         "startTime": "2022-05-31 23:59:59.999 UTC",
+         "arcs": [
+            {
+               "center": "JUICE",
+               "trajectoryFrame": "ICRF",
+               "trajectory": {
+                  "type": "Spice",
+                  "target": "JUICE_SWI_FULL",
+                  "center": "JUICE_SPACECRAFT"
+               }
+            }
+         ],
+       "label": {
+                    "showText": false
+       }
+      },
+      {
+         "class": "spacecraft",
+         "name": "JUICE_UVS",
+         "startTime": "2022-05-31 23:59:59.999 UTC",
+         "arcs": [
+            {
+               "center": "JUICE",
+               "trajectoryFrame": "ICRF",
+               "trajectory": {
+                  "type": "Spice",
+                  "target": "JUICE_UVS",
+                  "center": "JUICE_SPACECRAFT"
+               }
+            }
+         ],
+       "label": {
+                    "showText": false
+       }
+      },
+      {
+         "class": "spacecraft",
+         "name": "JUICE_NAVCAM1",
+         "startTime": "2022-05-31 23:59:59.999 UTC",
+         "arcs": [
+            {
+               "center": "JUICE",
+               "trajectoryFrame": "ICRF",
+               "trajectory": {
+                  "type": "Spice",
+                  "target": "JUICE_NAVCAM-1",
+                  "center": "JUICE_SPACECRAFT"
+               }
+            }
+         ],
+       "label": {
+                    "showText": false
+       }
+      },
+      {
+         "class": "spacecraft",
+         "name": "JUICE_NAVCAM2",
+         "startTime": "2022-05-31 23:59:59.999 UTC",
+         "arcs": [
+            {
+               "center": "JUICE",
+               "trajectoryFrame": "ICRF",
+               "trajectory": {
+                  "type": "Spice",
+                  "target": "JUICE_NAVCAM-2",
+                  "center": "JUICE_SPACECRAFT"
+               }
+            }
+         ],
+       "label": {
+                    "showText": false
+       }
+      }
+   ]
+}

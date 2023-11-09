@@ -1,0 +1,97 @@
+{
+   "version": "1.0",
+   "name": "Cosmographia JUICE Example",
+   "items": [
+      {
+         "class": "spacecraft",
+         "name": "JUICE_MGA",
+         "startTime": "2022-05-31 23:59:59.999 UTC",
+         "arcs": [
+            {
+               "center": "JUICE",
+               "trajectoryFrame": "ICRF",
+               "trajectory": {
+                  "type": "Spice",
+                  "target": "JUICE_MGA_APM",
+                  "center": "JUICE_SPACECRAFT"
+               },
+               "bodyFrame": {
+                 "type": "Spice",
+                  "name": "JUICE_MGA"
+               }
+            }
+         ],
+      "geometry": {
+        "type": "Mesh",
+        "scale": 1.1,
+        "meshOffset": [0.0, 0.000025, 0.0],
+        "source": "./models/juice_mga_dish.3ds"
+      },
+      "label": {
+        "showText": false,
+        "color": [
+          1,
+          1,
+          1
+        ]
+      },
+      "trajectoryPlot": {
+        "color": [
+          1,
+          1,
+          1
+        ],
+        "duration": "5d",
+        "lead": 0,
+        "fade": 1,
+        "sampleCount": 500
+
+      }
+    },
+    {
+         "class": "spacecraft",
+         "name": "JUICE_MGA_APM",
+         "startTime": "2022-05-31 23:59:59.999 UTC",
+         "arcs": [
+            {
+               "center": "JUICE",
+               "trajectoryFrame": "ICRF",
+               "trajectory": {
+                  "type": "Spice",
+                  "target": "JUICE_MGA_APM",
+                  "center": "JUICE_SPACECRAFT"
+               },
+               "bodyFrame": {
+                 "type": "Spice",
+                  "name": "JUICE_MGA_AZ"
+               }
+            }
+         ],
+      "geometry": {
+        "type": "Mesh",
+        "meshOffset": [0.0, 0.0, -0.0002],
+        "source": "./models/juice_mga_apm.3ds"
+      },
+      "label": {
+        "showText": false,
+        "color": [
+          1,
+          1,
+          1
+        ]
+      },
+      "trajectoryPlot": {
+        "color": [
+          1,
+          1,
+          1
+        ],
+        "duration": "5d",
+        "lead": 0,
+        "fade": 1,
+        "sampleCount": 500
+
+      }
+    }
+  ]
+}
