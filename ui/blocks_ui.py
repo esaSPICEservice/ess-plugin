@@ -1,0 +1,62 @@
+
+from ui.design.block_panel import Ui_Form
+from PyQt5.QtWidgets import QDialog, QTableWidgetItem, QTableWidget
+
+from utils.block_parser import BlockParser
+from actions.time_navigation import goto_date
+
+class DateTableWidgetItem(QTableWidgetItem):
+    
+    def __init__(self, date_str):
+        QTableWidgetItem.__init__(self, date_str)
+        self.date_str = date_str
+
+    def doEdit(self):
+        goto_date(self.date_str)
+
+class BlocksDialog(QDialog):
+
+    id = 'blocks_dialog_window_id'
+
+    def __init__(self, main_window, ptr_path):
+        QDialog.__init__(self, main_window)
+        self.ptr_path = ptr_path
+        self.init_ui()
+
+    def init_ui(self):
+        self.setObjectName(BlocksDialog.id)
+        self.ui = Ui_Form()
+        self.ui.setupUi(self)
+        
+        try:
+            with open(self.ptr_path, 'r') as ptr_file:
+                ptr_content = ptr_file.read()
+            parser = BlockParser(ptr_content)
+            parser.process()
+
+            self.ui.tableWidget.setEditTriggers( QTableWidget.NoEditTriggers )
+
+            # create a connection to the double click event
+            self.ui.tableWidget.itemDoubleClicked.connect(self.editItem)
+
+            row_number = 0
+            for index, start_time in enumerate(parser.start_times):
+                if start_time:
+                    self.ui.tableWidget.insertRow(row_number)
+                    self.ui.tableWidget.setItem(
+                        row_number, 0, 
+                        DateTableWidgetItem(start_time))
+                    self.ui.tableWidget.setItem(
+                        row_number, 1, 
+                        DateTableWidgetItem(parser.end_times[index]))
+                    row_number +=1
+
+        except Exception as error:
+            print(error)
+
+    def editItem(self, item):
+        item.doEdit()
+
+    def show_and_focus(self):
+        self.hide()
+        self.show()

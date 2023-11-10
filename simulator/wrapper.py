@@ -73,10 +73,10 @@ def simulate(meta_kernel, ptr_content):
     os.makedirs(working_dir)
     session_file_path = create_structure(working_dir, meta_kernel, ptr_content,
                                          step=5,
-                                         no_power=False,
+                                         no_power=True,
                                          quaternions=False)
 
     root_scenario_path = os.path.dirname(session_file_path)
     sim.execute(root_scenario_path, session_file_path)
 
-    return create_cosmo_scene(root_scenario_path, meta_kernel)
+    return create_cosmo_scene(root_scenario_path, meta_kernel), root_scenario_path

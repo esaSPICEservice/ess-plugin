@@ -39,6 +39,7 @@ class PTREditorDialog(QDialog):
             self, "Open Metarkernel", None, "Metakernel files (*.tm *.mk)")
         if file_name:
             self.ptr_editor.mkInput.setText(file_name)
+            self.show_and_focus()
 
     def open_ptr(self):
         file_name, _ = QFileDialog.getOpenFileName(
@@ -47,6 +48,7 @@ class PTREditorDialog(QDialog):
             with open(file_name, 'r') as ptr_file:
                 content = ptr_file.read()
                 self.ptr_editor.ptrEditor.setPlainText(content)
+            self.show_and_focus()
 
     def save_ptr(self):
         ptr_content = self.validate_ptr()
@@ -56,6 +58,7 @@ class PTREditorDialog(QDialog):
             if file_name:
                 with open(file_name, 'w') as ptr_file:
                     ptr_file.write(ptr_content)
+            self.show_and_focus()
 
     def validate_ptr(self):
         ptr_content =  self.ptr_editor.ptrEditor.toPlainText()
