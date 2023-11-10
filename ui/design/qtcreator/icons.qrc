@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/images">
+        <file>icons/disk.png</file>
+        <file>icons/folder.png</file>
+        <file>icons/pencil_add.png</file>
+    </qresource>
+</RCC>

@@ -24,7 +24,14 @@ def create_cosmo_scene(parent_path, metakernel):
                 "./spice.json",
                 "../config/cosmo/spacecraft_JUICE_arcs.json",
                 "../config/cosmo/spacecraft_JUICE_MGA_arcs.json",
-                "../config/cosmo/spacecraft_JUICE_SOLAR_ARRAYS_arcs.json"
+                "../config/cosmo/spacecraft_JUICE_SOLAR_ARRAYS_arcs.json",
+                "../config/cosmo/jupiter_minor_moons_ananke_group.json",
+                "../config/cosmo/jupiter_minor_moons_carme_group.json",
+                "../config/cosmo/jupiter_minor_moons_inner_group.json",
+                "../config/cosmo/jupiter_minor_moons_pasiphae_group.json",
+                "../config/cosmo/jupiter_minor_moons_prograde_groups.json",
+                "../config/cosmo/jupiter_rings.json",
+                "../config/cosmo/moon_torus.json"
             ]
     }
 

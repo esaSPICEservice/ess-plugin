@@ -1,0 +1,97 @@
+{
+    "version": "1.0",
+    "name": "Cosmographia JUICE Example",
+    "items": [
+       {
+          "class": "spacecraft",
+          "name": "JUICE_EUROPA_PLASMA_TORUS",
+          "startTime": "2022-05-31 23:59:59.999 UTC",
+          "arcs": [
+             {
+                "endTime": "2036-01-01 02:49:00 UTC",
+                "center": "Jupiter",
+                "trajectory": {
+                   "type": "Spice",
+                   "target": "JUICE_EUROPA_PLASMA_TORUS",
+                   "center": "Jupiter"
+                },
+                "bodyFrame": {
+                   "type": "Spice",
+                   "name": "JUICE_EPT"
+                }
+             }
+          ],
+         "geometry": {
+           "type": "DSK",
+           "kernel": "./models/juice_europa_plasma_torus_v02.bds",
+           "opacity": 1,
+           "color": [ 1, 0.6, 0 ]
+       },
+       "label": {
+         "color": [
+           1,
+           1,
+           1
+         ]
+       },
+       "trajectoryPlot": {
+         "color": [
+           1,
+           1,
+           1
+         ],
+         "duration": "5d",
+         "lead": 0,
+         "fade": 1,
+         "sampleCount": 500
+         
+       }
+     },
+
+     {
+        "class": "spacecraft",
+        "name": "JUICE_IO_PLASMA_TORUS",
+        "startTime": "2022-05-31 23:59:59.999 UTC",
+        "arcs": [
+           {
+              "endTime": "2036-01-01 02:49:00 UTC",
+              "center": "Jupiter",
+              "trajectory": {
+                 "type": "Spice",
+                 "target": "JUICE_IO_PLASMA_TORUS",
+                 "center": "Jupiter"
+              },
+              "bodyFrame": {
+                 "type": "Spice",
+                 "name": "JUICE_IPT"
+              }
+           }
+        ],
+       "geometry": {
+         "type": "DSK",
+         "kernel": "./models/juice_io_plasma_torus_v04.bds",
+         "opacity": 1,
+         "color": [ 0.6, 1, 0 ]
+     },
+     "label": {
+       "color": [
+         1,
+         1,
+         1
+       ]
+     },
+     "trajectoryPlot": {
+       "color": [
+         1,
+         1,
+         1
+       ],
+       "duration": "5d",
+       "lead": 0,
+       "fade": 1,
+       "sampleCount": 500
+       
+     }
+   }
+   ]
+ }

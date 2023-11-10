@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'ptr-editor.ui'
+# Form implementation generated from reading ui file 'qtcreator/ptr-editor.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.7
 #
@@ -59,6 +59,29 @@ class Ui_ptrEditorWidget(object):
         self.label_2 = QtWidgets.QLabel(ptrEditorWidget)
         self.label_2.setObjectName("label_2")
         self.verticalLayout.addWidget(self.label_2)
+        self.horizontalLayout_2 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_2.setObjectName("horizontalLayout_2")
+        self.openButton = QtWidgets.QToolButton(ptrEditorWidget)
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap(":/images/icons/folder.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.openButton.setIcon(icon)
+        self.openButton.setObjectName("openButton")
+        self.horizontalLayout_2.addWidget(self.openButton)
+        self.saveButton = QtWidgets.QToolButton(ptrEditorWidget)
+        icon1 = QtGui.QIcon()
+        icon1.addPixmap(QtGui.QPixmap(":/images/icons/disk.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.saveButton.setIcon(icon1)
+        self.saveButton.setObjectName("saveButton")
+        self.horizontalLayout_2.addWidget(self.saveButton)
+        self.cleanButton = QtWidgets.QToolButton(ptrEditorWidget)
+        icon2 = QtGui.QIcon()
+        icon2.addPixmap(QtGui.QPixmap(":/images/icons/pencil_add.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.cleanButton.setIcon(icon2)
+        self.cleanButton.setObjectName("cleanButton")
+        self.horizontalLayout_2.addWidget(self.cleanButton)
+        spacerItem = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_2.addItem(spacerItem)
+        self.verticalLayout.addLayout(self.horizontalLayout_2)
         self.ptrEditor = QtWidgets.QTextEdit(ptrEditorWidget)
         self.ptrEditor.setObjectName("ptrEditor")
         self.verticalLayout.addWidget(self.ptrEditor)
@@ -75,4 +98,8 @@ class Ui_ptrEditorWidget(object):
         self.label.setText(_translate("ptrEditorWidget", "Metakernel File"))
         self.mkButton.setText(_translate("ptrEditorWidget", " Browse "))
         self.label_2.setText(_translate("ptrEditorWidget", "PTR editor"))
+        self.openButton.setText(_translate("ptrEditorWidget", "..."))
+        self.saveButton.setText(_translate("ptrEditorWidget", "..."))
+        self.cleanButton.setText(_translate("ptrEditorWidget", "..."))
         self.visualizeButton.setText(_translate("ptrEditorWidget", "Visualize"))
+from . import icons_rc

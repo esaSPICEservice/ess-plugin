@@ -1,0 +1,1041 @@
+{
+   "version": "1.0",
+   "name": "03 - Carme Group",
+   "items": [
+      {
+         "class": "spacecraft",
+         "name": "CAR",
+         "startTime": "2022-05-31 23:59:59.999 UTC",
+         "arcs": [
+            { 
+               "endTime": "2036-01-01 02:49:00 UTC", 
+               "center": "Jupiter", 
+               "trajectory": { 
+                  "type": "Spice", 
+                  "target": "CARME", 
+                  "center": "Jupiter" 
+               }, 
+               "bodyFrame": { 
+                  "type": "Spice", 
+                  "name": "IAU_JUPITER"
+               } 
+            } 
+         ], 
+        "geometry": { 
+         "type": "Globe", 
+          "radii": [10, 10, 10],
+          "opacity": 1, 
+          "color": [ 0, 1, 0 ] 
+      }, 
+      "label": { 
+        "color": [ 
+          0, 
+          1, 
+          0
+        ] 
+      }, 
+      "trajectoryPlot": { 
+        "visible": true, 
+        "color": [ 
+          0, 
+          1, 
+          0
+        ], 
+        "duration": "1y", 
+        "lead": 1, 
+        "fade": 1, 
+        "sampleCount": 1000 
+        } 
+      }, 
+      {
+         "class": "spacecraft",
+         "name": "TAY",
+         "startTime": "2022-05-31 23:59:59.999 UTC",
+         "arcs": [
+            { 
+               "endTime": "2036-01-01 02:49:00 UTC", 
+               "center": "Jupiter", 
+               "trajectory": { 
+                  "type": "Spice", 
+                  "target": "TAYGETE", 
+                  "center": "Jupiter" 
+               }, 
+               "bodyFrame": { 
+                  "type": "Spice", 
+                  "name": "IAU_JUPITER"
+               } 
+            } 
+         ], 
+        "geometry": { 
+         "type": "Globe", 
+          "radii": [10, 10, 10],
+          "opacity": 1, 
+          "color": [ 0, 1, 0 ] 
+      }, 
+      "label": { 
+        "color": [ 
+          0, 
+          1, 
+          0
+        ] 
+      }, 
+      "trajectoryPlot": { 
+        "visible": true, 
+        "color": [ 
+          0, 
+          1, 
+          0
+        ], 
+        "duration": "1y", 
+        "lead": 1, 
+        "fade": 1, 
+        "sampleCount": 1000 
+        } 
+      }, 
+      {
+         "class": "spacecraft",
+         "name": "CHA",
+         "startTime": "2022-05-31 23:59:59.999 UTC",
+         "arcs": [
+            { 
+               "endTime": "2036-01-01 02:49:00 UTC", 
+               "center": "Jupiter", 
+               "trajectory": { 
+                  "type": "Spice", 
+                  "target": "CHALDENE", 
+                  "center": "Jupiter" 
+               }, 
+               "bodyFrame": { 
+                  "type": "Spice", 
+                  "name": "IAU_JUPITER"
+               } 
+            } 
+         ], 
+        "geometry": { 
+         "type": "Globe", 
+          "radii": [10, 10, 10],
+          "opacity": 1, 
+          "color": [ 0, 1, 0 ] 
+      }, 
+      "label": { 
+        "color": [ 
+          0, 
+          1, 
+          0
+        ] 
+      }, 
+      "trajectoryPlot": { 
+        "visible": true, 
+        "color": [ 
+          0, 
+          1, 
+          0
+        ], 
+        "duration": "1y", 
+        "lead": 1, 
+        "fade": 1, 
+        "sampleCount": 1000 
+        } 
+      }, 
+      {
+         "class": "spacecraft",
+         "name": "KLK",
+         "startTime": "2022-05-31 23:59:59.999 UTC",
+         "arcs": [
+            { 
+               "endTime": "2036-01-01 02:49:00 UTC", 
+               "center": "Jupiter", 
+               "trajectory": { 
+                  "type": "Spice", 
+                  "target": "KALYKE", 
+                  "center": "Jupiter" 
+               }, 
+               "bodyFrame": { 
+                  "type": "Spice", 
+                  "name": "IAU_JUPITER"
+               } 
+            } 
+         ], 
+        "geometry": { 
+         "type": "Globe", 
+          "radii": [10, 10, 10],
+          "opacity": 1, 
+          "color": [ 0, 1, 0 ] 
+      }, 
+      "label": { 
+        "color": [ 
+          0, 
+          1, 
+          0
+        ] 
+      }, 
+      "trajectoryPlot": { 
+        "visible": true, 
+        "color": [ 
+          0, 
+          1, 
+          0
+        ], 
+        "duration": "1y", 
+        "lead": 1, 
+        "fade": 1, 
+        "sampleCount": 1000 
+        } 
+      }, 
+      {
+         "class": "spacecraft",
+         "name": "ERI",
+         "startTime": "2022-05-31 23:59:59.999 UTC",
+         "arcs": [
+            { 
+               "endTime": "2036-01-01 02:49:00 UTC", 
+               "center": "Jupiter", 
+               "trajectory": { 
+                  "type": "Spice", 
+                  "target": "ERINOME", 
+                  "center": "Jupiter" 
+               }, 
+               "bodyFrame": { 
+                  "type": "Spice", 
+                  "name": "IAU_JUPITER"
+               } 
+            } 
+         ], 
+        "geometry": { 
+         "type": "Globe", 
+          "radii": [10, 10, 10],
+          "opacity": 1, 
+          "color": [ 0, 1, 0 ] 
+      }, 
+      "label": { 
+        "color": [ 
+          0, 
+          1, 
+          0
+        ] 
+      }, 
+      "trajectoryPlot": { 
+        "visible": true, 
+        "color": [ 
+          0, 
+          1, 
+          0
+        ], 
+        "duration": "1y", 
+        "lead": 1, 
+        "fade": 1, 
+        "sampleCount": 1000 
+        } 
+      }, 
+      {
+         "class": "spacecraft",
+         "name": "ISO",
+         "startTime": "2022-05-31 23:59:59.999 UTC",
+         "arcs": [
+            { 
+               "endTime": "2036-01-01 02:49:00 UTC", 
+               "center": "Jupiter", 
+               "trajectory": { 
+                  "type": "Spice", 
+                  "target": "ISONOE", 
+                  "center": "Jupiter" 
+               }, 
+               "bodyFrame": { 
+                  "type": "Spice", 
+                  "name": "IAU_JUPITER"
+               } 
+            } 
+         ], 
+        "geometry": { 
+         "type": "Globe", 
+          "radii": [10, 10, 10],
+          "opacity": 1, 
+          "color": [ 0, 1, 0 ] 
+      }, 
+      "label": { 
+        "color": [ 
+          0, 
+          1, 
+          0
+        ] 
+      }, 
+      "trajectoryPlot": { 
+        "visible": true, 
+        "color": [ 
+          0, 
+          1, 
+          0
+        ], 
+        "duration": "1y", 
+        "lead": 1, 
+        "fade": 1, 
+        "sampleCount": 1000 
+        } 
+      }, 
+      {
+         "class": "spacecraft",
+         "name": "AIT",
+         "startTime": "2022-05-31 23:59:59.999 UTC",
+         "arcs": [
+            { 
+               "endTime": "2036-01-01 02:49:00 UTC", 
+               "center": "Jupiter", 
+               "trajectory": { 
+                  "type": "Spice", 
+                  "target": "AITNE", 
+                  "center": "Jupiter" 
+               }, 
+               "bodyFrame": { 
+                  "type": "Spice", 
+                  "name": "IAU_JUPITER"
+               } 
+            } 
+         ], 
+        "geometry": { 
+         "type": "Globe", 
+          "radii": [10, 10, 10],
+          "opacity": 1, 
+          "color": [ 0, 1, 0 ] 
+      }, 
+      "label": { 
+        "color": [ 
+          0, 
+          1, 
+          0
+        ] 
+      }, 
+      "trajectoryPlot": { 
+        "visible": true, 
+        "color": [ 
+          0, 
+          1, 
+          0
+        ], 
+        "duration": "1y", 
+        "lead": 1, 
+        "fade": 1, 
+        "sampleCount": 1000 
+        } 
+      }, 
+      {
+         "class": "spacecraft",
+         "name": "KLE",
+         "startTime": "2022-05-31 23:59:59.999 UTC",
+         "arcs": [
+            { 
+               "endTime": "2036-01-01 02:49:00 UTC", 
+               "center": "Jupiter", 
+               "trajectory": { 
+                  "type": "Spice", 
+                  "target": "KALE", 
+                  "center": "Jupiter" 
+               }, 
+               "bodyFrame": { 
+                  "type": "Spice", 
+                  "name": "IAU_JUPITER"
+               } 
+            } 
+         ], 
+        "geometry": { 
+         "type": "Globe", 
+          "radii": [10, 10, 10],
+          "opacity": 1, 
+          "color": [ 0, 1, 0 ] 
+      }, 
+      "label": { 
+        "color": [ 
+          0, 
+          1, 
+          0
+        ] 
+      }, 
+      "trajectoryPlot": { 
+        "visible": true, 
+        "color": [ 
+          0, 
+          1, 
+          0
+        ], 
+        "duration": "1y", 
+        "lead": 1, 
+        "fade": 1, 
+        "sampleCount": 1000 
+        } 
+      }, 
+      {
+         "class": "spacecraft",
+         "name": "PST",
+         "startTime": "2022-05-31 23:59:59.999 UTC",
+         "arcs": [
+            { 
+               "endTime": "2036-01-01 02:49:00 UTC", 
+               "center": "Jupiter", 
+               "trajectory": { 
+                  "type": "Spice", 
+                  "target": "PASITHEE", 
+                  "center": "Jupiter" 
+               }, 
+               "bodyFrame": { 
+                  "type": "Spice", 
+                  "name": "IAU_JUPITER"
+               } 
+            } 
+         ], 
+        "geometry": { 
+         "type": "Globe", 
+          "radii": [10, 10, 10],
+          "opacity": 1, 
+          "color": [ 0, 1, 0 ] 
+      }, 
+      "label": { 
+        "color": [ 
+          0, 
+          1, 
+          0
+        ] 
+      }, 
+      "trajectoryPlot": { 
+        "visible": true, 
+        "color": [ 
+          0, 
+          1, 
+          0
+        ], 
+        "duration": "1y", 
+        "lead": 1, 
+        "fade": 1, 
+        "sampleCount": 1000 
+        } 
+      }, 
+      {
+         "class": "spacecraft",
+         "name": "ARC",
+         "startTime": "2022-05-31 23:59:59.999 UTC",
+         "arcs": [
+            { 
+               "endTime": "2036-01-01 02:49:00 UTC", 
+               "center": "Jupiter", 
+               "trajectory": { 
+                  "type": "Spice", 
+                  "target": "ARCHE", 
+                  "center": "Jupiter" 
+               }, 
+               "bodyFrame": { 
+                  "type": "Spice", 
+                  "name": "IAU_JUPITER"
+               } 
+            } 
+         ], 
+        "geometry": { 
+         "type": "Globe", 
+          "radii": [10, 10, 10],
+          "opacity": 1, 
+          "color": [ 0, 1, 0 ] 
+      }, 
+      "label": { 
+        "color": [ 
+          0, 
+          1, 
+          0
+        ] 
+      }, 
+      "trajectoryPlot": { 
+        "visible": true, 
+        "color": [ 
+          0, 
+          1, 
+          0
+        ], 
+        "duration": "1y", 
+        "lead": 1, 
+        "fade": 1, 
+        "sampleCount": 1000 
+        } 
+      }, 
+      {
+         "class": "spacecraft",
+         "name": "KCH",
+         "startTime": "2022-05-31 23:59:59.999 UTC",
+         "arcs": [
+            { 
+               "endTime": "2036-01-01 02:49:00 UTC", 
+               "center": "Jupiter", 
+               "trajectory": { 
+                  "type": "Spice", 
+                  "target": "KALLICHORE", 
+                  "center": "Jupiter" 
+               }, 
+               "bodyFrame": { 
+                  "type": "Spice", 
+                  "name": "IAU_JUPITER"
+               } 
+            } 
+         ], 
+        "geometry": { 
+         "type": "Globe", 
+          "radii": [10, 10, 10],
+          "opacity": 1, 
+          "color": [ 0, 1, 0 ] 
+      }, 
+      "label": { 
+        "color": [ 
+          0, 
+          1, 
+          0
+        ] 
+      }, 
+      "trajectoryPlot": { 
+        "visible": true, 
+        "color": [ 
+          0, 
+          1, 
+          0
+        ], 
+        "duration": "1y", 
+        "lead": 1, 
+        "fade": 1, 
+        "sampleCount": 1000 
+        } 
+      }, 
+      {
+         "class": "spacecraft",
+         "name": "EUK",
+         "startTime": "2022-05-31 23:59:59.999 UTC",
+         "arcs": [
+            { 
+               "endTime": "2036-01-01 02:49:00 UTC", 
+               "center": "Jupiter", 
+               "trajectory": { 
+                  "type": "Spice", 
+                  "target": "EUKELADE", 
+                  "center": "Jupiter" 
+               }, 
+               "bodyFrame": { 
+                  "type": "Spice", 
+                  "name": "IAU_JUPITER"
+               } 
+            } 
+         ], 
+        "geometry": { 
+         "type": "Globe", 
+          "radii": [10, 10, 10],
+          "opacity": 1, 
+          "color": [ 0, 1, 0 ] 
+      }, 
+      "label": { 
+        "color": [ 
+          0, 
+          1, 
+          0
+        ] 
+      }, 
+      "trajectoryPlot": { 
+        "visible": true, 
+        "color": [ 
+          0, 
+          1, 
+          0
+        ], 
+        "duration": "1y", 
+        "lead": 1, 
+        "fade": 1, 
+        "sampleCount": 1000 
+        } 
+      }, 
+      {
+         "class": "spacecraft",
+         "name": "HRS",
+         "startTime": "2022-05-31 23:59:59.999 UTC",
+         "arcs": [
+            { 
+               "endTime": "2036-01-01 02:49:00 UTC", 
+               "center": "Jupiter", 
+               "trajectory": { 
+                  "type": "Spice", 
+                  "target": "HERSE", 
+                  "center": "Jupiter" 
+               }, 
+               "bodyFrame": { 
+                  "type": "Spice", 
+                  "name": "IAU_JUPITER"
+               } 
+            } 
+         ], 
+        "geometry": { 
+         "type": "Globe", 
+          "radii": [10, 10, 10],
+          "opacity": 1, 
+          "color": [ 0, 1, 0 ] 
+      }, 
+      "label": { 
+        "color": [ 
+          0, 
+          1, 
+          0
+        ] 
+      }, 
+      "trajectoryPlot": { 
+        "visible": true, 
+        "color": [ 
+          0, 
+          1, 
+          0
+        ], 
+        "duration": "1y", 
+        "lead": 1, 
+        "fade": 1, 
+        "sampleCount": 1000 
+        } 
+      }, 
+      {
+         "class": "spacecraft",
+         "name": "10J1",
+         "startTime": "2022-05-31 23:59:59.999 UTC",
+         "arcs": [
+            { 
+               "endTime": "2036-01-01 02:49:00 UTC", 
+               "center": "Jupiter", 
+               "trajectory": { 
+                  "type": "Spice", 
+                  "target": "S2010_J1", 
+                  "center": "Jupiter" 
+               }, 
+               "bodyFrame": { 
+                  "type": "Spice", 
+                  "name": "IAU_JUPITER"
+               } 
+            } 
+         ], 
+        "geometry": { 
+         "type": "Globe", 
+          "radii": [10, 10, 10],
+          "opacity": 1, 
+          "color": [ 0, 1, 0 ] 
+      }, 
+      "label": { 
+        "color": [ 
+          0, 
+          1, 
+          0
+        ] 
+      }, 
+      "trajectoryPlot": { 
+        "visible": true, 
+        "color": [ 
+          0, 
+          1, 
+          0
+        ], 
+        "duration": "1y", 
+        "lead": 1, 
+        "fade": 1, 
+        "sampleCount": 1000 
+        } 
+      }, 
+      {
+         "class": "spacecraft",
+         "name": "EIR",
+         "startTime": "2022-05-31 23:59:59.999 UTC",
+         "arcs": [
+            { 
+               "endTime": "2036-01-01 02:49:00 UTC", 
+               "center": "Jupiter", 
+               "trajectory": { 
+                  "type": "Spice", 
+                  "target": "EIRENE", 
+                  "center": "Jupiter" 
+               }, 
+               "bodyFrame": { 
+                  "type": "Spice", 
+                  "name": "IAU_JUPITER"
+               } 
+            } 
+         ], 
+        "geometry": { 
+         "type": "Globe", 
+          "radii": [10, 10, 10],
+          "opacity": 1, 
+          "color": [ 0, 1, 0 ] 
+      }, 
+      "label": { 
+        "color": [ 
+          0, 
+          1, 
+          0
+        ] 
+      }, 
+      "trajectoryPlot": { 
+        "visible": true, 
+        "color": [ 
+          0, 
+          1, 
+          0
+        ], 
+        "duration": "1y", 
+        "lead": 1, 
+        "fade": 1, 
+        "sampleCount": 1000 
+        } 
+      }, 
+      {
+         "class": "spacecraft",
+         "name": "3J19",
+         "startTime": "2022-05-31 23:59:59.999 UTC",
+         "arcs": [
+            { 
+               "endTime": "2036-01-01 02:49:00 UTC", 
+               "center": "Jupiter", 
+               "trajectory": { 
+                  "type": "Spice", 
+                  "target": "S2003_J19", 
+                  "center": "Jupiter" 
+               }, 
+               "bodyFrame": { 
+                  "type": "Spice", 
+                  "name": "IAU_JUPITER"
+               } 
+            } 
+         ], 
+        "geometry": { 
+         "type": "Globe", 
+          "radii": [10, 10, 10],
+          "opacity": 1, 
+          "color": [ 0, 1, 0 ] 
+      }, 
+      "label": { 
+        "color": [ 
+          0, 
+          1, 
+          0
+        ] 
+      }, 
+      "trajectoryPlot": { 
+        "visible": true, 
+        "color": [ 
+          0, 
+          1, 
+          0
+        ], 
+        "duration": "1y", 
+        "lead": 1, 
+        "fade": 1, 
+        "sampleCount": 1000 
+        } 
+      }, 
+      {
+         "class": "spacecraft",
+         "name": "17J2",
+         "startTime": "2022-05-31 23:59:59.999 UTC",
+         "arcs": [
+            { 
+               "endTime": "2036-01-01 02:49:00 UTC", 
+               "center": "Jupiter", 
+               "trajectory": { 
+                  "type": "Spice", 
+                  "target": "S2017_J2", 
+                  "center": "Jupiter" 
+               }, 
+               "bodyFrame": { 
+                  "type": "Spice", 
+                  "name": "IAU_JUPITER"
+               } 
+            } 
+         ], 
+        "geometry": { 
+         "type": "Globe", 
+          "radii": [10, 10, 10],
+          "opacity": 1, 
+          "color": [ 0, 1, 0 ] 
+      }, 
+      "label": { 
+        "color": [ 
+          0, 
+          1, 
+          0
+        ] 
+      }, 
+      "trajectoryPlot": { 
+        "visible": true, 
+        "color": [ 
+          0, 
+          1, 
+          0
+        ], 
+        "duration": "1y", 
+        "lead": 1, 
+        "fade": 1, 
+        "sampleCount": 1000 
+        } 
+      }, 
+      {
+         "class": "spacecraft",
+         "name": "17J5",
+         "startTime": "2022-05-31 23:59:59.999 UTC",
+         "arcs": [
+            { 
+               "endTime": "2036-01-01 02:49:00 UTC", 
+               "center": "Jupiter", 
+               "trajectory": { 
+                  "type": "Spice", 
+                  "target": "S2017_J5", 
+                  "center": "Jupiter" 
+               }, 
+               "bodyFrame": { 
+                  "type": "Spice", 
+                  "name": "IAU_JUPITER"
+               } 
+            } 
+         ], 
+        "geometry": { 
+         "type": "Globe", 
+          "radii": [10, 10, 10],
+          "opacity": 1, 
+          "color": [ 0, 1, 0 ] 
+      }, 
+      "label": { 
+        "color": [ 
+          0, 
+          1, 
+          0
+        ] 
+      }, 
+      "trajectoryPlot": { 
+        "visible": true, 
+        "color": [ 
+          0, 
+          1, 
+          0
+        ], 
+        "duration": "1y", 
+        "lead": 1, 
+        "fade": 1, 
+        "sampleCount": 1000 
+        } 
+      }, 
+      {
+         "class": "spacecraft",
+         "name": "17J8",
+         "startTime": "2022-05-31 23:59:59.999 UTC",
+         "arcs": [
+            { 
+               "endTime": "2036-01-01 02:49:00 UTC", 
+               "center": "Jupiter", 
+               "trajectory": { 
+                  "type": "Spice", 
+                  "target": "S2017_J8", 
+                  "center": "Jupiter" 
+               }, 
+               "bodyFrame": { 
+                  "type": "Spice", 
+                  "name": "IAU_JUPITER"
+               } 
+            } 
+         ], 
+        "geometry": { 
+         "type": "Globe", 
+          "radii": [10, 10, 10],
+          "opacity": 1, 
+          "color": [ 0, 1, 0 ] 
+      }, 
+      "label": { 
+        "color": [ 
+          0, 
+          1, 
+          0
+        ] 
+      }, 
+      "trajectoryPlot": { 
+        "visible": true, 
+        "color": [ 
+          0, 
+          1, 
+          0
+        ], 
+        "duration": "1y", 
+        "lead": 1, 
+        "fade": 1, 
+        "sampleCount": 1000 
+        } 
+      }, 
+      {
+         "class": "spacecraft",
+         "name": "11J1",
+         "startTime": "2022-05-31 23:59:59.999 UTC",
+         "arcs": [
+            { 
+               "endTime": "2036-01-01 02:49:00 UTC", 
+               "center": "Jupiter", 
+               "trajectory": { 
+                  "type": "Spice", 
+                  "target": "S2011_J1", 
+                  "center": "Jupiter" 
+               }, 
+               "bodyFrame": { 
+                  "type": "Spice", 
+                  "name": "IAU_JUPITER"
+               } 
+            } 
+         ], 
+        "geometry": { 
+         "type": "Globe", 
+          "radii": [10, 10, 10],
+          "opacity": 1, 
+          "color": [ 0, 1, 0 ] 
+      }, 
+      "label": { 
+        "color": [ 
+          0, 
+          1, 
+          0
+        ] 
+      }, 
+      "trajectoryPlot": { 
+        "visible": true, 
+        "color": [ 
+          0, 
+          1, 
+          0
+        ], 
+        "duration": "1y", 
+        "lead": 1, 
+        "fade": 1, 
+        "sampleCount": 1000 
+        } 
+      }, 
+      {
+         "class": "spacecraft",
+         "name": "3J9",
+         "startTime": "2022-05-31 23:59:59.999 UTC",
+         "arcs": [
+            { 
+               "endTime": "2036-01-01 02:49:00 UTC", 
+               "center": "Jupiter", 
+               "trajectory": { 
+                  "type": "Spice", 
+                  "target": "S2003_J9", 
+                  "center": "Jupiter" 
+               }, 
+               "bodyFrame": { 
+                  "type": "Spice", 
+                  "name": "IAU_JUPITER"
+               } 
+            } 
+         ], 
+        "geometry": { 
+         "type": "Globe", 
+          "radii": [10, 10, 10],
+          "opacity": 1, 
+          "color": [ 0, 1, 0 ] 
+      }, 
+      "label": { 
+        "color": [ 
+          0, 
+          1, 
+          0
+        ] 
+      }, 
+      "trajectoryPlot": { 
+        "visible": true, 
+        "color": [ 
+          0, 
+          1, 
+          0
+        ], 
+        "duration": "1y", 
+        "lead": 1, 
+        "fade": 1, 
+        "sampleCount": 1000 
+        } 
+      }, 
+      {
+         "class": "spacecraft",
+         "name": "3J10",
+         "startTime": "2022-05-31 23:59:59.999 UTC",
+         "arcs": [
+            { 
+               "endTime": "2036-01-01 02:49:00 UTC", 
+               "center": "Jupiter", 
+               "trajectory": { 
+                  "type": "Spice", 
+                  "target": "S2003_J10", 
+                  "center": "Jupiter" 
+               }, 
+               "bodyFrame": { 
+                  "type": "Spice", 
+                  "name": "IAU_JUPITER"
+               } 
+            } 
+         ], 
+        "geometry": { 
+         "type": "Globe", 
+          "radii": [10, 10, 10],
+          "opacity": 1, 
+          "color": [ 0, 1, 0 ] 
+      }, 
+      "label": { 
+        "color": [ 
+          0, 
+          1, 
+          0
+        ] 
+      }, 
+      "trajectoryPlot": { 
+        "visible": true, 
+        "color": [ 
+          0, 
+          1, 
+          0
+        ], 
+        "duration": "1y", 
+        "lead": 1, 
+        "fade": 1, 
+        "sampleCount": 1000 
+        } 
+      }, 
+      {
+         "class": "spacecraft",
+         "name": "3J24",
+         "startTime": "2022-05-31 23:59:59.999 UTC",
+         "arcs": [
+            { 
+               "endTime": "2036-01-01 02:49:00 UTC", 
+               "center": "Jupiter", 
+               "trajectory": { 
+                  "type": "Spice", 
+                  "target": "S2003_J24", 
+                  "center": "Jupiter" 
+               }, 
+               "bodyFrame": { 
+                  "type": "Spice", 
+                  "name": "IAU_JUPITER"
+               } 
+            } 
+         ], 
+        "geometry": { 
+         "type": "Globe", 
+          "radii": [10, 10, 10],
+          "opacity": 1, 
+          "color": [ 0, 1, 0 ] 
+      }, 
+      "label": { 
+        "color": [ 
+          0, 
+          1, 
+          0
+        ] 
+      }, 
+      "trajectoryPlot": { 
+        "visible": true, 
+        "color": [ 
+          0, 
+          1, 
+          0
+        ], 
+        "duration": "1y", 
+        "lead": 1, 
+        "fade": 1, 
+        "sampleCount": 1000 
+        } 
+      }
+  ]
+}

@@ -1,0 +1,186 @@
+{
+   "version": "1.0",
+   "name": "01 - Inner Group",
+   "items": [
+      {
+         "class": "spacecraft",
+         "name": "AMA",
+         "startTime": "2022-05-31 23:59:59.999 UTC",
+         "arcs": [
+            { 
+               "endTime": "2036-01-01 02:49:00 UTC", 
+               "center": "Jupiter", 
+               "trajectory": { 
+                  "type": "Spice", 
+                  "target": "AMALTHEA", 
+                  "center": "Jupiter" 
+               }, 
+               "bodyFrame": { 
+                  "type": "Spice", 
+                  "name": "IAU_JUPITER"
+               } 
+            } 
+         ], 
+        "geometry": { 
+         "type": "Globe", 
+          "radii": [10, 10, 10],
+          "opacity": 1, 
+          "color": [ 1, 0.2, 0.6 ] 
+      }, 
+      "label": { 
+        "color": [ 
+          1, 
+          0.2, 
+          0.6 
+        ] 
+      }, 
+      "trajectoryPlot": { 
+        "visible": true, 
+        "color": [ 
+          1, 
+          0.2, 
+          0.6 
+        ], 
+        "duration": "12h", 
+        "lead": 1, 
+        "fade": 1, 
+        "sampleCount": 1000 
+        } 
+      }, 
+      {
+         "class": "spacecraft",
+         "name": "THE",
+         "startTime": "2022-05-31 23:59:59.999 UTC",
+         "arcs": [
+            { 
+               "endTime": "2036-01-01 02:49:00 UTC", 
+               "center": "Jupiter", 
+               "trajectory": { 
+                  "type": "Spice", 
+                  "target": "THEBE", 
+                  "center": "Jupiter" 
+               }, 
+               "bodyFrame": { 
+                  "type": "Spice", 
+                  "name": "IAU_JUPITER"
+               } 
+            } 
+         ], 
+        "geometry": { 
+         "type": "Globe", 
+          "radii": [10, 10, 10],
+          "opacity": 1, 
+          "color": [ 1, 0.2, 0.6 ] 
+      }, 
+      "label": { 
+        "color": [ 
+          1, 
+          0.2, 
+          0.6 
+        ] 
+      }, 
+      "trajectoryPlot": { 
+        "visible": true, 
+        "color": [ 
+          1, 
+          0.2, 
+          0.6 
+        ], 
+        "duration": "12h", 
+        "lead": 1, 
+        "fade": 1, 
+        "sampleCount": 1000 
+        } 
+      }, 
+      {
+         "class": "spacecraft",
+         "name": "ADR",
+         "startTime": "2022-05-31 23:59:59.999 UTC",
+         "arcs": [
+            { 
+               "endTime": "2036-01-01 02:49:00 UTC", 
+               "center": "Jupiter", 
+               "trajectory": { 
+                  "type": "Spice", 
+                  "target": "ADRASTEA", 
+                  "center": "Jupiter" 
+               }, 
+               "bodyFrame": { 
+                  "type": "Spice", 
+                  "name": "IAU_JUPITER"
+               } 
+            } 
+         ], 
+        "geometry": { 
+         "type": "Globe", 
+          "radii": [10, 10, 10],
+          "opacity": 1, 
+          "color": [ 1, 0.2, 0.6 ] 
+      }, 
+      "label": { 
+        "color": [ 
+          1, 
+          0.2, 
+          0.6 
+        ] 
+      }, 
+      "trajectoryPlot": { 
+        "visible": true, 
+        "color": [ 
+          1, 
+          0.2, 
+          0.6 
+        ], 
+        "duration": "12h", 
+        "lead": 1, 
+        "fade": 1, 
+        "sampleCount": 1000 
+        } 
+      }, 
+      {
+         "class": "spacecraft",
+         "name": "MET",
+         "startTime": "2022-05-31 23:59:59.999 UTC",
+         "arcs": [
+            { 
+               "endTime": "2036-01-01 02:49:00 UTC", 
+               "center": "Jupiter", 
+               "trajectory": { 
+                  "type": "Spice", 
+                  "target": "METIS", 
+                  "center": "Jupiter" 
+               }, 
+               "bodyFrame": { 
+                  "type": "Spice", 
+                  "name": "IAU_JUPITER"
+               } 
+            } 
+         ], 
+        "geometry": { 
+         "type": "Globe", 
+          "radii": [10, 10, 10],
+          "opacity": 1, 
+          "color": [ 1, 0.2, 0.6 ] 
+      }, 
+      "label": { 
+        "color": [ 
+          1, 
+          0.2, 
+          0.6 
+        ] 
+      }, 
+      "trajectoryPlot": { 
+        "visible": true, 
+        "color": [ 
+          1, 
+          0.2, 
+          0.6 
+        ], 
+        "duration": "12h", 
+        "lead": 1, 
+        "fade": 1, 
+        "sampleCount": 1000 
+        } 
+      }
+  ]
+}

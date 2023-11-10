@@ -1,0 +1,232 @@
+{
+    "version": "1.0",
+    "name": "Cosmographia JUICE Example",
+    "items": [
+       {
+          "class": "spacecraft",
+          "name": "JUICE_JUP_HALO_RING",
+          "startTime": "2022-05-31 23:59:59.999 UTC",
+          "arcs": [
+             {
+                "endTime": "2036-01-01 02:49:00 UTC",
+                "center": "Jupiter",
+                "trajectory": {
+                   "type": "Spice",
+                   "target": "JUICE_JUP_HALO_RING",
+                   "center": "Jupiter"
+                },
+                "bodyFrame": {
+                   "type": "Spice",
+                   "name": "IAU_JUPITER"
+                }
+             }
+          ],
+         "geometry": {
+           "type": "DSK",
+           "kernel": "./models/juice_jup_halo_ring_v03.bds",
+           "opacity": 0.5,
+           "color": [ 1.0, 0.0, 0.0 ]
+       },
+       "label": {
+         "color": [
+           1,
+           1,
+           1
+         ]
+       },
+       "trajectoryPlot": {
+         "color": [
+           1,
+           1,
+           1
+         ],
+         "duration": "5d",
+         "lead": 0,
+         "fade": 1,
+         "sampleCount": 500
+         
+       }
+     },
+     {
+          "class": "spacecraft",
+          "name": "JUICE_JUP_MAIN_RING",
+          "startTime": "2022-05-31 23:59:59.999 UTC",
+          "arcs": [
+             {
+                "endTime": "2036-01-01 02:49:00 UTC",
+                "center": "Jupiter",
+                "trajectory": {
+                   "type": "Spice",
+                   "target": "JUICE_JUP_MAIN_RING",
+                   "center": "Jupiter"
+                },
+                "bodyFrame": {
+                   "type": "Spice",
+                   "name": "IAU_JUPITER"
+                }
+             }
+          ],
+         "geometry": {
+           "type": "DSK",
+           "kernel": "./models/juice_jup_main_ring_v03.bds",
+           "opacity": 0.7,
+           "color": [ 0.0, 1.0, 0.0 ]
+       },
+       "label": {
+         "color": [
+           1,
+           1,
+           1
+         ]
+       },
+       "trajectoryPlot": {
+         "color": [
+           1,
+           1,
+           1
+         ],
+         "duration": "5d",
+         "lead": 0,
+         "fade": 1,
+         "sampleCount": 500
+ 
+       }
+     },
+     {
+          "class": "spacecraft",
+          "name": "JUICE_JUP_AMA_GOS_RING",
+          "startTime": "2022-05-31 23:59:59.999 UTC",
+          "arcs": [
+             {
+                "endTime": "2036-01-01 02:49:00 UTC",
+                "center": "Jupiter",
+                "trajectory": {
+                   "type": "Spice",
+                   "target": "JUICE_JUP_AMA_GOS_RING",
+                   "center": "Jupiter"
+                },
+                "bodyFrame": {
+                   "type": "Spice",
+                   "name": "IAU_JUPITER"
+                }
+             }
+          ],
+         "geometry": {
+           "type": "DSK",
+           "kernel": "./models/juice_jup_ama_gos_ring_v01.bds",
+           "opacity": 0.32,
+           "color": [ 0.0, 0.0, 1.0 ]
+       },
+       "label": {
+         "color": [
+           1,
+           1,
+           1
+         ]
+       },
+       "trajectoryPlot": {
+         "color": [
+           1,
+           1,
+           1
+         ],
+         "duration": "5d",
+         "lead": 0,
+         "fade": 1,
+         "sampleCount": 500
+ 
+       }
+     },
+     {
+          "class": "spacecraft",
+          "name": "JUICE_JUP_THE_GOS_RING",
+          "startTime": "2022-05-31 23:59:59.999 UTC",
+          "arcs": [
+             {
+                "endTime": "2036-01-01 02:49:00 UTC",
+                "center": "Jupiter",
+                "trajectory": {
+                   "type": "Spice",
+                   "target": "JUICE_JUP_THE_GOS_RING",
+                   "center": "Jupiter"
+                },
+                "bodyFrame": {
+                   "type": "Spice",
+                   "name": "IAU_JUPITER"
+                }
+             }
+          ],
+         "geometry": {
+           "type": "DSK",
+           "kernel": "./models/juice_jup_the_gos_ring_v01.bds",
+           "opacity": 0.20,
+           "color": [ 1.0, 0.0, 1.0 ]
+       },
+       "label": {
+         "color": [
+           1,
+           1,
+           1
+         ]
+       },
+       "trajectoryPlot": {
+         "color": [
+           1,
+           1,
+           1
+         ],
+         "duration": "5d",
+         "lead": 0,
+         "fade": 1,
+         "sampleCount": 500
+ 
+       }
+     },
+     {
+          "class": "spacecraft",
+          "name": "JUICE_JUP_THE_RING_EXT",
+          "startTime": "2022-05-31 23:59:59.999 UTC",
+          "arcs": [
+             {
+                "endTime": "2036-01-01 02:49:00 UTC",
+                "center": "Jupiter",
+                "trajectory": {
+                   "type": "Spice",
+                   "target": "JUICE_JUP_THE_RING_EXT",
+                   "center": "Jupiter"
+                },
+                "bodyFrame": {
+                   "type": "Spice",
+                   "name": "IAU_JUPITER"
+                }
+             }
+          ],
+         "geometry": {
+           "type": "DSK",
+           "kernel": "./models/juice_jup_the_ring_ext_v01.bds",
+           "opacity": 0.12,
+           "color": [ 0.905, 0.863, 0.475 ]
+       },
+       "label": {
+         "color": [
+           1,
+           1,
+           1
+         ]
+       },
+       "trajectoryPlot": {
+         "color": [
+           1,
+           1,
+           1
+         ],
+         "duration": "5d",
+         "lead": 0,
+         "fade": 1,
+         "sampleCount": 500
+ 
+       }
+     }
+   ]
+ }
+ 

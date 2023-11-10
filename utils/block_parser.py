@@ -3,8 +3,6 @@ import os
 from xml.dom import minidom
 
 
-
-
 class BlockParser:
 
     def __init__(self, xml_content):
@@ -17,8 +15,6 @@ class BlockParser:
         self.start_times = list()
         self.end_times = list()
         self.block_contents = list()
-
-
 
     def process(self):
         self.blocks = self.root.findall('.//block')
