@@ -17,9 +17,6 @@ def execute_ptr(mk, content):
     after_load(root_scenario)
     cosmo.setTime(start_time + ' UTC')
     cosmo.gotoObject('JUICE', 0)
-    cosmo.setCameraToBodyFixedFrame()
-    cosmo.setCameraPosition([0.0, 0.0, -0.07]).wait(1)
-    cosmo.setCameraOrientation([0.0, 0.0, 1.0]).wait(1)
 
 def validate_ptr(content):
     parser = BlockParser(content)

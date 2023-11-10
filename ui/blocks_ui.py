@@ -14,6 +14,14 @@ class DateTableWidgetItem(QTableWidgetItem):
     def doEdit(self):
         goto_date(self.date_str)
 
+class BlockTableWidgetItem(QTableWidgetItem):
+    
+    def __init__(self, block_str):
+        QTableWidgetItem.__init__(self, block_str)
+
+    def doEdit(self):
+        pass
+
 class BlocksDialog(QDialog):
 
     id = 'blocks_dialog_window_id'
@@ -36,9 +44,12 @@ class BlocksDialog(QDialog):
 
             self.ui.tableWidget.setEditTriggers( QTableWidget.NoEditTriggers )
 
-            # create a connection to the double click event
-            self.ui.tableWidget.itemDoubleClicked.connect(self.editItem)
+            self.ui.tableWidget.verticalHeader().sectionClicked.connect(self.show_block_index)
 
+            # create a connection to the double click event
+            self.ui.tableWidget.itemDoubleClicked.connect(self.edit_item)
+            self.ui.tableWidget.clicked.connect(self.show_block)
+            self.block_contents = {}
             row_number = 0
             for index, start_time in enumerate(parser.start_times):
                 if start_time:
@@ -49,13 +60,25 @@ class BlocksDialog(QDialog):
                     self.ui.tableWidget.setItem(
                         row_number, 1, 
                         DateTableWidgetItem(parser.end_times[index]))
+                    self.ui.tableWidget.setItem(
+                        row_number, 2, 
+                        BlockTableWidgetItem('OBS'))
+                    self.block_contents[row_number] = parser.block_contents[index]
                     row_number +=1
+                    
 
         except Exception as error:
             print(error)
 
-    def editItem(self, item):
+    def edit_item(self, item):
         item.doEdit()
+
+    def show_block(self, item):
+        self.show_block_index(item.row())
+
+    def show_block_index(self, index):
+        block_content = self.block_contents[index]
+        self.ui.blockTextEdit.setPlainText(block_content)
 
     def show_and_focus(self):
         self.hide()

@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName("Form")
-        Form.resize(467, 320)
+        Form.resize(566, 435)
         Form.setStyleSheet("QPushButton {\n"
 "    background-color: #4CAF50;\n"
 "    color:white;\n"
@@ -57,7 +57,11 @@ class Ui_Form(object):
         self.tableWidget.setHorizontalHeaderItem(1, item)
         item = QtWidgets.QTableWidgetItem()
         self.tableWidget.setHorizontalHeaderItem(2, item)
+        self.tableWidget.horizontalHeader().setDefaultSectionSize(170)
         self.verticalLayout.addWidget(self.tableWidget)
+        self.blockTextEdit = QtWidgets.QPlainTextEdit(Form)
+        self.blockTextEdit.setObjectName("blockTextEdit")
+        self.verticalLayout.addWidget(self.blockTextEdit)
 
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
