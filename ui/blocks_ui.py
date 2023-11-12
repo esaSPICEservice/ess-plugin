@@ -4,6 +4,7 @@ from PyQt5.QtWidgets import QDialog, QTableWidgetItem, QTableWidget
 
 from utils.block_parser import BlockParser
 from actions.time_navigation import goto_date
+from utils.time import duration
 
 class DateTableWidgetItem(QTableWidgetItem):
     
@@ -53,6 +54,7 @@ class BlocksDialog(QDialog):
             row_number = 0
             for index, start_time in enumerate(parser.start_times):
                 if start_time:
+                    duration_secs = duration(start_time, parser.end_times[index])
                     self.ui.tableWidget.insertRow(row_number)
                     self.ui.tableWidget.setItem(
                         row_number, 0, 
@@ -62,7 +64,7 @@ class BlocksDialog(QDialog):
                         DateTableWidgetItem(parser.end_times[index]))
                     self.ui.tableWidget.setItem(
                         row_number, 2, 
-                        BlockTableWidgetItem('OBS'))
+                        BlockTableWidgetItem(str(duration_secs)))
                     self.block_contents[row_number] = parser.block_contents[index]
                     row_number +=1
                     

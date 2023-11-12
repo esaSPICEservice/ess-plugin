@@ -40,8 +40,26 @@ class Ui_Form(object):
 "}\n"
 "\n"
 "QTableWidget {\n"
+"    font-size: 12pt;\n"
+"}\n"
 "\n"
-"}")
+"QTableWidget::item {\n"
+"    border: 0px; \n"
+"    padding: 5px;\n"
+"    color: black;\n"
+"}\n"
+"\n"
+"QHeaderView {\n"
+"  background: Grey;\n"
+"  color:white;\n"
+" \n"
+"}\n"
+"\n"
+"QTableCornerButton::section {\n"
+"    background: Grey;\n"
+"    border: 0px;\n"
+"}\n"
+"")
         self.verticalLayout = QtWidgets.QVBoxLayout(Form)
         self.verticalLayout.setObjectName("verticalLayout")
         self.label = QtWidgets.QLabel(Form)
@@ -60,6 +78,7 @@ class Ui_Form(object):
         self.tableWidget.horizontalHeader().setDefaultSectionSize(170)
         self.verticalLayout.addWidget(self.tableWidget)
         self.blockTextEdit = QtWidgets.QPlainTextEdit(Form)
+        self.blockTextEdit.setReadOnly(True)
         self.blockTextEdit.setObjectName("blockTextEdit")
         self.verticalLayout.addWidget(self.blockTextEdit)
 
@@ -75,4 +94,4 @@ class Ui_Form(object):
         item = self.tableWidget.horizontalHeaderItem(1)
         item.setText(_translate("Form", "End"))
         item = self.tableWidget.horizontalHeaderItem(2)
-        item.setText(_translate("Form", "Type"))
+        item.setText(_translate("Form", "Duration"))

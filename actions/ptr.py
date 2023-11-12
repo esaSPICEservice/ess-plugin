@@ -1,4 +1,5 @@
 import os
+from actions.time_navigation import goto_date
 import cosmoscripting
 from simulator.wrapper import simulate
 from ui.blocks_ui import BlocksDialog
@@ -15,8 +16,8 @@ def execute_ptr(mk, content):
     catalog, root_scenario = simulate(mk, content)
     cosmo.loadCatalogFile(catalog)
     after_load(root_scenario)
-    cosmo.setTime(start_time + ' UTC')
-    cosmo.gotoObject('JUICE', 0)
+    goto_date(start_time + ' UTC')
+
 
 def validate_ptr(content):
     parser = BlockParser(content)

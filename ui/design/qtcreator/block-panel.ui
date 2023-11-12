@@ -39,8 +39,26 @@ QLabel {
 }
 
 QTableWidget {
+    font-size: 12pt;
+}
 
-}</string>
+QTableWidget::item {
+	border: 0px; 
+	padding: 5px;
+	color: black;
+}
+
+QHeaderView {
+  background: Grey;
+  color:white;
+ 
+}
+
+QTableCornerButton::section {
+    background: Grey;
+    border: 0px;
+}
+</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
@@ -67,13 +85,17 @@ QTableWidget {
      </column>
      <column>
       <property name="text">
-       <string>Type</string>
+       <string>Duration</string>
       </property>
      </column>
     </widget>
    </item>
    <item>
-    <widget class="QPlainTextEdit" name="blockTextEdit"/>
+    <widget class="QPlainTextEdit" name="blockTextEdit">
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
    </item>
   </layout>
  </widget>
