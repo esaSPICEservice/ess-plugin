@@ -92,6 +92,12 @@ QTableCornerButton::section {
    </item>
    <item>
     <widget class="QPlainTextEdit" name="blockTextEdit">
+     <property name="frameShadow">
+      <enum>QFrame::Plain</enum>
+     </property>
+     <property name="lineWidth">
+      <number>0</number>
+     </property>
      <property name="readOnly">
       <bool>true</bool>
      </property>

@@ -79,18 +79,29 @@ class Ui_ptrEditorWidget(object):
         self.cleanButton.setIcon(icon2)
         self.cleanButton.setObjectName("cleanButton")
         self.horizontalLayout_2.addWidget(self.cleanButton)
+        self.powerCheck = QtWidgets.QCheckBox(ptrEditorWidget)
+        self.powerCheck.setObjectName("powerCheck")
+        self.horizontalLayout_2.addWidget(self.powerCheck)
         spacerItem = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
         self.horizontalLayout_2.addItem(spacerItem)
         self.verticalLayout.addLayout(self.horizontalLayout_2)
         self.ptrEditor = QtWidgets.QTextEdit(ptrEditorWidget)
         self.ptrEditor.setObjectName("ptrEditor")
         self.verticalLayout.addWidget(self.ptrEditor)
+        self.horizontalLayout_3 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_3.setObjectName("horizontalLayout_3")
         self.visualizeButton = QtWidgets.QPushButton(ptrEditorWidget)
         self.visualizeButton.setObjectName("visualizeButton")
-        self.verticalLayout.addWidget(self.visualizeButton)
+        self.horizontalLayout_3.addWidget(self.visualizeButton)
+        self.verticalLayout.addLayout(self.horizontalLayout_3)
 
         self.retranslateUi(ptrEditorWidget)
         QtCore.QMetaObject.connectSlotsByName(ptrEditorWidget)
+        ptrEditorWidget.setTabOrder(self.ptrEditor, self.mkInput)
+        ptrEditorWidget.setTabOrder(self.mkInput, self.mkButton)
+        ptrEditorWidget.setTabOrder(self.mkButton, self.openButton)
+        ptrEditorWidget.setTabOrder(self.openButton, self.saveButton)
+        ptrEditorWidget.setTabOrder(self.saveButton, self.cleanButton)
 
     def retranslateUi(self, ptrEditorWidget):
         _translate = QtCore.QCoreApplication.translate
@@ -101,5 +112,6 @@ class Ui_ptrEditorWidget(object):
         self.openButton.setText(_translate("ptrEditorWidget", "..."))
         self.saveButton.setText(_translate("ptrEditorWidget", "..."))
         self.cleanButton.setText(_translate("ptrEditorWidget", "..."))
+        self.powerCheck.setText(_translate("ptrEditorWidget", "Calculate Power"))
         self.visualizeButton.setText(_translate("ptrEditorWidget", "Visualize"))
 from . import icons_rc

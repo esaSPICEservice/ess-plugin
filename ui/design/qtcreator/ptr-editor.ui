@@ -114,6 +114,13 @@ QLabel {
       </widget>
      </item>
      <item>
+      <widget class="QCheckBox" name="powerCheck">
+       <property name="text">
+        <string>Calculate Power</string>
+       </property>
+      </widget>
+     </item>
+     <item>
       <spacer name="horizontalSpacer">
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
@@ -132,14 +139,26 @@ QLabel {
     <widget class="QTextEdit" name="ptrEditor"/>
    </item>
    <item>
-    <widget class="QPushButton" name="visualizeButton">
-     <property name="text">
-      <string>Visualize</string>
-     </property>
-    </widget>
+    <layout class="QHBoxLayout" name="horizontalLayout_3">
+     <item>
+      <widget class="QPushButton" name="visualizeButton">
+       <property name="text">
+        <string>Visualize</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </item>
   </layout>
  </widget>
+ <tabstops>
+  <tabstop>ptrEditor</tabstop>
+  <tabstop>mkInput</tabstop>
+  <tabstop>mkButton</tabstop>
+  <tabstop>openButton</tabstop>
+  <tabstop>saveButton</tabstop>
+  <tabstop>cleanButton</tabstop>
+ </tabstops>
  <resources>
   <include location="icons.qrc"/>
  </resources>

@@ -27,8 +27,9 @@ class PTREditorDialog(QDialog):
     def visualize(self):
         ptr_content =  self.ptr_editor.ptrEditor.toPlainText()
         mk = self.ptr_editor.mkInput.text()
+        calculate_power = self.ptr_editor.powerCheck.isChecked()
         try:
-            execute_ptr(mk, ptr_content)
+            execute_ptr(mk, ptr_content, calculate_power)
             self.hide()
         except ValueError as error:
             QMessageBox.warning(self, 'PTR editor',
@@ -62,6 +63,7 @@ class PTREditorDialog(QDialog):
 
     def validate_ptr(self):
         ptr_content =  self.ptr_editor.ptrEditor.toPlainText()
+        
         try:
             validate_ptr(ptr_content)
         except ValueError as error:
