@@ -60,7 +60,7 @@ def create_cosmo_scene(parent_path, metakernel):
 
     return scene_file_path
 
-def simulate(meta_kernel, ptr_content):
+def simulate(meta_kernel, ptr_content, no_power, step=5):
     sim = osve.osve()
     
     print("")
@@ -72,8 +72,8 @@ def simulate(meta_kernel, ptr_content):
     working_dir = os.path.join(os.path.dirname(__file__), timestamp())
     os.makedirs(working_dir)
     session_file_path = create_structure(working_dir, meta_kernel, ptr_content,
-                                         step=5,
-                                         no_power=True,
+                                         step=step,
+                                         no_power=no_power,
                                          quaternions=False)
 
     root_scenario_path = os.path.dirname(session_file_path)

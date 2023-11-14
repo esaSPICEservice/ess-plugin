@@ -381,31 +381,46 @@ class AreaChart(ScatterChart):
 class Viewer(QWidget):
     """ Widget container for Chart object
     """
-    def __init__(self):
+    def __init__(self, show_legend=False):
         QWidget.__init__(self)
         self.graph = None
+        self.show_legend = show_legend
 
     def set_graph(self, func):
         self.graph = func
         self.update()
+
+    def _show_legend(self, event, painter):
+        graphRect  = QRect(0,
+                                    0,
+                                    event.rect().width() - 120,
+                                    event.rect().height())
+                                            
+        legendRect = QRect(event.rect().width() - 120,
+                        20,
+                        120,
+                        event.rect().height() - 20)
+
+        self.graph.draw(painter, graphRect)
+        self.graph.draw_legend(painter, legendRect)
+
+    def _show_no_legend(self, event, painter):
+        graphRect  = QRect(0,
+                                    0,
+                                    event.rect().width(),
+                                    event.rect().height())
+                                            
+        self.graph.draw(painter, graphRect)
 
     def paintEvent(self, event):
         painter = QPainter(self)
         painter.setRenderHint(QPainter.Antialiasing)
     
         if self.graph :
-            graphRect  = QRect(0,
-                               0,
-                               event.rect().width() - 120,
-                               event.rect().height())
-                                     
-            legendRect = QRect(event.rect().width() - 120,
-                               20,
-                               120,
-                               event.rect().height() - 20)
-
-            self.graph.draw(painter, graphRect)
-            self.graph.draw_legend(painter, legendRect)
+            if self.show_legend:
+                self._show_legend(event, painter)
+            else:
+                self._show_no_legend(event, painter)
 
         painter.end()
 

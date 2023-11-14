@@ -28,7 +28,7 @@ class LineChartPanel(Viewer):
             chart = LineChart(table)
             chart.set_horizontal_axis_column(0)
             chart.haxis_title = 'Time'
-            chart.haxis_step = 2
+            chart.haxis_step = int(index / 5)
             self.set_graph(chart)
         except Exception as error:
             print(error)
