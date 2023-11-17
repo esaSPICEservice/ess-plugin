@@ -4,6 +4,7 @@ import PyQt5.QtGui as QtGui
 import PyQt5.QtCore  as QtCore
 import PyQt5.QtWidgets as QtWidgets
 
+from dataclasses import dataclass
 
 styleSheet = """
 
@@ -26,13 +27,35 @@ QSlider::handle:horizontal {
  } 
 """
 
-class PC_timeline(QtWidgets.QSlider):
+block_type_style_map = {
+    'OBS': {
+        'color': QtGui.QColor(255, 0, 0, 30)
+    },
+    'SLEW': {
+        'color': QtGui.QColor(128, 128, 0, 30)
+    }
+}
+
+default_style = {
+    'color': QtGui.QColor(0, 0, 255, 30)
+}
+
+def get_style(block_type):
+    return block_type_style_map.get(block_type, default_style)
+
+@dataclass
+class TimelineBlock:
+    start: int
+    end: int
+    block_type: str
+
+
+class Timeline(QtWidgets.QSlider):
 
     def __init__(self, parent,*args):
-        super(PC_timeline, self).__init__(parent=parent,*args)
+        super(Timeline, self).__init__(parent=parent,*args)
         self.parent = parent
-        self.cachedFrmaes = []
-        self.missingFrames=[]
+        self.blocks = []
         self.hover = False
         self.hoverPos = None
         self.PressPos = None
@@ -47,14 +70,17 @@ class PC_timeline(QtWidgets.QSlider):
         self.setMinimumSize(1, 40)
         self.installEventFilter(self)
 
+    def add_block(self, block: TimelineBlock):
+        self.blocks.append(block)  
+
     def setRange(self,min,max,setOrig=True):
         if setOrig:
             self.origMax = max
             self.oriMin = min
-        return super(PC_timeline, self).setRange( min, max)
+        return super(Timeline, self).setRange( min, max)
 
     def setCached(self,cached):
-        self.cachedFrmaes = cached
+        self.cachedFrames = cached
 
     def setMissing(self,missing):
         self.missingFrames = missing
@@ -64,7 +90,7 @@ class PC_timeline(QtWidgets.QSlider):
         qp.begin(self)
         self.drawWidget(qp)
         qp.end()        
-        super(PC_timeline, self).paintEvent(event)
+        super(Timeline, self).paintEvent(event)
 
     def drawWidget(self, qp):
         font = QtGui.QFont('Serif', 7, QtGui.QFont.Light)
@@ -91,21 +117,10 @@ class PC_timeline(QtWidgets.QSlider):
         for e,i in enumerate(range(0,pxNb, step)):
             pos = self.style().sliderPositionFromValue(self.minimum(),self.maximum(),r[e],self.width())
             half = int(h/2)
-            if r[e] in self.cachedFrmaes:
-                qp.setPen(QtGui.QColor(0, 255, 0))
-                qp.setBrush(QtGui.QColor(0, 255, 0))
-                qp.drawRect(pos-int(step/2),half+5, step, int(1.5))  
-                qp.setPen(pen)
-                qp.setBrush(QtCore.Qt.NoBrush)
-            elif r[e] in self.missingFrames:
-                qp.setPen(QtGui.QColor(255, 0, 0))
-                qp.setBrush(QtGui.QColor(255, 0, 0))
-                qp.drawRect(pos-int(step/2),half+5, step, int(1.5))  
-                qp.setPen(pen)
-                qp.setBrush(QtCore.Qt.NoBrush)                
             if (r[e]%5) == 0:
                 s = 4
                 text = r[e]
+                text = '2023-05-10'
                 fw = metrics.width(str(text))
                 qp.drawText(int((pos)-fw/2), int(h-fh/3), str(text))
             else:
@@ -126,11 +141,22 @@ class PC_timeline(QtWidgets.QSlider):
                     if val > self.maximum()-(self.maximum()/2):
                         fw += metrics.width(str(val))
                         fw *= -1
-                    pen2 = QtGui.QPen(QtGui.QColor(255,160,47,100), 2, QtCore.Qt.SolidLine)
+                    pen2 = QtGui.QPen(QtGui.QColor(255,0,0,100), 2, QtCore.Qt.SolidLine)
                     qp.setPen(pen2)
                     qp.drawLine(pos,0, pos,h)
                     qp.drawText((pos)+fw, 0+fh, str(val)) 
-        qp.setPen(pen)       
+        qp.setPen(pen)
+
+        for block in self.blocks:
+            vertical_pad = 5
+            style = get_style(block.block_type)
+            qp.setPen(style.get('color'))
+            qp.setBrush(style.get('color'))
+            pos = self.style().sliderPositionFromValue(self.minimum(),self.maximum(),block.start,self.width())
+            pos_end = self.style().sliderPositionFromValue(self.minimum(),self.maximum(),block.end,self.width())
+            qp.drawRect(pos, 0 + vertical_pad , (pos_end - pos), h - 2 * vertical_pad)
+        qp.setPen(pen)
+
     def mousePressEvent(self,event):
         if event.modifiers() == QtCore.Qt.AltModifier:
             self.PressPos = event.globalPos()
@@ -138,9 +164,10 @@ class PC_timeline(QtWidgets.QSlider):
         if event.button() == QtCore.Qt.LeftButton and event.modifiers() != QtCore.Qt.AltModifier:
             butts = QtCore.Qt.MouseButtons(QtCore.Qt.MidButton)
             nevent = QtGui.QMouseEvent(event.type(),QtCore.QPointF(event.pos()),QtCore.QPointF(event.globalPos()),QtCore.Qt.MidButton,butts,event.modifiers())
-            super(PC_timeline, self).mousePressEvent(nevent)
+            super(Timeline, self).mousePressEvent(nevent)
         elif event.modifiers() != QtCore.Qt.AltModifier:
-            super(PC_timeline, self).mousePressEvent(event)
+            super(Timeline, self).mousePressEvent(event)
+
     def wheelEvent(self,event):
         delta = int(event.pixelDelta().y() / 5)
         newMin = self.minimum() + delta
@@ -149,6 +176,7 @@ class PC_timeline(QtWidgets.QSlider):
             return
         self.setRange(newMin,newMax)
         self.repaint()
+
     def eventFilter(self, widget, event):
         if event.type() == QtCore.QEvent.MouseMove:
             self.hover = True
@@ -157,7 +185,7 @@ class PC_timeline(QtWidgets.QSlider):
         elif event.type() == QtCore.QEvent.Leave:
             self.hover = False
             self.repaint()
-        return super(PC_timeline, self).eventFilter( widget, event)
+        return super(Timeline, self).eventFilter( widget, event)
 
     def mouseMoveEvent(self, event):
         if event.modifiers() == QtCore.Qt.AltModifier:
@@ -172,7 +200,7 @@ class PC_timeline(QtWidgets.QSlider):
                     self.setRange(newMin,newMax)
                     self.repaint()
         else:
-            return super(PC_timeline, self).mouseMoveEvent( event)
+            return super(Timeline, self).mouseMoveEvent( event)
 
         
 class testWidg(QtWidgets.QWidget):
@@ -181,8 +209,12 @@ class testWidg(QtWidgets.QWidget):
         super(testWidg, self).__init__(parent)
              
         self.setLayout(QtWidgets.QVBoxLayout())
-        self.sld = PC_timeline(self)
+        self.sld = Timeline(self)
+        self.sld.add_block(TimelineBlock(3,8, 'OBS'))
+        self.sld.add_block(TimelineBlock(14, 16, 'OBS'))
+        self.sld.add_block(TimelineBlock(8, 14, 'SLEW'))
         self.layout().addWidget(self.sld)
+        self.setGeometry(0,0, 1000, 40)
 
 
         
@@ -191,7 +223,7 @@ def main():
     app = QtWidgets.QApplication(sys.argv)
 
     ex = testWidg(None)
-    ex.setStyle(QtWidgets.QStyleFactory.create("motif"))
+    # ex.setStyle(QtWidgets.QStyleFactory.create("motif"))
     ex.show()
     sys.exit(app.exec_())
 
