@@ -1,6 +1,7 @@
 
 from ui.design.block_panel import Ui_Form
-from PyQt5.QtWidgets import QDialog, QTableWidgetItem, QTableWidget
+from PyQt5.QtWidgets import QDialog, QTableWidgetItem, QTableWidget, QWidget, QVBoxLayout
+from ui.timeline.timeline import Timeline, TimelineBlock
 
 from utils.block_parser import BlockParser
 from actions.time_navigation import goto_date
@@ -23,6 +24,19 @@ class BlockTableWidgetItem(QTableWidgetItem):
     def doEdit(self):
         pass
 
+
+class TimelineWidget(QWidget):
+
+    def __init__(self,parent, callback):
+        super(TimelineWidget, self).__init__(parent)
+        self.setLayout(QVBoxLayout())
+        self.timeline = Timeline(self, callback)
+        self.layout().addWidget(self.timeline)
+
+
+    def add_block(self, block):
+        self.timeline.add_block(block)
+
 class BlocksDialog(QDialog):
 
     id = 'blocks_dialog_window_id'
@@ -37,6 +51,8 @@ class BlocksDialog(QDialog):
         self.ui = Ui_Form()
         self.ui.setupUi(self)
         
+        self.timeline = TimelineWidget(self, self.goto_date_timeline)
+
         try:
             with open(self.ptr_path, 'r') as ptr_file:
                 ptr_content = ptr_file.read()
@@ -54,6 +70,8 @@ class BlocksDialog(QDialog):
             row_number = 0
             for index, start_time in enumerate(parser.start_times):
                 if start_time:
+                    end_time = parser.end_times[index]
+                    self.timeline.add_block(TimelineBlock(start_time, end_time, 'OBS'))
                     duration_secs = duration(start_time, parser.end_times[index])
                     self.ui.tableWidget.insertRow(row_number)
                     self.ui.tableWidget.setItem(
@@ -72,8 +90,14 @@ class BlocksDialog(QDialog):
         except Exception as error:
             print(error)
 
+        self.ui.verticalLayout.addWidget(self.timeline)
+
+
     def edit_item(self, item):
         item.doEdit()
+
+    def goto_date_timeline(self, value):
+        goto_date(value)
 
     def show_block(self, item):
         self.show_block_index(item.row())

@@ -140,7 +140,7 @@ class Timeline(QtWidgets.QSlider):
        
         if self.hover:
             val = self.style().sliderValueFromPosition(self.minimum(),self.maximum(),self.hoverPos.x(),self.width())
-            if val != self.value():
+            if val != self.value() and self.epoch != None:
                     pos = self.style().sliderPositionFromValue(self.minimum(),self.maximum(),val,self.width())
                     fw = metrics.width("0")
                     if val > self.maximum()-(self.maximum()/2):
@@ -168,7 +168,6 @@ class Timeline(QtWidgets.QSlider):
 
         pos = self.style().sliderPositionFromValue(self.minimum(),self.maximum(), rel_start, self.width())
         pos_end = self.style().sliderPositionFromValue(self.minimum(),self.maximum(), rel_end, self.width())
-
         if pos != pos_end :
             if pos < pos_end:
                 qp.drawRect(pos, 0 + vertical_pad , (pos_end - pos), h - 2 * vertical_pad)
@@ -224,35 +223,3 @@ class Timeline(QtWidgets.QSlider):
                 self.repaint()
         else:
             return super(Timeline, self).mouseMoveEvent( event)
-
-        
-class testWidg(QtWidgets.QWidget):
-
-    def __init__(self,parent):
-        super(testWidg, self).__init__(parent)
-             
-        self.setLayout(QtWidgets.QVBoxLayout())
-        self.sld = Timeline(self, self.callback)
-        self.sld.add_block(TimelineBlock('2023-11-20T03:30:00', '2023-11-20T04:30:00', 'OBS'))
-        self.sld.add_block(TimelineBlock('2023-11-20T04:30:00', '2023-11-20T08:30:00', 'SLEW'))
-        self.sld.add_block(TimelineBlock('2023-11-20T08:30:00', '2023-11-20T09:30:00', 'OBS'))
-        self.sld.add_block(TimelineBlock('2023-11-20T09:30:00', '2023-11-20T10:30:00', 'OBS'))
-        self.layout().addWidget(self.sld)
-        self.setGeometry(0,0, 1000, 40)
-
-    def callback(self, value):
-        print(value)
-
-        
-def main():
-    
-    app = QtWidgets.QApplication(sys.argv)
-
-    ex = testWidg(None)
-    # ex.setStyle(QtWidgets.QStyleFactory.create("motif"))
-    ex.show()
-    sys.exit(app.exec_())
-
-
-if __name__ == '__main__':
-    main()
