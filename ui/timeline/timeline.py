@@ -1,10 +1,7 @@
-import sys
-
 import PyQt5.QtGui as QtGui
 import PyQt5.QtCore  as QtCore
 import PyQt5.QtWidgets as QtWidgets
 
-from dataclasses import dataclass
 import datetime
 
 def epoch_seconds(isoc):

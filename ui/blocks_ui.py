@@ -25,16 +25,6 @@ class BlockTableWidgetItem(QTableWidgetItem):
         pass
 
 
-class TimelineWidget(QWidget):
-
-    def __init__(self,parent, callback):
-        super(TimelineWidget, self).__init__(parent)
-
-
-
-    def add_block(self, block):
-        self.timeline.add_block(block)
-
 class BlocksDialog(QDialog):
 
     id = 'blocks_dialog_window_id'
