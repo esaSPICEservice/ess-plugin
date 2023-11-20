@@ -77,6 +77,9 @@ def simulate(meta_kernel, ptr_content, no_power, step=5):
                                          quaternions=False)
 
     root_scenario_path = os.path.dirname(session_file_path)
-    sim.execute(root_scenario_path, session_file_path)
+    status_code = sim.execute(root_scenario_path, session_file_path)
 
-    return create_cosmo_scene(root_scenario_path, meta_kernel), root_scenario_path
+    if status_code == 0:
+        return True, create_cosmo_scene(root_scenario_path, meta_kernel), root_scenario_path
+    else:
+        return False, os.path.join(root_scenario_path, 'output', 'log.json'), root_scenario_path

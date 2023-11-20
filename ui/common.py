@@ -42,7 +42,7 @@ def get_main_window():
     widgets = qApp.topLevelWidgets()
     for index, widget in enumerate(widgets):
         name = widget.objectName()
-        print(f'{index:03d}=> {widget_desc(widget)}')
+        # print(f'{index:03d}=> {widget_desc(widget)}')
         if name == 'mainWindow':
             return widget
     return None

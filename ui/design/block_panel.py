@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName("Form")
-        Form.resize(566, 435)
+        Form.resize(800, 280)
         Form.setStyleSheet("QPushButton {\n"
 "    background-color: #4CAF50;\n"
 "    color:white;\n"
@@ -40,7 +40,7 @@ class Ui_Form(object):
 "}\n"
 "\n"
 "QTableWidget {\n"
-"    font-size: 12pt;\n"
+"    font-size: 10pt;\n"
 "}\n"
 "\n"
 "QTableWidget::item {\n"
@@ -59,13 +59,27 @@ class Ui_Form(object):
 "    background: Grey;\n"
 "    border: 0px;\n"
 "}\n"
-"")
+"\n"
+"QTableView::item:selected {\n"
+"    background-color: rgb(242, 128, 133);\n"
+"}")
         self.verticalLayout = QtWidgets.QVBoxLayout(Form)
         self.verticalLayout.setObjectName("verticalLayout")
         self.label = QtWidgets.QLabel(Form)
         self.label.setObjectName("label")
         self.verticalLayout.addWidget(self.label)
+        self.timelineWidget = QtWidgets.QWidget(Form)
+        self.timelineWidget.setObjectName("timelineWidget")
+        self.verticalLayout.addWidget(self.timelineWidget)
+        self.horizontalLayout = QtWidgets.QHBoxLayout()
+        self.horizontalLayout.setObjectName("horizontalLayout")
         self.tableWidget = QtWidgets.QTableWidget(Form)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(3)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.tableWidget.sizePolicy().hasHeightForWidth())
+        self.tableWidget.setSizePolicy(sizePolicy)
+        self.tableWidget.setSelectionBehavior(QtWidgets.QAbstractItemView.SelectRows)
         self.tableWidget.setObjectName("tableWidget")
         self.tableWidget.setColumnCount(3)
         self.tableWidget.setRowCount(0)
@@ -75,12 +89,26 @@ class Ui_Form(object):
         self.tableWidget.setHorizontalHeaderItem(1, item)
         item = QtWidgets.QTableWidgetItem()
         self.tableWidget.setHorizontalHeaderItem(2, item)
-        self.tableWidget.horizontalHeader().setDefaultSectionSize(170)
-        self.verticalLayout.addWidget(self.tableWidget)
+        self.tableWidget.horizontalHeader().setVisible(True)
+        self.tableWidget.horizontalHeader().setDefaultSectionSize(148)
+        self.tableWidget.horizontalHeader().setStretchLastSection(True)
+        self.tableWidget.verticalHeader().setVisible(False)
+        self.horizontalLayout.addWidget(self.tableWidget)
         self.blockTextEdit = QtWidgets.QPlainTextEdit(Form)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(2)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.blockTextEdit.sizePolicy().hasHeightForWidth())
+        self.blockTextEdit.setSizePolicy(sizePolicy)
+        self.blockTextEdit.setStyleSheet(".QPlainTextEdit {\n"
+"    font: 10pt \"PT Mono\";\n"
+"}")
+        self.blockTextEdit.setFrameShadow(QtWidgets.QFrame.Plain)
+        self.blockTextEdit.setLineWidth(0)
         self.blockTextEdit.setReadOnly(True)
         self.blockTextEdit.setObjectName("blockTextEdit")
-        self.verticalLayout.addWidget(self.blockTextEdit)
+        self.horizontalLayout.addWidget(self.blockTextEdit)
+        self.verticalLayout.addLayout(self.horizontalLayout)
 
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
@@ -88,7 +116,8 @@ class Ui_Form(object):
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "Block Resume"))
-        self.label.setText(_translate("Form", "Blocks"))
+        self.label.setText(_translate("Form", "Timeline"))
+        self.tableWidget.setSortingEnabled(True)
         item = self.tableWidget.horizontalHeaderItem(0)
         item.setText(_translate("Form", "Start"))
         item = self.tableWidget.horizontalHeaderItem(1)

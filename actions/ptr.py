@@ -4,20 +4,34 @@ import cosmoscripting
 from simulator.wrapper import simulate
 from ui.blocks_ui import BlocksDialog
 from utils.block_parser import BlockParser
+import json
+
+from PyQt5.QtWidgets import QMessageBox
 
 from ui.common import get_main_window, ActionSpec, add_menu, MenuSpec
 from ui.moons_ui import MoonsDialog
 from ui.rings_ui import RingsDialog
 from ui.power_ui import PowerDialog
 
+def dump_error(log_path):
+    with open(log_path, 'r') as log_file:
+            log_json = json.load(log_file)
+    errors =  list(filter(lambda entry: entry.get('severity', 'INFO') == 'ERROR', log_json))
+    raise ValueError(json.dumps(errors, indent=2))
+
+
 def execute_ptr(mk, content, calculate_power):
     start_time = validate_ptr(content)
     cosmo = cosmoscripting.Cosmo()
     cosmo.unloadLastCatalog()
-    catalog, root_scenario = simulate(mk, content, not calculate_power)
-    cosmo.loadCatalogFile(catalog)
-    after_load(root_scenario)
-    goto_date(start_time + ' UTC')
+    success, catalog, root_scenario = simulate(mk, content, not calculate_power)
+    if success:
+        cosmo.loadCatalogFile(catalog)
+        after_load(root_scenario)
+        goto_date(start_time + ' UTC')
+    else:
+        dump_error(catalog)
+
 
 
 def validate_ptr(content):

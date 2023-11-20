@@ -29,9 +29,7 @@ class TimelineWidget(QWidget):
 
     def __init__(self,parent, callback):
         super(TimelineWidget, self).__init__(parent)
-        self.setLayout(QVBoxLayout())
-        self.timeline = Timeline(self, callback)
-        self.layout().addWidget(self.timeline)
+
 
 
     def add_block(self, block):
@@ -50,8 +48,10 @@ class BlocksDialog(QDialog):
         self.setObjectName(BlocksDialog.id)
         self.ui = Ui_Form()
         self.ui.setupUi(self)
-        
-        self.timeline = TimelineWidget(self, self.goto_date_timeline)
+        timelineLayout = QVBoxLayout()
+        self.ui.timelineWidget.setLayout(timelineLayout)
+        self.timeline = Timeline(self, self.goto_date_timeline)
+        timelineLayout.addWidget(self.timeline)
 
         try:
             with open(self.ptr_path, 'r') as ptr_file:
@@ -90,7 +90,6 @@ class BlocksDialog(QDialog):
         except Exception as error:
             print(error)
 
-        self.ui.verticalLayout.addWidget(self.timeline)
 
 
     def edit_item(self, item):

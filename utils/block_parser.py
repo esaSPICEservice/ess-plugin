@@ -5,8 +5,8 @@ from xml.dom import minidom
 
 class BlockParser:
 
-    def __init__(self, xml_content):
-
+    def __init__(self, xml_content, strict_bounds=False):
+        self.strict_bounds = strict_bounds
         try:
             self.root = ET.fromstring(xml_content)
         except Exception as e:
@@ -39,7 +39,10 @@ class BlockParser:
     def get_unique_path(self, element, path):
         st_candidates = element.findall(path)
         if len(st_candidates) == 0:
-            raise ValueError("The xml does not contain the path " + path)
+            if self.strict_bounds:
+                raise ValueError("The xml does not contain the path " + path)
+            else:
+                return ''
         elif len(st_candidates) > 1:
             raise ValueError("The xml contains several values for the path " + path)
         else:
