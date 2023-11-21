@@ -1,9 +1,6 @@
 import json
 import os
 import shutil
-from datetime import datetime
-
-TIMESTAMP_FORMAT = '%Y%m%dT%H%M%S%f'
 
 def create_structure(parent_path, metakernel_path='input_mk.tm', ptr_content='input_ptr.ptx', step=5, no_power=False,
                      quaternions=False):
@@ -223,5 +220,3 @@ def remove_directory_if_empty(directory_path):
         print(f"Directory '{directory_path}' is not empty. Skipping removal.")
 
 
-def timestamp():
-    return datetime.now().strftime(TIMESTAMP_FORMAT)

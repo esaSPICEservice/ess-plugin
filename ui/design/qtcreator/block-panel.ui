@@ -60,7 +60,7 @@ QTableCornerButton::section {
 }
 
 QTableView::item:selected {
-    background-color: rgb(242, 128, 133);
+    background-color: rgb(223, 235, 244)
 }</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">

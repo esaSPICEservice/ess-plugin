@@ -101,11 +101,3 @@ class PTREditorDialog(QDialog):
     def show_and_focus(self):
         self.hide()
         self.show()
-
-
-def create_ui():
-    main_window = get_main_window()
-    main_window.setWindowOpacity(0.9)
-
-    bd = PTREditorDialog(main_window)
-    add_menu(main_window, MenuSpec('Simulator', [ActionSpec('PTR request', 'Execute OSVE', 'Alt+P', bd.show_and_focus)]))

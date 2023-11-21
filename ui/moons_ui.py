@@ -17,7 +17,7 @@ class MoonsDialog(QDialog):
         self.ui = Ui_Form()
         self.ui.setupUi(self)
         self.tabSelector = TabbedSelector(self, get_moons(), toggle_moon)
-        self.ui.label.setText('Jupiter Rings and Moon Torus')
+        self.ui.label.setText('Jupiter Moons')
         self.ui.verticalLayout.addWidget(self.tabSelector)
         self.ui.verticalLayout.addItem(QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding))
 

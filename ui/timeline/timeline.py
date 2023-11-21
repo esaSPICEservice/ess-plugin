@@ -3,6 +3,7 @@ import PyQt5.QtCore  as QtCore
 import PyQt5.QtWidgets as QtWidgets
 
 import datetime
+import math
 
 def epoch_seconds(isoc):
     epoch = datetime.datetime.fromisoformat(isoc)
@@ -31,7 +32,7 @@ QSlider::handle:horizontal {
 
 block_type_style_map = {
     'OBS': {
-        'color': QtGui.QColor(255, 0, 0, 30)
+        'color': QtGui.QColor(0, 0, 255, 35)
     },
     'SLEW': {
         'color': QtGui.QColor(128, 128, 0, 30)
@@ -81,7 +82,7 @@ class Timeline(QtWidgets.QSlider):
         self.setStyleSheet(styleSheet)
         self.setMouseTracking(True)
         self.setPageStep(1)
-        self.setMinimumSize(800, 40)
+        self.setMinimumSize(800, 50)
         self.installEventFilter(self)
         self.epoch = None
         self.max_epoch = None
@@ -118,6 +119,15 @@ class Timeline(QtWidgets.QSlider):
     def get_slider_value(self, x_pos):
         return self.style().sliderValueFromPosition(self.minimum(),self.maximum(), x_pos ,self.width())
 
+    def get_major_ticks(self):
+        scale = 3600
+        major_ticks = []
+        mark = math.ceil(self.minimum() / scale) * scale
+        while mark < self.maximum():
+            major_ticks.append(mark)
+            mark += scale
+        return major_ticks
+
     def drawWidget(self, qp):
 
         qp.setFont(self.default_font)
@@ -133,13 +143,22 @@ class Timeline(QtWidgets.QSlider):
         qp.drawRect(0, 0, w-50, h-50)
         
         metrics = qp.fontMetrics()
-        fh = metrics.height()      
+        fh = metrics.height()
+        fw = metrics.width("0")
+
+        for tick in self.get_major_ticks():
+            pos = self.style().sliderPositionFromValue(self.minimum(),self.maximum(),tick,self.width())
+            pen2 = QtGui.QPen(QtGui.QColor(128,128,128,255), 2, QtCore.Qt.SolidLine)
+            qp.setPen(pen2)
+            qp.drawLine(pos,h - fh, pos, h)
+            date_value = datetime.datetime.fromtimestamp(self.epoch + tick).isoformat()[:19]
+            qp.drawText((pos)+fw, h - 3, str(date_value)) 
+
        
         if self.hover:
             val = self.style().sliderValueFromPosition(self.minimum(),self.maximum(),self.hoverPos.x(),self.width())
             if val != self.value() and self.epoch != None:
                     pos = self.style().sliderPositionFromValue(self.minimum(),self.maximum(),val,self.width())
-                    fw = metrics.width("0")
                     if val > self.maximum()-(self.maximum()/2):
                         fw += metrics.width(str(val))
                         fw *= -1
@@ -156,7 +175,7 @@ class Timeline(QtWidgets.QSlider):
 
 
     def drawBlock(self, qp, h, block):
-        vertical_pad = 8
+        vertical_pad = 14
         style = get_style(block.block_type)
         qp.setPen(style.get('color'))
         qp.setBrush(style.get('color'))

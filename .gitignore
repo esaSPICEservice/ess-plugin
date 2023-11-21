@@ -4,3 +4,6 @@ launcher.sh
 **/20*/**
 
 **.autosave
+test_*.py
+
+tmp/

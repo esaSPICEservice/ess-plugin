@@ -40,7 +40,7 @@ class Ui_Form(object):
 "}\n"
 "\n"
 "QTabWidget::pane { /* The tab widget frame */\n"
-"    border-top: 2px solid #C2C7CB;\n"
+"    border-top: 2px solid #FFFFFF;\n"
 "    position: absolute;\n"
 "    top: -0.5em;\n"
 "}\n"

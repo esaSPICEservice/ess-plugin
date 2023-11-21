@@ -61,7 +61,7 @@ class Ui_Form(object):
 "}\n"
 "\n"
 "QTableView::item:selected {\n"
-"    background-color: rgb(242, 128, 133);\n"
+"    background-color: rgb(223, 235, 244)\n"
 "}")
         self.verticalLayout = QtWidgets.QVBoxLayout(Form)
         self.verticalLayout.setObjectName("verticalLayout")
