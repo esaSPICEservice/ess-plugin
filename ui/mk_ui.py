@@ -1,5 +1,6 @@
 
 from PyQt5.QtWidgets import qApp, QMenuBar, QAction, QFileDialog, QDialog, QMessageBox, QVBoxLayout
+from PyQt5.QtCore import Qt
 from ui.design.mk_loader import Ui_mkLoaderWidget
 from actions.mkloader import execute
 import os
@@ -34,7 +35,8 @@ class MkLoaderDialog(QDialog):
                 QMessageBox.warning(self, 'Add extra kernel',
                                     f'Kernel file not valid {extra}' )
     def visualize(self):
-        date = '2031-09-07T12:00:00 UTC'
+        date = self.mk_loader.dateTimeEdit.dateTime().toUTC().toString(Qt.ISODate)
+        print(date)
         mk = self.mk_loader.mkInput.text()
         lw = self.mk_loader.extraList
         extra_kernels = [lw.item(x).text() for x in range(lw.count())]
