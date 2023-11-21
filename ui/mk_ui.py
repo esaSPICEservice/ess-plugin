@@ -50,14 +50,14 @@ class MkLoaderDialog(QDialog):
             self, "Select Metarkernel", None, "Metakernel files (*.tm *.mk)")
         if file_name:
             self.mk_loader.mkInput.setText(file_name)
-            self.show_and_focus()
+        self.show_and_focus()
 
     def browse_extra(self):
         file_name, _ = QFileDialog.getOpenFileName(
             self, "Select Extra Kernel", None, "Kernel files (*.*)")
         if file_name:
             self.mk_loader.extraInput.setText(file_name)
-            self.show_and_focus()
+        self.show_and_focus()
 
 
     def show_and_focus(self):

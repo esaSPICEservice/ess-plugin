@@ -3,7 +3,7 @@ import os
 import cosmoscripting
 
 
-TEMPLATE_FOLDER = os.path.join(os.path.dirname(__file__), '..', 'simulator', 'config', 'cosmo')
+TEMPLATE_FOLDER = os.path.join(os.path.dirname(__file__), '..', 'scenes', 'data', 'juice')
 
 def get_moons():
 
