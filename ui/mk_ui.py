@@ -22,8 +22,6 @@ class MkLoaderDialog(QDialog):
         self.mk_loader.mkButton.clicked.connect(self.browse_mk)
         self.mk_loader.extraAddButton.clicked.connect(self.add_kernel)
         self.mk_loader.extraBrowseButton.clicked.connect(self.browse_extra)
-        self.mk_loader.mkInput.setText('/Users/randres/juice_repo/juice_crema_5_1_150lb_23_1_v435_20230918_001.tm')
-        
 
     def add_kernel(self):
         extra = self.mk_loader.extraInput.text()

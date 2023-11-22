@@ -47,6 +47,14 @@ def get_main_window():
             return widget
     return None
 
+def remove_menu(main_window, search_menu_id: str):
+    main_menu = main_window.findChildren(QMenuBar)[0]
+    menu = main_menu.findChild(QMenu, search_menu_id)
+    if menu:
+        menu.clear()
+        menu.deleteLater()
+
+
 def add_menu(main_window, menu_spec: MenuSpec):
     main_menu = main_window.findChildren(QMenuBar)[0]
     

@@ -16,7 +16,6 @@ create_ui()
 #
 
 cosmo.showInfoText()
-cosmo.setWindowResolution('xga')
 #
 # Load the catalog
 #

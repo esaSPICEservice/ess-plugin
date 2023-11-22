@@ -21,8 +21,6 @@ class PTREditorDialog(QDialog):
         self.ptr_editor.saveButton.clicked.connect(self.save_ptr)
         self.ptr_editor.cleanButton.clicked.connect(self.clean_ptr)
 
-        self.ptr_editor.mkInput.setText('/Users/randres/juice_repo/juice_crema_5_1_150lb_23_1_v435_20230918_001.tm')
-
 
     def visualize(self):
         ptr_content =  self.ptr_editor.ptrEditor.toPlainText()
