@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Block Resume</string>
+   <string>Timeline</string>
   </property>
   <property name="styleSheet">
    <string notr="true">QPushButton {

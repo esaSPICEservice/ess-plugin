@@ -1,6 +1,7 @@
 import json
 from dataclasses import dataclass
 
+SENSOR_SUFFIX =  '_SENSOR'
 class Generator:
 
     def content(self):
@@ -26,7 +27,7 @@ class SensorGenerator(Generator):
         self.version = '1.0'
         self.name = 'ESS-Plugin generated'
 
-        name = sensor.instr_name + '_' + sensor.target.upper()
+        name = sensor.instr_name + SENSOR_SUFFIX
         body = spacecraft
 
         self.items = [{

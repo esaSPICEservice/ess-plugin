@@ -136,7 +136,7 @@ QLabel {
     </layout>
    </item>
    <item>
-    <widget class="QTextEdit" name="ptrEditor"/>
+    <widget class="QPlainTextEdit" name="ptrEditor"/>
    </item>
    <item>
     <layout class="QHBoxLayout" name="horizontalLayout_3">

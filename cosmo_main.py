@@ -16,6 +16,7 @@ create_ui()
 #
 
 cosmo.showInfoText()
+
 #
 # Load the catalog
 #

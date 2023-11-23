@@ -85,7 +85,7 @@ class Ui_ptrEditorWidget(object):
         spacerItem = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
         self.horizontalLayout_2.addItem(spacerItem)
         self.verticalLayout.addLayout(self.horizontalLayout_2)
-        self.ptrEditor = QtWidgets.QTextEdit(ptrEditorWidget)
+        self.ptrEditor = QtWidgets.QPlainTextEdit(ptrEditorWidget)
         self.ptrEditor.setObjectName("ptrEditor")
         self.verticalLayout.addWidget(self.ptrEditor)
         self.horizontalLayout_3 = QtWidgets.QHBoxLayout()

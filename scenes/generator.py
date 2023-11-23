@@ -1,5 +1,6 @@
 import os
 import json
+from actions.sensors import get_sensor_list
 from utils.generators import Sensor, SensorGenerator
 
 from datetime import datetime
@@ -39,7 +40,7 @@ def create_cosmo_scene(parent_path, metakernel, extra):
 
     sensor_folder = os.path.join(parent_path, 'sensors')
     os.makedirs(sensor_folder)
-    for instrument in ['JUICE_JANUS']:
+    for instrument in get_sensor_list():
         scene_json.get('require').append(generate_sensor(instrument, sensor_folder))
 
     scene_file_path = os.path.abspath(os.path.join(parent_path, "scene.json"))

@@ -5,6 +5,7 @@ from ui.timeline.timeline import Timeline, TimelineBlock
 
 from utils.block_parser import BlockParser
 from actions.time_navigation import goto_date
+from actions.time_navigation import spacecraft_view
 from utils.time import duration
 
 class DateTableWidgetItem(QTableWidgetItem):

@@ -1,12 +1,12 @@
 
-from ui.common import get_main_window, MenuSpec, ActionSpec, add_menu
+from ui.common import get_main_window, MenuSpec, ActionSpec, add_menu, set_settings_handler
 from ui.mk_ui import MkLoaderDialog
 from ui.simulator_ui import PTREditorDialog
 
-
 def create_ui():
+    set_settings_handler()
+
     main_window = get_main_window()
-    main_window.setWindowOpacity(0.9)
 
     bd = PTREditorDialog(main_window)
     mk = MkLoaderDialog(main_window)

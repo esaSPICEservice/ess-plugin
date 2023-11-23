@@ -1,10 +1,12 @@
 
-from PyQt5.QtWidgets import qApp, QMenuBar, QAction, QFileDialog, QDialog, QMessageBox, QVBoxLayout
+from PyQt5.QtWidgets import QFileDialog, QDialog, QMessageBox
 from PyQt5.QtCore import Qt
+from ui.common import get_settings_handler
 from ui.design.mk_loader import Ui_mkLoaderWidget
 from actions.mkloader import execute
 import os
 
+from settings.handler import last_repo_key, last_kernel_key
 
 class MkLoaderDialog(QDialog):
 
@@ -12,6 +14,7 @@ class MkLoaderDialog(QDialog):
 
     def __init__(self, main_window):
         QDialog.__init__(self, main_window)
+        self.settings_hdl = get_settings_handler()
         self.init_ui()
 
     def init_ui(self):
@@ -22,6 +25,9 @@ class MkLoaderDialog(QDialog):
         self.mk_loader.mkButton.clicked.connect(self.browse_mk)
         self.mk_loader.extraAddButton.clicked.connect(self.add_kernel)
         self.mk_loader.extraBrowseButton.clicked.connect(self.browse_extra)
+
+        mk = self.settings_hdl.settings.get(last_kernel_key, '')
+        self.mk_loader.mkInput.setText(mk)
 
     def add_kernel(self):
         extra = self.mk_loader.extraInput.text()
@@ -34,8 +40,16 @@ class MkLoaderDialog(QDialog):
                                     f'Kernel file not valid {extra}' )
     def visualize(self):
         date = self.mk_loader.dateTimeEdit.dateTime().toUTC().toString(Qt.ISODate)
-        print(date)
         mk = self.mk_loader.mkInput.text()
+
+        if not date or not mk or not os.path.exists(mk):
+            QMessageBox.warning(self, 'PTR editor', f'Date and metakernel are mandatory')
+            return
+
+        self.settings_hdl.settings[last_repo_key] = os.path.dirname(mk)
+        self.settings_hdl.settings[last_kernel_key] = mk
+        self.settings_hdl.save()
+
         lw = self.mk_loader.extraList
         extra_kernels = [lw.item(x).text() for x in range(lw.count())]
         try:
@@ -46,15 +60,17 @@ class MkLoaderDialog(QDialog):
                                 f'PTR not valid {error}' )
 
     def browse_mk(self):
+        default_folder = self.settings_hdl.settings.get(last_repo_key, '')
         file_name, _ = QFileDialog.getOpenFileName(
-            self, "Select Metarkernel", None, "Metakernel files (*.tm *.mk)")
+            self, "Select Metarkernel", default_folder, "Metakernel files (*.tm *.mk)")
         if file_name:
             self.mk_loader.mkInput.setText(file_name)
         self.show_and_focus()
 
     def browse_extra(self):
+        default_folder = self.settings_hdl.settings.get(last_repo_key, '')
         file_name, _ = QFileDialog.getOpenFileName(
-            self, "Select Extra Kernel", None, "Kernel files (*.*)")
+            self, "Select Extra Kernel", default_folder, "Kernel files (*.*)")
         if file_name:
             self.mk_loader.extraInput.setText(file_name)
         self.show_and_focus()

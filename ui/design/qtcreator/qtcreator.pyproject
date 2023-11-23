@@ -1,3 +1,3 @@
 {
-    "files": ["block-panel.ui","moons-panel.ui","power-panel.ui","ptr-editor.ui","icons.qrc","mk-loader.ui"]
+    "files": ["block-panel.ui","moons-panel.ui","ptr-editor.ui","power-panel.ui","mk-loader.ui","icons.qrc","navigator-panel.ui"]
 }

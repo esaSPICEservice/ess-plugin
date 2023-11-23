@@ -4,6 +4,8 @@ from PyQt5.QtGui import QIcon
 import time
 from dataclasses import dataclass
 
+from settings.handler import SettingsHandler
+
 WINDOW_TYPES = [
     'Qt.Widget', 
 'Qt.Window', 
@@ -111,3 +113,12 @@ def to_str(object):
         return f' QAction > {object.text()}'
     return str(object) 
 
+def get_settings_handler():
+    main_window = get_main_window()
+    if not hasattr(main_window, 'settings_handler'):
+        set_settings_handler()
+    return main_window.settings_handler
+
+def set_settings_handler():
+    main_window = get_main_window()
+    main_window.__setattr__('settings_handler', SettingsHandler())

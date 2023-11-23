@@ -1,8 +1,10 @@
 import os
+from actions.common import add_juice_menu
 from actions.time_navigation import goto_date
 import cosmoscripting
 from simulator.wrapper import simulate
 from ui.blocks_ui import BlocksDialog
+from ui.navigation_ui import NavigationDialog
 from utils.block_parser import BlockParser
 import json
 
@@ -41,9 +43,6 @@ def validate_ptr(content):
 
 def after_load(root_scenario):
     main_window = get_main_window()
-    jm = MoonsDialog(main_window)
-    rd = RingsDialog(main_window)
-
 
     resolved_ptr = os.path.join(root_scenario, 'output', 'ptr_resolved.ptx')
     power_file  = os.path.join(root_scenario, 'output', 'power.csv')
@@ -63,11 +62,8 @@ def after_load(root_scenario):
         )
 
     add_menu(main_window, MenuSpec('Pointing', menu))
-             
-    add_menu(main_window, MenuSpec(
-        'Jupiter structures', 
-        [
-            ActionSpec('Jovian Moons', 'Control Jovian Moons', '', jm.show_and_focus),
-            ActionSpec('Rings and Torus', 'Control Rings and Torus', '', rd.show_and_focus)
-         ]
-        ))
+
+    add_juice_menu()
+
+
+

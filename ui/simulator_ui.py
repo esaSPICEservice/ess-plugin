@@ -1,14 +1,18 @@
-from ui.common import get_main_window, add_menu, MenuSpec, ActionSpec
+from ui.common import get_settings_handler
 
-from PyQt5.QtWidgets import qApp, QMenuBar, QAction, QFileDialog, QDialog, QMessageBox, QVBoxLayout
+from PyQt5.QtWidgets import  QFileDialog, QDialog, QMessageBox
 from ui.design.ptr_editor import Ui_ptrEditorWidget
 from actions.ptr import execute_ptr, validate_ptr
+from settings.handler import last_repo_key, last_kernel_key
+
+import os
 class PTREditorDialog(QDialog):
 
     id = 'ptr_editor_dialog_window_id'
 
     def __init__(self, main_window):
         QDialog.__init__(self, main_window)
+        self.settings_hdl = get_settings_handler()
         self.init_ui()
 
     def init_ui(self):
@@ -21,10 +25,20 @@ class PTREditorDialog(QDialog):
         self.ptr_editor.saveButton.clicked.connect(self.save_ptr)
         self.ptr_editor.cleanButton.clicked.connect(self.clean_ptr)
 
+        mk = self.settings_hdl.settings.get(last_kernel_key, '')
+        self.ptr_editor.mkInput.setText(mk)
 
     def visualize(self):
         ptr_content =  self.ptr_editor.ptrEditor.toPlainText()
         mk = self.ptr_editor.mkInput.text()
+        if not ptr_content or not mk or not os.path.exists(mk):
+            QMessageBox.warning(self, 'PTR editor', f'PTR and metakernel are mandatory')
+            return
+
+        self.settings_hdl.settings[last_repo_key] = os.path.dirname(mk)
+        self.settings_hdl.settings[last_kernel_key] = mk
+        self.settings_hdl.save()
+
         calculate_power = self.ptr_editor.powerCheck.isChecked()
         try:
             execute_ptr(mk, ptr_content, calculate_power)
@@ -34,8 +48,9 @@ class PTREditorDialog(QDialog):
                                 f'PTR not valid {error}' )
 
     def browse_mk(self):
+        default_folder = self.settings_hdl.settings.get(last_repo_key, '')
         file_name, _ = QFileDialog.getOpenFileName(
-            self, "Open Metarkernel", None, "Metakernel files (*.tm *.mk)")
+            self, "Open Metarkernel", default_folder, "Metakernel files (*.tm *.mk)")
         if file_name:
             self.ptr_editor.mkInput.setText(file_name)
             self.show_and_focus()

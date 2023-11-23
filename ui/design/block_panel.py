@@ -115,7 +115,7 @@ class Ui_Form(object):
 
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
-        Form.setWindowTitle(_translate("Form", "Block Resume"))
+        Form.setWindowTitle(_translate("Form", "Timeline"))
         self.label.setText(_translate("Form", "Timeline"))
         self.tableWidget.setSortingEnabled(True)
         item = self.tableWidget.horizontalHeaderItem(0)

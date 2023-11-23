@@ -1,3 +1,4 @@
+from actions.common import add_juice_menu
 import cosmoscripting
 from scenes.generator import create_cosmo_scene, generate_working_dir
 from actions.time_navigation import goto_date
@@ -21,13 +22,5 @@ def execute(mk, extra_kernels, date):
 
 def after_load():
     main_window = get_main_window()
-    jm = MoonsDialog(main_window)
-    rd = RingsDialog(main_window)
-    add_menu(main_window, MenuSpec(
-        'Jupiter structures', 
-        [
-            ActionSpec('Jovian Moons', 'Control Jovian Moons', '', jm.show_and_focus),
-            ActionSpec('Rings and Torus', 'Control Rings and Torus', '', rd.show_and_focus)
-         ]
-        ))
+    add_juice_menu()
     remove_menu(main_window, 'Pointing')
