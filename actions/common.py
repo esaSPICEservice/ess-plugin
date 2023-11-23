@@ -20,5 +20,5 @@ def add_juice_menu():
     nv = NavigationDialog(main_window)
     add_menu(main_window, MenuSpec('Navigation', 
                                    [
-                                       ActionSpec('Sensors', 'Fine Control', 'Alt+P', nv.show_and_focus)
+                                       ActionSpec('Sensors', 'Sensors', '', nv.show_and_focus)
                                     ]))

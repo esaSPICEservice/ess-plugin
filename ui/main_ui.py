@@ -12,7 +12,7 @@ def create_ui():
     mk = MkLoaderDialog(main_window)
     add_menu(main_window, MenuSpec('Scenes', 
                                    [
-                                       ActionSpec('Metakernel Load', 'Execute OSVE', 'Alt+P', mk.show_and_focus),
-                                       ActionSpec('PTR simulation', 'Execute OSVE', 'Alt+P', bd.show_and_focus)
+                                       ActionSpec('Metakernel Load', 'Build a basic scene', '', mk.show_and_focus),
+                                       ActionSpec('PTR simulation', 'Execute OSVE', '', bd.show_and_focus)
                                     ]))
 
