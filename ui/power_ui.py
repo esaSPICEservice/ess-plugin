@@ -19,16 +19,24 @@ class LineChartPanel(Viewer):
         table.add_column('Act')
         table.add_column('Ref')
         try:
+            vmax = None
+            vmin = None
             with open(self.power_file_path, 'r') as power_file:
                 reader = csv.reader(filter(lambda row: row[0]!='#', power_file))
                 for index, row in enumerate(reader):
                     actual = float(row[1])
                     ck = float(row[2])
                     table.add_row([index, actual, ck])
+                    vmax = max(actual, ck) if vmax is None else max(actual, ck, vmax)
+                    vmin = min(actual, ck) if vmin is None else min(actual, ck, vmin)
+
             chart = LineChart(table)
             chart.set_horizontal_axis_column(0)
             chart.haxis_title = 'Time'
             chart.haxis_step = int(index / 5)
+            chart.vaxis_step = int ((vmax - vmin) / 5)
+            chart.vaxis_vmin = vmin - chart.vaxis_step 
+            chart.vaxis_vmax = vmax + chart.vaxis_step 
             self.set_graph(chart)
         except Exception as error:
             print(error)

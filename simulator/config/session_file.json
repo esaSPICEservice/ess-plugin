@@ -38,6 +38,8 @@
         {
             "baselineRelPath":"output",
             "ckAttitudeFilePath":"juice_sc_ptr.bc",
+            "ckSaFilePath": "juice_sa_ptr.bc",
+            "ckMgaFilePath": "juice_mga_ptr.bc",
             "ckConfig":
             {
                 "ckFrameId":  -28001,
@@ -45,6 +47,8 @@
             },
             "attitudeXmlPtr": "ptr_resolved.ptx",
             "txtAttitudeFilePath": "quaternions.csv",
+            "saDataFilePath": "juice_sa_ptr.csv",
+            "mgaDataFilePath": "juice_mga_ptr.csv",
             "powerFilePath": "power.csv",
             "powerConfig": {
                 "powerTimeStep": 30

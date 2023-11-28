@@ -82,6 +82,12 @@ class Ui_ptrEditorWidget(object):
         self.powerCheck = QtWidgets.QCheckBox(ptrEditorWidget)
         self.powerCheck.setObjectName("powerCheck")
         self.horizontalLayout_2.addWidget(self.powerCheck)
+        self.saCheck = QtWidgets.QCheckBox(ptrEditorWidget)
+        self.saCheck.setObjectName("saCheck")
+        self.horizontalLayout_2.addWidget(self.saCheck)
+        self.mgaCheck = QtWidgets.QCheckBox(ptrEditorWidget)
+        self.mgaCheck.setObjectName("mgaCheck")
+        self.horizontalLayout_2.addWidget(self.mgaCheck)
         spacerItem = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
         self.horizontalLayout_2.addItem(spacerItem)
         self.verticalLayout.addLayout(self.horizontalLayout_2)
@@ -112,6 +118,9 @@ class Ui_ptrEditorWidget(object):
         self.openButton.setText(_translate("ptrEditorWidget", "..."))
         self.saveButton.setText(_translate("ptrEditorWidget", "..."))
         self.cleanButton.setText(_translate("ptrEditorWidget", "..."))
-        self.powerCheck.setText(_translate("ptrEditorWidget", "Calculate Power"))
+        self.powerCheck.setText(_translate("ptrEditorWidget", "Power"))
+        self.saCheck.setText(_translate("ptrEditorWidget", "SA"))
+        self.mgaCheck.setText(_translate("ptrEditorWidget", "MGA"))
         self.visualizeButton.setText(_translate("ptrEditorWidget", "Visualize"))
+
 from . import icons_rc

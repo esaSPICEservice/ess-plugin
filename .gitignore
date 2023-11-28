@@ -7,3 +7,5 @@ launcher.sh
 test_*.py
 
 tmp/
+
+.vscode/

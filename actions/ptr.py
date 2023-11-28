@@ -22,11 +22,13 @@ def dump_error(log_path):
     raise ValueError(json.dumps(errors, indent=2))
 
 
-def execute_ptr(mk, content, calculate_power):
+def execute_ptr(mk, content, calculate_power, calculate_sa, calculate_mga):
     start_time = validate_ptr(content)
     cosmo = cosmoscripting.Cosmo()
     cosmo.unloadLastCatalog()
-    success, catalog, root_scenario = simulate(mk, content, not calculate_power)
+    success, catalog, root_scenario = simulate(
+        mk, content, 
+        not calculate_power, not calculate_sa, not calculate_mga)
     if success:
         cosmo.loadCatalogFile(catalog)
         after_load(root_scenario)

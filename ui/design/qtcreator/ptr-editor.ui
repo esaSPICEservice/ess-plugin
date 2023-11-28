@@ -116,7 +116,21 @@ QLabel {
      <item>
       <widget class="QCheckBox" name="powerCheck">
        <property name="text">
-        <string>Calculate Power</string>
+        <string>Power</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="saCheck">
+       <property name="text">
+        <string>SA</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="mgaCheck">
+       <property name="text">
+        <string>MGA</string>
        </property>
       </widget>
      </item>

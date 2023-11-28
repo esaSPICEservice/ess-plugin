@@ -3,7 +3,7 @@ import os
 import shutil
 
 def create_structure(parent_path, metakernel_path='input_mk.tm', ptr_content='input_ptr.ptx', step=5, no_power=False,
-                     quaternions=False):
+                    no_sa=False, no_mga=False, quaternions=False):
     """
     Creates the structure and contents for an OSVE session folder
 
@@ -150,6 +150,14 @@ def create_structure(parent_path, metakernel_path='input_mk.tm', ptr_content='in
     if no_power:
         del session_json['sessionConfiguration']['outputFiles']['powerFilePath']
         del session_json['sessionConfiguration']['outputFiles']['powerConfig']
+
+    if no_mga:
+        del session_json['sessionConfiguration']['outputFiles']['ckMgaFilePath']
+        del session_json['sessionConfiguration']['outputFiles']['mgaDataFilePath']
+
+    if no_sa:
+        del session_json['sessionConfiguration']['outputFiles']['ckSaFilePath']
+        del session_json['sessionConfiguration']['outputFiles']['saDataFilePath']
 
     session_json['sessionConfiguration']['outputFiles']['ckConfig']['ckTimeStep'] = step
 

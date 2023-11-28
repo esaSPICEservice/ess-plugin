@@ -40,8 +40,11 @@ class PTREditorDialog(QDialog):
         self.settings_hdl.save()
 
         calculate_power = self.ptr_editor.powerCheck.isChecked()
+        calculate_sa = self.ptr_editor.saCheck.isChecked()
+        calculate_mga = self.ptr_editor.mgaCheck.isChecked()
+        
         try:
-            execute_ptr(mk, ptr_content, calculate_power)
+            execute_ptr(mk, ptr_content, calculate_power, calculate_sa, calculate_mga)
             self.hide()
         except ValueError as error:
             QMessageBox.warning(self, 'PTR editor',
