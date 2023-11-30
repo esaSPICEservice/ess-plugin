@@ -37,13 +37,13 @@ class MkLoaderDialog(QDialog):
                 self.mk_loader.extraList.addItem(extra)
             else:
                 QMessageBox.warning(self, 'Add extra kernel',
-                                    f'Kernel file not valid {extra}' )
+                                    'Kernel file not valid ' + extra)
     def visualize(self):
         date = self.mk_loader.dateTimeEdit.dateTime().toUTC().toString(Qt.ISODate)
         mk = self.mk_loader.mkInput.text()
 
         if not date or not mk or not os.path.exists(mk):
-            QMessageBox.warning(self, 'PTR editor', f'Date and metakernel are mandatory')
+            QMessageBox.warning(self, 'PTR editor', 'Date and metakernel are mandatory')
             return
 
         self.settings_hdl.settings[last_repo_key] = os.path.dirname(mk)
@@ -57,7 +57,7 @@ class MkLoaderDialog(QDialog):
             self.hide()
         except ValueError as error:
             QMessageBox.warning(self, 'PTR editor',
-                                f'PTR not valid {error}' )
+                                'PTR not valid' + error)
 
     def browse_mk(self):
         default_folder = self.settings_hdl.settings.get(last_repo_key, '')

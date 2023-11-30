@@ -32,7 +32,7 @@ class PTREditorDialog(QDialog):
         ptr_content =  self.ptr_editor.ptrEditor.toPlainText()
         mk = self.ptr_editor.mkInput.text()
         if not ptr_content or not mk or not os.path.exists(mk):
-            QMessageBox.warning(self, 'PTR editor', f'PTR and metakernel are mandatory')
+            QMessageBox.warning(self, 'PTR editor', 'PTR and metakernel are mandatory')
             return
 
         self.settings_hdl.settings[last_repo_key] = os.path.dirname(mk)
@@ -48,7 +48,7 @@ class PTREditorDialog(QDialog):
             self.hide()
         except ValueError as error:
             QMessageBox.warning(self, 'PTR editor',
-                                f'PTR not valid {error}' )
+                                'PTR not valid ' + error)
 
     def browse_mk(self):
         default_folder = self.settings_hdl.settings.get(last_repo_key, '')
@@ -84,7 +84,7 @@ class PTREditorDialog(QDialog):
             validate_ptr(ptr_content)
         except ValueError as error:
             QMessageBox.warning(self, 'PTR editor',
-                                f'PTR not valid {error}' )
+                                'PTR not valid ' + error)
             return None
         return ptr_content
 

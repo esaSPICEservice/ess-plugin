@@ -1,9 +1,6 @@
 from PyQt5.QtWidgets import qApp, QMenuBar, QAction, QMenu, QDialog, QPushButton, QVBoxLayout
 from PyQt5.QtGui import QIcon
 
-import time
-from dataclasses import dataclass
-
 from settings.handler import SettingsHandler
 
 WINDOW_TYPES = [
@@ -22,29 +19,25 @@ WINDOW_TYPES = [
 'Qt.CoverWindow'
 ]
 
-@dataclass
 class ActionSpec:
-    """Class for describing an action."""
-    id: str
-    tooltip: str
-    shortcut: str
-    cmd: any
+    def __init__(self, id, tooltip, shortcut, cmd):
+        self.id = id
+        self.tooltip = tooltip
+        self.shortcut = shortcut
+        self.cmd = cmd
 
-
-@dataclass
 class MenuSpec:
-    """Class for describing a menu."""
-    id: str
-    actions: list[ActionSpec]
+    def __init__(self, id, actions):
+        self.id = id
+        self.actions = actions
 
 def widget_desc(widget):
-    return f'{widget.objectName()} {widget.isWindow()} {widget.width()} {widget.height()} {WINDOW_TYPES[widget.windowType()]}'
+    return widget.objectName()
 
 def get_main_window():
     widgets = qApp.topLevelWidgets()
     for index, widget in enumerate(widgets):
         name = widget.objectName()
-        # print(f'{index:03d}=> {widget_desc(widget)}')
         if name == 'mainWindow':
             return widget
     return None
@@ -110,7 +103,7 @@ def get_widget_from_name(name):
 
 def to_str(object):
     if isinstance(object, QAction):
-        return f' QAction > {object.text()}'
+        return ' QAction > '+ object.text()
     return str(object) 
 
 def get_settings_handler():

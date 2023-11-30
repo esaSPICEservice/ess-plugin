@@ -140,7 +140,7 @@ def create_structure(parent_path, metakernel_path='input_mk.tm', ptr_content='in
     file_list.append(
         {
             "fileRelPath": os.path.basename(metakernel_path),
-            "description": f"{os.path.basename(metakernel_path)}",
+            "description": os.path.basename(metakernel_path)
         }
     )
 
@@ -219,12 +219,12 @@ def remove_directory_if_empty(directory_path):
 
     """
     if not os.path.isdir(directory_path):
-        print(f"Error: '{directory_path}' is not a directory.")
+        print("Error: " + directory_path + " is not a directory.")
         return
 
     if len(os.listdir(directory_path)) == 0:
         os.rmdir(directory_path)
     else:
-        print(f"Directory '{directory_path}' is not empty. Skipping removal.")
+        print("Directory " + directory_path + " is not empty. Skipping removal.")
 
 

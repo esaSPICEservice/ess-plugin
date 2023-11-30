@@ -1,5 +1,4 @@
 import json
-from dataclasses import dataclass
 
 SENSOR_SUFFIX =  '_SENSOR'
 class Generator:
@@ -12,13 +11,13 @@ class Generator:
             local_file.write(self.content().encode())
 
 
-@dataclass
 class Sensor:
     """Class for describing a sensor."""
-    instr_name: str
-    target: str
-    frustum_color: str
-    sensor_position: str
+    def __init__(self, instr_name, target, frustum_color, sensor_position):
+        self.instr_name = instr_name
+        self.target = target
+        self.frustum_color = frustum_color
+        self.sensor_position = sensor_position
 
 class SensorGenerator(Generator):
     '''Sensor representation'''

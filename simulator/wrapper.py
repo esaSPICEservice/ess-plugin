@@ -31,7 +31,7 @@ def simulate(meta_kernel, ptr_content, no_power, no_sa, no_mga, step=5):
         cks = ['juice_sc_ptr.bc', 'juice_sa_ptr.bc', 'juice_mga_ptr.bc']
         for ck in cks:
             if os.path.exists(os.path.join(root_scenario_path, 'output', ck)):
-                extra.append(f"./output/{ck}")
+                extra.append("./output/" + ck)
 
         return True, create_cosmo_scene(root_scenario_path, mk, extra), root_scenario_path
     else:

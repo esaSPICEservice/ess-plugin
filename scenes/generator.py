@@ -15,8 +15,8 @@ def generate_sensor(name, parent_path):
                 name, 'Jupiter', 
                 [0, 0.6, 0], None),
         'JUICE')
-    generator.save(os.path.abspath(os.path.join(parent_path, f"{name}.json")))
-    return f'./sensors/{name}.json'
+    generator.save(os.path.abspath(os.path.join(parent_path, "{name}.json".format(name=name))))
+    return './sensors/'+ name + '.json'
 
 def create_cosmo_scene(parent_path, metakernel, extra):
 
@@ -25,16 +25,16 @@ def create_cosmo_scene(parent_path, metakernel, extra):
         "name": "ESS-Plugin Scene",
         "require": [
                 "./spice.json",
-                f"{data_folder}/spacecraft_JUICE_arcs.json",
-                f"{data_folder}/spacecraft_JUICE_MGA_arcs.json",
-                f"{data_folder}/spacecraft_JUICE_SOLAR_ARRAYS_arcs.json",
-                f"{data_folder}/jupiter_minor_moons_ananke_group.json",
-                f"{data_folder}/jupiter_minor_moons_carme_group.json",
-                f"{data_folder}/jupiter_minor_moons_inner_group.json",
-                f"{data_folder}/jupiter_minor_moons_pasiphae_group.json",
-                f"{data_folder}/jupiter_minor_moons_prograde_groups.json",
-                f"{data_folder}/jupiter_rings.json",
-                f"{data_folder}/moon_torus.json"
+                "{data_folder}/spacecraft_JUICE_arcs.json".format(data_folder=data_folder),
+                "{data_folder}/spacecraft_JUICE_MGA_arcs.json".format(data_folder=data_folder),
+                "{data_folder}/spacecraft_JUICE_SOLAR_ARRAYS_arcs.json".format(data_folder=data_folder),
+                "{data_folder}/jupiter_minor_moons_ananke_group.json".format(data_folder=data_folder),
+                "{data_folder}/jupiter_minor_moons_carme_group.json".format(data_folder=data_folder),
+                "{data_folder}/jupiter_minor_moons_inner_group.json".format(data_folder=data_folder),
+                "{data_folder}/jupiter_minor_moons_pasiphae_group.json".format(data_folder=data_folder),
+                "{data_folder}/jupiter_minor_moons_prograde_groups.json".format(data_folder=data_folder),
+                "{data_folder}/jupiter_rings.json".format(data_folder=data_folder),
+                "{data_folder}/moon_torus.json".format(data_folder=data_folder)
             ]
     }
 

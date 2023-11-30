@@ -57,7 +57,7 @@ def get_platform():
         else:
             machine = "i386"
 
-    return f"{system}_{machine}"
+    return "{system}_{machine}".format(system=system, machine=machine)
 
 
 def build_lib_path():
