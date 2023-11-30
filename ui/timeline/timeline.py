@@ -47,9 +47,6 @@ def get_style(block_type):
     return block_type_style_map.get(block_type, default_style)
 
 class TimelineBlock:
-    start: int
-    end: int
-    block_type: str
 
     def __init__(self, start_str, end_str, block_type):
         if start_str > end_str:
