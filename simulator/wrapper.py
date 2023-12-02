@@ -1,20 +1,14 @@
 import os
 from .utils import create_structure
 from simulator.osve import osve
+from simulator.osve.utils import get_platform
 from scenes.generator import create_cosmo_scene, generate_working_dir
-
+from launcher.linux import execute_linux
+import sys
 
 def simulate(meta_kernel, ptr_content, no_power, no_sa, no_mga, step=5):
-    sim = osve.osve()
-    
-    print("")
-    print("OSVE LIB VERSION:       ", sim.get_app_version())
-    print("OSVE AGM VERSION:       ", sim.get_agm_version())
-    print("OSVE EPS VERSION:       ", sim.get_eps_version())
-    print("")
 
     working_dir = generate_working_dir()
-
     session_file_path = create_structure(working_dir, meta_kernel, ptr_content,
                                          step=step,
                                          no_power=no_power,
@@ -23,7 +17,18 @@ def simulate(meta_kernel, ptr_content, no_power, no_sa, no_mga, step=5):
                                          quaternions=False)
 
     root_scenario_path = os.path.dirname(session_file_path)
-    status_code = sim.execute(root_scenario_path, session_file_path)
+
+    my_platform = get_platform()
+    if (my_platform.startswith("linux")):
+        status_code = execute_linux(root_scenario_path, session_file_path)
+    else: 
+        sim = osve.osve()
+        print("")
+        print("OSVE LIB VERSION:       ", sim.get_app_version())
+        print("OSVE AGM VERSION:       ", sim.get_agm_version())
+        print("OSVE EPS VERSION:       ", sim.get_eps_version())
+        print("")
+        status_code = sim.execute(root_scenario_path, session_file_path)
 
     if status_code == 0:
         mk = "./kernel/" + os.path.basename(meta_kernel)
