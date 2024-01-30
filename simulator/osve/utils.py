@@ -75,13 +75,13 @@ def build_lib_path():
     elif (my_platform.startswith("darwin")):
        
         if ("arm64" in my_platform):
-            if_shared_lib_name = if_shared_lib_name = os.path.join("mac", "arm64", "libosve-if.dylib")
-            
-        elif ("x86_64" in my_platform):
-            if_shared_lib_name = if_shared_lib_name = os.path.join("mac", "x86_64", "libosve-if.dylib")
+            if_shared_lib_name = os.path.join("mac", "arm64", "libosve-if.dylib")
 
-    #elif (os_name.startswith("windows")):
-    #    if_shared_lib_name = "osve-if.dll"
+        elif ("x86_64" in my_platform):
+            if_shared_lib_name = os.path.join("mac", "x86_64", "libosve-if.dylib")
+
+        elif ("windows" in my_platform):
+            if_shared_lib_name = os.path.join("win", "osve-if.dll")
 
     if if_shared_lib_name is None:
         raise Exception("Unsupported OS platform: " + my_platform)

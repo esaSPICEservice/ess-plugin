@@ -42,6 +42,19 @@ def get_main_window():
             return widget
     return None
 
+def get_api():
+    # Find the scripting API object with its name in QT
+    widgets = qApp.topLevelWidgets()
+    for widget in widgets:
+        n = widget.objectName()
+        if n == 'mainWindow':
+            mainWindow = widget
+    for child in mainWindow.children():
+        n = child.objectName()
+        if n == 'scriptingApi':
+            return child
+    return None
+
 def remove_menu(main_window, search_menu_id: str):
     main_menu = main_window.findChildren(QMenuBar)[0]
     menu = main_menu.findChild(QMenu, search_menu_id)

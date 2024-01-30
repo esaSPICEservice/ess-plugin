@@ -1,4 +1,5 @@
 import cosmoscripting
+from ui.common import get_api
 
 def goto_date(utc_str):    
     cosmo = cosmoscripting.Cosmo()
@@ -13,8 +14,15 @@ def spacecraft_view():
     cosmo.setFov(70, 0)
 
 
-def sensor_view(sensor_name, fov):
+def sensor_view(sensor_name, fov, sc='JUICE'):
+    api = get_api()
     cosmo = cosmoscripting.Cosmo()
-    cosmo.moveToPovSpiceFrame(
-        'JUICE', sensor_name, [0, 0, 10E-3], [0,0,1], [0,1,0], 0.0)
-    cosmo.setFov(fov, 0)
+    cosmo.showObject(sensor_name)
+    print('Viewing ' + sensor_name)
+    api.gotoObject(sc)
+    api.setCentralObject(sc)
+    api.setCameraToBodyFixedFrame()
+    api.setCameraPosition([0,0,5E-3])
+    quat = [0, -1, 0, 0]
+    api.setCameraOrientation(quat)
+    api.adjustFov(fov, 0)
