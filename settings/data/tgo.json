@@ -1,0 +1,44 @@
+{
+    "mission": "TGO",
+    "spacecraft": "TGO",
+    "spacecraft_frame": "TGO_SPACECRAFT",
+    "models": [
+        "spacecraft_EM16_tgo_arcs.json"
+    ],
+    "sensors": {
+        "ACS": [
+            "TGO_ACS_MIR",
+            "TGO_ACS_NIR_NAD",
+            "TGO_ACS_NIR_OCC",
+            "TGO_ACS_TIRVIM",
+            "TGO_ACS_TIRVIM_SCAN_NAD",
+            "TGO_ACS_TIRVIM_SCAN_OCC",
+            "TGO_ACS_TIRVIM_SPC",
+            "TGO_ACS_TIRVIM_SUN",
+            "TGO_ACS_TIRVIM_SUN_BSR"
+        ],
+        "CASIS": [
+            "TGO_CASSIS",
+            "TGO_CASSIS_BLU",
+            "TGO_CASSIS_NIR",
+            "TGO_CASSIS_PAN",
+            "TGO_CASSIS_RED"
+        ],
+        "FREND": [
+            "TGO_FREND"
+        ],
+        "NOMAD": [
+            "TGO_NOMAD_LNO",
+            "TGO_NOMAD_LNO_OPS_NAD",
+            "TGO_NOMAD_LNO_OPS_OCC",
+            "TGO_NOMAD_SO",
+            "TGO_NOMAD_UVIS_NAD",
+            "TGO_NOMAD_UVIS_OCC"
+        ],
+        "STR": [
+            "TGO_STR-1",
+            "TGO_STR-2"
+        ]
+    },
+    "central_body": "Mars"
+}

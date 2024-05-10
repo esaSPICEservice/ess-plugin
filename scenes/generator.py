@@ -2,41 +2,45 @@ import os
 import json
 from actions.sensors import get_sensor_list
 from utils.generators import Sensor, SensorGenerator
+from ui.common import get_runtime
 
 from datetime import datetime
 
 TIMESTAMP_FORMAT = '%Y%m%dT%H%M%S%f'
 
-data_folder = os.path.join(os.path.dirname(__file__), 'data', 'juice')
+
 
 def generate_sensor(name, parent_path):
+
+    run_time = get_runtime()
+
     generator = SensorGenerator(
         Sensor(
-                name, 'Jupiter', 
+                name, run_time.get('central_body', ''), 
                 [0, 0.6, 0], None),
-        'JUICE')
+        run_time.get('spacecraft', ''))
     generator.save(os.path.abspath(os.path.join(parent_path, "{name}.json".format(name=name))))
     return './sensors/'+ name + '.json'
 
+
+
 def create_cosmo_scene(parent_path, metakernel, extra):
+
+
+    run_time = get_runtime()
+    data_folder = os.path.join(os.path.dirname(__file__), 'data',  run_time.get('spacecraft', ''))
 
     scene_json = {
         "version": "1.0",
         "name": "ESS-Plugin Scene",
         "require": [
                 "./spice.json",
-                "{data_folder}/spacecraft_JUICE_arcs.json".format(data_folder=data_folder),
-                "{data_folder}/spacecraft_JUICE_MGA_arcs.json".format(data_folder=data_folder),
-                "{data_folder}/spacecraft_JUICE_SOLAR_ARRAYS_arcs.json".format(data_folder=data_folder),
-                "{data_folder}/jupiter_minor_moons_ananke_group.json".format(data_folder=data_folder),
-                "{data_folder}/jupiter_minor_moons_carme_group.json".format(data_folder=data_folder),
-                "{data_folder}/jupiter_minor_moons_inner_group.json".format(data_folder=data_folder),
-                "{data_folder}/jupiter_minor_moons_pasiphae_group.json".format(data_folder=data_folder),
-                "{data_folder}/jupiter_minor_moons_prograde_groups.json".format(data_folder=data_folder),
-                "{data_folder}/jupiter_rings.json".format(data_folder=data_folder),
-                "{data_folder}/moon_torus.json".format(data_folder=data_folder)
             ]
     }
+
+    for model in run_time.get('models', []):
+        scene_json.get('require').append("{data_folder}/{model}".format(data_folder=data_folder,model=model))
+
 
     sensor_folder = os.path.join(parent_path, 'sensors')
     os.makedirs(sensor_folder)
