@@ -56,14 +56,14 @@ def after_load(root_scenario):
     
     menu = []
 
-    if not my_platform.startswith("windows"):
+    if not my_platform.startswith("windows") and not my_platform.startswith("linux"):
         if os.path.exists(resolved_ptr):
             bp = BlocksDialog(main_window, resolved_ptr)
             menu.append(
                 ActionSpec('Blocks', 'Show pointing blocks', '', bp.show_and_focus)
             )
 
-        if os.path.exists(power_file):
+    if os.path.exists(power_file) and not my_platform.startswith("windows"):
             pw = PowerDialog(main_window, power_file)
             menu.append(
                 ActionSpec('SA Produced power', 'Solar Array produced power', '', pw.show_and_focus)
