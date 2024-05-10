@@ -28,7 +28,7 @@ def create_cosmo_scene(parent_path, metakernel, extra):
 
 
     run_time = get_runtime()
-    data_folder = os.path.join(os.path.dirname(__file__), 'data',  run_time.get('spacecraft', ''))
+    data_folder = os.path.join(os.path.dirname(__file__), 'data',  run_time.get('spacecraft', '').lower())
 
     scene_json = {
         "version": "1.0",
