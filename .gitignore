@@ -9,3 +9,5 @@ test_*.py
 tmp/
 
 .vscode/
+
+launcher.bat

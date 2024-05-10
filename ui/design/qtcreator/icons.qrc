@@ -3,5 +3,6 @@
         <file>icons/disk.png</file>
         <file>icons/folder.png</file>
         <file>icons/pencil_add.png</file>
+        <file>icons/ess_logo.png</file>
     </qresource>
 </RCC>

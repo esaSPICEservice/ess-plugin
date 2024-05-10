@@ -22,3 +22,11 @@ def add_juice_menu():
                                    [
                                        ActionSpec('Sensors', 'Sensors', '', nv.show_and_focus)
                                     ]))
+    
+def add_tgo_menu():
+    main_window = get_main_window()
+    nv = NavigationDialog(main_window)
+    add_menu(main_window, MenuSpec('Navigation', 
+                                   [
+                                       ActionSpec('Sensors', 'Sensors', '', nv.show_and_focus)
+                                    ]))

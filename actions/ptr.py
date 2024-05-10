@@ -5,7 +5,12 @@ import cosmoscripting
 from simulator.wrapper import simulate
 from ui.blocks_ui import BlocksDialog
 from ui.navigation_ui import NavigationDialog
-from utils.block_parser import BlockParser
+from simulator.osve.utils import get_platform
+my_platform = get_platform()
+if (my_platform.startswith("windows")):
+    from utils.re_block_parser import BlockParser
+else:
+    from utils.block_parser import BlockParser
 import json
 
 from PyQt5.QtWidgets import QMessageBox
@@ -51,17 +56,18 @@ def after_load(root_scenario):
     
     menu = []
 
-    if os.path.exists(resolved_ptr):
-        bp = BlocksDialog(main_window, resolved_ptr)
-        menu.append(
-            ActionSpec('Blocks', 'Show pointing blocks', '', bp.show_and_focus)
-        )
+    if not my_platform.startswith("windows") and not my_platform.startswith("linux"):
+        if os.path.exists(resolved_ptr):
+            bp = BlocksDialog(main_window, resolved_ptr)
+            menu.append(
+                ActionSpec('Blocks', 'Show pointing blocks', '', bp.show_and_focus)
+            )
 
-    if os.path.exists(power_file):
-        pw = PowerDialog(main_window, power_file)
-        menu.append(
-            ActionSpec('SA Produced power', 'Solar Array produced power', '', pw.show_and_focus)
-        )
+    if os.path.exists(power_file) and not my_platform.startswith("windows"):
+            pw = PowerDialog(main_window, power_file)
+            menu.append(
+                ActionSpec('SA Produced power', 'Solar Array produced power', '', pw.show_and_focus)
+            )
 
     add_menu(main_window, MenuSpec('Pointing', menu))
 

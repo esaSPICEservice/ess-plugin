@@ -1,4 +1,4 @@
-from ui.common import get_settings_handler
+from ui.common import get_settings, get_runtime
 
 from PyQt5.QtWidgets import  QFileDialog, QDialog, QMessageBox
 from ui.design.ptr_editor import Ui_ptrEditorWidget
@@ -12,7 +12,9 @@ class PTREditorDialog(QDialog):
 
     def __init__(self, main_window):
         QDialog.__init__(self, main_window)
-        self.settings_hdl = get_settings_handler()
+        self.settings = get_settings()
+        self.runtime = get_runtime()
+        self.mission = self.runtime.get('mission')
         self.init_ui()
 
     def init_ui(self):
@@ -25,7 +27,7 @@ class PTREditorDialog(QDialog):
         self.ptr_editor.saveButton.clicked.connect(self.save_ptr)
         self.ptr_editor.cleanButton.clicked.connect(self.clean_ptr)
 
-        mk = self.settings_hdl.settings.get(last_kernel_key, '')
+        mk = self.settings.get(self.mission, last_kernel_key, '')
         self.ptr_editor.mkInput.setText(mk)
 
     def visualize(self):
@@ -35,9 +37,9 @@ class PTREditorDialog(QDialog):
             QMessageBox.warning(self, 'PTR editor', 'PTR and metakernel are mandatory')
             return
 
-        self.settings_hdl.settings[last_repo_key] = os.path.dirname(mk)
-        self.settings_hdl.settings[last_kernel_key] = mk
-        self.settings_hdl.save()
+        self.settings.set(self.mission, last_repo_key, os.path.dirname(mk))
+        self.settings.set(self.mission, last_kernel_key, mk)
+        self.settings.save()
 
         calculate_power = self.ptr_editor.powerCheck.isChecked()
         calculate_sa = self.ptr_editor.saCheck.isChecked()
@@ -51,7 +53,7 @@ class PTREditorDialog(QDialog):
                                 'PTR not valid ' + error)
 
     def browse_mk(self):
-        default_folder = self.settings_hdl.settings.get(last_repo_key, '')
+        default_folder = self.settings.get(self.mission, last_repo_key, '')
         file_name, _ = QFileDialog.getOpenFileName(
             self, "Open Metarkernel", default_folder, "Metakernel files (*.tm *.mk)")
         if file_name:

@@ -1,7 +1,7 @@
 from PyQt5.QtWidgets import qApp, QMenuBar, QAction, QMenu, QDialog, QPushButton, QVBoxLayout
 from PyQt5.QtGui import QIcon
 
-from settings.handler import SettingsHandler
+from settings.handler import PersistenceSettings, RuntimeSettings
 
 WINDOW_TYPES = [
     'Qt.Widget', 
@@ -119,12 +119,24 @@ def to_str(object):
         return ' QAction > '+ object.text()
     return str(object) 
 
-def get_settings_handler():
+def get_settings():
     main_window = get_main_window()
-    if not hasattr(main_window, 'settings_handler'):
+    if not hasattr(main_window, 'persistence_settings'):
         set_settings_handler()
-    return main_window.settings_handler
+    return main_window.persistence_settings
+
+def get_runtime():
+    main_window = get_main_window()
+    if not hasattr(main_window, 'runtime_settings'):
+        set_settings_handler()
+    return main_window.runtime_settings
+
+def set_rt_settings(rt_settings):
+    rt = get_runtime()
+    rt.update(rt_settings)
+
 
 def set_settings_handler():
     main_window = get_main_window()
-    main_window.__setattr__('settings_handler', SettingsHandler())
+    main_window.__setattr__('persistence_settings', PersistenceSettings())
+    main_window.__setattr__('runtime_settings', RuntimeSettings())

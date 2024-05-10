@@ -1,12 +1,12 @@
 
 from PyQt5.QtWidgets import QFileDialog, QDialog, QMessageBox
-from PyQt5.QtCore import Qt
-from ui.common import get_settings_handler
+from PyQt5.QtCore import Qt, QDateTime
+from ui.common import get_settings, get_runtime
 from ui.design.mk_loader import Ui_mkLoaderWidget
 from actions.mkloader import execute
 import os
 
-from settings.handler import last_repo_key, last_kernel_key
+from settings.handler import last_repo_key, last_kernel_key, last_start_date
 
 class MkLoaderDialog(QDialog):
 
@@ -14,7 +14,9 @@ class MkLoaderDialog(QDialog):
 
     def __init__(self, main_window):
         QDialog.__init__(self, main_window)
-        self.settings_hdl = get_settings_handler()
+        self.settings = get_settings()
+        self.run_time = get_runtime()
+        self.mission = self.run_time.get('mission')
         self.init_ui()
 
     def init_ui(self):
@@ -25,9 +27,6 @@ class MkLoaderDialog(QDialog):
         self.mk_loader.mkButton.clicked.connect(self.browse_mk)
         self.mk_loader.extraAddButton.clicked.connect(self.add_kernel)
         self.mk_loader.extraBrowseButton.clicked.connect(self.browse_extra)
-
-        mk = self.settings_hdl.settings.get(last_kernel_key, '')
-        self.mk_loader.mkInput.setText(mk)
 
     def add_kernel(self):
         extra = self.mk_loader.extraInput.text()
@@ -46,9 +45,10 @@ class MkLoaderDialog(QDialog):
             QMessageBox.warning(self, 'PTR editor', 'Date and metakernel are mandatory')
             return
 
-        self.settings_hdl.settings[last_repo_key] = os.path.dirname(mk)
-        self.settings_hdl.settings[last_kernel_key] = mk
-        self.settings_hdl.save()
+        self.settings.set(self.mission, last_repo_key, os.path.dirname(mk))
+        self.settings.set(self.mission, last_kernel_key, mk)
+        self.settings.set(self.mission, last_start_date, date)
+        self.settings.save()
 
         lw = self.mk_loader.extraList
         extra_kernels = [lw.item(x).text() for x in range(lw.count())]
@@ -60,24 +60,30 @@ class MkLoaderDialog(QDialog):
                                 'PTR not valid' + error)
 
     def browse_mk(self):
-        default_folder = self.settings_hdl.settings.get(last_repo_key, '')
+        default_folder = self.settings.get(self.mission, last_repo_key, '')
         file_name, _ = QFileDialog.getOpenFileName(
             self, "Select Metarkernel", default_folder, "Metakernel files (*.tm *.mk)")
         if file_name:
             self.mk_loader.mkInput.setText(file_name)
-        self.show_and_focus()
+        self.focus()
 
     def browse_extra(self):
-        default_folder = self.settings_hdl.settings.get(last_repo_key, '')
+        default_folder = self.settings.get(self.mission, last_repo_key, '')
         file_name, _ = QFileDialog.getOpenFileName(
             self, "Select Extra Kernel", default_folder, "Kernel files (*.*)")
         if file_name:
             self.mk_loader.extraInput.setText(file_name)
-        self.show_and_focus()
+        self.focus()
 
 
     def show_and_focus(self):
+        mk = self.settings.get(self.mission, last_kernel_key, '')
+        self.mk_loader.mkInput.setText(mk)
+        start_date = self.settings.get(self.mission, last_start_date, '2010-01-01T00:00:00Z')
+        dt = QDateTime.fromString(start_date, 'yyyy-M-dThh:mm:ssZ')
+        self.mk_loader.dateTimeEdit.setDateTime(dt)
+        self.focus()
+
+    def focus(self):
         self.hide()
         self.show()
-
-
