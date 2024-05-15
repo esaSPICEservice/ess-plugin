@@ -67,9 +67,10 @@ class Ui_landingWidget(object):
 
     def retranslateUi(self, landingWidget):
         _translate = QtCore.QCoreApplication.translate
-        landingWidget.setWindowTitle(_translate("landingWidget", "Basic Scene"))
+        landingWidget.setWindowTitle(_translate("landingWidget", "ESS Plugin"))
         self.label_3.setText(_translate("landingWidget", "ESS Cosmographia Plugin"))
         self.comboBox.setItemText(0, _translate("landingWidget", "JUICE"))
         self.comboBox.setItemText(1, _translate("landingWidget", "TGO"))
         self.selectButton.setText(_translate("landingWidget", "Select Mission"))
+
 from . import icons_rc

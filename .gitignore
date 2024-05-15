@@ -1,3 +1,8 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+
+
 launcher.sh
 
 **/__pycache__/**
@@ -6,6 +11,7 @@ launcher.sh
 **.autosave
 test_*.py
 
+**/qtcreator.pyproject.user
 tmp/
 
 .vscode/

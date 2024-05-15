@@ -5,6 +5,7 @@ from ui.navigation_ui import NavigationDialog
 from ui.rings_ui import RingsDialog
 
 
+
 def add_juice_menu():
     main_window = get_main_window()
     jm = MoonsDialog(main_window)

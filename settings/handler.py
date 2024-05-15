@@ -5,6 +5,7 @@ import os
 last_kernel_key = 'last_metakernel'
 last_repo_key = 'last_kernel_repo'
 last_start_date = 'last_start_date'
+last_expressions = 'last_expressions'
 
 
 class PersistenceSettings:

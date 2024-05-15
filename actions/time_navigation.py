@@ -24,12 +24,21 @@ def sensor_view(sensor_name, fov):
     sc = run_time.get("spacecraft", "")
     api = get_api()
     cosmo = cosmoscripting.Cosmo()
-    cosmo.showObject(sensor_name)
+    frame = sensor_name
+    cosmo.moveToPovSpiceFrame(sc, frame, [0,0,0.005], [0,0,1], [0,1,0], 5.0)
     print("Viewing " + sensor_name)
-    api.gotoObject(sc)
-    api.setCentralObject(sc)
-    api.setCameraToBodyFixedFrame()
-    api.setCameraPosition([0, 0, 5e-3])
-    quat = [0, -1, 0, 0]
-    api.setCameraOrientation(quat)
     api.adjustFov(fov, 0)
+    cosmo.pause()
+
+def evaluate(expressions):
+    cosmo = cosmoscripting.Cosmo()
+    api = get_api()
+    try:
+        for expression in expressions.split('\n'):
+            if len(expression.strip()) > 0:
+                eval(expression, {'cosmo': cosmo, 'api': api})
+    except Exception as error:
+        raise EvaluateException(f"An error occurred: {type(error).__name__} {error}")
+
+class EvaluateException(Exception):
+    pass

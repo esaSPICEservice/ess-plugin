@@ -1,5 +1,6 @@
 
 from ui.common import get_main_window, MenuSpec, ActionSpec, add_menu, set_settings_handler, get_runtime
+from ui.console_ui import ConsoleDialog
 from ui.landing import LandingDialog
 from ui.mk_ui import MkLoaderDialog
 from ui.simulator_ui import PTREditorDialog
@@ -23,5 +24,11 @@ def create_ui(settings_filename):
         actions.append(ActionSpec('PTR simulation', 'Execute OSVE', '', bd.show_and_focus))
 
     add_menu(main_window, MenuSpec('Scenes', actions))
+
+    cm = ConsoleDialog(main_window)
+    add_menu(main_window, MenuSpec('Runtime',
+            [
+            ActionSpec('Console', 'Runtime console', '', cm.show_and_focus)
+            ]))
 
 

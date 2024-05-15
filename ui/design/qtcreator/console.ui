@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>landingWidget</class>
- <widget class="QWidget" name="landingWidget">
+ <class>consoleWidget</class>
+ <widget class="QWidget" name="consoleWidget">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>373</width>
+    <width>515</width>
     <height>396</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>ESS Plugin</string>
+   <string>Expression Console</string>
   </property>
   <property name="styleSheet">
    <string notr="true">QPushButton {
@@ -42,46 +42,19 @@ QLabel {
    <item>
     <widget class="QLabel" name="label">
      <property name="text">
-      <string/>
-     </property>
-     <property name="pixmap">
-      <pixmap resource="icons.qrc">:/images/icons/ess_logo.png</pixmap>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
+      <string>Expressions</string>
      </property>
     </widget>
    </item>
    <item>
-    <widget class="QLabel" name="label_3">
-     <property name="text">
-      <string>ESS Cosmographia Plugin</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
-    </widget>
-   </item>
-   <item>
-    <widget class="QComboBox" name="comboBox">
-     <item>
-      <property name="text">
-       <string>JUICE</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>TGO</string>
-      </property>
-     </item>
-    </widget>
+    <widget class="QPlainTextEdit" name="expressionEditor"/>
    </item>
    <item>
     <layout class="QHBoxLayout" name="horizontalLayout_3">
      <item>
-      <widget class="QPushButton" name="selectButton">
+      <widget class="QPushButton" name="runButton">
        <property name="text">
-        <string>Select Mission</string>
+        <string>Run</string>
        </property>
       </widget>
      </item>
@@ -89,8 +62,9 @@ QLabel {
    </item>
   </layout>
  </widget>
- <resources>
-  <include location="icons.qrc"/>
- </resources>
+ <tabstops>
+  <tabstop>expressionEditor</tabstop>
+ </tabstops>
+ <resources/>
  <connections/>
 </ui>
