@@ -25,7 +25,7 @@ def sensor_view(sensor_name, fov):
     api = get_api()
     cosmo = cosmoscripting.Cosmo()
     frame = sensor_name
-    cosmo.moveToPovSpiceFrame(sc, frame, [0,0,0.005], [0,0,1], [0,1,0], 5.0)
+    cosmo.moveToPovSpiceFrame(sc, frame, [0,0,0.002], [0,0,1], [0,1,0], 0.0)
     print("Viewing " + sensor_name)
     api.adjustFov(fov, 0)
     cosmo.pause()
