@@ -1,6 +1,6 @@
 
 from PyQt5.QtWidgets import QDialog
-from actions.sensors import get_sensors, toggle_sensor, get_sensor_list
+from actions.sensors import get_sensors, toggle_sensor, get_boresights
 from ui.design.navigation_panel import Ui_Form
 from actions.time_navigation import spacecraft_view, sensor_view
 from ui.tabbed_selector import TabbedSelector
@@ -12,7 +12,9 @@ class NavigationDialog(QDialog):
 
     def __init__(self, main_window):
         QDialog.__init__(self, main_window)
+        self.boresights = get_boresights()
         self.init_ui()
+        
 
     def init_ui(self):
         self.setObjectName(NavigationDialog.id)
@@ -24,12 +26,13 @@ class NavigationDialog(QDialog):
         self.tabSelector = TabbedSelector(self, get_sensors(), toggle_sensor)
         self.navigation_panel.verticalLayout.addWidget(self.tabSelector)
 
-        self.navigation_panel.sensorBox.addItems(get_sensor_list())
+        sensor_list = list(map(lambda item: item.get('name'), self.boresights))
+        self.navigation_panel.sensorBox.addItems(sensor_list)
 
     def sensor_view(self):
         sensor_name = self.navigation_panel.sensorBox.currentText()
-        fov = self.navigation_panel.fovSize.value()
-        sensor_view(sensor_name, fov)
+        sensor = next(filter(lambda item: item.get('name') == sensor_name, self.boresights))
+        sensor_view(sensor.get('fov_frame'), sensor.get('size'))
 
     def show_and_focus(self):
         self.hide()

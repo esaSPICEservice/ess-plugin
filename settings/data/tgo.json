@@ -40,5 +40,122 @@
             "TGO_STR-2"
         ]
     },
-    "central_body": "Mars"
+    "central_body": "Mars",
+    "boresights": [
+        {
+            "name": "TGO_ACS_MIR",
+            "fov_frame": "TGO_ACS_MIR",
+            "size": 0.23
+        },
+        {
+            "name": "TGO_ACS_NIR_NAD",
+            "fov_frame": "TGO_ACS_NIR_NAD",
+            "size": 2.0
+        },
+        {
+            "name": "TGO_ACS_NIR_OCC",
+            "fov_frame": "TGO_ACS_NIR_OCC",
+            "size": 2.0
+        },
+        {
+            "name": "TGO_ACS_TIRVIM",
+            "fov_frame": "TGO_ACS_TIRVIM",
+            "size": 2.8
+        },
+        {
+            "name": "TGO_ACS_TIRVIM_SCAN_BBY",
+            "fov_frame": "TGO_ACS_TIRVIM_SCAN_BBY",
+            "size": 2.8
+        },
+        {
+            "name": "TGO_ACS_TIRVIM_SCAN_NAD",
+            "fov_frame": "TGO_ACS_TIRVIM_SCAN_NAD",
+            "size": 2.8
+        },
+        {
+            "name": "TGO_ACS_TIRVIM_SCAN_SPC",
+            "fov_frame": "TGO_ACS_TIRVIM_SCAN_SPC",
+            "size": 2.8
+        },
+        {
+            "name": "TGO_ACS_TIRVIM_SUN",
+            "fov_frame": "TGO_ACS_TIRVIM_SUN",
+            "size": 2.8
+        },
+        {
+            "name": "TGO_ACS_TIRVIM_SUN_BSR",
+            "fov_frame": "TGO_ACS_TIRVIM_SUN_BSR",
+            "size": 2.8
+        },
+        {
+            "name": "TGO_CASSIS",
+            "fov_frame": "TGO_CASSIS_FSA",
+            "size": 1.34114
+        },
+        {
+            "name": "TGO_CASSIS_BLU",
+            "fov_frame": "TGO_CASSIS_FSA",
+            "size": 1.3411406874
+        },
+        {
+            "name": "TGO_CASSIS_NIR",
+            "fov_frame": "TGO_CASSIS_FSA",
+            "size": 1.3411406874
+        },
+        {
+            "name": "TGO_CASSIS_PAN",
+            "fov_frame": "TGO_CASSIS_FSA",
+            "size": 1.3411406874
+        },
+        {
+            "name": "TGO_CASSIS_RED",
+            "fov_frame": "TGO_CASSIS_FSA",
+            "size": 1.3411406874
+        },
+        {
+            "name": "TGO_FREND",
+            "fov_frame": "TGO_FREND",
+            "size": 15.0
+        },
+        {
+            "name": "TGO_NOMAD_LNO",
+            "fov_frame": "TGO_NOMAD_LNO",
+            "size": 2.5
+        },
+        {
+            "name": "TGO_NOMAD_LNO_OPS_NAD",
+            "fov_frame": "TGO_NOMAD_LNO_OPS_NAD",
+            "size": 2.5
+        },
+        {
+            "name": "TGO_NOMAD_LNO_OPS_OCC",
+            "fov_frame": "TGO_NOMAD_LNO_OPS_OCC",
+            "size": 2.5
+        },
+        {
+            "name": "TGO_NOMAD_SO",
+            "fov_frame": "TGO_NOMAD_SO",
+            "size": 0.5
+        },
+        {
+            "name": "TGO_NOMAD_UVIS_NAD",
+            "fov_frame": "TGO_NOMAD_UVIS_NAD",
+            "size": 0.7166666666666667
+        },
+        {
+            "name": "TGO_NOMAD_UVIS_OCC",
+            "fov_frame": "TGO_NOMAD_UVIS_OCC",
+            "size": 0.03333333333333333
+        },
+        {
+            "name": "TGO_STR-1",
+            "fov_frame": "TGO_STR-1",
+            "size": 20.0
+        },
+        {
+            "name": "TGO_STR-2",
+            "fov_frame": "TGO_STR-2",
+            "size": 20.0
+        }
+    ]
 }

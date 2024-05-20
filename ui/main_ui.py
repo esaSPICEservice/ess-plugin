@@ -30,5 +30,7 @@ def create_ui(settings_filename):
             [
             ActionSpec('Console', 'Runtime console', '', cm.show_and_focus)
             ]))
+    
+    mk.show_and_focus()
 
 

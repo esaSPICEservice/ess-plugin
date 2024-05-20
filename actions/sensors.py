@@ -17,6 +17,12 @@ def get_sensors():
     return sensors
 
 
+def get_boresights():
+    runtime = get_runtime()
+    boresights = runtime.get('boresights')
+    return boresights
+
+
 def toggle_sensor(visible, name):
     cosmo = cosmoscripting.Cosmo()
     sensor_id = name + SENSOR_SUFFIX

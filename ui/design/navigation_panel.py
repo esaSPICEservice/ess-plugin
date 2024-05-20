@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'qtcreator/navigator-panel.ui'
+# Form implementation generated from reading ui file 'navigator-panel.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.7
 #
@@ -58,13 +58,6 @@ class Ui_Form(object):
         self.sensorBox.setSizePolicy(sizePolicy)
         self.sensorBox.setObjectName("sensorBox")
         self.horizontalLayout.addWidget(self.sensorBox)
-        self.fovSize = QtWidgets.QDoubleSpinBox(Form)
-        self.fovSize.setDecimals(1)
-        self.fovSize.setMinimum(0.1)
-        self.fovSize.setSingleStep(0.25)
-        self.fovSize.setProperty("value", 2.0)
-        self.fovSize.setObjectName("fovSize")
-        self.horizontalLayout.addWidget(self.fovSize)
         self.verticalLayout.addLayout(self.horizontalLayout)
         self.scViewButton = QtWidgets.QPushButton(Form)
         self.scViewButton.setObjectName("scViewButton")

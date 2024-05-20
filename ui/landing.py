@@ -1,7 +1,5 @@
 from PyQt5.QtWidgets import QDialog
-from actions.sensors import get_sensors, toggle_sensor, get_sensor_list
 from ui.design.landing import Ui_landingWidget
-from actions.time_navigation import spacecraft_view, sensor_view
 
 
 class LandingDialog(QDialog):
