@@ -12,8 +12,6 @@
             "TGO_ACS_NIR_OCC",
             "TGO_ACS_TIRVIM",
             "TGO_ACS_TIRVIM_SCAN_NAD",
-            "TGO_ACS_TIRVIM_SCAN_OCC",
-            "TGO_ACS_TIRVIM_SPC",
             "TGO_ACS_TIRVIM_SUN",
             "TGO_ACS_TIRVIM_SUN_BSR"
         ],
