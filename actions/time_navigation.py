@@ -38,7 +38,7 @@ def evaluate(expressions):
             if len(expression.strip()) > 0:
                 eval(expression, {'cosmo': cosmo, 'api': api})
     except Exception as error:
-        raise EvaluateException("An error occurred: " + type(error).__name__ + " " + error)
+        raise EvaluateException("An error occurred: " + type(error).__name__ + " " + str(error))
 
 class EvaluateException(Exception):
     pass
