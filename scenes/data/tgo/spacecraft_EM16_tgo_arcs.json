@@ -10,10 +10,9 @@
             {
                "endTime": "2018-02-01 14:43:18 UTC",
                "center": "Sun",
-               "trajectoryFrame": "ICRF",
                "trajectory": {
                   "type": "Spice",
-                  "target": "TGO_SPACECRAFT",
+                  "target": "TGO",
                   "center": "Sun"
                },
                "bodyFrame": {
@@ -23,10 +22,9 @@
             },
             {
                "center": "Mars",
-               "trajectoryFrame": "ICRF",
                "trajectory": {
                   "type": "Spice",
-                  "target": "TGO_SPACECRAFT",
+                  "target": "TGO",
                   "center": "Mars"
                },
                "bodyFrame": {
@@ -36,10 +34,16 @@
             } 
          ],
          "geometry": {
-        "type": "Mesh",
-        "source": "./models/tgo_bus.3ds",
-        "scale": 0.001
-        },
+                     "type": "Mesh",
+                     "meshRotation": [
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5
+                     ],
+                     "source": "./models/ExomarsTGO_v0.5_Body_NoEDM_with_solar_panels.3DS",
+                     "size": 0.01
+         },
          "label": {
             "color": [
                1,
@@ -58,102 +62,6 @@
             "fade": 0.25,
             "sampleCount": 500
          }
-      },
-      {
-         "class": "spacecraft",
-         "name": "TGO_SAMZ",
-         "startTime": "2016-10-20 14:48:52 UTC",
-         "arcs": [
-            {
-               "center": "TGO",
-               "trajectoryFrame": "ICRF",
-               "trajectory": {
-                  "type": "Spice",
-                  "target": "TGO_SA+Z",
-                  "center": "TGO_SPACECRAFT"
-               },
-               "bodyFrame": {
-                  "type": "Spice",
-                  "name": "TGO_SA+Z"
-               }
-            }
-         ],
-      "geometry": {
-        "type": "Mesh",
-        "source": "./models/tgo_samz.3ds",
-        "scale": 0.001
-      },
-      "label": {
-        "color": [
-          1,
-          1,
-          1
-        ]
       }
-    },
-    {
-         "class": "spacecraft",
-         "name": "TGO_SAPZ",
-         "startTime": "2016-10-20 14:48:52 UTC",
-         "arcs": [
-            {
-               "center": "TGO",
-               "trajectoryFrame": "ICRF",
-               "trajectory": {
-                  "type": "Spice",
-                  "target": "TGO_SA-Z",
-                  "center": "TGO_SPACECRAFT"
-               },
-               "bodyFrame": {
-                  "type": "Spice",
-                  "name": "TGO_SA-Z"
-               }
-            }
-         ],
-      "geometry": {
-        "type": "Mesh",
-        "source": "./models/tgo_sapz.3ds",
-        "scale": 0.001
-      },
-      "label": {
-        "color": [
-          1,
-          1,
-          1
-        ]
-      }
-    },
-    {
-         "class": "spacecraft",
-         "name": "TGO_HGA",
-         "startTime": "2016-10-20 14:48:52 UTC",
-         "arcs": [
-            {
-               "center": "TGO",
-               "trajectoryFrame": "ICRF",
-               "trajectory": {
-                  "type": "Spice",
-                  "target": "TGO_HGA_APM",
-                  "center": "TGO_SPACECRAFT"
-               },
-               "bodyFrame": {
-                  "type": "Spice",
-                  "name": "TGO_HGA"
-               }
-            }
-         ],
-      "geometry": {
-        "type": "Mesh",
-        "source": "./models/tgo_hga.3ds",
-        "scale": 0.001
-      },
-      "label": {
-        "color": [
-          1,
-          1,
-          1
-        ]
-      }
-    }
    ]
 }
