@@ -7,35 +7,212 @@
     ],
     "sensors": {
         "ACS": [
-            "TGO_ACS_MIR",
-            "TGO_ACS_NIR_NAD",
-            "TGO_ACS_NIR_OCC",
-            "TGO_ACS_TIRVIM",
-            "TGO_ACS_TIRVIM_SCAN_NAD",
-            "TGO_ACS_TIRVIM_SUN",
-            "TGO_ACS_TIRVIM_SUN_BSR"
+            {
+                "name": "TGO_ACS_MIR",
+                "fov_frame": "TGO_ACS_MIR",
+                "color": [
+                    0,
+                    0.6,
+                    0
+                ]
+            },
+            {
+                "name": "TGO_ACS_NIR_NAD",
+                "fov_frame": "TGO_ACS_NIR_NAD",
+                "color": [
+                    0,
+                    0.6,
+                    0
+                ]
+            },
+            {
+                "name": "TGO_ACS_NIR_OCC",
+                "fov_frame": "TGO_ACS_NIR_OCC",
+                "color": [
+                    0,
+                    0.6,
+                    0
+                ]
+            },
+            {
+                "name": "TGO_ACS_TIRVIM",
+                "fov_frame": "TGO_ACS_TIRVIM",
+                "color": [
+                    0,
+                    0.6,
+                    0
+                ]
+            },
+            {
+                "name": "TGO_ACS_TIRVIM_SCAN_BBY",
+                "fov_frame": "TGO_ACS_TIRVIM_SCAN_BBY",
+                "color": [
+                    0,
+                    0.6,
+                    0
+                ]
+            },
+            {
+                "name": "TGO_ACS_TIRVIM_SCAN_NAD",
+                "fov_frame": "TGO_ACS_TIRVIM_SCAN_NAD",
+                "color": [
+                    0,
+                    0.6,
+                    0
+                ]
+            },
+            {
+                "name": "TGO_ACS_TIRVIM_SCAN_SPC",
+                "fov_frame": "TGO_ACS_TIRVIM_SCAN_SPC",
+                "color": [
+                    0,
+                    0.6,
+                    0
+                ]
+            },
+            {
+                "name": "TGO_ACS_TIRVIM_SUN",
+                "fov_frame": "TGO_ACS_TIRVIM_SUN",
+                "color": [
+                    0,
+                    0.6,
+                    0
+                ]
+            },
+            {
+                "name": "TGO_ACS_TIRVIM_SUN_BSR",
+                "fov_frame": "TGO_ACS_TIRVIM_SUN_BSR",
+                "color": [
+                    0,
+                    0.6,
+                    0
+                ]
+            }
         ],
-        "CASIS": [
-            "TGO_CASSIS",
-            "TGO_CASSIS_BLU",
-            "TGO_CASSIS_NIR",
-            "TGO_CASSIS_PAN",
-            "TGO_CASSIS_RED"
+        "CASSIS": [
+            {
+                "name": "TGO_CASSIS_BLU",
+                "fov_frame": "TGO_CASSIS_FSA",
+                "color": [
+                    0,
+                    0,
+                    1
+                ]
+            },
+            {
+                "name": "TGO_CASSIS_NIR",
+                "fov_frame": "TGO_CASSIS_FSA",
+                "color": [
+                    1,
+                    1,
+                    0
+                ]
+            },
+            {
+                "name": "TGO_CASSIS_PAN",
+                "fov_frame": "TGO_CASSIS_FSA",
+                "color": [
+                    0,
+                    1,
+                    0
+                ]
+            },
+            {
+                "name": "TGO_CASSIS_RED",
+                "fov_frame": "TGO_CASSIS_FSA",
+                "color": [
+                    1,
+                    0,
+                    0
+                ]
+            }
         ],
         "FREND": [
-            "TGO_FREND"
+            {
+                "name": "TGO_FREND",
+                "fov_frame": "TGO_FREND",
+                "color": [
+                    0,
+                    0.6,
+                    0
+                ]
+            }
         ],
         "NOMAD": [
-            "TGO_NOMAD_LNO",
-            "TGO_NOMAD_LNO_OPS_NAD",
-            "TGO_NOMAD_LNO_OPS_OCC",
-            "TGO_NOMAD_SO",
-            "TGO_NOMAD_UVIS_NAD",
-            "TGO_NOMAD_UVIS_OCC"
+            {
+                "name": "TGO_NOMAD_LNO",
+                "fov_frame": "TGO_NOMAD_LNO",
+                "color": [
+                    0,
+                    0.6,
+                    0
+                ]
+            },
+            {
+                "name": "TGO_NOMAD_LNO_OPS_NAD",
+                "fov_frame": "TGO_NOMAD_LNO_OPS_NAD",
+                "color": [
+                    0,
+                    0.6,
+                    0
+                ]
+            },
+            {
+                "name": "TGO_NOMAD_LNO_OPS_OCC",
+                "fov_frame": "TGO_NOMAD_LNO_OPS_OCC",
+                "color": [
+                    0,
+                    0.6,
+                    0
+                ]
+            },
+            {
+                "name": "TGO_NOMAD_SO",
+                "fov_frame": "TGO_NOMAD_SO",
+                "color": [
+                    0,
+                    0.6,
+                    0
+                ]
+            },
+            {
+                "name": "TGO_NOMAD_UVIS_NAD",
+                "fov_frame": "TGO_NOMAD_UVIS_NAD",
+                "color": [
+                    0,
+                    0.6,
+                    0
+                ]
+            },
+            {
+                "name": "TGO_NOMAD_UVIS_OCC",
+                "fov_frame": "TGO_NOMAD_UVIS_OCC",
+                "color": [
+                    0,
+                    0.6,
+                    0
+                ]
+            }
         ],
         "STR": [
-            "TGO_STR-1",
-            "TGO_STR-2"
+            {
+                "name": "TGO_STR-1",
+                "fov_frame": "TGO_STR-1",
+                "color": [
+                    0,
+                    0,
+                    0.6
+                ]
+            },
+            {
+                "name": "TGO_STR-2",
+                "fov_frame": "TGO_STR-2",
+                "color": [
+                    0,
+                    0,
+                    0.6
+                ]
+            }
         ]
     },
     "central_body": "Mars",

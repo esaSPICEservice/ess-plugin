@@ -8,6 +8,7 @@ class TabbedSelector(QWidget):
     def __init__(self, parent, items, callback, num_colums=4):
         super(QWidget, self).__init__(parent)
         self.callback = callback
+        self.checkboxes = []
         self.setup(items, num_colums)
 
     def setup(self, items, num_columns):
@@ -43,6 +44,7 @@ class TabbedSelector(QWidget):
                 layout.addWidget(cb, col, row)
                 self.adapt_callback(Qt.Unchecked, moon)
                 group_checkboxes[group_name].append(cb)
+                self.checkboxes.append(cb)
 
             layout = tabmm_map[group_name]
             checkboxes = group_checkboxes[group_name]
@@ -61,3 +63,9 @@ class TabbedSelector(QWidget):
 
     def adapt_callback(self, state, name):
         self.callback(True if state == Qt.Checked else False, name)
+
+    def get_state(self):
+        state = {}
+        for cb in self.checkboxes:
+            state[cb.text()] = cb.isChecked()
+        return state

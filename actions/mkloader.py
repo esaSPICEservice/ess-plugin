@@ -10,11 +10,12 @@ def execute(mk, extra_kernels, date):
 
     working_dir = generate_working_dir()
 
-    catalog = create_cosmo_scene(working_dir, mk, extra_kernels)
+    catalog, sensor_catalog = create_cosmo_scene(working_dir, mk, extra_kernels)
 
     cosmo = cosmoscripting.Cosmo()
     cosmo.unloadLastCatalog()
     cosmo.loadCatalogFile(catalog)
+    cosmo.loadCatalogFile(sensor_catalog)
     after_load()
     goto_date(date)
 

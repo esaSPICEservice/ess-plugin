@@ -22,14 +22,16 @@ class Sensor:
 class SensorGenerator(Generator):
     '''Sensor representation'''
 
-    def __init__(self, sensor, spacecraft):
+    def __init__(self):
         self.version = '1.0'
         self.name = 'ESS-Plugin generated'
+        self.items = []
 
+    def append(self, sensor, spacecraft):
         name = sensor.instr_name + SENSOR_SUFFIX
         body = spacecraft
 
-        self.items = [{
+        sensor_json = {
             'class': 'sensor',
             'name': name,
             'parent': body,
@@ -46,17 +48,19 @@ class SensorGenerator(Generator):
                 'range': 12000,
                 'rangeTracking': True,
                 'frustumColor':  sensor.frustum_color,
-                'frustumOpacity': 0.3,
+                'frustumOpacity': 0.0,
                 'gridOpacity': 0.3,
                 'footprintOpacity': 0.5,
                 'sideDivisions': 125,
                 'onlyVisibleDuringObs': False
             }
 
-        }]
-
+        }
+        
         if sensor.sensor_position:
-            self.items[0]['trajectory'] = {
+            sensor_json['trajectory'] = {
                 "type": "FixedPoint",
                 "position": sensor.sensor_position
-            }
+        }
+
+        self.items.append(sensor_json)

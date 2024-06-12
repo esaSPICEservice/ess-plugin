@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>382</width>
-    <height>91</height>
+    <height>89</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -72,6 +72,17 @@ QLabel {
       <string>Spacecraft</string>
      </property>
     </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <widget class="QCheckBox" name="frustrumCheckbox">
+       <property name="text">
+        <string>Show Frustrum</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </item>
   </layout>
  </widget>

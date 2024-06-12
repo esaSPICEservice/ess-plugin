@@ -84,6 +84,18 @@ QLabel {
       <widget class="QLineEdit" name="extraInput"/>
      </item>
      <item>
+      <widget class="QPushButton" name="extraBrowseButton">
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+	background-color: gray;
+}</string>
+       </property>
+       <property name="text">
+        <string>Browse</string>
+       </property>
+      </widget>
+     </item>
+     <item>
       <widget class="QPushButton" name="extraAddButton">
        <property name="styleSheet">
         <string notr="true">QPushButton {
@@ -96,14 +108,14 @@ QLabel {
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="extraBrowseButton">
+      <widget class="QPushButton" name="extraResetButton">
        <property name="styleSheet">
         <string notr="true">QPushButton {
-	background-color: gray;
+	background-color: orange;
 }</string>
        </property>
        <property name="text">
-        <string>Browse</string>
+        <string>Clean all</string>
        </property>
       </widget>
      </item>
@@ -123,24 +135,24 @@ QLabel {
     <widget class="QDateTimeEdit" name="dateTimeEdit">
      <property name="dateTime">
       <datetime>
-       <hour>0</hour>
+       <hour>22</hour>
        <minute>0</minute>
        <second>0</second>
        <year>2031</year>
        <month>8</month>
-       <day>17</day>
+       <day>16</day>
       </datetime>
      </property>
      <property name="date">
       <date>
        <year>2031</year>
        <month>8</month>
-       <day>17</day>
+       <day>16</day>
       </date>
      </property>
      <property name="maximumDateTime">
       <datetime>
-       <hour>21</hour>
+       <hour>20</hour>
        <minute>59</minute>
        <second>57</second>
        <year>2035</year>
@@ -150,7 +162,7 @@ QLabel {
      </property>
      <property name="minimumDateTime">
       <datetime>
-       <hour>20</hour>
+       <hour>18</hour>
        <minute>0</minute>
        <second>0</second>
        <year>2023</year>

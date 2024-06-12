@@ -16,50 +16,290 @@
   ],
   "sensors": {
     "GAL": [
-      "JUICE_GALA_RXT"
+      {
+        "name": "JUICE_GALA_RXT",
+        "fov_frame": "JUICE_GALA_RXT",
+        "color": [
+          0,
+          0,
+          0.6
+        ]
+      }
     ],
     "JAN": [
-      "JUICE_JANUS"
+      {
+        "name": "JUICE_JANUS",
+        "fov_frame": "JUICE_JANUS",
+        "color": [
+          0,
+          0,
+          0.6
+        ]
+      }
     ],
     "JMC": [
-      "JUICE_JMC-1",
-      "JUICE_JMC-2"
+      {
+        "name": "JUICE_JMC-1",
+        "fov_frame": "JUICE_JMC-1",
+        "color": [
+          0,
+          0,
+          0.6
+        ]
+      },
+      {
+        "name": "JUICE_JMC-2",
+        "fov_frame": "JUICE_JMC-2",
+        "color": [
+          0,
+          0,
+          0.6
+        ]
+      }
     ],
     "MAJ": [
-      "JUICE_MAJIS_ENVELOPE",
-      "JUICE_MAJIS_VISNIR",
-      "JUICE_MAJIS_VISNIR_B2",
-      "JUICE_MAJIS_VISNIR_B4",
-      "JUICE_MAJIS_IR",
-      "JUICE_MAJIS_IR_B2",
-      "JUICE_MAJIS_IR_B4"
+      {
+        "name": "JUICE_MAJIS_ENVELOPE",
+        "fov_frame": "JUICE_MAJIS_ENVELOPE",
+        "color": [
+          0,
+          0,
+          0.6
+        ]
+      },
+      {
+        "name": "JUICE_MAJIS_VISNIR",
+        "fov_frame": "JUICE_MAJIS_VISNIR",
+        "color": [
+          0,
+          0,
+          0.6
+        ]
+      },
+      {
+        "name": "JUICE_MAJIS_VISNIR_B2",
+        "fov_frame": "JUICE_MAJIS_VISNIR_B2",
+        "color": [
+          0,
+          0,
+          0.6
+        ]
+      },
+      {
+        "name": "JUICE_MAJIS_VISNIR_B4",
+        "fov_frame": "JUICE_MAJIS_VISNIR_B4",
+        "color": [
+          0,
+          0,
+          0.6
+        ]
+      },
+      {
+        "name": "JUICE_MAJIS_IR",
+        "fov_frame": "JUICE_MAJIS_IR",
+        "color": [
+          0,
+          0,
+          0.6
+        ]
+      },
+      {
+        "name": "JUICE_MAJIS_IR_B2",
+        "fov_frame": "JUICE_MAJIS_IR_B2",
+        "color": [
+          0,
+          0,
+          0.6
+        ]
+      },
+      {
+        "name": "JUICE_MAJIS_IR_B4",
+        "fov_frame": "JUICE_MAJIS_IR_B4",
+        "color": [
+          0,
+          0,
+          0.6
+        ]
+      }
     ],
     "NAV": [
-      "JUICE_NAVCAM-1",
-      "JUICE_NAVCAM-2"
+      {
+        "name": "JUICE_NAVCAM-1",
+        "fov_frame": "JUICE_NAVCAM-1",
+        "color": [
+          0,
+          0,
+          0.6
+        ]
+      },
+      {
+        "name": "JUICE_NAVCAM-2",
+        "fov_frame": "JUICE_NAVCAM-2",
+        "color": [
+          0,
+          0,
+          0.6
+        ]
+      }
     ],
     "PJDC": [
-      "JUICE_PEP_JDC_PIXEL_000",
-      "JUICE_PEP_JDC_PIXEL_080",
-      "JUICE_PEP_JDC_PIXEL_176",
-      "JUICE_PEP_JDC_PIXEL_004",
-      "JUICE_PEP_JDC_PIXEL_084",
-      "JUICE_PEP_JDC_PIXEL_180",
-      "JUICE_PEP_JDC_PIXEL_008",
-      "JUICE_PEP_JDC_PIXEL_088",
-      "JUICE_PEP_JDC_PIXEL_184",
-      "JUICE_PEP_JDC_PIXEL_012",
-      "JUICE_PEP_JDC_PIXEL_092",
-      "JUICE_PEP_JDC_PIXEL_188"
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_000",
+        "fov_frame": "JUICE_PEP_JDC_PIXEL_000",
+        "color": [
+          0,
+          0,
+          0.6
+        ]
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_080",
+        "fov_frame": "JUICE_PEP_JDC_PIXEL_080",
+        "color": [
+          0,
+          0,
+          0.6
+        ]
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_176",
+        "fov_frame": "JUICE_PEP_JDC_PIXEL_176",
+        "color": [
+          0,
+          0,
+          0.6
+        ]
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_004",
+        "fov_frame": "JUICE_PEP_JDC_PIXEL_004",
+        "color": [
+          0,
+          0,
+          0.6
+        ]
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_084",
+        "fov_frame": "JUICE_PEP_JDC_PIXEL_084",
+        "color": [
+          0,
+          0,
+          0.6
+        ]
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_180",
+        "fov_frame": "JUICE_PEP_JDC_PIXEL_180",
+        "color": [
+          0,
+          0,
+          0.6
+        ]
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_008",
+        "fov_frame": "JUICE_PEP_JDC_PIXEL_008",
+        "color": [
+          0,
+          0,
+          0.6
+        ]
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_088",
+        "fov_frame": "JUICE_PEP_JDC_PIXEL_088",
+        "color": [
+          0,
+          0,
+          0.6
+        ]
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_184",
+        "fov_frame": "JUICE_PEP_JDC_PIXEL_184",
+        "color": [
+          0,
+          0,
+          0.6
+        ]
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_012",
+        "fov_frame": "JUICE_PEP_JDC_PIXEL_012",
+        "color": [
+          0,
+          0,
+          0.6
+        ]
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_092",
+        "fov_frame": "JUICE_PEP_JDC_PIXEL_092",
+        "color": [
+          0,
+          0,
+          0.6
+        ]
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_188",
+        "fov_frame": "JUICE_PEP_JDC_PIXEL_188",
+        "color": [
+          0,
+          0,
+          0.6
+        ]
+      }
     ],
     "STR": [
-      "JUICE_STR-OH1",
-      "JUICE_STR-OH2",
-      "JUICE_STR-OH3"
+      {
+        "name": "JUICE_STR-OH1",
+        "fov_frame": "JUICE_STR-OH1",
+        "color": [
+          0,
+          0,
+          0.6
+        ]
+      },
+      {
+        "name": "JUICE_STR-OH2",
+        "fov_frame": "JUICE_STR-OH2",
+        "color": [
+          0,
+          0,
+          0.6
+        ]
+      },
+      {
+        "name": "JUICE_STR-OH3",
+        "fov_frame": "JUICE_STR-OH3",
+        "color": [
+          0,
+          0,
+          0.6
+        ]
+      }
     ],
     "UVS": [
-      "JUICE_UVS_AP_HP",
-      "JUICE_UVS_SP"
+      {
+        "name": "JUICE_UVS_AP_HP",
+        "fov_frame": "JUICE_UVS_AP_HP",
+        "color": [
+          0,
+          0,
+          0.6
+        ]
+      },
+      {
+        "name": "JUICE_UVS_SP",
+        "fov_frame": "JUICE_UVS_SP",
+        "color": [
+          0,
+          0,
+          0.6
+        ]
+      }
     ]
   },
   "central_body": "Jupiter",

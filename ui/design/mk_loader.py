@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'qtcreator/mk-loader.ui'
+# Form implementation generated from reading ui file 'design/qtcreator/mk-loader.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.7
 #
@@ -64,18 +64,24 @@ class Ui_mkLoaderWidget(object):
         self.extraInput = QtWidgets.QLineEdit(mkLoaderWidget)
         self.extraInput.setObjectName("extraInput")
         self.horizontalLayout_4.addWidget(self.extraInput)
-        self.extraAddButton = QtWidgets.QPushButton(mkLoaderWidget)
-        self.extraAddButton.setStyleSheet("QPushButton {\n"
-"    background-color: gray;\n"
-"}")
-        self.extraAddButton.setObjectName("extraAddButton")
-        self.horizontalLayout_4.addWidget(self.extraAddButton)
         self.extraBrowseButton = QtWidgets.QPushButton(mkLoaderWidget)
         self.extraBrowseButton.setStyleSheet("QPushButton {\n"
 "    background-color: gray;\n"
 "}")
         self.extraBrowseButton.setObjectName("extraBrowseButton")
         self.horizontalLayout_4.addWidget(self.extraBrowseButton)
+        self.extraAddButton = QtWidgets.QPushButton(mkLoaderWidget)
+        self.extraAddButton.setStyleSheet("QPushButton {\n"
+"    background-color: gray;\n"
+"}")
+        self.extraAddButton.setObjectName("extraAddButton")
+        self.horizontalLayout_4.addWidget(self.extraAddButton)
+        self.extraResetButton = QtWidgets.QPushButton(mkLoaderWidget)
+        self.extraResetButton.setStyleSheet("QPushButton {\n"
+"    background-color: orange;\n"
+"}")
+        self.extraResetButton.setObjectName("extraResetButton")
+        self.horizontalLayout_4.addWidget(self.extraResetButton)
         self.verticalLayout.addLayout(self.horizontalLayout_4)
         self.extraList = QtWidgets.QListWidget(mkLoaderWidget)
         self.extraList.setObjectName("extraList")
@@ -84,8 +90,10 @@ class Ui_mkLoaderWidget(object):
         self.label_3.setObjectName("label_3")
         self.verticalLayout.addWidget(self.label_3)
         self.dateTimeEdit = QtWidgets.QDateTimeEdit(mkLoaderWidget)
-        self.dateTimeEdit.setMaximumDateTime(QtCore.QDateTime(QtCore.QDate(2035, 12, 30), QtCore.QTime(21, 59, 57)))
-        self.dateTimeEdit.setMinimumDateTime(QtCore.QDateTime(QtCore.QDate(2000, 1, 1), QtCore.QTime(0, 0, 0)))
+        self.dateTimeEdit.setDateTime(QtCore.QDateTime(QtCore.QDate(2031, 8, 16), QtCore.QTime(22, 0, 0)))
+        self.dateTimeEdit.setDate(QtCore.QDate(2031, 8, 16))
+        self.dateTimeEdit.setMaximumDateTime(QtCore.QDateTime(QtCore.QDate(2035, 12, 30), QtCore.QTime(20, 59, 57)))
+        self.dateTimeEdit.setMinimumDateTime(QtCore.QDateTime(QtCore.QDate(2023, 4, 13), QtCore.QTime(18, 0, 0)))
         self.dateTimeEdit.setTimeSpec(QtCore.Qt.UTC)
         self.dateTimeEdit.setObjectName("dateTimeEdit")
         self.verticalLayout.addWidget(self.dateTimeEdit)
@@ -106,8 +114,9 @@ class Ui_mkLoaderWidget(object):
         self.label.setText(_translate("mkLoaderWidget", "Metakernel File"))
         self.mkButton.setText(_translate("mkLoaderWidget", " Browse "))
         self.label_2.setText(_translate("mkLoaderWidget", "Additional kernels"))
-        self.extraAddButton.setText(_translate("mkLoaderWidget", "Add"))
         self.extraBrowseButton.setText(_translate("mkLoaderWidget", "Browse"))
+        self.extraAddButton.setText(_translate("mkLoaderWidget", "Add"))
+        self.extraResetButton.setText(_translate("mkLoaderWidget", "Clean all"))
         self.label_3.setText(_translate("mkLoaderWidget", "Date"))
         self.dateTimeEdit.setDisplayFormat(_translate("mkLoaderWidget", "yyyy-MM-ddTHH:mm:ss"))
         self.visualizeButton.setText(_translate("mkLoaderWidget", "Visualize"))
