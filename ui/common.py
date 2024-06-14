@@ -40,7 +40,7 @@ def get_main_window():
         name = widget.objectName()
         if name == 'mainWindow':
             return widget
-    return None
+    return qApp
 
 def get_api():
     # Find the scripting API object with its name in QT

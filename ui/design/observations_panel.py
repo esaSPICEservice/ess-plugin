@@ -79,7 +79,7 @@ class Ui_observationsPanel(object):
         self.horizontalLayout_2.setObjectName("horizontalLayout_2")
         self.tableWidget = QtWidgets.QTableWidget(observationsPanel)
         self.tableWidget.setObjectName("tableWidget")
-        self.tableWidget.setColumnCount(4)
+        self.tableWidget.setColumnCount(6)
         self.tableWidget.setRowCount(0)
         item = QtWidgets.QTableWidgetItem()
         self.tableWidget.setHorizontalHeaderItem(0, item)
@@ -89,38 +89,22 @@ class Ui_observationsPanel(object):
         self.tableWidget.setHorizontalHeaderItem(2, item)
         item = QtWidgets.QTableWidgetItem()
         self.tableWidget.setHorizontalHeaderItem(3, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(4, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(5, item)
         self.tableWidget.horizontalHeader().setDefaultSectionSize(150)
         self.horizontalLayout_2.addWidget(self.tableWidget)
-        self.verticalLayout = QtWidgets.QVBoxLayout()
-        self.verticalLayout.setObjectName("verticalLayout")
-        self.removeButton = QtWidgets.QPushButton(observationsPanel)
-        self.removeButton.setStyleSheet("QPushButton {\n"
-"    background-color: orange;\n"
-"    color:white;\n"
-"    font-size:14px;\n"
-"    border:none;\n"
-"    border-radius:5px;\n"
-"    padding-right: 5px;\n"
-"    padding-left: 5px;\n"
-"    padding-bottom: 2px;\n"
-"}\n"
-"\n"
-"")
-        self.removeButton.setObjectName("removeButton")
-        self.verticalLayout.addWidget(self.removeButton)
-        spacerItem = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.verticalLayout.addItem(spacerItem)
-        self.horizontalLayout_2.addLayout(self.verticalLayout)
         self.verticalLayout_2.addLayout(self.horizontalLayout_2)
         self.horizontalLayout_4 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_4.setObjectName("horizontalLayout_4")
-        spacerItem1 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_4.addItem(spacerItem1)
+        spacerItem = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_4.addItem(spacerItem)
         self.addButton = QtWidgets.QPushButton(observationsPanel)
         self.addButton.setObjectName("addButton")
         self.horizontalLayout_4.addWidget(self.addButton)
-        spacerItem2 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_4.addItem(spacerItem2)
+        spacerItem1 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_4.addItem(spacerItem1)
         self.verticalLayout_2.addLayout(self.horizontalLayout_4)
 
         self.retranslateUi(observationsPanel)
@@ -143,5 +127,8 @@ class Ui_observationsPanel(object):
         item.setText(_translate("observationsPanel", "Start"))
         item = self.tableWidget.horizontalHeaderItem(3)
         item.setText(_translate("observationsPanel", "End"))
-        self.removeButton.setText(_translate("observationsPanel", "Remove Last"))
+        item = self.tableWidget.horizontalHeaderItem(4)
+        item.setText(_translate("observationsPanel", "-"))
+        item = self.tableWidget.horizontalHeaderItem(5)
+        item.setText(_translate("observationsPanel", "-"))
         self.addButton.setText(_translate("observationsPanel", "Add Observations"))

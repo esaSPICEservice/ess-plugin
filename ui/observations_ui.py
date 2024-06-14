@@ -1,7 +1,8 @@
 
-from PyQt5.QtWidgets import QFileDialog, QDialog, QTableWidgetItem, QMessageBox
+from PyQt5.QtWidgets import QFileDialog, QDialog, QTableWidgetItem, QMessageBox, QPushButton
 from PyQt5.QtCore import Qt, QDateTime
 from actions.sensors import get_sensor_ids, get_targets, reconfigure_catalogue
+from actions.time_navigation import goto_date
 from ui.common import get_settings, get_runtime
 from ui.design.observations_panel import Ui_observationsPanel
 import os
@@ -21,13 +22,19 @@ class ObservationsDialog(QDialog):
         self.panel = Ui_observationsPanel()
         self.panel.setupUi(self)
         self.panel.newButton.clicked.connect(self._add_row)
-        self.panel.removeButton.clicked.connect(self._remove_row)
         self.panel.browseButton.clicked.connect(self._browse)
         self.panel.importButton.clicked.connect(self._import)
         self.panel.addButton.clicked.connect(self.__add_observations)
         self.panel.sensorComboBox.addItems(get_sensor_ids())
         self.panel.targetComboBox.addItems(get_targets())
         self.table = self.panel.tableWidget
+        self.table.setColumnWidth(0, 150)
+        self.table.setColumnWidth(1, 100)
+        self.table.setColumnWidth(2, 180)
+        self.table.setColumnWidth(3, 180)
+        self.table.setColumnWidth(4, 40)
+        self.table.setColumnWidth(5, 40)
+
 
     def _add_row(self):
       
@@ -44,10 +51,29 @@ class ObservationsDialog(QDialog):
         self.table.setItem(row_count , 1, QTableWidgetItem(target))
         self.table.setItem(row_count , 2, QTableWidgetItem(start))
         self.table.setItem(row_count , 3, QTableWidgetItem(end))
+       
+        delete_button = QPushButton(self.table)
+        delete_button.setText('X')
+        delete_button.clicked.connect(self.__delete_clicked)
+        self.table.setCellWidget(row_count , 4, delete_button)
 
-    def _remove_row(self):
-        if self.table.rowCount() > 0:
-            self.table.removeRow(self.table.rowCount()-1)
+        goto_button = QPushButton(self.table)
+        goto_button.setText('Go')
+        goto_button.clicked.connect(self.__go_clicked)
+        self.table.setCellWidget(row_count , 5, goto_button)
+
+    def __delete_clicked(self):
+        button = self.sender()
+        if button:
+            row = self.table.indexAt(button.pos()).row()
+            self.table.removeRow(row)
+
+    def __go_clicked(self):
+        button = self.sender()
+        if button:
+            row = self.table.indexAt(button.pos()).row()
+            start = self.table.item(row, 2).text()
+            goto_date(start[:-1])
 
     def _browse(self):
         # default_folder = self.settings.get(self.mission, last_repo_key, '')
@@ -75,11 +101,11 @@ class ObservationsDialog(QDialog):
 
     def _get_observations(self):
         row_count = self.table.rowCount()
-        column_count = self.table.columnCount()
         observations = []
         for row in range(row_count):
             observation = []
-            for column in range(column_count):
+            # We don't want to extract the buttons
+            for column in range(4):
                 observation.append(self.table.item(row, column).text())
             observations.append(observation)
         return observations
