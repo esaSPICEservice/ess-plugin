@@ -303,6 +303,7 @@
     ]
   },
   "central_body": "Jupiter",
+  "targets": ["Jupiter", "Io", "Europa", "Ganymede", "Callisto", "Earth", "Moon", "Venus"],
   "boresights": [
     {
       "name": "JUICE_GALA_RXT",

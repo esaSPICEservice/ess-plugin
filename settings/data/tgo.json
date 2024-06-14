@@ -216,6 +216,7 @@
         ]
     },
     "central_body": "Mars",
+    "targets": ["Mars", "Deimos", "Phobos", "Earth"],
     "boresights": [
         {
             "name": "TGO_ACS_MIR",
