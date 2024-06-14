@@ -52,13 +52,6 @@ QLabel {
       <widget class="QLineEdit" name="importLineEdit"/>
      </item>
      <item>
-      <widget class="QPushButton" name="browseButton">
-       <property name="text">
-        <string>Browse</string>
-       </property>
-      </widget>
-     </item>
-     <item>
       <widget class="QPushButton" name="importButton">
        <property name="text">
         <string>Import CSV</string>
@@ -98,7 +91,7 @@ QLabel {
      <item>
       <widget class="QPushButton" name="newButton">
        <property name="text">
-        <string>New</string>
+        <string>Add</string>
        </property>
       </widget>
      </item>
@@ -163,7 +156,7 @@ QLabel {
      <item>
       <widget class="QPushButton" name="addButton">
        <property name="text">
-        <string>Add Observations</string>
+        <string>Load in Scene</string>
        </property>
       </widget>
      </item>

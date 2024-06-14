@@ -22,9 +22,8 @@ class ObservationsDialog(QDialog):
         self.panel = Ui_observationsPanel()
         self.panel.setupUi(self)
         self.panel.newButton.clicked.connect(self._add_row)
-        self.panel.browseButton.clicked.connect(self._browse)
-        self.panel.importButton.clicked.connect(self._import)
-        self.panel.addButton.clicked.connect(self.__add_observations)
+        self.panel.importButton.clicked.connect(self._browse)
+        self.panel.addButton.clicked.connect(self.__load_in_scene)
         self.panel.sensorComboBox.addItems(get_sensor_ids())
         self.panel.targetComboBox.addItems(get_targets())
         self.table = self.panel.tableWidget
@@ -82,6 +81,7 @@ class ObservationsDialog(QDialog):
             self, "Select CSV", default_folder, "CSV files (*.csv)")
         if file_name:
             self.panel.importLineEdit.setText(file_name)
+            self._import()
         self.focus()
     
     def _import(self):
@@ -110,12 +110,11 @@ class ObservationsDialog(QDialog):
             observations.append(observation)
         return observations
     
-    def __add_observations(self):
+    def __load_in_scene(self):
         observations = self._get_observations()
         if len(observations) > 0:
             self.run_time.set('observations', observations)
             reconfigure_catalogue()
-            self.hide()
 
     def show_and_focus(self):
         self.focus()
