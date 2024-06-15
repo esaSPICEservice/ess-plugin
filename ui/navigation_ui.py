@@ -41,7 +41,7 @@ class NavigationDialog(QDialog):
     def sensor_view(self):
         sensor_name = self.navigation_panel.sensorBox.currentText()
         sensor = next(filter(lambda item: item.get('name') == sensor_name, self.boresights))
-        sensor_view(sensor.get('fov_frame'), sensor.get('size'))
+        sensor_view(sensor.get('name'), sensor.get('size'))
         self.hide()
 
     def toggle_sensor(self, visible, name):

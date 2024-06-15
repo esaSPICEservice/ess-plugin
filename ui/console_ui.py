@@ -31,7 +31,7 @@ class ConsoleDialog(QDialog):
         
         try:
             evaluate(expressions)
-            self.hide()
+            # self.hide()
         except EvaluateException as error:
             QMessageBox.warning(self, 'Expression editor',
                                 str(error))

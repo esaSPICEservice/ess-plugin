@@ -20,15 +20,15 @@ def spacecraft_view():
 
 
 def sensor_view(sensor_name, fov):
-    run_time = get_runtime()
-    sc = run_time.get("spacecraft", "")
     api = get_api()
     cosmo = cosmoscripting.Cosmo()
-    frame = sensor_name
-    cosmo.moveToPovSpiceFrame(sc, frame, [0,0,0.002], [0,0,1], [0,1,0], 0.0)
-    print("Viewing " + sensor_name)
+    cosmo.gotoObject(sensor_name + '_SENSOR',  0)
+    cosmo.setCentralObject(sensor_name + '_SENSOR')
+    cosmo.setCameraToBodyFixedFrame()
+    cosmo.setCameraPosition([0, 0, 0.05])
     api.adjustFov(fov, 0)
-    cosmo.pause()
+    cosmo.setCameraOrientation([0, 0, -1, 0])
+
 
 def evaluate(expressions):
     cosmo = cosmoscripting.Cosmo()
