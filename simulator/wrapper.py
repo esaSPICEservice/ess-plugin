@@ -39,7 +39,8 @@ def simulate(meta_kernel, ptr_content, no_power, no_sa, no_mga, step=5):
         for ck in cks:
             if os.path.exists(os.path.join(root_scenario_path, 'output', ck)):
                 extra.append("./output/" + ck)
+        catalog, sensor_catalog = create_cosmo_scene(root_scenario_path, mk, extra)
 
-        return True, create_cosmo_scene(root_scenario_path, mk, extra), root_scenario_path
+        return True, catalog, sensor_catalog, root_scenario_path
     else:
-        return False, os.path.join(root_scenario_path, 'output', 'log.json'), root_scenario_path
+        return False, os.path.join(root_scenario_path, 'output', 'log.json'), None, root_scenario_path

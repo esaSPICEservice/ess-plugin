@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'navigator-panel.ui'
+# Form implementation generated from reading ui file 'qtcreator/navigator-panel.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.7
 #
@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName("Form")
-        Form.resize(382, 91)
+        Form.resize(382, 89)
         Form.setStyleSheet("QPushButton {\n"
 "    background-color: #4CAF50;\n"
 "    color:white;\n"
@@ -62,6 +62,12 @@ class Ui_Form(object):
         self.scViewButton = QtWidgets.QPushButton(Form)
         self.scViewButton.setObjectName("scViewButton")
         self.verticalLayout.addWidget(self.scViewButton)
+        self.horizontalLayout_2 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_2.setObjectName("horizontalLayout_2")
+        self.frustrumCheckbox = QtWidgets.QCheckBox(Form)
+        self.frustrumCheckbox.setObjectName("frustrumCheckbox")
+        self.horizontalLayout_2.addWidget(self.frustrumCheckbox)
+        self.verticalLayout.addLayout(self.horizontalLayout_2)
 
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
@@ -71,3 +77,4 @@ class Ui_Form(object):
         Form.setWindowTitle(_translate("Form", "Navigation"))
         self.sensorViewButton.setText(_translate("Form", "Sensor View"))
         self.scViewButton.setText(_translate("Form", "Spacecraft"))
+        self.frustrumCheckbox.setText(_translate("Form", "Show Frustrum"))

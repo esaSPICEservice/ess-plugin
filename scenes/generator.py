@@ -3,24 +3,29 @@ import json
 from actions.sensors import get_sensor_list
 from utils.generators import Sensor, SensorGenerator
 from ui.common import get_runtime
+import cosmoscripting
 
 from datetime import datetime
 
 TIMESTAMP_FORMAT = '%Y%m%dT%H%M%S%f'
 
 
-
-def generate_sensor(name, parent_path):
+def generate_all_sensor(sensor_list, parent_path):
 
     run_time = get_runtime()
+    generator = SensorGenerator()
+    for sensor in sensor_list:
+        instrument = sensor.get('name')
+        color = sensor.get('color')
+        sensor = Sensor(
+                instrument, run_time.get('central_body', ''), 
+                color, None)
+        generator.append(sensor, run_time.get('spacecraft', ''))
 
-    generator = SensorGenerator(
-        Sensor(
-                name, run_time.get('central_body', ''), 
-                [0, 0.6, 0], None),
-        run_time.get('spacecraft', ''))
-    generator.save(os.path.abspath(os.path.join(parent_path, "{name}.json".format(name=name))))
-    return './sensors/'+ name + '.json'
+    file_path = os.path.abspath(os.path.join(parent_path, "sensors.json"))
+    generator.save(file_path)
+    run_time.set('sensors_file_path', file_path)
+    return file_path
 
 
 
@@ -41,11 +46,7 @@ def create_cosmo_scene(parent_path, metakernel, extra):
     for model in run_time.get('models', []):
         scene_json.get('require').append("{data_folder}/{model}".format(data_folder=data_folder,model=model))
 
-
-    sensor_folder = os.path.join(parent_path, 'sensors')
-    os.makedirs(sensor_folder)
-    for instrument in get_sensor_list():
-        scene_json.get('require').append(generate_sensor(instrument, sensor_folder))
+    all_sensor_path = generate_all_sensor(get_sensor_list(), parent_path)
 
     scene_file_path = os.path.abspath(os.path.join(parent_path, "scene.json"))
     with open(scene_file_path, "w") as scene_json_file:
@@ -65,7 +66,7 @@ def create_cosmo_scene(parent_path, metakernel, extra):
     with open(spice_file_path, "w") as spice_json_file:
         json.dump(spice_json, spice_json_file, indent=2)
 
-    return scene_file_path
+    return scene_file_path, all_sensor_path
 
 
 def timestamp():

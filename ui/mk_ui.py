@@ -27,6 +27,11 @@ class MkLoaderDialog(QDialog):
         self.mk_loader.mkButton.clicked.connect(self.browse_mk)
         self.mk_loader.extraAddButton.clicked.connect(self.add_kernel)
         self.mk_loader.extraBrowseButton.clicked.connect(self.browse_extra)
+        self.mk_loader.extraResetButton.clicked.connect(self.reset_extra)
+
+    def reset_extra(self):
+        self.mk_loader.extraList.clear()
+        self.mk_loader.extraInput.setText('')
 
     def add_kernel(self):
         extra = self.mk_loader.extraInput.text()
