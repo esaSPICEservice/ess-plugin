@@ -1,0 +1,578 @@
+{
+   "version": "1.0",
+   "name": "Cosmographia MPO Example",
+   "items": [
+{
+         "class": "spacecraft",
+         "name": "DIDYMOS",
+         "startTime": "2022-01-01 01:00:00.000  UTC",
+         "arcs": [
+            {
+               "endTime": "2033-06-23 00:00:00.000  UTC",
+               "center": "Sun",
+               "trajectory": {
+                  "type": "Spice",
+                  "target": "DIDYMOS",
+                  "center": "Sun"
+               },
+               "bodyFrame": {
+                  "type": "Spice",
+                  "name": "DIDYMOS_FIXED"
+               }
+            }
+         ],
+      "geometry": {
+        "type": "Globe",
+         "radii": [
+               0.39167,
+               0.39167,
+               0.29195
+            ]
+      },
+      "label": {
+        "color": [
+          1,
+          1,
+          1
+        ]
+      },
+      "trajectoryPlot": {
+        "color": [
+          1,
+          0,
+          0
+        ],
+        "lineWidth": 5,
+        "duration": "600 d",
+        "lead": 0.25,
+        "fade": 0.0,
+        "sampleCount": 500
+      }
+    },
+     {
+         "class": "spacecraft",
+         "name": "DIMORPHOS",
+         "startTime": "2022-01-01 01:00:00.000  UTC",
+         "arcs": [
+            {
+               "endTime": "2033-06-23 00:00:00.000  UTC",
+               "center": "DIDYMOS",
+               "trajectory": {
+                  "type": "Spice",
+                  "target": "DIMORPHOS",
+                  "center": "DIDYMOS"
+               },
+               "bodyFrame": {
+                  "type": "Spice",
+                  "name": "DIMORPHOS_FIXED"
+               }
+            }
+         ],
+      "geometry": {
+        "type": "Globe",
+         "radii": [
+               0.09078,
+               0.06932,
+               0.06131
+            ]
+      },
+      "label": {
+        "color": [
+          1,
+          1,
+          1
+        ]
+      },
+      "trajectoryPlot": {
+        "color": [
+          1,
+          0,
+          0
+        ],
+        "lineWidth": 5,
+        "duration": "2 d",
+        "lead": 0.25,
+        "fade": 0.0,
+        "sampleCount": 500
+      }
+    },
+  {
+         "class": "spacecraft",
+         "name": "DART_IMPACT_SITE",
+         "startTime": "2022-01-01 01:00:00.000  UTC",
+         "center": "DIMORPHOS",
+         "trajectory": {
+            "type": "Spice",
+            "target": "DART_IMPACT_SITE",
+            "center": "DIMORPHOS"
+         },
+         "bodyFrame": {
+            "type": "Spice",
+            "name": "DIMORPHOS_FIXED"
+         },
+   "geometry": {
+        "type": "Globe",
+         "radii": [
+               0.001,
+               0.001,
+               0.001
+            ]}},
+     {
+         "class": "spacecraft",
+         "name": "HERA_BUS",
+         "startTime": "2022-01-01 01:00:00.000  UTC",
+         "arcs": [
+            {
+               "center": "HERA",
+               "trajectory": {
+                  "type": "Spice",
+                  "target": "HERA_SPACECRAFT",
+                  "center": "HERA"
+               },
+               "bodyFrame": {
+                  "type": "Spice",
+                  "name": "HERA_SPACECRAFT"
+               }
+            }
+         ],
+      "geometry": {
+        "type": "Mesh",
+        "source": "./models/3ds/hera_sc_bus_v01.3ds"
+      },
+      "label": {
+        "showText": false
+      },
+      "trajectoryPlot": {
+        "color": [
+          1,
+          0,
+          0
+        ],
+        "lineWidth": 1,
+        "duration": "7 d",
+        "lead": 0.0,
+        "fade": 0.25,
+        "sampleCount": 1000
+      }
+    },
+    {
+         "class": "spacecraft",
+         "name": "HERA",
+         "startTime": "2022-01-01 01:00:00.000  UTC",
+         "arcs": [
+            {
+               "endTime": "2025-03-10 00:00:00.000  UTC",
+               "center": "Sun",
+               "trajectory": {
+                  "type": "Spice",
+                  "target": "HERA_SPACECRAFT",
+                  "center": "SUN"
+               },
+               "bodyFrame": {
+                  "type": "Spice",
+                  "name": "HERA_SPACECRAFT"
+               }
+            },
+           {
+               "endTime": "2025-03-18 00:00:00.000  UTC",
+               "center": "Mars",
+               "trajectory": {
+                  "type": "Spice",
+                  "target": "HERA_SPACECRAFT",
+                  "center": "MARS"
+               },
+               "bodyFrame": {
+                  "type": "Spice",
+                  "name": "HERA_SPACECRAFT"
+               }
+            },
+           {
+               "endTime": "2026-12-02 00:00:00.000  UTC",
+               "center": "Sun",
+               "trajectory": {
+                  "type": "Spice",
+                  "target": "HERA_SPACECRAFT",
+                  "center": "SUN"
+               },
+               "bodyFrame": {
+                  "type": "Spice",
+                  "name": "HERA_SPACECRAFT"
+               }
+            },
+           {
+               "center": "DIDYMOS",
+               "trajectory": {
+                  "type": "Spice",
+                  "target": "HERA_SPACECRAFT",
+                  "center": "DIDYMOS"
+               },
+               "bodyFrame": {
+                  "type": "Spice",
+                  "name": "HERA_SPACECRAFT"
+               }
+            }
+         ],
+      "geometry": {
+        "type": "Mesh",
+        "source": "./models/3ds/hera_sc_mli_v01.3ds"
+      },
+      "label": {
+        "color": [
+          1,
+          1,
+          1
+        ]
+      },
+      "trajectoryPlot": {
+        "color": [
+          1,
+          0,
+          0
+        ],
+        "lineWidth": 1,
+        "duration": "7 d",
+        "lead": 0.0,
+        "fade": 0.25,
+        "sampleCount": 1000
+      }
+    },
+     {
+         "class": "spacecraft",
+         "name": "HERA_SAPY",
+         "startTime": "2022-01-01 01:00:00.000  UTC",
+         "arcs": [
+            {
+               "center": "HERA",
+               "trajectory": {
+                  "type": "Spice",
+                  "target": "HERA_SA+Y",
+                  "center": "HERA_SPACECRAFT"
+               },
+               "bodyFrame": {
+                  "type": "Spice",
+                  "name": "HERA_SA+Y_ZERO"
+               }
+            }
+         ],
+      "geometry": {
+        "type": "Mesh",
+        "source": "./models/3ds/hera_sc_sapy_v01.3ds"
+      },
+      "label": {
+        "showText": false
+      }
+     },
+    {
+         "class": "spacecraft",
+         "name": "HERA_SAMY",
+         "startTime": "2022-01-01 01:00:00.000  UTC",
+         "arcs": [
+            {
+               "center": "HERA",
+               "trajectory": {
+                  "type": "Spice",
+                  "target": "HERA_SA-Y",
+                  "center": "HERA_SPACECRAFT"
+               },
+               "bodyFrame": {
+                  "type": "Spice",
+                  "name": "HERA_SA-Y_ZERO"
+               }
+            }
+         ],
+      "geometry": {
+        "type": "Mesh",
+        "source": "./models/3ds/hera_sc_samy_v01.3ds"
+      },
+      "label": {
+        "showText": false
+      }
+    },
+     {
+         "class": "spacecraft",
+         "name": "HERA_ME",
+         "startTime": "2022-01-01 01:00:00.000  UTC",
+         "arcs": [
+            {
+               "center": "HERA",
+               "trajectory": {
+                  "type": "Spice",
+                  "target": "HERA_SPACECRAFT",
+                  "center": "HERA_SPACECRAFT"
+               },
+               "bodyFrame": {
+                  "type": "Spice",
+                  "name": "HERA_SPACECRAFT"
+               }
+            }
+         ],
+      "geometry": {
+        "type": "Mesh",
+        "source": "./models/3ds/hera_sc_me_v01.3ds"
+      },
+      "label": {
+        "showText": false
+      }
+     },
+     {
+         "class": "spacecraft",
+         "name": "HERA_NTHRUSTERS",
+         "startTime": "2022-01-01 01:00:00.000  UTC",
+         "arcs": [
+            {
+               "center": "HERA",
+               "trajectory": {
+                  "type": "Spice",
+                  "target": "HERA_SPACECRAFT",
+                  "center": "HERA_SPACECRAFT"
+               },
+               "bodyFrame": {
+                  "type": "Spice",
+                  "name": "HERA_SPACECRAFT"
+               }
+            }
+         ],
+      "geometry": {
+        "type": "Mesh",
+        "source": "./models/3ds/hera_sc_thrusters_v01.3ds"
+      },
+      "label": {
+        "showText": false
+      }
+     },
+     {
+         "class": "spacecraft",
+         "name": "HERA_HGA",
+         "startTime": "2022-01-01 01:00:00.000  UTC",
+         "arcs": [
+            {
+               "center": "HERA",
+               "trajectory": {
+                  "type": "Spice",
+                  "target": "HERA_HGA",
+                  "center": "HERA_SPACECRAFT"
+               },
+               "bodyFrame": {
+                  "type": "Spice",
+                  "name": "HERA_HGA"
+               }
+            }
+         ],
+      "geometry": {
+        "type": "Mesh",
+        "source": "./models/3ds/hera_sc_hga_v01.3ds"
+      },
+      "label": {
+        "showText": false
+      }
+     },
+     {
+         "class": "spacecraft",
+         "name": "HERA_STR1",
+         "startTime": "2022-01-01 01:00:00.000  UTC",
+         "arcs": [
+            {
+               "center": "HERA",
+               "trajectory": {
+                  "type": "Spice",
+                  "target": "HERA_STR-OH1",
+                  "center": "HERA_SPACECRAFT"
+               },
+               "bodyFrame": {
+                  "type": "Spice",
+                  "name": "HERA_STR-OH1"
+               }
+            }
+         ],
+      "geometry": {
+        "type": "Mesh",
+        "source": "./models/3ds/hera_sc_str_v01.3ds"
+      },
+      "label": {
+        "showText": false
+      }
+     },
+     {
+         "class": "spacecraft",
+         "name": "HERA_STR2",
+         "startTime": "2022-01-01 01:00:00.000  UTC",
+         "arcs": [
+            {
+               "center": "HERA",
+               "trajectory": {
+                  "type": "Spice",
+                  "target": "HERA_STR-OH2",
+                  "center": "HERA_SPACECRAFT"
+               },
+               "bodyFrame": {
+                  "type": "Spice",
+                  "name": "HERA_STR-OH2"
+               }
+            }
+         ],
+      "geometry": {
+        "type": "Mesh",
+        "source": "./models/3ds/hera_sc_str_v01.3ds"
+      },
+      "label": {
+        "showText": false
+      }
+     },
+     {
+         "class": "spacecraft",
+         "name": "HERA_AFC-1",
+         "startTime": "2022-01-01 01:00:00.000  UTC",
+         "arcs": [
+            {
+               "center": "HERA",
+               "trajectory": {
+                  "type": "Spice",
+                  "target": "HERA_AFC-1",
+                  "center": "HERA_SPACECRAFT"
+               },
+               "bodyFrame": {
+                  "type": "Spice",
+                  "name": "HERA_AFC-1"
+               }
+            }
+         ],
+      "geometry": {
+        "type": "Mesh",
+        "source": "./models/3ds/hera_sc_afc_v01.3ds"
+      },
+      "label": {
+        "showText": false
+      }
+     },
+     {
+         "class": "spacecraft",
+         "name": "HERA_AFC-2",
+         "startTime": "2022-01-01 01:00:00.000  UTC",
+         "arcs": [
+            {
+               "center": "HERA",
+               "trajectory": {
+                  "type": "Spice",
+                  "target": "HERA_AFC-2",
+                  "center": "HERA_SPACECRAFT"
+               },
+               "bodyFrame": {
+                  "type": "Spice",
+                  "name": "HERA_AFC-2"
+               }
+            }
+         ],
+      "geometry": {
+        "type": "Mesh",
+        "source": "./models/3ds/hera_sc_afc_v01.3ds"
+      },
+      "label": {
+        "showText": false
+      }
+     },
+     {
+         "class": "spacecraft",
+         "name": "HERA_TIRI",
+         "startTime": "2022-01-01 01:00:00.000  UTC",
+         "arcs": [
+            {
+               "center": "HERA",
+               "trajectory": {
+                  "type": "Spice",
+                  "target": "HERA_TIRI",
+                  "center": "HERA_SPACECRAFT"
+               },
+               "bodyFrame": {
+                  "type": "Spice",
+                  "name": "HERA_TIRI"
+               }
+            }
+         ],
+      "geometry": {
+        "type": "Mesh",
+        "source": "./models/3ds/hera_sc_tiri_v01.3ds"
+      },
+      "label": {
+        "showText": false
+      }
+     },
+     {
+         "class": "spacecraft",
+         "name": "HERA_HSH",
+         "startTime": "2022-01-01 01:00:00.000  UTC",
+         "arcs": [
+            {
+               "center": "HERA",
+               "trajectory": {
+                  "type": "Spice",
+                  "target": "HERA_HSH",
+                  "center": "HERA_SPACECRAFT"
+               },
+               "bodyFrame": {
+                  "type": "Spice",
+                  "name": "HERA_HSH"
+               }
+            }
+         ],
+      "geometry": {
+        "type": "Mesh",
+        "source": "./models/3ds/hera_sc_hsh_v01.3ds"
+      },
+      "label": {
+        "showText": false
+      }
+     },
+     {
+         "class": "spacecraft",
+         "name": "HERA_PALT",
+         "startTime": "2022-01-01 01:00:00.000  UTC",
+         "arcs": [
+            {
+               "center": "HERA",
+               "trajectory": {
+                  "type": "Spice",
+                  "target": "HERA_PALT",
+                  "center": "HERA_SPACECRAFT"
+               },
+               "bodyFrame": {
+                  "type": "Spice",
+                  "name": "HERA_PALT"
+               }
+            }
+         ],
+      "geometry": {
+        "type": "Mesh",
+        "source": "./models/3ds/hera_sc_palt_v01.3ds"
+      },
+      "label": {
+        "showText": false
+      }
+     },
+     {
+         "class": "spacecraft",
+         "name": "HERA_SMC",
+         "startTime": "2022-01-01 01:00:00.000  UTC",
+         "arcs": [
+            {
+               "center": "HERA",
+               "trajectory": {
+                  "type": "Spice",
+                  "target": "HERA_SMC",
+                  "center": "HERA_SPACECRAFT"
+               },
+               "bodyFrame": {
+                  "type": "Spice",
+                  "name": "HERA_SMC"
+               }
+            }
+         ],
+      "geometry": {
+        "type": "Mesh",
+        "source": "./models/3ds/hera_sc_smc_v01.3ds"
+      },
+      "label": {
+        "showText": false
+      }
+     }
+   ]
+}

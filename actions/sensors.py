@@ -111,7 +111,7 @@ def reconfigure_sensors(items):
     sensors = []
     for item in items:
         if item['class'] == 'sensor':
-            item['geometry']['frustumOpacity'] = 0.8 if show_frustum else 0
+            item['geometry']['frustumOpacity'] = 0.2 if show_frustum else 0
             current_sensors.append(item['name'])
             sensors.append(item)
     return sensors, current_sensors

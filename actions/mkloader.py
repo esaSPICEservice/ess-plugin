@@ -1,4 +1,4 @@
-from actions.common import add_juice_menu, add_tgo_menu
+from actions.common import add_hera_menu, add_juice_menu, add_tgo_menu
 import cosmoscripting
 from scenes.generator import create_cosmo_scene, generate_working_dir
 from actions.time_navigation import goto_date
@@ -30,6 +30,8 @@ def after_load():
         return
     elif mission.lower() == 'tgo':
         add_tgo_menu()
+    elif mission.lower() == 'hera':
+        add_hera_menu()
     elif mission.lower() == 'juice':
         add_juice_menu()
         remove_menu(main_window, 'Pointing')

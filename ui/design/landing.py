@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'landing.ui'
+# Form implementation generated from reading ui file 'qtcreator/landing.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.7
 #
@@ -54,6 +54,7 @@ class Ui_landingWidget(object):
         self.comboBox.setObjectName("comboBox")
         self.comboBox.addItem("")
         self.comboBox.addItem("")
+        self.comboBox.addItem("")
         self.verticalLayout.addWidget(self.comboBox)
         self.horizontalLayout_3 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_3.setObjectName("horizontalLayout_3")
@@ -69,8 +70,8 @@ class Ui_landingWidget(object):
         _translate = QtCore.QCoreApplication.translate
         landingWidget.setWindowTitle(_translate("landingWidget", "ESS Plugin"))
         self.label_3.setText(_translate("landingWidget", "ESS Cosmographia Plugin"))
-        self.comboBox.setItemText(0, _translate("landingWidget", "JUICE"))
-        self.comboBox.setItemText(1, _translate("landingWidget", "TGO"))
+        self.comboBox.setItemText(0, _translate("landingWidget", "HERA"))
+        self.comboBox.setItemText(1, _translate("landingWidget", "JUICE"))
+        self.comboBox.setItemText(2, _translate("landingWidget", "TGO"))
         self.selectButton.setText(_translate("landingWidget", "Select Mission"))
-
 from . import icons_rc

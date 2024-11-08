@@ -1,0 +1,162 @@
+{
+    "mission": "HERA",
+    "spacecraft": "HERA",
+    "spacecraft_frame": "HERA_SPACECRAFT",
+    "models": [
+        "spacecraft_hera_arcs.json"
+    ],
+    "sensors": {
+        "AFC": [
+            {
+                "name": "HERA_AFC-1",
+                "fov_frame": "HERA_AFC-1",
+                "color": [
+                    0.929,
+                    0.659,
+                    0.612
+                ]
+            },
+            {
+                "name": "HERA_AFC-2",
+                "fov_frame": "HERA_AFC-2",
+                "color": [
+                    0.96,
+                    0.36,
+                    0.25
+                ]
+            }
+        ],
+        
+        "HSH": [
+            {
+                "name": "HERA_HSH",
+                "fov_frame": "HERA_HSH",
+                "color": [
+                    0.96,
+                    0.54,
+                    0.26
+                ]
+            }
+        ],
+
+        "PALT": [
+            {
+                "name": "HERA_PALT",
+                "fov_frame": "HERA_PALT",
+                "color": [
+                    0.63,
+                    0.96,
+                    0.61
+                ]
+            },
+            {
+                "name": "HERA_PALT_MIN",
+                "fov_frame": "HERA_PALT_MIN",
+                "color": [
+                    0.30,
+                    0.96,
+                    0.26
+                ]
+            }
+        ],
+        "SMC": [
+            {
+                "name": "HERA_SMC",
+                "fov_frame": "HERA_SMC",
+                "color": [
+                    0.95,
+                    0.61,
+                    0.96
+                ]
+            }
+        ],
+        "STR": [
+            {
+                "name": "HERA_STR-OH1",
+                "fov_frame": "HERA_STR-OH1",
+                "color": [
+                    0.34,
+                    0.80,
+                    0.96
+                ]
+            },
+            {
+                "name": "HERA_STR-OH2",
+                "fov_frame": "HERA_STR-OH2",
+                "color": [
+                    0.71,
+                    0.90,
+                    0.96
+                ]
+            }
+        ],
+        "TIRI": [
+            {
+                "name": "HERA_TIRI",
+                "fov_frame": "HERA_TIRI",
+                "color": [
+                    0.96,
+                    0.94,
+                    0.71
+                ]
+            }
+        ]
+    },
+    "central_body": "Mars",
+    "targets": [
+        "Earth",
+        "Moon",
+        "Mars",
+        "Deimos",
+        "Phobos",
+        "Didymos",
+        "Dimorphos"
+    ],
+    "boresights": [
+        {
+            "name": "HERA_AFC-1",
+            "fov_frame": "HERA_AFC-1",
+            "size": 5.5
+        },
+        {
+            "name": "HERA_AFC-2",
+            "fov_frame": "HERA_AFC-2",
+            "size": 5.5
+        },
+        {
+            "name": "HERA_HSH",
+            "fov_frame": "HERA_HSH",
+            "size": 15.2
+        },
+        {
+            "name": "HERA_PALT",
+            "fov_frame": "HERA_PALT",
+            "size": 3
+        },
+        {
+            "name": "HERA_PALT_MIN",
+            "fov_frame": "HERA_PALT_MIN",
+            "size": 0.5
+        },
+        {
+            "name": "HERA_SMC",
+            "fov_frame": "HERA_SMC",
+            "size": 88.3
+        },
+        {
+            "name": "HERA_STR-OH1",
+            "fov_frame": "HERA_STR-OH1",
+            "size": 40.0
+        },
+        {
+            "name": "HERA_STR-OH2",
+            "fov_frame": "HERA_STR-OH2",
+            "size": 40.0
+        },
+        {
+            "name": "HERA_TIRI",
+            "fov_frame": "HERA_TIRI",
+            "size": 13.3
+        }
+    ]
+}

@@ -29,6 +29,11 @@ def sensor_view(sensor_name, fov):
     api.adjustFov(fov, 0)
     cosmo.setCameraOrientation([0, 0, -1, 0])
 
+def goto_sensor_date(utc_str, sensor_name, fov):
+    cosmo = cosmoscripting.Cosmo()
+    cosmo.setTime(utc_str + " UTC")
+    sensor_view(sensor_name, fov)
+
 
 def evaluate(expressions):
     cosmo = cosmoscripting.Cosmo()

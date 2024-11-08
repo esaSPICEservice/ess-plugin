@@ -1,8 +1,8 @@
 
 from PyQt5.QtWidgets import QFileDialog, QDialog, QTableWidgetItem, QMessageBox, QPushButton
 from PyQt5.QtCore import Qt, QDateTime
-from actions.sensors import get_sensor_ids, get_targets, reconfigure_catalogue
-from actions.time_navigation import goto_date
+from actions.sensors import get_boresights, get_sensor, get_sensor_ids, get_targets, reconfigure_catalogue
+from actions.time_navigation import goto_sensor_date
 from ui.common import get_settings, get_runtime
 from ui.design.observations_panel import Ui_observationsPanel
 import os
@@ -14,6 +14,7 @@ class ObservationsDialog(QDialog):
 
     def __init__(self, main_window):
         QDialog.__init__(self, main_window)
+        self.boresights = get_boresights()
         self.run_time = get_runtime()
         self.init_ui()
 
@@ -72,7 +73,9 @@ class ObservationsDialog(QDialog):
         if button:
             row = self.table.indexAt(button.pos()).row()
             start = self.table.item(row, 2).text()
-            goto_date(start[:-1])
+            sensor_name = self.table.item(row, 0).text()
+            sensor = next(filter(lambda item: item.get('name') == sensor_name, self.boresights))
+            goto_sensor_date(start[:-1], sensor_name, sensor.get('size'))
 
     def _browse(self):
         # default_folder = self.settings.get(self.mission, last_repo_key, '')
