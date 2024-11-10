@@ -1,0 +1,63 @@
+{
+   "version": "1.0",
+   "name": "Cosmographia Juventas Example",
+   "items": [
+   {
+         "class": "spacecraft",
+         "name": "JUVENTAS",
+         "startTime": "2022-01-01 01:00:00.000  UTC",
+         "arcs": [
+            {
+               "center": "DIDYMOS",
+               "trajectory": {
+                  "type": "Spice",
+                  "target": "JUVENTAS",
+                  "center": "DIDYMOS"
+               },
+               "bodyFrame": {
+                  "type": "Spice",
+                  "name": "JUVENTAS_SPACECRAFT"
+               }
+            }
+         ],
+      "geometry": {
+        "type": "TimeSwitched",
+        "sequence": [
+        {
+            "startTime": "2024-10-08 00:00:00.000",
+            "geometry": {
+              "type": "Mesh",
+              "source": "./models/3ds/juventas_cruise_v01.3ds"
+         }
+        },
+        {
+           "startTime" : "2027-03-26 16:01:09.185",
+           "geometry": {
+              "type": "Mesh",
+              "source": "./models/3ds/juventas_v01.3ds"
+         }
+        }
+      ]
+      },
+      "label": {
+        "color": [
+          1,
+          1,
+          1
+        ]
+      },
+      "trajectoryPlot": {
+        "color": [
+          0,
+          1,
+          0
+        ],
+        "lineWidth": 1,
+        "duration": "7 d",
+        "lead": 0.0,
+        "fade": 0.25,
+        "sampleCount": 1000
+      }
+    }
+   ]
+}

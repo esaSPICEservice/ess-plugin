@@ -3,8 +3,28 @@
     "spacecraft": "HERA",
     "spacecraft_frame": "HERA_SPACECRAFT",
     "models": [
-        "spacecraft_hera_arcs.json"
+        "spacecraft_hera_arcs.json",
+        "spacecraft_juventas_arcs.json",
+        "spacecraft_milani_arcs.json"
     ],
+    "spacecrafts": [
+        {
+            "spacecraft": "HERA",
+            "spacecraft_frame": "HERA_SPACECRAFT",
+            "initial_offset": [0, 1e-3, -10e-3]
+        },
+        {
+            "spacecraft": "JUVENTAS",
+            "spacecraft_frame": "JUVENTAS_SPACECRAFT",
+            "initial_offset": [0, 2e-4, -2e-3]
+        },
+        {
+            "spacecraft": "MILANI",
+            "spacecraft_frame": "MILANI_SPACECRAFT",
+            "initial_offset": [0, 2e-4, -2e-3]
+        }
+    ],
+
     "sensors": {
         "AFC": [
             {

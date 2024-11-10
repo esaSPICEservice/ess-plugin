@@ -14,6 +14,13 @@
     "jupiter_rings.json",
     "moon_torus.json"
   ],
+  "spacecrafts": [
+        {
+            "spacecraft": "JUICE",
+            "spacecraft_frame": "JUICE_SPACECRAFT",
+            "initial_offset": [0, 2e-3, -22e-3]
+        }
+  ],
   "sensors": {
     "GAL": [
       {

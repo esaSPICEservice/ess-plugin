@@ -5,6 +5,13 @@
     "models": [
         "spacecraft_EM16_tgo_arcs.json"
     ],
+    "spacecrafts": [
+        {
+            "spacecraft": "TGO",
+            "spacecraft_frame": "TGO_SPACECRAFT",
+            "initial_offset": [0, 2e-3, -15e-3]
+        }
+  ],
     "sensors": {
         "ACS": [
             {

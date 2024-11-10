@@ -7,16 +7,19 @@ def goto_date(utc_str):
     cosmo.setTime(utc_str + " UTC")
     spacecraft_view()
 
+def goto_spacecraft(sc_name, sc_frame, initial_offset):
+    print(sc_name, sc_frame, initial_offset)
+    cosmo = cosmoscripting.Cosmo()
+    cosmo.moveToPovSpiceFrame(
+        sc_name, sc_frame, initial_offset, [0, 0, 1], [0, 1, 0], 0.0
+    )
+    cosmo.setFov(70, 0)
 
 def spacecraft_view():
     run_time = get_runtime()
     sc = run_time.get("spacecraft", "")
     sc_frame = run_time.get("spacecraft_frame", "")
-    cosmo = cosmoscripting.Cosmo()
-    cosmo.moveToPovSpiceFrame(
-        sc, sc_frame, [0, 2e-3, -22e-3], [0, 0, 1], [0, 1, 0], 0.0
-    )
-    cosmo.setFov(70, 0)
+    goto_spacecraft(sc, sc_frame, [0, 2e-3, -22e-3])
 
 
 def sensor_view(sensor_name, fov):
