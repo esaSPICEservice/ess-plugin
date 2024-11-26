@@ -44,10 +44,7 @@
                     0.36,
                     0.25
                 ]
-            }
-        ],
-        
-        "HSH": [
+            },
             {
                 "name": "HERA_HSH",
                 "fov_frame": "HERA_HSH",
@@ -56,10 +53,7 @@
                     0.54,
                     0.26
                 ]
-            }
-        ],
-
-        "PALT": [
+            },
             {
                 "name": "HERA_PALT",
                 "fov_frame": "HERA_PALT",
@@ -77,9 +71,7 @@
                     0.96,
                     0.26
                 ]
-            }
-        ],
-        "SMC": [
+            },
             {
                 "name": "HERA_SMC",
                 "fov_frame": "HERA_SMC",
@@ -88,9 +80,7 @@
                     0.61,
                     0.96
                 ]
-            }
-        ],
-        "STR": [
+            },
             {
                 "name": "HERA_STR-OH1",
                 "fov_frame": "HERA_STR-OH1",
@@ -108,10 +98,7 @@
                     0.90,
                     0.96
                 ]
-            }
-        ],
-        "TIRI": [
-            {
+            },{
                 "name": "HERA_TIRI",
                 "fov_frame": "HERA_TIRI",
                 "color": [

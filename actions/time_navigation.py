@@ -17,9 +17,13 @@ def goto_spacecraft(sc_name, sc_frame, initial_offset):
 
 def spacecraft_view():
     run_time = get_runtime()
-    sc = run_time.get("spacecraft", "")
-    sc_frame = run_time.get("spacecraft_frame", "")
-    goto_spacecraft(sc, sc_frame, [0, 2e-3, -22e-3])
+    spacecrafts = run_time.get("spacecrafts", [])
+    if len(spacecrafts) > 0:
+        spacecraft = spacecrafts[0]
+        name = spacecraft.get("spacecraft")
+        frame = spacecraft.get("spacecraft_frame")
+        initial_offset = spacecraft.get("initial_offset", [0, 2e-3, -22e-3])
+        goto_spacecraft(name, frame, initial_offset)
 
 
 def sensor_view(sensor_name, fov):

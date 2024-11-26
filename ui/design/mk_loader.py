@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'design/qtcreator/mk-loader.ui'
+# Form implementation generated from reading ui file 'qtcreator/mk-loader.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.7
 #
@@ -90,10 +90,10 @@ class Ui_mkLoaderWidget(object):
         self.label_3.setObjectName("label_3")
         self.verticalLayout.addWidget(self.label_3)
         self.dateTimeEdit = QtWidgets.QDateTimeEdit(mkLoaderWidget)
-        self.dateTimeEdit.setDateTime(QtCore.QDateTime(QtCore.QDate(2031, 8, 16), QtCore.QTime(22, 0, 0)))
+        self.dateTimeEdit.setDateTime(QtCore.QDateTime(QtCore.QDate(2031, 8, 16), QtCore.QTime(20, 0, 0)))
         self.dateTimeEdit.setDate(QtCore.QDate(2031, 8, 16))
-        self.dateTimeEdit.setMaximumDateTime(QtCore.QDateTime(QtCore.QDate(2035, 12, 30), QtCore.QTime(20, 59, 57)))
-        self.dateTimeEdit.setMinimumDateTime(QtCore.QDateTime(QtCore.QDate(2023, 4, 13), QtCore.QTime(18, 0, 0)))
+        self.dateTimeEdit.setMaximumDateTime(QtCore.QDateTime(QtCore.QDate(2050, 12, 31), QtCore.QTime(19, 59, 57)))
+        self.dateTimeEdit.setMinimumDateTime(QtCore.QDateTime(QtCore.QDate(2010, 1, 1), QtCore.QTime(17, 0, 0)))
         self.dateTimeEdit.setTimeSpec(QtCore.Qt.UTC)
         self.dateTimeEdit.setObjectName("dateTimeEdit")
         self.verticalLayout.addWidget(self.dateTimeEdit)

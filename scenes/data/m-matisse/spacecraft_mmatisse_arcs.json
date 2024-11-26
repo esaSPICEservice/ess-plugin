@@ -1,0 +1,90 @@
+{
+   "version": "1.0",
+   "name": "Cosmographia MPO Example",
+   "items": [
+    {
+         "class": "spacecraft",
+         "name": "HENRI",
+         "startTime": "2022-01-01 01:00:00.000  UTC",
+         "arcs": [
+            {
+               "center": "Mars",
+               "trajectory": {
+                  "type": "Spice",
+                  "target": "HENRI",
+                  "center": "MARS"
+               },
+               "bodyFrame": {
+                  "type": "Spice",
+                  "name": "HENRI_SPACECRAFT"
+               }
+            }
+         ],
+      "geometry": {
+        "type": "Mesh",
+        "source": "./models/mmatisse.obj"
+      },
+      "label": {
+        "color": [
+          1,
+          1,
+          1
+        ]
+      },
+      "trajectoryPlot": {
+        "color": [
+          1,
+          0,
+          0
+        ],
+        "lineWidth": 1,
+        "duration": "1 d",
+        "lead": 0.0,
+        "fade": 0.25,
+        "sampleCount": 1000
+      }
+    },
+    {
+         "class": "spacecraft",
+         "name": "MARGUERITE",
+         "startTime": "2022-01-01 01:00:00.000  UTC",
+         "arcs": [
+            {
+               "center": "Mars",
+               "trajectory": {
+                  "type": "Spice",
+                  "target": "MARGUERITE",
+                  "center": "MARS"
+               },
+               "bodyFrame": {
+                  "type": "Spice",
+                  "name": "MARGUERITE_SPACECRAFT"
+               }
+            }
+         ],
+      "geometry": {
+        "type": "Mesh",
+        "source": "./models/mmatisse.obj"
+      },
+      "label": {
+        "color": [
+          1,
+          1,
+          1
+        ]
+      },
+      "trajectoryPlot": {
+        "color": [
+          0,
+          1,
+          0
+        ],
+        "lineWidth": 1,
+        "duration": "1 d",
+        "lead": 0.0,
+        "fade": 0.25,
+        "sampleCount": 1000
+      }
+    }
+   ]
+}

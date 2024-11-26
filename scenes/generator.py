@@ -17,10 +17,12 @@ def generate_all_sensor(sensor_list, parent_path):
     for sensor in sensor_list:
         instrument = sensor.get('name')
         color = sensor.get('color')
+        sc = sensor.get('spacecraft', run_time.get('spacecraft', ''))
         sensor = Sensor(
                 instrument, run_time.get('central_body', ''), 
                 color, None)
-        generator.append(sensor, run_time.get('spacecraft', ''))
+       
+        generator.append(sensor, sc)
 
     file_path = os.path.abspath(os.path.join(parent_path, "sensors.json"))
     generator.save(file_path)

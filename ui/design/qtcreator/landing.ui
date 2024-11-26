@@ -54,6 +54,13 @@ QLabel {
    </item>
    <item>
     <widget class="QLabel" name="label_3">
+     <property name="font">
+      <font>
+       <family>Arial Black</family>
+       <pointsize>-1</pointsize>
+       <bold>false</bold>
+      </font>
+     </property>
      <property name="text">
       <string>ESS Cosmographia Plugin</string>
      </property>
@@ -72,6 +79,11 @@ QLabel {
      <item>
       <property name="text">
        <string>JUICE</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>M-MATISSE</string>
       </property>
      </item>
      <item>
