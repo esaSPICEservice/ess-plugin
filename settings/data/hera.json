@@ -1,169 +1,399 @@
 {
-    "mission": "HERA",
-    "spacecraft": "HERA",
-    "spacecraft_frame": "HERA_SPACECRAFT",
-    "models": [
-        "spacecraft_hera_arcs.json",
-        "spacecraft_juventas_arcs.json",
-        "spacecraft_milani_arcs.json"
-    ],
-    "spacecrafts": [
-        {
-            "spacecraft": "HERA",
-            "spacecraft_frame": "HERA_SPACECRAFT",
-            "initial_offset": [0, 1e-3, -10e-3]
-        },
-        {
-            "spacecraft": "JUVENTAS",
-            "spacecraft_frame": "JUVENTAS_SPACECRAFT",
-            "initial_offset": [0, 2e-4, -2e-3]
-        },
-        {
-            "spacecraft": "MILANI",
-            "spacecraft_frame": "MILANI_SPACECRAFT",
-            "initial_offset": [0, 2e-4, -2e-3]
-        }
-    ],
-
-    "sensors": {
-        "AFC": [
-            {
-                "name": "HERA_AFC-1",
-                "fov_frame": "HERA_AFC-1",
-                "color": [
-                    0.929,
-                    0.659,
-                    0.612
-                ]
-            },
-            {
-                "name": "HERA_AFC-2",
-                "fov_frame": "HERA_AFC-2",
-                "color": [
-                    0.96,
-                    0.36,
-                    0.25
-                ]
-            },
-            {
-                "name": "HERA_HSH",
-                "fov_frame": "HERA_HSH",
-                "color": [
-                    0.96,
-                    0.54,
-                    0.26
-                ]
-            },
-            {
-                "name": "HERA_PALT",
-                "fov_frame": "HERA_PALT",
-                "color": [
-                    0.63,
-                    0.96,
-                    0.61
-                ]
-            },
-            {
-                "name": "HERA_PALT_MIN",
-                "fov_frame": "HERA_PALT_MIN",
-                "color": [
-                    0.30,
-                    0.96,
-                    0.26
-                ]
-            },
-            {
-                "name": "HERA_SMC",
-                "fov_frame": "HERA_SMC",
-                "color": [
-                    0.95,
-                    0.61,
-                    0.96
-                ]
-            },
-            {
-                "name": "HERA_STR-OH1",
-                "fov_frame": "HERA_STR-OH1",
-                "color": [
-                    0.34,
-                    0.80,
-                    0.96
-                ]
-            },
-            {
-                "name": "HERA_STR-OH2",
-                "fov_frame": "HERA_STR-OH2",
-                "color": [
-                    0.71,
-                    0.90,
-                    0.96
-                ]
-            },{
-                "name": "HERA_TIRI",
-                "fov_frame": "HERA_TIRI",
-                "color": [
-                    0.96,
-                    0.94,
-                    0.71
-                ]
-            }
-        ]
+  "mission": "HERA",
+  "spacecraft": "HERA",
+  "spacecraft_frame": "HERA_SPACECRAFT",
+  "models": [
+    "spacecraft_hera_arcs.json",
+    "spacecraft_juventas_arcs.json",
+    "spacecraft_milani_arcs.json"
+  ],
+  "spacecrafts": [
+    {
+      "spacecraft": "HERA",
+      "spacecraft_frame": "HERA_SPACECRAFT",
+      "initial_offset": [
+        0,
+        1e-3,
+        -10e-3
+      ]
     },
-    "central_body": "Mars",
-    "targets": [
-        "Earth",
-        "Moon",
-        "Mars",
-        "Deimos",
-        "Phobos",
-        "Didymos",
-        "Dimorphos"
+    {
+      "spacecraft": "JUVENTAS",
+      "spacecraft_frame": "JUVENTAS_SPACECRAFT",
+      "initial_offset": [
+        0,
+        2e-4,
+        -2e-3
+      ]
+    },
+    {
+      "spacecraft": "MILANI",
+      "spacecraft_frame": "MILANI_SPACECRAFT",
+      "initial_offset": [
+        0,
+        2e-4,
+        -2e-3
+      ]
+    }
+  ],
+  "central_body": "Mars",
+  "targets": [
+    "Earth",
+    "Moon",
+    "Mars",
+    "Deimos",
+    "Phobos",
+    "Didymos",
+    "Dimorphos"
+  ],
+  "sensors": {
+    "HERA": [
+      {
+        "name": "HERA_AFC-1",
+        "fov_frame": "HERA_AFC-1",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "HERA"
+      },
+      {
+        "name": "HERA_AFC-2",
+        "fov_frame": "HERA_AFC-2",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "HERA"
+      },
+      {
+        "name": "HERA_HSH",
+        "fov_frame": "HERA_HSH",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "HERA"
+      },
+      {
+        "name": "HERA_PALT",
+        "fov_frame": "HERA_PALT",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "HERA"
+      },
+      {
+        "name": "HERA_SMC",
+        "fov_frame": "HERA_SMC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "HERA"
+      },
+      {
+        "name": "HERA_STR-OH1",
+        "fov_frame": "HERA_STR-OH1",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "HERA"
+      },
+      {
+        "name": "HERA_STR-OH2",
+        "fov_frame": "HERA_STR-OH2",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "HERA"
+      },
+      {
+        "name": "HERA_TIRI",
+        "fov_frame": "HERA_TIRI",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "HERA"
+      }
     ],
-    "boresights": [
-        {
-            "name": "HERA_AFC-1",
-            "fov_frame": "HERA_AFC-1",
-            "size": 5.5
-        },
-        {
-            "name": "HERA_AFC-2",
-            "fov_frame": "HERA_AFC-2",
-            "size": 5.5
-        },
-        {
-            "name": "HERA_HSH",
-            "fov_frame": "HERA_HSH",
-            "size": 15.2
-        },
-        {
-            "name": "HERA_PALT",
-            "fov_frame": "HERA_PALT",
-            "size": 3
-        },
-        {
-            "name": "HERA_PALT_MIN",
-            "fov_frame": "HERA_PALT_MIN",
-            "size": 0.5
-        },
-        {
-            "name": "HERA_SMC",
-            "fov_frame": "HERA_SMC",
-            "size": 88.3
-        },
-        {
-            "name": "HERA_STR-OH1",
-            "fov_frame": "HERA_STR-OH1",
-            "size": 40.0
-        },
-        {
-            "name": "HERA_STR-OH2",
-            "fov_frame": "HERA_STR-OH2",
-            "size": 40.0
-        },
-        {
-            "name": "HERA_TIRI",
-            "fov_frame": "HERA_TIRI",
-            "size": 13.3
-        }
+    "JUVENTAS": [
+      {
+        "name": "JUVENTAS_CCAM",
+        "fov_frame": "JUVENTAS_CCAM",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUVENTAS"
+      },
+      {
+        "name": "JUVENTAS_JURA",
+        "fov_frame": "JUVENTAS_JURA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUVENTAS"
+      },
+      {
+        "name": "JUVENTAS_LIDAR",
+        "fov_frame": "JUVENTAS_LIDAR",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUVENTAS"
+      },
+      {
+        "name": "JUVENTAS_NAVCAM",
+        "fov_frame": "JUVENTAS_NAVCAM",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUVENTAS"
+      },
+      {
+        "name": "JUVENTAS_STR-1",
+        "fov_frame": "JUVENTAS_STR-1",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUVENTAS"
+      },
+      {
+        "name": "JUVENTAS_STR-2",
+        "fov_frame": "JUVENTAS_STR-2",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUVENTAS"
+      }
+    ],
+    "MILANI": [
+      {
+        "name": "MILANI_ASPECT_NIR1",
+        "fov_frame": "MILANI_ASPECT_NIR1",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MILANI"
+      },
+      {
+        "name": "MILANI_ASPECT_NIR2",
+        "fov_frame": "MILANI_ASPECT_NIR2",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MILANI"
+      },
+      {
+        "name": "MILANI_ASPECT_SWIR",
+        "fov_frame": "MILANI_ASPECT_SWIR",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MILANI"
+      },
+      {
+        "name": "MILANI_ASPECT_VIS",
+        "fov_frame": "MILANI_ASPECT_VIS",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MILANI"
+      },
+      {
+        "name": "MILANI_LIDAR",
+        "fov_frame": "MILANI_LIDAR",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MILANI"
+      },
+      {
+        "name": "MILANI_NAVCAM",
+        "fov_frame": "MILANI_NAVCAM",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MILANI"
+      },
+      {
+        "name": "MILANI_STR",
+        "fov_frame": "MILANI_STR",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MILANI"
+      },
+      {
+        "name": "MILANI_VISTA",
+        "fov_frame": "MILANI_VISTA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MILANI"
+      }
     ]
+  },
+  "boresights": [
+    {
+      "name": "-9102411",
+      "fov_frame": "-9102411",
+      "size": 180.0
+    },
+    {
+      "name": "-9102412",
+      "fov_frame": "-9102412",
+      "size": 180.0
+    },
+    {
+      "name": "HERA_AFC-1",
+      "fov_frame": "HERA_AFC-1",
+      "size": 5.5
+    },
+    {
+      "name": "HERA_AFC-2",
+      "fov_frame": "HERA_AFC-2",
+      "size": 5.5
+    },
+    {
+      "name": "HERA_HSH",
+      "fov_frame": "HERA_HSH",
+      "size": 15.24
+    },
+    {
+      "name": "HERA_PALT",
+      "fov_frame": "HERA_PALT",
+      "size": 3.0
+    },
+    {
+      "name": "HERA_SMC",
+      "fov_frame": "HERA_SMC",
+      "size": 88.2
+    },
+    {
+      "name": "HERA_STR-OH1",
+      "fov_frame": "HERA_STR-OH1",
+      "size": 40.0
+    },
+    {
+      "name": "HERA_STR-OH2",
+      "fov_frame": "HERA_STR-OH2",
+      "size": 40.0
+    },
+    {
+      "name": "HERA_TIRI",
+      "fov_frame": "HERA_TIRI",
+      "size": 13.3
+    },
+    {
+      "name": "JUVENTAS_CCAM",
+      "fov_frame": "JUVENTAS_CCAM",
+      "size": 95.0
+    },
+    {
+      "name": "JUVENTAS_JURA",
+      "fov_frame": "JUVENTAS_JURA",
+      "size": 80.0
+    },
+    {
+      "name": "JUVENTAS_LIDAR",
+      "fov_frame": "JUVENTAS_LIDAR",
+      "size": 0.0458366
+    },
+    {
+      "name": "JUVENTAS_NAVCAM",
+      "fov_frame": "JUVENTAS_NAVCAM",
+      "size": 38.0
+    },
+    {
+      "name": "JUVENTAS_STR-1",
+      "fov_frame": "JUVENTAS_STR-1",
+      "size": 10.6
+    },
+    {
+      "name": "JUVENTAS_STR-2",
+      "fov_frame": "JUVENTAS_STR-2",
+      "size": 10.6
+    },
+    {
+      "name": "MILANI_ASPECT_NIR1",
+      "fov_frame": "MILANI_ASPECT_NIR1",
+      "size": 6.7
+    },
+    {
+      "name": "MILANI_ASPECT_NIR2",
+      "fov_frame": "MILANI_ASPECT_NIR2",
+      "size": 6.7
+    },
+    {
+      "name": "MILANI_ASPECT_SWIR",
+      "fov_frame": "MILANI_ASPECT_SWIR",
+      "size": 5.0
+    },
+    {
+      "name": "MILANI_ASPECT_VIS",
+      "fov_frame": "MILANI_ASPECT_VIS",
+      "size": 10.0
+    },
+    {
+      "name": "MILANI_LIDAR",
+      "fov_frame": "MILANI_LIDAR",
+      "size": 0.04010704
+    },
+    {
+      "name": "MILANI_NAVCAM",
+      "fov_frame": "MILANI_NAVCAM",
+      "size": 21.0
+    },
+    {
+      "name": "MILANI_STR",
+      "fov_frame": "MILANI_STR",
+      "size": 40.0
+    },
+    {
+      "name": "MILANI_VISTA",
+      "fov_frame": "MILANI_VISTA",
+      "size": 180.0
+    }
+  ]
 }

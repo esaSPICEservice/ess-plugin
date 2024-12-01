@@ -44,9 +44,9 @@ def get_fov_size(id):
 
 def get_definition(id):
     return {
-        'name': get_str(f'INS{id}_NAME'),
+        'name': get_str(f'INS{id}_FOV_NAME'),
         'fov_frame': get_str(f'INS{id}_FOV_FRAME'),
-        #'size': get_fov_size(id)
+        'size': get_fov_size(id),
         'color': [0, 0.6, 0]
     }
 
@@ -69,15 +69,28 @@ if __name__ == "__main__":
     sp.furnsh(args.m)
     instrument_ids = get_all_instruments_ids()
     definitions = sorted(list(map(get_definition, instrument_ids)), key=lambda x: x.get('name'))
-    # print(json.dumps(definitions, indent=2))
 
     sensors = {}
+    boresights = []
+
     for definition in definitions:
-        parts = definition.get('name').split('_')
-        if len(parts) > 2:
-            key = parts[1]
+        name = definition.get('name')
+        size = definition.get('size')
+        parts = name.split('_')
+        if len(parts) >= 2:
+            key = parts[0]
+            definition['spacecraft'] = key
+            del definition['size']
             if key not in sensors:
                 sensors[key] = []
             sensors[key].append(definition)
-    print(json.dumps(sensors, indent=2))
+        boresights.append({
+            "name": name,
+            "fov_frame": name,
+            "size": size
+        })
+
+    cnf = {"sensors": sensors, "boresights": boresights}
+    with open('sensor_section.json', 'w') as sensor_file:
+        json.dump(cnf, sensor_file, indent=2)
     

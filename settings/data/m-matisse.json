@@ -27,432 +27,6 @@
             ]
         }
     ],
-    "sensors": {
-        "HENRI": [
-            {
-                "name": "HENRI_3DVI",
-                "fov_frame": "HENRI_3DVI",
-                "color": [
-                    0.929,
-                    0.659,
-                    0.612
-                ],
-                "spacecraft": "HENRI"
-            },
-            {
-                "name": "HENRI_M-AC",
-                "fov_frame": "HENRI_M-AC",
-                "color": [
-                    0.929,
-                    0.659,
-                    0.612
-                ],
-                "spacecraft": "HENRI"
-            },
-            {
-                "name": "HENRI_M-EAS1-1",
-                "fov_frame": "HENRI_M-EAS1-1",
-                "color": [
-                    0.929,
-                    0.659,
-                    0.612
-                ],
-                "spacecraft": "HENRI"
-            },
-            {
-                "name": "HENRI_M-EAS1-2",
-                "fov_frame": "HENRI_M-EAS1-2",
-                "color": [
-                    0.929,
-                    0.659,
-                    0.612
-                ],
-                "spacecraft": "HENRI"
-            },
-            {
-                "name": "HENRI_M-EAS1-3",
-                "fov_frame": "HENRI_M-EAS1-3",
-                "color": [
-                    0.929,
-                    0.659,
-                    0.612
-                ],
-                "spacecraft": "HENRI"
-            },
-            {
-                "name": "HENRI_M-EAS1-4",
-                "fov_frame": "HENRI_M-EAS1-4",
-                "color": [
-                    0.929,
-                    0.659,
-                    0.612
-                ],
-                "spacecraft": "HENRI"
-            },
-            {
-                "name": "HENRI_M-EAS2-1",
-                "fov_frame": "HENRI_M-EAS2-1",
-                "color": [
-                    0.929,
-                    0.659,
-                    0.612
-                ],
-                "spacecraft": "HENRI"
-            },
-            {
-                "name": "HENRI_M-EAS2-2",
-                "fov_frame": "HENRI_M-EAS2-2",
-                "color": [
-                    0.929,
-                    0.659,
-                    0.612
-                ],
-                "spacecraft": "HENRI"
-            },
-            {
-                "name": "HENRI_M-EAS2-3",
-                "fov_frame": "HENRI_M-EAS2-3",
-                "color": [
-                    0.929,
-                    0.659,
-                    0.612
-                ],
-                "spacecraft": "HENRI"
-            },
-            {
-                "name": "HENRI_M-EAS2-4",
-                "fov_frame": "HENRI_M-EAS2-4",
-                "color": [
-                    0.929,
-                    0.659,
-                    0.612
-                ],
-                "spacecraft": "HENRI"
-            },
-            {
-                "name": "HENRI_M-INEA",
-                "fov_frame": "HENRI_M-INEA",
-                "color": [
-                    0.929,
-                    0.659,
-                    0.612
-                ],
-                "spacecraft": "HENRI"
-            },
-            {
-                "name": "HENRI_M-MSA",
-                "fov_frame": "HENRI_M-MSA",
-                "color": [
-                    0.929,
-                    0.659,
-                    0.612
-                ],
-                "spacecraft": "HENRI"
-            },
-            {
-                "name": "HENRI_M-SOSPIM",
-                "fov_frame": "HENRI_M-SOSPIM",
-                "color": [
-                    0.929,
-                    0.659,
-                    0.612
-                ],
-                "spacecraft": "HENRI"
-            },
-            {
-                "name": "HENRI_SPAM1_E",
-                "fov_frame": "HENRI_SPAM1_E",
-                "color": [
-                    0.929,
-                    0.659,
-                    0.612
-                ],
-                "spacecraft": "HENRI"
-            },
-            {
-                "name": "HENRI_SPAM2_E",
-                "fov_frame": "HENRI_SPAM2_E",
-                "color": [
-                    0.929,
-                    0.659,
-                    0.612
-                ],
-                "spacecraft": "HENRI"
-            },
-            {
-                "name": "HENRI_SPAM3_E",
-                "fov_frame": "HENRI_SPAM3_E",
-                "color": [
-                    0.929,
-                    0.659,
-                    0.612
-                ],
-                "spacecraft": "HENRI"
-            },
-            {
-                "name": "HENRI_SPAM4_E",
-                "fov_frame": "HENRI_SPAM4_E",
-                "color": [
-                    0.929,
-                    0.659,
-                    0.612
-                ],
-                "spacecraft": "HENRI"
-            },
-            {
-                "name": "HENRI_SPAM1_I",
-                "fov_frame": "HENRI_SPAM1_I",
-                "color": [
-                    0.929,
-                    0.659,
-                    0.612
-                ],
-                "spacecraft": "HENRI"
-            },
-            {
-                "name": "HENRI_SPAM2_I",
-                "fov_frame": "HENRI_SPAM2_I",
-                "color": [
-                    0.929,
-                    0.659,
-                    0.612
-                ],
-                "spacecraft": "HENRI"
-            },
-            {
-                "name": "HENRI_SPAM3_I",
-                "fov_frame": "HENRI_SPAM3_I",
-                "color": [
-                    0.929,
-                    0.659,
-                    0.612
-                ],
-                "spacecraft": "HENRI"
-            },
-            {
-                "name": "HENRI_SPAM4_I",
-                "fov_frame": "HENRI_SPAM4_I",
-                "color": [
-                    0.929,
-                    0.659,
-                    0.612
-                ],
-                "spacecraft": "HENRI"
-            }
-        ],
-        "MARGUERITE": [
-            {
-                "name": "MARGUERITE_3DVI",
-                "fov_frame": "MARGUERITE_3DVI",
-                "color": [
-                    0.929,
-                    0.659,
-                    0.612
-                ],
-                "spacecraft": "MARGUERITE"
-            },
-            {
-                "name": "MARGUERITE_M-AC",
-                "fov_frame": "MARGUERITE_M-AC",
-                "color": [
-                    0.929,
-                    0.659,
-                    0.612
-                ],
-                "spacecraft": "MARGUERITE"
-            },
-            {
-                "name": "MARGUERITE_M-EAS1-1",
-                "fov_frame": "MARGUERITE_M-EAS1-1",
-                "color": [
-                    0.929,
-                    0.659,
-                    0.612
-                ],
-                "spacecraft": "MARGUERITE"
-            },
-            {
-                "name": "MARGUERITE_M-EAS1-2",
-                "fov_frame": "MARGUERITE_M-EAS1-2",
-                "color": [
-                    0.929,
-                    0.659,
-                    0.612
-                ],
-                "spacecraft": "MARGUERITE"
-            },
-            {
-                "name": "MARGUERITE_M-EAS1-3",
-                "fov_frame": "MARGUERITE_M-EAS1-3",
-                "color": [
-                    0.929,
-                    0.659,
-                    0.612
-                ],
-                "spacecraft": "MARGUERITE"
-            },
-            {
-                "name": "MARGUERITE_M-EAS1-4",
-                "fov_frame": "MARGUERITE_M-EAS1-4",
-                "color": [
-                    0.929,
-                    0.659,
-                    0.612
-                ],
-                "spacecraft": "MARGUERITE"
-            },
-            {
-                "name": "MARGUERITE_M-EAS2-1",
-                "fov_frame": "MARGUERITE_M-EAS2-1",
-                "color": [
-                    0.929,
-                    0.659,
-                    0.612
-                ],
-                "spacecraft": "MARGUERITE"
-            },
-            {
-                "name": "MARGUERITE_M-EAS2-2",
-                "fov_frame": "MARGUERITE_M-EAS2-2",
-                "color": [
-                    0.929,
-                    0.659,
-                    0.612
-                ],
-                "spacecraft": "MARGUERITE"
-            },
-            {
-                "name": "MARGUERITE_M-EAS2-3",
-                "fov_frame": "MARGUERITE_M-EAS2-3",
-                "color": [
-                    0.929,
-                    0.659,
-                    0.612
-                ],
-                "spacecraft": "MARGUERITE"
-            },
-            {
-                "name": "MARGUERITE_M-EAS2-4",
-                "fov_frame": "MARGUERITE_M-EAS2-4",
-                "color": [
-                    0.929,
-                    0.659,
-                    0.612
-                ],
-                "spacecraft": "MARGUERITE"
-            },
-            {
-                "name": "MARGUERITE_M-INEA",
-                "fov_frame": "MARGUERITE_M-INEA",
-                "color": [
-                    0.929,
-                    0.659,
-                    0.612
-                ],
-                "spacecraft": "MARGUERITE"
-            },
-            {
-                "name": "MARGUERITE_M-MSA",
-                "fov_frame": "MARGUERITE_M-MSA",
-                "color": [
-                    0.929,
-                    0.659,
-                    0.612
-                ],
-                "spacecraft": "MARGUERITE"
-            },
-            {
-                "name": "MARGUERITE_M-SOSPIM",
-                "fov_frame": "MARGUERITE_M-SOSPIM",
-                "color": [
-                    0.929,
-                    0.659,
-                    0.612
-                ],
-                "spacecraft": "MARGUERITE"
-            },
-            {
-                "name": "MARGUERITE_SPAM1_E",
-                "fov_frame": "MARGUERITE_SPAM1_E",
-                "color": [
-                    0.929,
-                    0.659,
-                    0.612
-                ],
-                "spacecraft": "MARGUERITE"
-            },
-            {
-                "name": "MARGUERITE_SPAM2_E",
-                "fov_frame": "MARGUERITE_SPAM2_E",
-                "color": [
-                    0.929,
-                    0.659,
-                    0.612
-                ],
-                "spacecraft": "MARGUERITE"
-            },
-            {
-                "name": "MARGUERITE_SPAM3_E",
-                "fov_frame": "MARGUERITE_SPAM3_E",
-                "color": [
-                    0.929,
-                    0.659,
-                    0.612
-                ],
-                "spacecraft": "MARGUERITE"
-            },
-            {
-                "name": "MARGUERITE_SPAM4_E",
-                "fov_frame": "MARGUERITE_SPAM4_E",
-                "color": [
-                    0.929,
-                    0.659,
-                    0.612
-                ],
-                "spacecraft": "MARGUERITE"
-            },
-            {
-                "name": "MARGUERITE_SPAM1_I",
-                "fov_frame": "MARGUERITE_SPAM1_I",
-                "color": [
-                    0.929,
-                    0.659,
-                    0.612
-                ],
-                "spacecraft": "MARGUERITE"
-            },
-            {
-                "name": "MARGUERITE_SPAM2_I",
-                "fov_frame": "MARGUERITE_SPAM2_I",
-                "color": [
-                    0.929,
-                    0.659,
-                    0.612
-                ],
-                "spacecraft": "MARGUERITE"
-            },
-            {
-                "name": "MARGUERITE_SPAM3_I",
-                "fov_frame": "MARGUERITE_SPAM3_I",
-                "color": [
-                    0.929,
-                    0.659,
-                    0.612
-                ],
-                "spacecraft": "MARGUERITE"
-            },
-            {
-                "name": "MARGUERITE_SPAM4_I",
-                "fov_frame": "MARGUERITE_SPAM4_I",
-                "color": [
-                    0.929,
-                    0.659,
-                    0.612
-                ],
-                "spacecraft": "MARGUERITE"
-            }
-        ]
-    },
     "central_body": "Mars",
     "targets": [
         "Earth",
@@ -463,5 +37,642 @@
         "Didymos",
         "Dimorphos"
     ],
-    "boresights": []
+    "sensors": {
+        "HENRI": [
+            {
+                "name": "HENRI_3DVI",
+                "fov_frame": "HENRI_3DVI_BASE",
+                "color": [
+                    0,
+                    0.6,
+                    0
+                ],
+                "spacecraft": "HENRI"
+            },
+            {
+                "name": "HENRI_M-AC",
+                "fov_frame": "HENRI_M-AC_BASE",
+                "color": [
+                    0,
+                    0.6,
+                    0
+                ],
+                "spacecraft": "HENRI"
+            },
+            {
+                "name": "HENRI_M-EAS1-1",
+                "fov_frame": "HENRI_M-EAS1",
+                "color": [
+                    0,
+                    0.6,
+                    0
+                ],
+                "spacecraft": "HENRI"
+            },
+            {
+                "name": "HENRI_M-EAS1-2",
+                "fov_frame": "HENRI_M-EAS1",
+                "color": [
+                    0,
+                    0.6,
+                    0
+                ],
+                "spacecraft": "HENRI"
+            },
+            {
+                "name": "HENRI_M-EAS1-3",
+                "fov_frame": "HENRI_M-EAS1",
+                "color": [
+                    0,
+                    0.6,
+                    0
+                ],
+                "spacecraft": "HENRI"
+            },
+            {
+                "name": "HENRI_M-EAS1-4",
+                "fov_frame": "HENRI_M-EAS1",
+                "color": [
+                    0,
+                    0.6,
+                    0
+                ],
+                "spacecraft": "HENRI"
+            },
+            {
+                "name": "HENRI_M-EAS2-1",
+                "fov_frame": "HENRI_M-EAS2",
+                "color": [
+                    0,
+                    0.6,
+                    0
+                ],
+                "spacecraft": "HENRI"
+            },
+            {
+                "name": "HENRI_M-EAS2-2",
+                "fov_frame": "HENRI_M-EAS2",
+                "color": [
+                    0,
+                    0.6,
+                    0
+                ],
+                "spacecraft": "HENRI"
+            },
+            {
+                "name": "HENRI_M-EAS2-3",
+                "fov_frame": "HENRI_M-EAS2",
+                "color": [
+                    0,
+                    0.6,
+                    0
+                ],
+                "spacecraft": "HENRI"
+            },
+            {
+                "name": "HENRI_M-EAS2-4",
+                "fov_frame": "HENRI_M-EAS2",
+                "color": [
+                    0,
+                    0.6,
+                    0
+                ],
+                "spacecraft": "HENRI"
+            },
+            {
+                "name": "HENRI_M-INEA",
+                "fov_frame": "HENRI_M-INEA_BASE",
+                "color": [
+                    0,
+                    0.6,
+                    0
+                ],
+                "spacecraft": "HENRI"
+            },
+            {
+                "name": "HENRI_M-MSA",
+                "fov_frame": "HENRI_M-MSA_BASE",
+                "color": [
+                    0,
+                    0.6,
+                    0
+                ],
+                "spacecraft": "HENRI"
+            },
+            {
+                "name": "HENRI_M-SOSPIM",
+                "fov_frame": "HENRI_M-SOSPIM_BASE",
+                "color": [
+                    0,
+                    0.6,
+                    0
+                ],
+                "spacecraft": "HENRI"
+            },
+            {
+                "name": "HENRI_SPAM1_E",
+                "fov_frame": "HENRI_SPAM1",
+                "color": [
+                    0,
+                    0.6,
+                    0
+                ],
+                "spacecraft": "HENRI"
+            },
+            {
+                "name": "HENRI_SPAM1_I",
+                "fov_frame": "HENRI_SPAM1",
+                "color": [
+                    0,
+                    0.6,
+                    0
+                ],
+                "spacecraft": "HENRI"
+            },
+            {
+                "name": "HENRI_SPAM2_E",
+                "fov_frame": "HENRI_SPAM1",
+                "color": [
+                    0,
+                    0.6,
+                    0
+                ],
+                "spacecraft": "HENRI"
+            },
+            {
+                "name": "HENRI_SPAM2_I",
+                "fov_frame": "HENRI_SPAM1",
+                "color": [
+                    0,
+                    0.6,
+                    0
+                ],
+                "spacecraft": "HENRI"
+            },
+            {
+                "name": "HENRI_SPAM3_E",
+                "fov_frame": "HENRI_SPAM2",
+                "color": [
+                    0,
+                    0.6,
+                    0
+                ],
+                "spacecraft": "HENRI"
+            },
+            {
+                "name": "HENRI_SPAM3_I",
+                "fov_frame": "HENRI_SPAM2",
+                "color": [
+                    0,
+                    0.6,
+                    0
+                ],
+                "spacecraft": "HENRI"
+            },
+            {
+                "name": "HENRI_SPAM4_E",
+                "fov_frame": "HENRI_SPAM2",
+                "color": [
+                    0,
+                    0.6,
+                    0
+                ],
+                "spacecraft": "HENRI"
+            },
+            {
+                "name": "HENRI_SPAM4_I",
+                "fov_frame": "HENRI_SPAM2",
+                "color": [
+                    0,
+                    0.6,
+                    0
+                ],
+                "spacecraft": "HENRI"
+            }
+        ],
+        "MARGUERITE": [
+            {
+                "name": "MARGUERITE_3DVI",
+                "fov_frame": "MARGUERITE_3DVI_BASE",
+                "color": [
+                    0,
+                    0.6,
+                    0
+                ],
+                "spacecraft": "MARGUERITE"
+            },
+            {
+                "name": "MARGUERITE_M-AC",
+                "fov_frame": "MARGUERITE_M-AC_BASE",
+                "color": [
+                    0,
+                    0.6,
+                    0
+                ],
+                "spacecraft": "MARGUERITE"
+            },
+            {
+                "name": "MARGUERITE_M-EAS1-1",
+                "fov_frame": "MARGUERITE_M-EAS1",
+                "color": [
+                    0,
+                    0.6,
+                    0
+                ],
+                "spacecraft": "MARGUERITE"
+            },
+            {
+                "name": "MARGUERITE_M-EAS1-2",
+                "fov_frame": "MARGUERITE_M-EAS1",
+                "color": [
+                    0,
+                    0.6,
+                    0
+                ],
+                "spacecraft": "MARGUERITE"
+            },
+            {
+                "name": "MARGUERITE_M-EAS1-3",
+                "fov_frame": "MARGUERITE_M-EAS1",
+                "color": [
+                    0,
+                    0.6,
+                    0
+                ],
+                "spacecraft": "MARGUERITE"
+            },
+            {
+                "name": "MARGUERITE_M-EAS1-4",
+                "fov_frame": "MARGUERITE_M-EAS1",
+                "color": [
+                    0,
+                    0.6,
+                    0
+                ],
+                "spacecraft": "MARGUERITE"
+            },
+            {
+                "name": "MARGUERITE_M-EAS2-1",
+                "fov_frame": "MARGUERITE_M-EAS2",
+                "color": [
+                    0,
+                    0.6,
+                    0
+                ],
+                "spacecraft": "MARGUERITE"
+            },
+            {
+                "name": "MARGUERITE_M-EAS2-2",
+                "fov_frame": "MARGUERITE_M-EAS2",
+                "color": [
+                    0,
+                    0.6,
+                    0
+                ],
+                "spacecraft": "MARGUERITE"
+            },
+            {
+                "name": "MARGUERITE_M-EAS2-3",
+                "fov_frame": "MARGUERITE_M-EAS2",
+                "color": [
+                    0,
+                    0.6,
+                    0
+                ],
+                "spacecraft": "MARGUERITE"
+            },
+            {
+                "name": "MARGUERITE_M-EAS2-4",
+                "fov_frame": "MARGUERITE_M-EAS2",
+                "color": [
+                    0,
+                    0.6,
+                    0
+                ],
+                "spacecraft": "MARGUERITE"
+            },
+            {
+                "name": "MARGUERITE_M-INEA",
+                "fov_frame": "MARGUERITE_M-INEA_BASE",
+                "color": [
+                    0,
+                    0.6,
+                    0
+                ],
+                "spacecraft": "MARGUERITE"
+            },
+            {
+                "name": "MARGUERITE_M-MSA",
+                "fov_frame": "MARGUERITE_M-MSA_BASE",
+                "color": [
+                    0,
+                    0.6,
+                    0
+                ],
+                "spacecraft": "MARGUERITE"
+            },
+            {
+                "name": "MARGUERITE_M-SOSPIM",
+                "fov_frame": "MARGUERITE_M-SOSPIM_BASE",
+                "color": [
+                    0,
+                    0.6,
+                    0
+                ],
+                "spacecraft": "MARGUERITE"
+            },
+            {
+                "name": "MARGUERITE_SPAM1_E",
+                "fov_frame": "MARGUERITE_SPAM1",
+                "color": [
+                    0,
+                    0.6,
+                    0
+                ],
+                "spacecraft": "MARGUERITE"
+            },
+            {
+                "name": "MARGUERITE_SPAM1_I",
+                "fov_frame": "MARGUERITE_SPAM1",
+                "color": [
+                    0,
+                    0.6,
+                    0
+                ],
+                "spacecraft": "MARGUERITE"
+            },
+            {
+                "name": "MARGUERITE_SPAM2_E",
+                "fov_frame": "MARGUERITE_SPAM1",
+                "color": [
+                    0,
+                    0.6,
+                    0
+                ],
+                "spacecraft": "MARGUERITE"
+            },
+            {
+                "name": "MARGUERITE_SPAM2_I",
+                "fov_frame": "MARGUERITE_SPAM1",
+                "color": [
+                    0,
+                    0.6,
+                    0
+                ],
+                "spacecraft": "MARGUERITE"
+            },
+            {
+                "name": "MARGUERITE_SPAM3_E",
+                "fov_frame": "MARGUERITE_SPAM2",
+                "color": [
+                    0,
+                    0.6,
+                    0
+                ],
+                "spacecraft": "MARGUERITE"
+            },
+            {
+                "name": "MARGUERITE_SPAM3_I",
+                "fov_frame": "MARGUERITE_SPAM2",
+                "color": [
+                    0,
+                    0.6,
+                    0
+                ],
+                "spacecraft": "MARGUERITE"
+            },
+            {
+                "name": "MARGUERITE_SPAM4_E",
+                "fov_frame": "MARGUERITE_SPAM2",
+                "color": [
+                    0,
+                    0.6,
+                    0
+                ],
+                "spacecraft": "MARGUERITE"
+            },
+            {
+                "name": "MARGUERITE_SPAM4_I",
+                "fov_frame": "MARGUERITE_SPAM2",
+                "color": [
+                    0,
+                    0.6,
+                    0
+                ],
+                "spacecraft": "MARGUERITE"
+            }
+        ]
+    },
+    "boresights": [
+        {
+            "name": "HENRI_3DVI",
+            "fov_frame": "HENRI_3DVI",
+            "size": 90.0
+        },
+        {
+            "name": "HENRI_M-AC",
+            "fov_frame": "HENRI_M-AC",
+            "size": 150.0
+        },
+        {
+            "name": "HENRI_M-EAS1-1",
+            "fov_frame": "HENRI_M-EAS1-1",
+            "size": 90.0
+        },
+        {
+            "name": "HENRI_M-EAS1-2",
+            "fov_frame": "HENRI_M-EAS1-2",
+            "size": 90.0
+        },
+        {
+            "name": "HENRI_M-EAS1-3",
+            "fov_frame": "HENRI_M-EAS1-3",
+            "size": 90.0
+        },
+        {
+            "name": "HENRI_M-EAS1-4",
+            "fov_frame": "HENRI_M-EAS1-4",
+            "size": 90.0
+        },
+        {
+            "name": "HENRI_M-EAS2-1",
+            "fov_frame": "HENRI_M-EAS2-1",
+            "size": 90.0
+        },
+        {
+            "name": "HENRI_M-EAS2-2",
+            "fov_frame": "HENRI_M-EAS2-2",
+            "size": 90.0
+        },
+        {
+            "name": "HENRI_M-EAS2-3",
+            "fov_frame": "HENRI_M-EAS2-3",
+            "size": 90.0
+        },
+        {
+            "name": "HENRI_M-EAS2-4",
+            "fov_frame": "HENRI_M-EAS2-4",
+            "size": 90.0
+        },
+        {
+            "name": "HENRI_M-INEA",
+            "fov_frame": "HENRI_M-INEA",
+            "size": 20.0
+        },
+        {
+            "name": "HENRI_M-MSA",
+            "fov_frame": "HENRI_M-MSA",
+            "size": 179.99988
+        },
+        {
+            "name": "HENRI_M-SOSPIM",
+            "fov_frame": "HENRI_M-SOSPIM",
+            "size": 8.0
+        },
+        {
+            "name": "HENRI_SPAM1_E",
+            "fov_frame": "HENRI_SPAM1_E",
+            "size": 50.0
+        },
+        {
+            "name": "HENRI_SPAM1_I",
+            "fov_frame": "HENRI_SPAM1_I",
+            "size": 50.0
+        },
+        {
+            "name": "HENRI_SPAM2_E",
+            "fov_frame": "HENRI_SPAM2_E",
+            "size": 50.0
+        },
+        {
+            "name": "HENRI_SPAM2_I",
+            "fov_frame": "HENRI_SPAM2_I",
+            "size": 50.0
+        },
+        {
+            "name": "HENRI_SPAM3_E",
+            "fov_frame": "HENRI_SPAM3_E",
+            "size": 50.0
+        },
+        {
+            "name": "HENRI_SPAM3_I",
+            "fov_frame": "HENRI_SPAM3_I",
+            "size": 50.0
+        },
+        {
+            "name": "HENRI_SPAM4_E",
+            "fov_frame": "HENRI_SPAM4_E",
+            "size": 50.0
+        },
+        {
+            "name": "HENRI_SPAM4_I",
+            "fov_frame": "HENRI_SPAM4_I",
+            "size": 50.0
+        },
+        {
+            "name": "MARGUERITE_3DVI",
+            "fov_frame": "MARGUERITE_3DVI",
+            "size": 90.0
+        },
+        {
+            "name": "MARGUERITE_M-AC",
+            "fov_frame": "MARGUERITE_M-AC",
+            "size": 150.0
+        },
+        {
+            "name": "MARGUERITE_M-EAS1-1",
+            "fov_frame": "MARGUERITE_M-EAS1-1",
+            "size": 90.0
+        },
+        {
+            "name": "MARGUERITE_M-EAS1-2",
+            "fov_frame": "MARGUERITE_M-EAS1-2",
+            "size": 90.0
+        },
+        {
+            "name": "MARGUERITE_M-EAS1-3",
+            "fov_frame": "MARGUERITE_M-EAS1-3",
+            "size": 90.0
+        },
+        {
+            "name": "MARGUERITE_M-EAS1-4",
+            "fov_frame": "MARGUERITE_M-EAS1-4",
+            "size": 90.0
+        },
+        {
+            "name": "MARGUERITE_M-EAS2-1",
+            "fov_frame": "MARGUERITE_M-EAS2-1",
+            "size": 90.0
+        },
+        {
+            "name": "MARGUERITE_M-EAS2-2",
+            "fov_frame": "MARGUERITE_M-EAS2-2",
+            "size": 90.0
+        },
+        {
+            "name": "MARGUERITE_M-EAS2-3",
+            "fov_frame": "MARGUERITE_M-EAS2-3",
+            "size": 90.0
+        },
+        {
+            "name": "MARGUERITE_M-EAS2-4",
+            "fov_frame": "MARGUERITE_M-EAS2-4",
+            "size": 90.0
+        },
+        {
+            "name": "MARGUERITE_M-INEA",
+            "fov_frame": "MARGUERITE_M-INEA",
+            "size": 20.0
+        },
+        {
+            "name": "MARGUERITE_M-MSA",
+            "fov_frame": "MARGUERITE_M-MSA",
+            "size": 179.99988
+        },
+        {
+            "name": "MARGUERITE_M-SOSPIM",
+            "fov_frame": "MARGUERITE_M-SOSPIM",
+            "size": 8.0
+        },
+        {
+            "name": "MARGUERITE_SPAM1_E",
+            "fov_frame": "MARGUERITE_SPAM1_E",
+            "size": 50.0
+        },
+        {
+            "name": "MARGUERITE_SPAM1_I",
+            "fov_frame": "MARGUERITE_SPAM1_I",
+            "size": 50.0
+        },
+        {
+            "name": "MARGUERITE_SPAM2_E",
+            "fov_frame": "MARGUERITE_SPAM2_E",
+            "size": 50.0
+        },
+        {
+            "name": "MARGUERITE_SPAM2_I",
+            "fov_frame": "MARGUERITE_SPAM2_I",
+            "size": 50.0
+        },
+        {
+            "name": "MARGUERITE_SPAM3_E",
+            "fov_frame": "MARGUERITE_SPAM3_E",
+            "size": 50.0
+        },
+        {
+            "name": "MARGUERITE_SPAM3_I",
+            "fov_frame": "MARGUERITE_SPAM3_I",
+            "size": 50.0
+        },
+        {
+            "name": "MARGUERITE_SPAM4_E",
+            "fov_frame": "MARGUERITE_SPAM4_E",
+            "size": 50.0
+        },
+        {
+            "name": "MARGUERITE_SPAM4_I",
+            "fov_frame": "MARGUERITE_SPAM4_I",
+            "size": 50.0
+        }
+    ]
 }

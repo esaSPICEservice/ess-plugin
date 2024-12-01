@@ -1,5 +1,5 @@
 import cosmoscripting
-from utils.generators import SENSOR_SUFFIX
+from utils.generators import SENSOR_SUFFIX, SENSOR_FRUSTUM_ON_OPACITY
 from ui.common import get_runtime
 from utils.generators import append_observation
 import json
@@ -111,7 +111,7 @@ def reconfigure_sensors(items):
     sensors = []
     for item in items:
         if item['class'] == 'sensor':
-            item['geometry']['frustumOpacity'] = 0.2 if show_frustum else 0
+            item['geometry']['frustumOpacity'] = SENSOR_FRUSTUM_ON_OPACITY if show_frustum else 0
             current_sensors.append(item['name'])
             sensors.append(item)
     return sensors, current_sensors

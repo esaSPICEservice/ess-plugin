@@ -1,6 +1,7 @@
 import json
 
 SENSOR_SUFFIX =  '_SENSOR'
+SENSOR_FRUSTUM_ON_OPACITY = 0.1
 class Generator:
 
     def content(self):
@@ -48,8 +49,8 @@ class SensorGenerator(Generator):
                 'range': 12000,
                 'rangeTracking': True,
                 'frustumColor':  sensor.frustum_color,
-                'frustumOpacity': 0.0,
-                'gridOpacity': 0.3,
+                'frustumOpacity': SENSOR_FRUSTUM_ON_OPACITY,
+                'gridOpacity': 0.2,
                 'footprintOpacity': 0.5,
                 'sideDivisions': 125,
                 'onlyVisibleDuringObs': False

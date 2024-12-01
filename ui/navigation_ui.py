@@ -1,5 +1,6 @@
 
 from PyQt5.QtWidgets import QDialog, QPushButton
+from PyQt5 import QtCore
 from actions.sensors import get_sensor_names, toggle_sensor, get_boresights, reconfigure_catalogue
 from ui.common import get_runtime
 from ui.design.navigation_panel import Ui_Form
@@ -12,10 +13,11 @@ class NavigationDialog(QDialog):
     id = 'navigation_dialog_window_id'
 
     def __init__(self, main_window):
-        QDialog.__init__(self, main_window)
+        QDialog.__init__(self, main_window, QtCore.Qt.WindowStaysOnTopHint)
         self.boresights = get_boresights()
         self.run_time = get_runtime()
         self.init_ui()
+
         
 
     def init_ui(self):
@@ -24,6 +26,7 @@ class NavigationDialog(QDialog):
         self.navigation_panel.setupUi(self)
         self.navigation_panel.sensorViewButton.clicked.connect(self.sensor_view)
         self.frustrumCheckbox = self.navigation_panel.frustrumCheckbox
+        self.frustrumCheckbox.setChecked(True)
         self.frustrumCheckbox.stateChanged.connect(self.frustrumChange)
         self.spacecrafts_tab()
         self.tabSelector = TabbedSelector(self, get_sensor_names(), self.toggle_sensor)
@@ -47,7 +50,6 @@ class NavigationDialog(QDialog):
         sensor_name = self.navigation_panel.sensorBox.currentText()
         sensor = next(filter(lambda item: item.get('name') == sensor_name, self.boresights))
         sensor_view(sensor.get('name'), sensor.get('size'))
-        self.hide()
 
     def toggle_sensor(self, visible, name):
         toggle_sensor(visible, name)
