@@ -1,5 +1,6 @@
 from PyQt5.QtWidgets import QTabWidget, QGridLayout, QCheckBox, QPushButton, QWidget, QVBoxLayout
 from PyQt5.QtCore import Qt
+import math
 
 
 
@@ -11,8 +12,10 @@ class TabbedSelector(QWidget):
         self.checkboxes = []
         self.setup(items, num_colums)
 
-    def setup(self, items, num_columns):
+    def setup(self, items, num_colums):
 
+        n_items = max([len(value) for value in items.values()]) 
+        items_per_row = math.ceil(n_items / num_colums)
         main_layout = QVBoxLayout()
         tabmm_map = dict()
         tabmm_index = dict()
@@ -39,8 +42,8 @@ class TabbedSelector(QWidget):
                 cb.setChecked(False)
                 cb.stateChanged.connect(
                     lambda state, name=moon: self.adapt_callback(state, name))
-                col = new_index % num_columns
-                row = new_index // num_columns
+                col = new_index % items_per_row
+                row = new_index // items_per_row
                 layout.addWidget(cb, col, row)
                 self.adapt_callback(Qt.Unchecked, moon)
                 group_checkboxes[group_name].append(cb)

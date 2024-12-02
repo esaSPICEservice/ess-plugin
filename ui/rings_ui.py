@@ -16,7 +16,7 @@ class RingsDialog(QDialog):
         self.setObjectName(RingsDialog.id)
         self.ui = Ui_Form()
         self.ui.setupUi(self)
-        self.tabSelector = TabbedSelector(self, get_rings(), toggle_ring, 5)
+        self.tabSelector = TabbedSelector(self, get_rings(), toggle_ring)
         self.ui.label.setText('Jupiter Rings and Moon Torus')
         self.ui.verticalLayout.addWidget(self.tabSelector)
         self.ui.verticalLayout.addItem(QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding))
