@@ -20,19 +20,19 @@ def create_structure(parent_path, metakernel_path='input_mk.tm', ptr_content='in
     )
 
     agm_config_filepath = os.path.join(
-        os.path.dirname(__file__), "config/age", "cfg_agm_jui_jupiter.xml"
+        os.path.dirname(__file__), "config/age", "cfg_agm_jui.xml"
     )
 
     fixed_definitions_filepath = os.path.join(
-        os.path.dirname(__file__), "config/age", "cfg_agm_jui_multibody_fixed_definitions.xml"
+        os.path.dirname(__file__), "config/age", "cfg_agm_jui_fixed_definitions.xml"
     )
 
     predefine_blocks_filepath = os.path.join(
-        os.path.dirname(__file__), "config/age", "cfg_agm_jui_multibody_predefined_block.xml"
+        os.path.dirname(__file__), "config/age", "cfg_agm_jui_predefined_block.xml"
     )
 
     event_definitions_filepath = os.path.join(
-        os.path.dirname(__file__), "config/age", "cfg_agm_jui_multibody_event_definitions.xml"
+        os.path.dirname(__file__), "config/age", "cfg_agm_jui_event_definitions.xml"
     )
 
     bit_rate_filepath = os.path.join(

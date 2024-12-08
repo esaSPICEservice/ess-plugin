@@ -250,7 +250,7 @@
                },
                "bodyFrame": {
                   "type": "Spice",
-                  "name": "HERA_SA+Y_ZERO"
+                  "name": "HERA_SA+Y"
                }
             }
          ],
@@ -276,13 +276,13 @@
                },
                "bodyFrame": {
                   "type": "Spice",
-                  "name": "HERA_SA-Y_ZERO"
+                  "name": "HERA_SA-Y"
                }
             }
          ],
       "geometry": {
         "type": "Mesh",
-        "source": "./models/3ds/hera_sc_samy_v01.3ds"
+        "source": "./models/3ds/hera_sc_samy_v02.3ds"
       },
       "label": {
         "showText": false

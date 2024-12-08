@@ -12,10 +12,10 @@
                 "fileList": []
             },
             "baselineRelPath":"config/age",
-            "ageConfigFileName": "cfg_agm_jui_jupiter.xml",
-            "fixedDefinitionsFile": "cfg_agm_jui_multibody_fixed_definitions.xml",
-            "predefinedBlockFile": "cfg_agm_jui_multibody_predefined_block.xml",
-            "eventDefinitionsFile": "cfg_agm_jui_multibody_event_definitions.xml"
+            "ageConfigFileName": "cfg_agm_jui.xml",
+            "fixedDefinitionsFile": "cfg_agm_jui_fixed_definitions.xml",
+            "predefinedBlockFile": "cfg_agm_jui_predefined_block.xml",
+            "eventDefinitionsFile": "cfg_agm_jui_event_definitions.xml"
         },
         "instrumentSimulationConfiguration": {
            "baselineRelPath":  "config/ise",
