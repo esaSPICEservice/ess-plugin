@@ -125,6 +125,9 @@ class Timeline(QtWidgets.QSlider):
             mark += scale
         return major_ticks
 
+    def every_nth(self, lst, nth):
+        return lst[nth - 1::nth]
+
     def drawWidget(self, qp):
 
         qp.setFont(self.default_font)
@@ -142,14 +145,20 @@ class Timeline(QtWidgets.QSlider):
         metrics = qp.fontMetrics()
         fh = metrics.height()
         fw = metrics.width("0")
-
-        for tick in self.get_major_ticks():
+        ticks = self.get_major_ticks()
+        show = range(0,len(ticks),len(ticks) // 5) if len(ticks) > 5 else range(0,len(ticks))
+        for index, tick in enumerate(ticks):
             pos = self.style().sliderPositionFromValue(self.minimum(),self.maximum(),tick,self.width())
             pen2 = QtGui.QPen(QtGui.QColor(128,128,128,255), 2, QtCore.Qt.SolidLine)
             qp.setPen(pen2)
-            qp.drawLine(pos,h - fh, pos, h)
-            date_value = datetime.datetime.fromtimestamp(self.epoch + tick).isoformat()[:19]
-            qp.drawText((pos)+fw, h - 3, str(date_value)) 
+            
+            tick_height = h - 3
+            if index in show:
+                date_value = datetime.datetime.fromtimestamp(self.epoch + tick).isoformat()[:19]
+                qp.drawText((pos)+fw, h - fh, str(date_value))
+                tick_height = h - fh
+            qp.drawLine(pos,tick_height, pos, h)
+            # qp.drawText((pos)+fw, h - 3, str(date_value)) 
 
        
         if self.hover:
