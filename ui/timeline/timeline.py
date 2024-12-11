@@ -8,7 +8,8 @@ import datetime
 import math
 
 def epoch_seconds(isoc):
-    epoch = datetime.datetime.fromisoformat(isoc)
+    homologated = isoc[:19]+'+00:00'
+    epoch = datetime.datetime.fromisoformat(homologated)
     return epoch.timestamp()
 
 styleSheet = """
@@ -75,6 +76,9 @@ class Timeline(QtWidgets.QSlider):
         self.hoverPos = None
         self.PressPos = None
         self.MovePos = None
+        self.time = False
+        self.timePos = None
+        self.timeStr = None
         self.origMax = self.maximum()
         self.oriMin = self.minimum()
         self.setOrientation(QtCore.Qt.Horizontal)
@@ -157,7 +161,7 @@ class Timeline(QtWidgets.QSlider):
             
             tick_height = h - 3
             if index in show:
-                date_value = datetime.datetime.fromtimestamp(self.epoch + tick).isoformat()[:19]
+                date_value = datetime.datetime.fromtimestamp(self.epoch + tick, tz=datetime.timezone.utc).isoformat()[:19]
                 qp.drawText((pos)+fw, h - fh, str(date_value))
                 tick_height = h - fh
             qp.drawLine(pos,tick_height, pos, h)
@@ -167,15 +171,24 @@ class Timeline(QtWidgets.QSlider):
         if self.hover:
             val = self.style().sliderValueFromPosition(self.minimum(),self.maximum(),self.hoverPos.x(),self.width())
             if val != self.value() and self.epoch != None:
-                    pos = self.style().sliderPositionFromValue(self.minimum(),self.maximum(),val,self.width())
-                    if val > self.maximum()-(self.maximum()/2):
-                        fw += metrics.width(str(val))
-                        fw *= -1
-                    pen2 = QtGui.QPen(QtGui.QColor(0,0,0,255), 2, QtCore.Qt.SolidLine)
-                    qp.setPen(pen2)
-                    qp.drawLine(pos,0, pos,h)
-                    date_value = datetime.datetime.fromtimestamp(self.epoch + val).isoformat()
-                    qp.drawText((pos)+fw, 0+fh, str(date_value)) 
+                pos = self.style().sliderPositionFromValue(self.minimum(),self.maximum(),val,self.width())
+                if val > self.maximum()-(self.maximum()/2):
+                    fw += metrics.width(str(val))
+                    fw *= -1
+                pen2 = QtGui.QPen(QtGui.QColor(0,0,0,255), 2, QtCore.Qt.SolidLine)
+                qp.setPen(pen2)
+                qp.drawLine(pos,0, pos,h)
+                date_value = datetime.datetime.fromtimestamp(self.epoch + val, tz=datetime.timezone.utc).isoformat()
+                qp.drawText((pos)+fw, 0+fh, str(date_value))
+
+        if self.time:
+            if self.epoch != None:
+                pos = self.style().sliderPositionFromValue(self.minimum(),self.maximum(),self.timePos,self.width())
+                pen2 = QtGui.QPen(QtGui.QColor(255,0,0,255), 2, QtCore.Qt.SolidLine)
+                qp.setPen(pen2)
+                qp.drawLine(pos,0, pos,h)
+                qp.drawText((pos)+fw, 0+fh, self.timeStr) 
+
         qp.setPen(self.default_pen)
 
         for block in self.blocks:
@@ -206,7 +219,7 @@ class Timeline(QtWidgets.QSlider):
             if event.modifiers() != QtCore.Qt.AltModifier:
                 butts = QtCore.Qt.MouseButtons(QtCore.Qt.MidButton)
                 value = self.get_slider_value(event.pos().x())
-                date_value = datetime.datetime.fromtimestamp(self.epoch + value).isoformat()
+                date_value = datetime.datetime.fromtimestamp(self.epoch + value, tz=datetime.timezone.utc).isoformat()
                 self.callback(date_value)
             else:
                 self.press_slider_value = self.get_slider_value(event.pos().x())
@@ -240,3 +253,9 @@ class Timeline(QtWidgets.QSlider):
             self.repaint()
         return super(Timeline, self).eventFilter( widget, event)
 
+
+    def set_time(self, time_str):
+        self.time = True
+        self.timeStr = time_str[:19]
+        self.timePos = int(epoch_seconds(time_str) - self.epoch)
+        self.repaint()

@@ -1,6 +1,9 @@
 
+import datetime
 from ui.design.block_panel import Ui_Form
 from PyQt5.QtWidgets import QDialog, QTableWidgetItem, QTableWidget, QTableWidgetSelectionRange, QVBoxLayout
+import cosmoscripting
+from PyQt5.QtCore import QTimer
 from ui.timeline.timeline import Timeline, TimelineBlock
 
 from utils.block_parser import BlockParser
@@ -9,12 +12,13 @@ from utils.time import duration
 
 class DateTableWidgetItem(QTableWidgetItem):
     
-    def __init__(self, date_str):
+    def __init__(self, date_str, callback):
         QTableWidgetItem.__init__(self, date_str)
         self.date_str = date_str
+        self.callback = callback
 
     def doEdit(self):
-        goto_date(self.date_str)
+        self.callback(self.date_str)
 
 class BlockTableWidgetItem(QTableWidgetItem):
     
@@ -25,6 +29,8 @@ class BlockTableWidgetItem(QTableWidgetItem):
         pass
 
 
+EPOCH_2000 = datetime.datetime(2000, 1, 1, 12, 0, tzinfo=datetime.timezone.utc).timestamp()
+
 class BlocksDialog(QDialog):
 
     id = 'blocks_dialog_window_id'
@@ -33,6 +39,11 @@ class BlocksDialog(QDialog):
         QDialog.__init__(self, main_window)
         self.ptr_path = ptr_path
         self.init_ui()
+        self.cosmo = cosmoscripting.Cosmo()
+        self.timer0 = QTimer()
+        self.timer0.setInterval(200)
+        self.timer0.timeout.connect(self.set_cosmographia_time)
+        self.timer0.start()
 
     def init_ui(self):
         self.setObjectName(BlocksDialog.id)
@@ -69,10 +80,10 @@ class BlocksDialog(QDialog):
                 self.ui.tableWidget.insertRow(row_number)
                 self.ui.tableWidget.setItem(
                     row_number, 0, 
-                    DateTableWidgetItem(start_time))
+                    DateTableWidgetItem(start_time, self.goto_date_cosmographia))
                 self.ui.tableWidget.setItem(
                     row_number, 1, 
-                    DateTableWidgetItem(end_time))
+                    DateTableWidgetItem(end_time, self.goto_date_cosmographia))
                 self.ui.tableWidget.setItem(
                     row_number, 2, 
                     BlockTableWidgetItem(str(duration(start_time, end_time))))
@@ -82,6 +93,15 @@ class BlocksDialog(QDialog):
 
         except Exception as error:
             print(error)
+
+    def set_cosmographia_time(self):
+        time = self.cosmo.getTime()
+        delta = (32.5 + 37) # TDB to UTC delta
+        date_utc = datetime.datetime.fromtimestamp(EPOCH_2000 + time - delta, tz=datetime.timezone.utc)
+        if self.timeline:
+            date_str = date_utc.isoformat()
+            self.timeline.set_time(date_str)
+            self.select_in_table(self.get_block_index(date_str))
 
     def get_block_index(self, timestamp):
         for index, start, end in self.block_timeline_index:
@@ -102,8 +122,11 @@ class BlocksDialog(QDialog):
         item.doEdit()
 
     def goto_date_timeline(self, value):
-        goto_date(value)
+        self.goto_date_cosmographia(value)
         self.select_in_table(self.get_block_index(value))
+
+    def goto_date_cosmographia(self, utc_str):
+        self.cosmo.setTime(utc_str + " UTC")
 
     def show_block(self, item):
         self.show_block_index(item.row())

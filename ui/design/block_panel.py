@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'qtcreator/block-panel.ui'
+# Form implementation generated from reading ui file 'design/qtcreator/block-panel.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.7
 #
@@ -65,9 +65,6 @@ class Ui_Form(object):
 "}")
         self.verticalLayout = QtWidgets.QVBoxLayout(Form)
         self.verticalLayout.setObjectName("verticalLayout")
-        self.label = QtWidgets.QLabel(Form)
-        self.label.setObjectName("label")
-        self.verticalLayout.addWidget(self.label)
         self.timelineWidget = QtWidgets.QWidget(Form)
         self.timelineWidget.setObjectName("timelineWidget")
         self.verticalLayout.addWidget(self.timelineWidget)
@@ -116,7 +113,6 @@ class Ui_Form(object):
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "Timeline"))
-        self.label.setText(_translate("Form", "Timeline"))
         self.tableWidget.setSortingEnabled(True)
         item = self.tableWidget.horizontalHeaderItem(0)
         item.setText(_translate("Form", "Start"))
