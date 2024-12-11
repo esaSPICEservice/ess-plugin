@@ -63,6 +63,7 @@ def after_load(root_scenario):
             menu.append(
                 ActionSpec('Blocks', 'Show pointing blocks', '', bp.show_and_focus)
             )
+            bp.show_and_focus()
 
     if os.path.exists(power_file) and not my_platform.startswith("windows"):
             pw = PowerDialog(main_window, power_file)

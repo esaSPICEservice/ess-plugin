@@ -1,6 +1,6 @@
 
 from ui.design.block_panel import Ui_Form
-from PyQt5.QtWidgets import QDialog, QTableWidgetItem, QTableWidget, QWidget, QVBoxLayout
+from PyQt5.QtWidgets import QDialog, QTableWidgetItem, QTableWidget, QTableWidgetSelectionRange, QVBoxLayout
 from ui.timeline.timeline import Timeline, TimelineBlock
 
 from utils.block_parser import BlockParser
@@ -42,7 +42,7 @@ class BlocksDialog(QDialog):
         self.ui.timelineWidget.setLayout(timelineLayout)
         self.timeline = Timeline(self, self.goto_date_timeline)
         timelineLayout.addWidget(self.timeline)
-
+        self.block_timeline_index = []
         try:
             with open(self.ptr_path, 'r') as ptr_file:
                 ptr_content = ptr_file.read()
@@ -62,38 +62,58 @@ class BlocksDialog(QDialog):
                 if start_time:
                     end_time = parser.end_times[index]
                     self.timeline.add_block(TimelineBlock(start_time, end_time, 'OBS'))
-                    duration_secs = duration(start_time, parser.end_times[index])
-                    self.ui.tableWidget.insertRow(row_number)
-                    self.ui.tableWidget.setItem(
-                        row_number, 0, 
-                        DateTableWidgetItem(start_time))
-                    self.ui.tableWidget.setItem(
-                        row_number, 1, 
-                        DateTableWidgetItem(parser.end_times[index]))
-                    self.ui.tableWidget.setItem(
-                        row_number, 2, 
-                        BlockTableWidgetItem(str(duration_secs)))
-                    self.block_contents[row_number] = parser.block_contents[index]
-                    row_number +=1
-                    
+                else:
+                    start_time = parser.end_times[index-1]
+                    end_time = parser.start_times[index+1]
+
+                self.ui.tableWidget.insertRow(row_number)
+                self.ui.tableWidget.setItem(
+                    row_number, 0, 
+                    DateTableWidgetItem(start_time))
+                self.ui.tableWidget.setItem(
+                    row_number, 1, 
+                    DateTableWidgetItem(end_time))
+                self.ui.tableWidget.setItem(
+                    row_number, 2, 
+                    BlockTableWidgetItem(str(duration(start_time, end_time))))
+                self.block_contents[row_number] = parser.block_contents[index]
+                self.block_timeline_index.append((row_number,start_time, end_time))
+                row_number +=1
 
         except Exception as error:
             print(error)
 
+    def get_block_index(self, timestamp):
+        for index, start, end in self.block_timeline_index:
+            if start <= timestamp <= end:
+                return index
+        return None
 
+    def select_in_table(self, index):
+        if index is None:
+            return
+        table = self.ui.tableWidget
+        table.clearSelection()
+        table.setRangeSelected(QTableWidgetSelectionRange(index, 0, index, 2), True)
+        table.scrollToItem(table.item(index, 0))
+        self.show_block_index(index)
 
     def edit_item(self, item):
         item.doEdit()
 
     def goto_date_timeline(self, value):
         goto_date(value)
+        self.select_in_table(self.get_block_index(value))
 
     def show_block(self, item):
         self.show_block_index(item.row())
 
     def show_block_index(self, index):
-        block_content = self.block_contents[index]
-        self.ui.blockTextEdit.setPlainText(block_content)
+        if index in self.block_contents:
+            block_content = self.block_contents[index]
+            self.ui.blockTextEdit.setPlainText(block_content)
+        else:
+            self.ui.blockTextEdit.setPlainText('Slewing to block...')
 
     def show_and_focus(self):
         self.hide()

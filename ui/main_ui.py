@@ -31,6 +31,9 @@ def create_ui(settings_filename):
             ActionSpec('Console', 'Runtime console', '', cm.show_and_focus)
             ]))
     
-    mk.show_and_focus()
+    if sc == 'JUICE':
+        bd.show_and_focus()
+    else:
+        mk.show_and_focus()
 
 

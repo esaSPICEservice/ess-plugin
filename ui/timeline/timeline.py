@@ -1,3 +1,5 @@
+import typing
+from PyQt5 import QtGui
 import PyQt5.QtGui as QtGui
 import PyQt5.QtCore  as QtCore
 import PyQt5.QtWidgets as QtWidgets
@@ -146,6 +148,7 @@ class Timeline(QtWidgets.QSlider):
         fh = metrics.height()
         fw = metrics.width("0")
         ticks = self.get_major_ticks()
+        ticks = self.every_nth(ticks, len(ticks) // 30) if len(ticks) > 30 else ticks
         show = range(0,len(ticks),len(ticks) // 5) if len(ticks) > 5 else range(0,len(ticks))
         for index, tick in enumerate(ticks):
             pos = self.style().sliderPositionFromValue(self.minimum(),self.maximum(),tick,self.width())
@@ -199,19 +202,23 @@ class Timeline(QtWidgets.QSlider):
 
 
     def mousePressEvent(self,event):
+        if event.button() == QtCore.Qt.LeftButton:
+            if event.modifiers() != QtCore.Qt.AltModifier:
+                butts = QtCore.Qt.MouseButtons(QtCore.Qt.MidButton)
+                value = self.get_slider_value(event.pos().x())
+                date_value = datetime.datetime.fromtimestamp(self.epoch + value).isoformat()
+                self.callback(date_value)
+            else:
+                self.press_slider_value = self.get_slider_value(event.pos().x())
+
+    def mouseReleaseEvent(self, event):
         if event.modifiers() == QtCore.Qt.AltModifier:
-            self.PressPos = event.globalPos()
-            self.MovePos = event.globalPos()
-            self.press_slider_value = self.get_slider_value(self.PressPos.x())
-        if event.button() == QtCore.Qt.LeftButton and event.modifiers() != QtCore.Qt.AltModifier:
-            butts = QtCore.Qt.MouseButtons(QtCore.Qt.MidButton)
-            nevent = QtGui.QMouseEvent(event.type(),QtCore.QPointF(event.pos()),QtCore.QPointF(event.globalPos()),QtCore.Qt.MidButton,butts,event.modifiers())
-            value = self.get_slider_value(event.pos().x())
-            date_value = datetime.datetime.fromtimestamp(self.epoch + value).isoformat()
-            self.callback(date_value)
-            super(Timeline, self).mousePressEvent(nevent)
-        elif event.modifiers() != QtCore.Qt.AltModifier:
-            super(Timeline, self).mousePressEvent(event)
+            slider_value = self.get_slider_value(event.pos().x())
+            diff_x = self.press_slider_value - slider_value
+            newMin = self.minimum() + diff_x
+            newMax = self.maximum() + diff_x
+            self.setRange(newMin,newMax)
+            self.repaint()
 
     def wheelEvent(self,event):
         delta_ratio = (self.maximum() - self.minimum()) / 500
@@ -233,15 +240,3 @@ class Timeline(QtWidgets.QSlider):
             self.repaint()
         return super(Timeline, self).eventFilter( widget, event)
 
-    def mouseMoveEvent(self, event):
-        if event.modifiers() == QtCore.Qt.AltModifier:
-            if event.buttons() in [QtCore.Qt.MidButton,QtCore.Qt.LeftButton] :
-                globalPos = event.globalPos()
-                slider_value = self.get_slider_value(globalPos.x())
-                diff_x = self.press_slider_value - slider_value
-                newMin = self.minimum() + diff_x
-                newMax = self.maximum() + diff_x
-                self.setRange(newMin,newMax)
-                self.repaint()
-        else:
-            return super(Timeline, self).mouseMoveEvent( event)
