@@ -57,7 +57,7 @@ def after_load(root_scenario):
     
     menu = []
 
-    if not my_platform.startswith("windows") and not my_platform.startswith("linux"):
+    if not my_platform.startswith("windows"):
         if os.path.exists(resolved_ptr):
             bp = BlocksDialog(main_window, resolved_ptr)
             menu.append(

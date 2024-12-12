@@ -6,7 +6,14 @@ import cosmoscripting
 from PyQt5.QtCore import QTimer
 from ui.timeline.timeline import Timeline, TimelineBlock
 
-from utils.block_parser import BlockParser
+from simulator.osve.utils import get_platform
+my_platform = get_platform()
+if (my_platform.startswith("linux")):
+    from utils.re_block_parser import BlockParser
+    print('Regular Expression Parser')
+else:
+    from utils.block_parser import BlockParser
+
 from actions.time_navigation import goto_date
 from utils.time import duration
 
@@ -69,6 +76,9 @@ class BlocksDialog(QDialog):
             self.ui.tableWidget.clicked.connect(self.show_block)
             self.block_contents = {}
             row_number = 0
+            print('*********************')
+            print(parser.start_times)
+            print('*********************')
             for index, start_time in enumerate(parser.start_times):
                 if start_time:
                     end_time = parser.end_times[index]

@@ -6,11 +6,9 @@ import PyQt5.QtWidgets as QtWidgets
 
 import datetime
 import math
+from utils.time import epoch_seconds
 
-def epoch_seconds(isoc):
-    homologated = isoc[:19]+'+00:00'
-    epoch = datetime.datetime.fromisoformat(homologated)
-    return epoch.timestamp()
+
 
 styleSheet = """
 
@@ -136,6 +134,9 @@ class Timeline(QtWidgets.QSlider):
 
     def drawWidget(self, qp):
 
+        if not self.epoch:
+            return
+
         qp.setFont(self.default_font)
         w = self.width()
         h = self.height()
@@ -255,7 +256,8 @@ class Timeline(QtWidgets.QSlider):
 
 
     def set_time(self, time_str):
-        self.time = True
-        self.timeStr = time_str[:19]
-        self.timePos = int(epoch_seconds(time_str) - self.epoch)
-        self.repaint()
+        if self.epoch:
+            self.time = True
+            self.timeStr = time_str[:19]
+            self.timePos = int(epoch_seconds(time_str) - self.epoch)
+            self.repaint()

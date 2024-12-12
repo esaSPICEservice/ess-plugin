@@ -5,10 +5,13 @@ class BlockParser:
     def __init__(self, xml_content, strict_bounds=False):
         self.strict_bounds = strict_bounds
         self.xml_content = xml_content
+        self.start_times = []
+        self.end_times = []
+
 
     def process(self):
-        self.start_times = self.get_tags('startTime')
-        self.end_times = self.get_tags('endTime')
+        self.start_times = [item.strip() for item in self.get_tags('startTime')]
+        self.end_times = [item.strip() for item in self.get_tags('endTime')]
         self.block_contents = self.get_tags('block')
 
     def get_tags(self, tag):
