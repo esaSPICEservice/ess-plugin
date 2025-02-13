@@ -107,3 +107,33 @@ def append_observation(items, index, body, sensor_name, start, end, color):
     }
     
     items.append(obs_json)
+
+
+class CustomStarsGenerator(Generator):
+    def __init__(self, items=None):
+        self.version = '1.0'
+        self.name = 'ESS-Plugin Custom Star Catalog generated'
+        self.items = items if items is not None else []
+
+    def append(self, ra, dec, name):
+        distance = 1E11
+        self.items.append(
+        {
+            "class": "spacecraft",
+            "name": name,
+            "center": "Sun",
+            "trajectory": {
+                "type": "FixedSpherical",
+                "latitude" : dec,
+                "longitude": ra,
+                "radius": distance
+            },
+            "trajectoryFrame": "ICRF",
+            "geometry": {
+                "type": "Globe",
+                "radii": [ 1, 1, 1],
+            },
+            "label": {
+                "showText": True
+            },
+        })

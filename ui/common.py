@@ -1,6 +1,6 @@
 from PyQt5.QtWidgets import qApp, QMenuBar, QAction, QMenu, QDialog, QPushButton, QVBoxLayout
 from PyQt5.QtGui import QIcon
-
+import datetime
 from settings.handler import PersistenceSettings, RuntimeSettings
 
 WINDOW_TYPES = [
@@ -140,3 +140,11 @@ def set_settings_handler():
     main_window = get_main_window()
     main_window.__setattr__('persistence_settings', PersistenceSettings())
     main_window.__setattr__('runtime_settings', RuntimeSettings())
+
+
+EPOCH_2000 = datetime.datetime(2000, 1, 1, 12, 0, tzinfo=datetime.timezone.utc).timestamp()
+
+def cosmo_time_to_utc(cosmo_time):
+    delta = (32.5 + 37) # TDB to UTC delta
+    date_utc = datetime.datetime.fromtimestamp(EPOCH_2000 + cosmo_time - delta, tz=datetime.timezone.utc)
+    return date_utc.isoformat()

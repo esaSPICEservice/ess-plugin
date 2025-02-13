@@ -25,14 +25,14 @@
     </Param>
 
 
-    <!-- Spacecraft characterisation -->
+    <!-- Spacecraft characterisation (from FDDB v7 considering Midddle of Life propellant) -->
     <Param id="SC_INERTIA" type="PT_MAT33" description="S/C inertia tensor" unit="kg*m^2">
       <!-- xx, xy, xz,
            yx, yy, yz,
            zx, zy, zz -->
-      29291, -125, -1347,
-       -125, 9692, 182,
-      -1347, 182, 27938
+      27755,  -96, -1265,
+        -96, 9682,   122,
+      -1265,  122,  26290
     </Param>
 
     <!-- Reaction wheels characterisation -->
@@ -62,7 +62,7 @@
       0.0
     </Param>
     <Param id="SE_DURATIONMIN" type="PT_DOUBLE" description="Minimum slew duration allowed (In case the estimated slew is shorter than this value)." unit="s">
-      300.0
+      120.0
     </Param>
     <Param id="SE_DURATIONMAX" type="PT_DOUBLE" description="Maximum slew duration allowed to shorten estimation. (In case the slew to be estimated has an initial guess duration longer than this value)." unit="s">
       7200.0
@@ -123,10 +123,10 @@
 
     <!-- Attitude constraints check -->
     <Param id="AC_POINTINGDURATIONMIN" type="PT_DOUBLE" description="Minimum duration of a pointing block (whatever is between block; in the PTR file). This includes the SLEWs and the Engineering activities like OCMs and WOLs" unit="s">
-      300.0
+      120.0
     </Param>
     <Param id="AC_SLEWDURATIONMIN" type="PT_DOUBLE" description="Minimum allowed slew duration (The minimum block duration takes the precedence. This parameter is there only for backward compatibility." unit="s">
-      300.0
+      120.0
     </Param>
     <Param id="AC_GSEPSLEWDURATIONMIN" type="PT_DOUBLE" description="Minimum duration of a slew block before/after a GSEP block" unit="s">
       7200.0
@@ -135,10 +135,10 @@
       60.0
     </Param>
     <Param id="AC_COMPOSITETIMEBEFORE" type="PT_DOUBLE" description="Minimum time required in composite pointing blocks before the offset rotations" unit="s">
-      60.0
+      0.0
     </Param>
     <Param id="AC_COMPOSITETIMEAFTER" type="PT_DOUBLE" description="Minimum time required in composite pointing blocks after the offset rotations" unit="s">
-      60.0
+      0.0
     </Param>
     <Param id="AC_FLIPDURATION" type="PT_DOUBLE" description="NadirPowerOptimize flip duration" unit="s">
       6.0
@@ -155,22 +155,27 @@
     <Param id="AC_CHECKTIMESTEP" type="PT_DOUBLE" description="Time step for the attitude constraints checking" unit="s">
       1.0
     </Param>
-    <Param id="AC_SCANGVELMAX" type="PT_DOUBLE" description="Maximum angular velocity allowed for the S/C (This value is used by the slew duration estimation algorithm only)" unit="deg/s">
-      0.1
+    <Param id="AC_SCANGVELMAX" type="PT_DOUBLE" description="Maximum angular velocity allowed for the S/C (This value is used by the slew duration estimation algorithm only). If the parameter is provided by axis via AC_SCANGVELMAXAXIS then the value is 0 = DISABLED" unit="deg/s">
+      0
     </Param>
-    <Param id="AC_SCANGACCMAX" type="PT_DOUBLE" description="Maximum angular acceleration allowed for the S/C (This value is used by the slew duration estimation algorithm only)" unit="deg/s^2">
-      0.001
+    <Param id="AC_SCANGVELMAXAXIS" type="PT_VEC3" description="Maximum angular velocity allowed per axis for the S/C, 0 = DISABLED AXIS" unit="deg/s">
+      0.1, 0.32, 0.1
     </Param>
-
+    <Param id="AC_SCANGACCMAX" type="PT_DOUBLE" description="Maximum angular acceleration allowed for the S/C (This value is used by the slew duration estimation algorithm only). If the parameter is provided by axis via AC_SCANGACCMAXAXIS then the value is 0 = DISABLED" unit="deg/s^2">
+      0
+    </Param>
+    <Param id="AC_SCANGACCMAXAXIS" type="PT_VEC3" description="Maximum angular acceleration allowed per axis for the S/C, 0 = DISABLED AXIS" unit="deg/s^2">
+      0.0004, 0.0012, 0.0004
+    </Param>
 
     <!-- Attitude constraints check: ROTATION WHEELS-->
-    <Param id="AC_RWTORQUEMIN" type="PT_VECRW" description="Minimum torque allowed for each Reaction Wheel. These values are used in the slew duration calculation algorithm that is independent on past and future spacecraft state." unit="N*m">
+    <Param id="AC_RWTORQUEMIN" type="PT_VECRW" description="This is a parameter for a Legacy Model not used in the simulation but present for backwards compatibility. Minimum torque allowed for each Reaction Wheel. These values are used in the slew duration calculation algorithm that is independent on past and future spacecraft state." unit="N*m">
       <!-- w1, w2, w3, w4 -->
       0, 0, 0, 0
     </Param>
-    <Param id="AC_RWTORQUEMAX" type="PT_VECRW" description="Maximum torque allowed for each Reaction Wheel. These values are used in the slew duration calculation algorithm that is independent on past and future spacecraft state." unit="N*m">
+    <Param id="AC_RWTORQUEMAX" type="PT_VECRW" description="This is a parameter for a Legacy Model not used in the simulation but present for backwards compatibility. Maximum torque allowed for each Reaction Wheel. These values are used in the slew duration calculation algorithm that is independent on past and future spacecraft state." unit="N*m">
       <!-- w1, w2, w3, w4 -->
-      0.13, 0.13, 0.13, 0.13
+      0.0, 0.0, 0.0, 0.0
     </Param>
     <Param id="AC_RW_WMM_GGT_TGT_OBJ" type="PT_STRING" description="" unit="">
       JUPITER
@@ -193,24 +198,28 @@
     <Param id="AC_RW_WMM_RESET_ON_ERROR" type="PT_BOOL" description="Flag for reseting accumulated data on a Wheel Momentum Management error" unit="False/True">
       false
     </Param>
-    <Param id="AC_RW_WMM_MOMENTUMMIN" type="PT_VECRW" description="This is the lower limit of the momentum that can be absorbed by the corresponding reaction wheel. This value is used when the 3 reaction wheels are active. In case of 3 reaction wheels there is only one solution to redistribute the momentum among the wheels. For that reason we can check each wheel individually." unit="N*m*s">
+    <Param id="AC_RW_WMM_MOMENTUMMIN" type="PT_VECRW" description="This is the lower limit of the momentum that can be absorbed by the corresponding reaction wheel. This value is used when the 3 reaction wheels are active. In case of 3 reaction wheels there is only one solution to redistribute the momentum among the wheels. For that reason we can check each wheel individually. If the value is set to 0 it indicates that there should be no zero-crossing for the RW." unit="N*m*s">
       <!-- w1, w2, w3, w4 -->
-      -60.0, -60.0, -60.0, -60.0
+      0.0, 0.0, 0.0, 0.0
     </Param>
     <Param id="AC_RW_WMM_MOMENTUMMAX" type="PT_VECRW" description="This is the upper limit of the momentum that can be absorbed by the corresponding reaction wheel. This value is used when the 3 reaction wheels are active. In case of 3 reaction wheels there is only one solution to redistribute the momentum among the wheels. For that reason we can check each wheel individually." unit="N*m*s">
       <!-- w1, w2, w3, w4 -->
-      60.0, 60.0, 60.0, 60.0
+      50.0, 50.0, 50.0, 0.0
+    </Param>
+    <Param id="AC_RW_WMM_MOMENTUMINIT" type="PT_VECRW" description="Initial wheel momentum state for each RW" unit="N*m*s">
+      <!-- w1, w2, w3, w4 -->
+      25.0, 25.0, 25.0, 0.0
     </Param>
     <Param id="AC_RW_WMM_MAXASSMOMENTUM" type="PT_DOUBLE" description="This is the absolute maximum momentum that the combination of all the wheels can handle. This value is used when the 4 reaction wheels are active. In fact in this case there is no one solution that allows to distribute the momentum among the wheels. We assume a total value that is less than the optimal but makes sure that there is a valid combination available." unit="N*m*s">
       88.0
     </Param>
     <Param id="AC_RW_WMM_TORQUEMIN" type="PT_VECRW" description="Lower limit of the torque that can be applied instantaneously to the corresponding reaction wheel for the wheel momentum simulation. The wheel momentum simulation algorithm takes into account the previous spacecraft state in order to compute the spacecraft loads." unit="N*m">
       <!-- w1, w2, w3, w4 -->
-      -0.14, -0.14, -0.14, -0.14
+      -0.14, -0.14, -0.14, 0.0
     </Param>
     <Param id="AC_RW_WMM_TORQUEMAX" type="PT_VECRW" description="Upper limit of the torque that can be applied instantaneously to the corresponding reaction wheel for the wheel momentum simulation. The wheel momentum simulation algorithm takes into account the previous spacecraft state in order to compute the spacecraft loads." unit="N*m">
       <!-- w1, w2, w3, w4 -->
-      0.14, 0.14, 0.14, 0.14
+      0.14, 0.14, 0.14, 0.0
     </Param>
 
     <!-- Attitude constraints check: SA -->

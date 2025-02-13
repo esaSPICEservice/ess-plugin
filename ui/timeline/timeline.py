@@ -6,7 +6,7 @@ import PyQt5.QtWidgets as QtWidgets
 
 import datetime
 import math
-from utils.time import epoch_seconds
+from utils.time import epoch_seconds, from_epoch_seconds, nearest_previous_oclock_epoch
 
 
 
@@ -27,7 +27,7 @@ QWidget:item:selected {   background-color: QLinearGradient( x1: 0, y1: 0, x2: 0
  }
 QSlider::handle:horizontal {
     background:  qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255,160,47, 141), stop:0.497175 rgba(255,160,47, 200), stop:0.497326 rgba(255,160,47, 200), stop:1 rgba(255,160,47, 147));
-    width: 3px;
+    width: 0px;
  } 
 """
 
@@ -93,7 +93,8 @@ class Timeline(QtWidgets.QSlider):
 
 
     def add_block(self, block: TimelineBlock):
-        self.epoch = min(self.epoch, block.start) if self.epoch else block.start
+        nearest = nearest_previous_oclock_epoch(from_epoch_seconds(block.start))
+        self.epoch = min(self.epoch, nearest) if self.epoch else nearest
         self.max_epoch = max(self.max_epoch, block.end) if self.max_epoch else block.end
         self.blocks.append(block)  
         self.setRange(0, int(self.max_epoch - self.epoch))
@@ -120,8 +121,14 @@ class Timeline(QtWidgets.QSlider):
     def get_slider_value(self, x_pos):
         return self.style().sliderValueFromPosition(self.minimum(),self.maximum(), x_pos ,self.width())
 
-    def get_major_ticks(self):
+    def get_major_ticks(self, timeline_seconds):
+
         scale = 3600
+        if timeline_seconds < 3600:
+            scale = 900
+        if timeline_seconds <= 900:
+            scale = 300
+
         major_ticks = []
         mark = math.ceil(self.minimum() / scale) * scale
         while mark < self.maximum():
@@ -142,9 +149,6 @@ class Timeline(QtWidgets.QSlider):
         h = self.height()
         nb =  (self.maximum() - self.minimum())
 
-        fStep = int(float(w) / nb)
-        step = max(1,int(round(fStep)))
-
         qp.setPen(self.default_pen)
         qp.setBrush(QtCore.Qt.NoBrush)
         qp.drawRect(0, 0, w-50, h-50)
@@ -152,21 +156,19 @@ class Timeline(QtWidgets.QSlider):
         metrics = qp.fontMetrics()
         fh = metrics.height()
         fw = metrics.width("0")
-        ticks = self.get_major_ticks()
+        ticks = self.get_major_ticks(nb)
         ticks = self.every_nth(ticks, len(ticks) // 30) if len(ticks) > 30 else ticks
         show = range(0,len(ticks),len(ticks) // 5) if len(ticks) > 5 else range(0,len(ticks))
         for index, tick in enumerate(ticks):
             pos = self.style().sliderPositionFromValue(self.minimum(),self.maximum(),tick,self.width())
             pen2 = QtGui.QPen(QtGui.QColor(128,128,128,255), 2, QtCore.Qt.SolidLine)
             qp.setPen(pen2)
-            
             tick_height = h - 3
             if index in show:
                 date_value = datetime.datetime.fromtimestamp(self.epoch + tick, tz=datetime.timezone.utc).isoformat()[:19]
                 qp.drawText((pos)+fw, h - fh, str(date_value))
                 tick_height = h - fh
             qp.drawLine(pos,tick_height, pos, h)
-            # qp.drawText((pos)+fw, h - 3, str(date_value)) 
 
        
         if self.hover:
@@ -180,7 +182,7 @@ class Timeline(QtWidgets.QSlider):
                 qp.setPen(pen2)
                 qp.drawLine(pos,0, pos,h)
                 date_value = datetime.datetime.fromtimestamp(self.epoch + val, tz=datetime.timezone.utc).isoformat()
-                qp.drawText((pos)+fw, 0+fh, str(date_value))
+                qp.drawText((pos)+fw, 0+fh, str(date_value[:19]))
 
         if self.time:
             if self.epoch != None:
@@ -194,6 +196,7 @@ class Timeline(QtWidgets.QSlider):
 
         for block in self.blocks:
             self.drawBlock(qp, h, block)
+
         qp.setPen(self.default_pen)
 
 
@@ -218,7 +221,6 @@ class Timeline(QtWidgets.QSlider):
     def mousePressEvent(self,event):
         if event.button() == QtCore.Qt.LeftButton:
             if event.modifiers() != QtCore.Qt.AltModifier:
-                butts = QtCore.Qt.MouseButtons(QtCore.Qt.MidButton)
                 value = self.get_slider_value(event.pos().x())
                 date_value = datetime.datetime.fromtimestamp(self.epoch + value, tz=datetime.timezone.utc).isoformat()
                 self.callback(date_value)
@@ -261,3 +263,70 @@ class Timeline(QtWidgets.QSlider):
             self.timeStr = time_str[:19]
             self.timePos = int(epoch_seconds(time_str) - self.epoch)
             self.repaint()
+
+    def move_timeline(self, pos):
+        delta_ratio = (self.maximum() - self.minimum()) / 10
+        delta = int(pos * delta_ratio)
+        newMin = self.minimum() + delta
+        newMax = self.maximum() + delta
+        if newMin >= newMax:
+            return
+        self.setRange(newMin,newMax)
+        self.repaint()
+
+    def zoom_timeline(self, pos):
+        delta_ratio = (self.maximum() - self.minimum()) / 10
+        delta = int(pos * delta_ratio)
+        newMin = self.minimum() - delta
+        newMax = self.maximum() + delta
+        if newMin >= newMax:
+            return
+        self.setRange(newMin,newMax)
+        self.repaint()
+
+class TimelineControl(QtWidgets.QWidget):
+
+    def __init__(self, parent, callback):
+        super(TimelineControl, self).__init__(parent)
+        self.parent = parent
+        self.setLayout(QtWidgets.QVBoxLayout())
+        self.layout().setContentsMargins(0, 0, 0, 0)
+        self.timeline = Timeline(self, callback)
+        self.layout().addWidget(self.create_buttonbar(self.timeline))
+        self.layout().addWidget(self.timeline)
+        
+
+    def create_buttonbar(self, timeline):
+        button_bar = QtWidgets.QWidget()
+        button_bar.setLayout(QtWidgets.QHBoxLayout())
+        button_bar.layout().setContentsMargins(0, 0, 0, 0)
+
+        button = QtWidgets.QPushButton()
+        button.setText('<')        
+        button.clicked.connect(lambda: timeline.move_timeline(-1))
+        button_bar.layout().addWidget(button)
+
+        button = QtWidgets.QPushButton()
+        button.setText('>')        
+        button.clicked.connect(lambda: timeline.move_timeline(+1))
+        button_bar.layout().addWidget(button)
+
+        button = QtWidgets.QPushButton()
+        button.setText('-')        
+        button.clicked.connect(lambda: timeline.zoom_timeline(+2.5))
+        button_bar.layout().addWidget(button)
+
+        button = QtWidgets.QPushButton()
+        button.setText('+')        
+        button.clicked.connect(lambda: timeline.zoom_timeline(-2.5))
+        button_bar.layout().addWidget(button)
+        return button_bar
+
+    def add_block(self, block):
+        self.timeline.add_block(block)
+
+    def set_time(self, time_str):
+        self.timeline.set_time(time_str)
+
+    def move_timeline(self, pos):
+        self.timeline.move_timeline(pos)

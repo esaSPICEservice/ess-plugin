@@ -3,7 +3,7 @@ __pycache__/
 *.py[cod]
 
 
-launcher.sh
+launcher*.sh
 
 **/__pycache__/**
 **/20*/**

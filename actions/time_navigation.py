@@ -1,5 +1,5 @@
 import cosmoscripting
-from ui.common import get_api, get_runtime
+from ui.common import get_api, get_runtime, cosmo_time_to_utc
 
 
 def goto_date(utc_str):
@@ -41,6 +41,42 @@ def goto_sensor_date(utc_str, sensor_name, fov):
     cosmo.setTime(utc_str + " UTC")
     sensor_view(sensor_name, fov)
 
+
+def faster2x():
+    cosmo = cosmoscripting.Cosmo()
+    cosmo.faster2x()
+
+def faster10x():
+    cosmo = cosmoscripting.Cosmo()
+    cosmo.faster10x()
+
+def slower2x():
+    cosmo = cosmoscripting.Cosmo()
+    cosmo.slower2x()
+
+def slower10x():
+    cosmo = cosmoscripting.Cosmo()
+    cosmo.slower10x()
+
+def pause():
+    cosmo = cosmoscripting.Cosmo()
+    cosmo.pause()
+
+def unpause():
+    cosmo = cosmoscripting.Cosmo()
+    cosmo.unpause()
+
+def reverseTime():
+    cosmo = cosmoscripting.Cosmo()
+    cosmo.reverseTime()
+
+def get_cosmo_time():
+    cosmo = cosmoscripting.Cosmo()
+    return cosmo_time_to_utc(cosmo.getTime())
+
+def set_time(time_str):
+    cosmo = cosmoscripting.Cosmo()
+    cosmo.setTime(time_str)
 
 def evaluate(expressions):
     cosmo = cosmoscripting.Cosmo()

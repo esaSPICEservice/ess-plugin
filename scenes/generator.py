@@ -1,8 +1,8 @@
 import os
 import json
 from actions.sensors import get_sensor_list
-from utils.generators import Sensor, SensorGenerator
-from ui.common import get_runtime
+from utils.generators import Sensor, SensorGenerator, CustomStarsGenerator
+from ui.common import get_runtime, get_settings
 import cosmoscripting
 
 from datetime import datetime
@@ -29,6 +29,16 @@ def generate_all_sensor(sensor_list, parent_path):
     run_time.set('sensors_file_path', file_path)
     return file_path
 
+def generate_custom_stars(parent_path):
+    filename = "custom_stars.json"
+    settings = get_settings()
+    generator = CustomStarsGenerator()
+    for star in settings.get('stardb', 'star_list', []):
+        generator.append(star.get('ra'), star.get('dec'), star.get('name'))
+
+    file_path = os.path.abspath(os.path.join(parent_path, filename))
+    generator.save(file_path)
+    return filename
 
 
 def create_cosmo_scene(parent_path, metakernel, extra):
@@ -47,6 +57,10 @@ def create_cosmo_scene(parent_path, metakernel, extra):
 
     for model in run_time.get('models', []):
         scene_json.get('require').append("{data_folder}/{model}".format(data_folder=data_folder,model=model))
+
+    # Custom stars added
+    custom_star_filename = generate_custom_stars(parent_path)
+    scene_json.get('require').append(custom_star_filename)
 
     all_sensor_path = generate_all_sensor(get_sensor_list(), parent_path)
 

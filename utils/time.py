@@ -6,6 +6,8 @@ def epoch_seconds(isoc):
     epoch = datetime.datetime.strptime(homologated, '%Y-%m-%dT%H:%M:%S%z')
     return epoch.timestamp()
 
+def from_epoch_seconds(epoch):
+    return datetime.datetime.fromtimestamp(epoch, tz=datetime.timezone.utc)
 
 def duration(st, et):
     return epoch_seconds(et) - epoch_seconds(st) 
@@ -19,3 +21,10 @@ def tdb_to_utc(tdb_seconds):
 def tdb_to_utc_str(tdb_seconds):
     return tdb_to_utc(tdb_seconds).isoformat(timespec='seconds')
 
+
+def nearest_previous_oclock_epoch(dt):
+    minutes = dt.minute
+    seconds = dt.second
+    microseconds = dt.microsecond
+    oclock = dt - datetime.timedelta(minutes=minutes, seconds=seconds, microseconds=microseconds)
+    return oclock.timestamp()

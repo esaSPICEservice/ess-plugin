@@ -34,6 +34,6 @@ def after_load():
         add_hera_menu()
     elif mission.lower() == 'm-matisse':
         add_mmatisse_menu()
-    elif mission.lower() == 'juice':
+    elif mission.lower() == 'juice' or mission.lower() == 'juice_ptr':
         add_juice_menu()
         remove_menu(main_window, 'Pointing')

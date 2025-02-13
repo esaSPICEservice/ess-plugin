@@ -3,7 +3,7 @@
     "spacecraft": "TGO",
     "spacecraft_frame": "TGO_SPACECRAFT",
     "models": [
-        "spacecraft_EM16_tgo_arcs.json"
+        "spacecraft_EM16_tgo_arcs_plan.json"
     ],
     "spacecrafts": [
         {

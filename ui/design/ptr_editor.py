@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_ptrEditorWidget(object):
     def setupUi(self, ptrEditorWidget):
         ptrEditorWidget.setObjectName("ptrEditorWidget")
-        ptrEditorWidget.resize(515, 396)
+        ptrEditorWidget.resize(607, 458)
         ptrEditorWidget.setStyleSheet("QPushButton {\n"
 "    background-color: #4CAF50;\n"
 "    color:white;\n"
@@ -40,9 +40,6 @@ class Ui_ptrEditorWidget(object):
 "}")
         self.verticalLayout = QtWidgets.QVBoxLayout(ptrEditorWidget)
         self.verticalLayout.setObjectName("verticalLayout")
-        self.label = QtWidgets.QLabel(ptrEditorWidget)
-        self.label.setObjectName("label")
-        self.verticalLayout.addWidget(self.label)
         self.horizontalLayout = QtWidgets.QHBoxLayout()
         self.horizontalLayout.setObjectName("horizontalLayout")
         self.mkInput = QtWidgets.QLineEdit(ptrEditorWidget)
@@ -56,9 +53,6 @@ class Ui_ptrEditorWidget(object):
         self.mkButton.setObjectName("mkButton")
         self.horizontalLayout.addWidget(self.mkButton)
         self.verticalLayout.addLayout(self.horizontalLayout)
-        self.label_2 = QtWidgets.QLabel(ptrEditorWidget)
-        self.label_2.setObjectName("label_2")
-        self.verticalLayout.addWidget(self.label_2)
         self.horizontalLayout_2 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_2.setObjectName("horizontalLayout_2")
         self.openButton = QtWidgets.QToolButton(ptrEditorWidget)
@@ -79,15 +73,6 @@ class Ui_ptrEditorWidget(object):
         self.cleanButton.setIcon(icon2)
         self.cleanButton.setObjectName("cleanButton")
         self.horizontalLayout_2.addWidget(self.cleanButton)
-        self.powerCheck = QtWidgets.QCheckBox(ptrEditorWidget)
-        self.powerCheck.setObjectName("powerCheck")
-        self.horizontalLayout_2.addWidget(self.powerCheck)
-        self.saCheck = QtWidgets.QCheckBox(ptrEditorWidget)
-        self.saCheck.setObjectName("saCheck")
-        self.horizontalLayout_2.addWidget(self.saCheck)
-        self.mgaCheck = QtWidgets.QCheckBox(ptrEditorWidget)
-        self.mgaCheck.setObjectName("mgaCheck")
-        self.horizontalLayout_2.addWidget(self.mgaCheck)
         spacerItem = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
         self.horizontalLayout_2.addItem(spacerItem)
         self.verticalLayout.addLayout(self.horizontalLayout_2)
@@ -112,15 +97,11 @@ class Ui_ptrEditorWidget(object):
     def retranslateUi(self, ptrEditorWidget):
         _translate = QtCore.QCoreApplication.translate
         ptrEditorWidget.setWindowTitle(_translate("ptrEditorWidget", "PTR Editor"))
-        self.label.setText(_translate("ptrEditorWidget", "Metakernel File"))
+        self.mkInput.setPlaceholderText(_translate("ptrEditorWidget", "Select a metakernel file"))
         self.mkButton.setText(_translate("ptrEditorWidget", " Browse "))
-        self.label_2.setText(_translate("ptrEditorWidget", "PTR editor"))
         self.openButton.setText(_translate("ptrEditorWidget", "..."))
         self.saveButton.setText(_translate("ptrEditorWidget", "..."))
         self.cleanButton.setText(_translate("ptrEditorWidget", "..."))
-        self.powerCheck.setText(_translate("ptrEditorWidget", "Power"))
-        self.saCheck.setText(_translate("ptrEditorWidget", "SA"))
-        self.mgaCheck.setText(_translate("ptrEditorWidget", "MGA"))
+        self.ptrEditor.setPlaceholderText(_translate("ptrEditorWidget", "Write PTR here"))
         self.visualizeButton.setText(_translate("ptrEditorWidget", "Visualize"))
-
 from . import icons_rc

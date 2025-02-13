@@ -250,7 +250,7 @@
                },
                "bodyFrame": {
                   "type": "Spice",
-                  "name": "HERA_SA+Y"
+                  "name": "HERA_SA+Y_ZERO"
                }
             }
          ],
@@ -276,7 +276,7 @@
                },
                "bodyFrame": {
                   "type": "Spice",
-                  "name": "HERA_SA-Y"
+                  "name": "HERA_SA-Y_ZERO"
                }
             }
          ],

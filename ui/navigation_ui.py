@@ -1,12 +1,13 @@
 
-from PyQt5.QtWidgets import QDialog, QPushButton
+from PyQt5.QtWidgets import QDialog, QPushButton, QWidget
 from PyQt5 import QtCore
 from actions.sensors import get_sensor_names, toggle_sensor, get_boresights, reconfigure_catalogue
 from ui.common import get_runtime
 from ui.design.navigation_panel import Ui_Form
-from actions.time_navigation import spacecraft_view, sensor_view, goto_spacecraft
+from ui.design.time_panel import Ui_Form as TimePanel
+from actions.time_navigation import faster2x, slower2x, reverseTime, unpause, pause, sensor_view, goto_spacecraft, get_cosmo_time
 from ui.tabbed_selector import TabbedSelector
-
+from PyQt5.QtCore import QTimer
 
 class NavigationDialog(QDialog):
 
@@ -17,8 +18,10 @@ class NavigationDialog(QDialog):
         self.boresights = get_boresights()
         self.run_time = get_runtime()
         self.init_ui()
-
-        
+        self.timer0 = QTimer()
+        self.timer0.setInterval(200)
+        self.timer0.timeout.connect(self.set_cosmographia_time)
+        self.timer0.start()
 
     def init_ui(self):
         self.setObjectName(NavigationDialog.id)
@@ -34,6 +37,12 @@ class NavigationDialog(QDialog):
 
         sensor_list = list(map(lambda item: item.get('name'), self.boresights))
         self.navigation_panel.sensorBox.addItems(sensor_list)
+
+        timeControlWidget = QWidget(self)
+        self.timeControl = TimePanel()
+        self.timeControl.setupUi(timeControlWidget)
+        self.setup_time_control()
+        self.navigation_panel.verticalLayout.addWidget(timeControlWidget)
 
     def spacecrafts_tab(self):
         spacecrafts = self.run_time.get("spacecrafts", [])
@@ -67,4 +76,14 @@ class NavigationDialog(QDialog):
         self.hide()
         self.show()
 
+    def setup_time_control(self):
+        self.timeControl.rewind.clicked.connect(slower2x)
+        self.timeControl.forward.clicked.connect(faster2x)
+        self.timeControl.direction.clicked.connect(reverseTime)
+        self.timeControl.play.clicked.connect(unpause)
+        self.timeControl.pause.clicked.connect(pause)
 
+    def set_cosmographia_time(self):
+        date_str = get_cosmo_time()
+        if self.timeControl:
+            self.timeControl.timeDisplay.setText(date_str[:19] + ' UTC')

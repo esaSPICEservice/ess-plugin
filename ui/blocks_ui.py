@@ -1,10 +1,16 @@
-
-import datetime
 from ui.design.block_panel import Ui_Form
-from PyQt5.QtWidgets import QDialog, QTableWidgetItem, QTableWidget, QTableWidgetSelectionRange, QVBoxLayout
-import cosmoscripting
+from PyQt5 import QtCore
+from PyQt5.QtWidgets import (QDialog, 
+                             QTableWidgetItem, 
+                             QTableWidget, 
+                             QTableWidgetSelectionRange, 
+                             QVBoxLayout,
+                             QWidget)
 from PyQt5.QtCore import QTimer
-from ui.timeline.timeline import Timeline, TimelineBlock
+from ui.timeline.timeline import TimelineControl, TimelineBlock
+from ui.design.time_panel import Ui_Form as TimePanel
+from actions.time_navigation import faster2x, slower2x, reverseTime, unpause, pause, set_time, get_cosmo_time
+
 
 from simulator.osve.utils import get_platform
 my_platform = get_platform()
@@ -14,7 +20,6 @@ if (my_platform.startswith("linux")):
 else:
     from utils.block_parser import BlockParser
 
-from actions.time_navigation import goto_date
 from utils.time import duration
 
 class DateTableWidgetItem(QTableWidgetItem):
@@ -36,17 +41,16 @@ class BlockTableWidgetItem(QTableWidgetItem):
         pass
 
 
-EPOCH_2000 = datetime.datetime(2000, 1, 1, 12, 0, tzinfo=datetime.timezone.utc).timestamp()
+
 
 class BlocksDialog(QDialog):
 
     id = 'blocks_dialog_window_id'
 
     def __init__(self, main_window, ptr_path):
-        QDialog.__init__(self, main_window)
+        QDialog.__init__(self, main_window, QtCore.Qt.WindowStaysOnTopHint)
         self.ptr_path = ptr_path
         self.init_ui()
-        self.cosmo = cosmoscripting.Cosmo()
         self.timer0 = QTimer()
         self.timer0.setInterval(200)
         self.timer0.timeout.connect(self.set_cosmographia_time)
@@ -58,8 +62,13 @@ class BlocksDialog(QDialog):
         self.ui.setupUi(self)
         timelineLayout = QVBoxLayout()
         self.ui.timelineWidget.setLayout(timelineLayout)
-        self.timeline = Timeline(self, self.goto_date_timeline)
+        self.timeline = TimelineControl(self, self.goto_date_timeline)
         timelineLayout.addWidget(self.timeline)
+        timeControlWidget = QWidget(self)
+        self.timeControl = TimePanel()
+        self.timeControl.setupUi(timeControlWidget)
+        timelineLayout.addWidget(timeControlWidget)
+        self.setup_time_control()
         self.block_timeline_index = []
         try:
             with open(self.ptr_path, 'r') as ptr_file:
@@ -105,13 +114,13 @@ class BlocksDialog(QDialog):
             print(error)
 
     def set_cosmographia_time(self):
-        time = self.cosmo.getTime()
-        delta = (32.5 + 37) # TDB to UTC delta
-        date_utc = datetime.datetime.fromtimestamp(EPOCH_2000 + time - delta, tz=datetime.timezone.utc)
+        date_str = get_cosmo_time()
         if self.timeline:
-            date_str = date_utc.isoformat()
             self.timeline.set_time(date_str)
             self.select_in_table(self.get_block_index(date_str))
+        if self.timeControl:
+            self.timeControl.timeDisplay.setText(date_str[:19] + ' UTC')
+
 
     def get_block_index(self, timestamp):
         for index, start, end in self.block_timeline_index:
@@ -136,7 +145,7 @@ class BlocksDialog(QDialog):
         self.select_in_table(self.get_block_index(value))
 
     def goto_date_cosmographia(self, utc_str):
-        self.cosmo.setTime(utc_str + " UTC")
+        set_time(utc_str + " UTC")
 
     def show_block(self, item):
         self.show_block_index(item.row())
@@ -151,3 +160,12 @@ class BlocksDialog(QDialog):
     def show_and_focus(self):
         self.hide()
         self.show()
+
+    def setup_time_control(self):
+        
+        self.timeControl.rewind.clicked.connect(slower2x)
+        self.timeControl.forward.clicked.connect(faster2x)
+        self.timeControl.direction.clicked.connect(reverseTime)
+        self.timeControl.play.clicked.connect(unpause)
+        self.timeControl.pause.clicked.connect(pause)
+       

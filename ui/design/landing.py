@@ -61,6 +61,7 @@ class Ui_landingWidget(object):
         self.comboBox.addItem("")
         self.comboBox.addItem("")
         self.comboBox.addItem("")
+        self.comboBox.addItem("")
         self.verticalLayout.addWidget(self.comboBox)
         self.horizontalLayout_3 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_3.setObjectName("horizontalLayout_3")
@@ -78,7 +79,8 @@ class Ui_landingWidget(object):
         self.label_3.setText(_translate("landingWidget", "ESS Cosmographia Plugin"))
         self.comboBox.setItemText(0, _translate("landingWidget", "HERA"))
         self.comboBox.setItemText(1, _translate("landingWidget", "JUICE"))
-        self.comboBox.setItemText(2, _translate("landingWidget", "M-MATISSE"))
-        self.comboBox.setItemText(3, _translate("landingWidget", "TGO"))
+        self.comboBox.setItemText(2, _translate("landingWidget", "JUICE_PTR"))
+        self.comboBox.setItemText(3, _translate("landingWidget", "M-MATISSE"))
+        self.comboBox.setItemText(4, _translate("landingWidget", "TGO"))
         self.selectButton.setText(_translate("landingWidget", "Select Mission"))
 from . import icons_rc

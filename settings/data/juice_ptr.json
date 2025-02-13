@@ -1,0 +1,472 @@
+{
+  "mission": "JUICE",
+  "spacecraft": "JUICE",
+  "spacecraft_frame": "JUICE_SPACECRAFT",
+  "use_ptr": true,
+  "models": [
+    "spacecraft_JUICE_arcs.json",
+    "spacecraft_JUICE_MGA_arcs.json",
+    "spacecraft_JUICE_SOLAR_ARRAYS_arcs.json",
+    "jupiter_minor_moons_ananke_group.json",
+    "jupiter_minor_moons_carme_group.json",
+    "jupiter_minor_moons_inner_group.json",
+    "jupiter_minor_moons_pasiphae_group.json",
+    "jupiter_minor_moons_prograde_groups.json",
+    "jupiter_rings.json",
+    "moon_torus.json"
+  ],
+  "spacecrafts": [
+        {
+            "spacecraft": "JUICE",
+            "spacecraft_frame": "JUICE_SPACECRAFT",
+            "initial_offset": [0, 2e-3, -22e-3]
+        }
+  ],
+  "sensors": {
+    "GAL": [
+      {
+        "name": "JUICE_GALA_RXT",
+        "fov_frame": "JUICE_GALA_RXT",
+        "color": [
+          0,
+          0,
+          0.6
+        ]
+      }
+    ],
+    "JAN": [
+      {
+        "name": "JUICE_JANUS",
+        "fov_frame": "JUICE_JANUS",
+        "color": [
+          0,
+          0,
+          0.6
+        ]
+      }
+    ],
+    "JMC": [
+      {
+        "name": "JUICE_JMC-1",
+        "fov_frame": "JUICE_JMC-1",
+        "color": [
+          0,
+          0,
+          0.6
+        ]
+      },
+      {
+        "name": "JUICE_JMC-2",
+        "fov_frame": "JUICE_JMC-2",
+        "color": [
+          0,
+          0,
+          0.6
+        ]
+      }
+    ],
+    "MAJ": [
+      {
+        "name": "JUICE_MAJIS_ENVELOPE",
+        "fov_frame": "JUICE_MAJIS_ENVELOPE",
+        "color": [
+          0,
+          0,
+          0.6
+        ]
+      },
+      {
+        "name": "JUICE_MAJIS_VISNIR",
+        "fov_frame": "JUICE_MAJIS_VISNIR",
+        "color": [
+          0,
+          0,
+          0.6
+        ]
+      },
+      {
+        "name": "JUICE_MAJIS_VISNIR_B2",
+        "fov_frame": "JUICE_MAJIS_VISNIR_B2",
+        "color": [
+          0,
+          0,
+          0.6
+        ]
+      },
+      {
+        "name": "JUICE_MAJIS_VISNIR_B4",
+        "fov_frame": "JUICE_MAJIS_VISNIR_B4",
+        "color": [
+          0,
+          0,
+          0.6
+        ]
+      },
+      {
+        "name": "JUICE_MAJIS_IR",
+        "fov_frame": "JUICE_MAJIS_IR",
+        "color": [
+          0,
+          0,
+          0.6
+        ]
+      },
+      {
+        "name": "JUICE_MAJIS_IR_B2",
+        "fov_frame": "JUICE_MAJIS_IR_B2",
+        "color": [
+          0,
+          0,
+          0.6
+        ]
+      },
+      {
+        "name": "JUICE_MAJIS_IR_B4",
+        "fov_frame": "JUICE_MAJIS_IR_B4",
+        "color": [
+          0,
+          0,
+          0.6
+        ]
+      }
+    ],
+    "NAV": [
+      {
+        "name": "JUICE_NAVCAM-1",
+        "fov_frame": "JUICE_NAVCAM-1",
+        "color": [
+          0,
+          0,
+          0.6
+        ]
+      },
+      {
+        "name": "JUICE_NAVCAM-2",
+        "fov_frame": "JUICE_NAVCAM-2",
+        "color": [
+          0,
+          0,
+          0.6
+        ]
+      }
+    ],
+    "PJDC": [
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_000",
+        "fov_frame": "JUICE_PEP_JDC_PIXEL_000",
+        "color": [
+          0,
+          0,
+          0.6
+        ]
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_080",
+        "fov_frame": "JUICE_PEP_JDC_PIXEL_080",
+        "color": [
+          0,
+          0,
+          0.6
+        ]
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_176",
+        "fov_frame": "JUICE_PEP_JDC_PIXEL_176",
+        "color": [
+          0,
+          0,
+          0.6
+        ]
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_004",
+        "fov_frame": "JUICE_PEP_JDC_PIXEL_004",
+        "color": [
+          0,
+          0,
+          0.6
+        ]
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_084",
+        "fov_frame": "JUICE_PEP_JDC_PIXEL_084",
+        "color": [
+          0,
+          0,
+          0.6
+        ]
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_180",
+        "fov_frame": "JUICE_PEP_JDC_PIXEL_180",
+        "color": [
+          0,
+          0,
+          0.6
+        ]
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_008",
+        "fov_frame": "JUICE_PEP_JDC_PIXEL_008",
+        "color": [
+          0,
+          0,
+          0.6
+        ]
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_088",
+        "fov_frame": "JUICE_PEP_JDC_PIXEL_088",
+        "color": [
+          0,
+          0,
+          0.6
+        ]
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_184",
+        "fov_frame": "JUICE_PEP_JDC_PIXEL_184",
+        "color": [
+          0,
+          0,
+          0.6
+        ]
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_012",
+        "fov_frame": "JUICE_PEP_JDC_PIXEL_012",
+        "color": [
+          0,
+          0,
+          0.6
+        ]
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_092",
+        "fov_frame": "JUICE_PEP_JDC_PIXEL_092",
+        "color": [
+          0,
+          0,
+          0.6
+        ]
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_188",
+        "fov_frame": "JUICE_PEP_JDC_PIXEL_188",
+        "color": [
+          0,
+          0,
+          0.6
+        ]
+      }
+    ],
+    "STR": [
+      {
+        "name": "JUICE_STR-OH1",
+        "fov_frame": "JUICE_STR-OH1",
+        "color": [
+          0,
+          0,
+          0.6
+        ]
+      },
+      {
+        "name": "JUICE_STR-OH2",
+        "fov_frame": "JUICE_STR-OH2",
+        "color": [
+          0,
+          0,
+          0.6
+        ]
+      },
+      {
+        "name": "JUICE_STR-OH3",
+        "fov_frame": "JUICE_STR-OH3",
+        "color": [
+          0,
+          0,
+          0.6
+        ]
+      }
+    ],
+    "UVS": [
+      {
+        "name": "JUICE_UVS_AP_HP",
+        "fov_frame": "JUICE_UVS_AP_HP",
+        "color": [
+          0,
+          0,
+          0.6
+        ]
+      },
+      {
+        "name": "JUICE_UVS_SP",
+        "fov_frame": "JUICE_UVS_SP",
+        "color": [
+          0,
+          0,
+          0.6
+        ]
+      }
+    ]
+  },
+  "central_body": "Jupiter",
+  "targets": ["Jupiter", "Io", "Europa", "Ganymede", "Callisto", "Earth", "Moon", "Venus"],
+  "boresights": [
+    {
+      "name": "JUICE_GALA_RXT",
+      "fov_frame": "JUICE_GALA_RXT",
+      "size": 0.03323155211758775
+    },
+    {
+      "name": "JUICE_GALA_TXL_MAIN",
+      "fov_frame": "JUICE_GALA_TXL_MAIN",
+      "size": 0.005729577951308232
+    },
+    {
+      "name": "JUICE_GALA_TXL_RED",
+      "fov_frame": "JUICE_GALA_TXL_RED",
+      "size": 0.005729577951308232
+    },
+    {
+      "name": "JUICE_HGA_KA",
+      "fov_frame": "JUICE_HGA_KA",
+      "size": 0.4
+    },
+    {
+      "name": "JUICE_HGA_X",
+      "fov_frame": "JUICE_HGA_X",
+      "size": 2.0
+    },
+    {
+      "name": "JUICE_JANUS",
+      "fov_frame": "JUICE_JANUS",
+      "size": 1.72
+    },
+    {
+      "name": "JUICE_JMC-1",
+      "fov_frame": "JUICE_JMC-1",
+      "size": 93.0
+    },
+    {
+      "name": "JUICE_JMC-2",
+      "fov_frame": "JUICE_JMC-2",
+      "size": 93.0
+    },
+    {
+      "name": "JUICE_MAJIS_ENVELOPE",
+      "fov_frame": "JUICE_MAJIS_BASE",
+      "size": 3.4
+    },
+    {
+      "name": "JUICE_MAJIS_IR",
+      "fov_frame": "JUICE_MAJIS_IR",
+      "size": 3.4
+    },
+    {
+      "name": "JUICE_MAJIS_IR_B2",
+      "fov_frame": "JUICE_MAJIS_IR",
+      "size": 3.4
+    },
+    {
+      "name": "JUICE_MAJIS_IR_B4",
+      "fov_frame": "JUICE_MAJIS_IR",
+      "size": 3.4
+    },
+    {
+      "name": "JUICE_MAJIS_RAD",
+      "fov_frame": "JUICE_MAJIS_RAD",
+      "size": 179.99988
+    },
+    {
+      "name": "JUICE_MAJIS_VISNIR",
+      "fov_frame": "JUICE_MAJIS_VISNIR",
+      "size": 3.4
+    },
+    {
+      "name": "JUICE_MAJIS_VISNIR_B2",
+      "fov_frame": "JUICE_MAJIS_VISNIR",
+      "size": 3.4
+    },
+    {
+      "name": "JUICE_MAJIS_VISNIR_B4",
+      "fov_frame": "JUICE_MAJIS_VISNIR",
+      "size": 3.4
+    },
+    {
+      "name": "JUICE_NAVCAM-1",
+      "fov_frame": "JUICE_NAVCAM-1",
+      "size": 4.0
+    },
+    {
+      "name": "JUICE_NAVCAM-2",
+      "fov_frame": "JUICE_NAVCAM-2",
+      "size": 4.0
+    },
+    {
+      "name": "JUICE_RIME+X",
+      "fov_frame": "JUICE_RIME",
+      "size": 80.0
+    },
+    {
+      "name": "JUICE_RIME_BASE",
+      "fov_frame": "JUICE_RIME_BASE",
+      "size": 80.0
+    },
+    {
+      "name": "JUICE_SCHULTE_KA_BAND",
+      "fov_frame": "JUICE_MGA",
+      "size": 8.4
+    },
+    {
+      "name": "JUICE_SCHULTE_X_BAND",
+      "fov_frame": "JUICE_MGA",
+      "size": 18.8
+    },
+    {
+      "name": "JUICE_STR-OH1",
+      "fov_frame": "JUICE_STR-OH1",
+      "size": 21.5
+    },
+    {
+      "name": "JUICE_STR-OH2",
+      "fov_frame": "JUICE_STR-OH2",
+      "size": 21.5
+    },
+    {
+      "name": "JUICE_STR-OH3",
+      "fov_frame": "JUICE_STR-OH3",
+      "size": 21.5
+    },
+    {
+      "name": "JUICE_SWI_CH1",
+      "fov_frame": "JUICE_SWI_SCANNER",
+      "size": 0.11459155902616465
+    },
+    {
+      "name": "JUICE_SWI_CH2",
+      "fov_frame": "JUICE_SWI_SCANNER",
+      "size": 0.057295779513082325
+    },
+    {
+      "name": "JUICE_SWI_FULL",
+      "fov_frame": "JUICE_SWI_BASE",
+      "size": 144.11459
+    },
+    {
+      "name": "JUICE_SWI_FULL_GCO500",
+      "fov_frame": "JUICE_SWI_BASE",
+      "size": 48.0
+    },
+    {
+      "name": "JUICE_UVS_AP_HP",
+      "fov_frame": "JUICE_UVS",
+      "size": 0
+    },
+    {
+      "name": "JUICE_UVS_SP",
+      "fov_frame": "JUICE_UVS_SP",
+      "size": 0
+    }
+  ]
+}

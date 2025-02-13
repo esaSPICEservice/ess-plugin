@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>515</width>
-    <height>396</height>
+    <width>607</width>
+    <height>458</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -40,16 +40,13 @@ QLabel {
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
-    <widget class="QLabel" name="label">
-     <property name="text">
-      <string>Metakernel File</string>
-     </property>
-    </widget>
-   </item>
-   <item>
     <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
-      <widget class="QLineEdit" name="mkInput"/>
+      <widget class="QLineEdit" name="mkInput">
+       <property name="placeholderText">
+        <string>Select a metakernel file</string>
+       </property>
+      </widget>
      </item>
      <item>
       <widget class="QPushButton" name="mkButton">
@@ -70,13 +67,6 @@ QLabel {
       </widget>
      </item>
     </layout>
-   </item>
-   <item>
-    <widget class="QLabel" name="label_2">
-     <property name="text">
-      <string>PTR editor</string>
-     </property>
-    </widget>
    </item>
    <item>
     <layout class="QHBoxLayout" name="horizontalLayout_2">
@@ -114,27 +104,6 @@ QLabel {
       </widget>
      </item>
      <item>
-      <widget class="QCheckBox" name="powerCheck">
-       <property name="text">
-        <string>Power</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QCheckBox" name="saCheck">
-       <property name="text">
-        <string>SA</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QCheckBox" name="mgaCheck">
-       <property name="text">
-        <string>MGA</string>
-       </property>
-      </widget>
-     </item>
-     <item>
       <spacer name="horizontalSpacer">
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
@@ -150,7 +119,11 @@ QLabel {
     </layout>
    </item>
    <item>
-    <widget class="QPlainTextEdit" name="ptrEditor"/>
+    <widget class="QPlainTextEdit" name="ptrEditor">
+     <property name="placeholderText">
+      <string>Write PTR here</string>
+     </property>
+    </widget>
    </item>
    <item>
     <layout class="QHBoxLayout" name="horizontalLayout_3">

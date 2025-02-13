@@ -17,9 +17,9 @@ def create_ui(settings_filename):
     mk = MkLoaderDialog(main_window)
     actions.append(ActionSpec('Metakernel Load', 'Build a basic scene', '', mk.show_and_focus))
     
-    sc = rt.get('spacecraft', '')
+    use_ptr = rt.get('use_ptr', False)
 
-    if sc == 'JUICE':
+    if use_ptr:
         bd = PTREditorDialog(main_window)
         actions.append(ActionSpec('PTR simulation', 'Execute OSVE', '', bd.show_and_focus))
 
@@ -31,7 +31,7 @@ def create_ui(settings_filename):
             ActionSpec('Console', 'Runtime console', '', cm.show_and_focus)
             ]))
     
-    if sc == 'JUICE':
+    if use_ptr:
         bd.show_and_focus()
     else:
         mk.show_and_focus()

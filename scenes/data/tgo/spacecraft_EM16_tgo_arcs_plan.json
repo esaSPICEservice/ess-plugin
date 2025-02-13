@@ -69,12 +69,12 @@
                "trajectoryFrame": "ICRF",
                "trajectory": {
                   "type": "Spice",
-                  "target": "TGO_SA+Z",
+                  "target": "TGO_SA-Z",
                   "center": "TGO_SPACECRAFT"
                },
                "bodyFrame": {
                   "type": "Spice",
-                  "name": "TGO_SA+Z_ZERO"
+                  "name": "TGO_SA-Z_ZERO"
                }
             }
          ],
@@ -101,12 +101,12 @@
                "trajectoryFrame": "ICRF",
                "trajectory": {
                   "type": "Spice",
-                  "target": "TGO_SA-Z",
+                  "target": "TGO_SA+Z",
                   "center": "TGO_SPACECRAFT"
                },
                "bodyFrame": {
                   "type": "Spice",
-                  "name": "TGO_SA-Z_ZERO"
+                  "name": "TGO_SA+Z_ZERO"
                }
             }
          ],
@@ -137,20 +137,9 @@
                   "center": "TGO_SPACECRAFT"
                },
                "bodyFrame": {
-                   "type": "TwoVector",
-                   "primaryAxis": "x",
-                   "primary": {
-                      "type": "RelativePosition",
-                      "observer":"TGO",
-                      "target":"TGO_HGA"
-                   },
-                   "secondaryAxis": "-y",
-                   "secondary": {
-                      "type": "RelativePosition",
-                      "observer":"TGO_SAPZ",
-                      "target":"TGO_SAMZ"
-                   }
-                }
+                  "type": "Spice",
+                  "name": "TGO_HGA"
+               }
             }
          ],
       "geometry": {

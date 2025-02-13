@@ -15,7 +15,9 @@
     <!-- ****************************************************     -->
     <!-- SPICE DIRECTIONS                                         -->
     <!-- as defined by the JUICE SPICE Kernel data set with.      -->
-    <!-- MK_IDENTIFIER = juice_plan_v436_20231204_001             -->
+    <!-- MK_IDENTIFIER = juice_plan_v453_20250116_001             -->
+
+    <!-- Generated with spice2agm                                 -->
 
     <!-- JUICE_JANUS +Z -->
     <dirVector name="JANUS_boresight" frame="SC">
@@ -24,11 +26,11 @@
         <z>0.99999800</z>
     </dirVector>
 
-    <!-- JUICE_UVS_SP +Z -->
-    <dirVector name="UVS_Sun_port" frame="SC">
-        <x>-0.00010908</x>
-        <y>0.86725420</y>
-        <z>0.49786558</z>
+    <!-- JUICE_UVS_SP +X -->
+    <dirVector name="JUICE_UVS_SP_Xaxis" frame="SC">
+        <x>-0.00045608</x>
+        <y>0.86602500</y>
+        <z>0.50000048</z>
     </dirVector>
 
     <!-- JUICE_SPACECRAFT_NADIR +Z -->
@@ -38,11 +40,32 @@
         <z>0.99999965</z>
     </dirVector>
 
+    <!-- JUICE_NAVCAM-1 +Z -->
+    <dirVector name="JUICE_NAVCAM-1_Zaxis" frame="SC">
+        <x>0.00311840</x>
+        <y>0.00013193</y>
+        <z>0.99999513</z>
+    </dirVector>
+
     <!-- JUICE_MAJIS_BASE +Z -->
     <dirVector name="JUICE_MAJIS_BASE_Zaxis" frame="SC">
         <x>-0.00427605</x>
         <y>-0.00552195</y>
         <z>0.99997561</z>
+    </dirVector>
+
+    <!-- JUICE_MAJIS_BASE +X -->
+    <dirVector name="JUICE_MAJIS_BASE_Xaxis" frame="SC">
+        <x>0.99988928</x>
+        <y>0.01422921</y>
+        <z>0.00435425</z>
+    </dirVector>
+
+    <!-- JUICE_MAJIS_BASE +Y -->
+    <dirVector name="JUICE_MAJIS_BASE_Yaxis" frame="SC">
+        <x>-0.01425291</x>
+        <y>0.99988351</y>
+        <z>0.00546049</z>
     </dirVector>
 
     <!-- JUICE_HGA +Z -->
@@ -59,11 +82,18 @@
         <z>-0.77714596</z>
     </dirVector>
 
-    <!-- JUICE_UVS +Z -->
-    <dirVector name="JUICE_UVS_Zaxis" frame="SC">
-        <x>-0.00021817</x>
-        <y>0.00246285</y>
-        <z>0.99999694</z>
+    <!-- JUICE_RPWI_SCM +Z -->
+    <dirVector name="JUICE_RPWI_SCM_Zaxis" frame="SC">
+        <x>-0.62932039</x>
+        <y>-0.00000000</y>
+        <z>0.77714596</z>
+    </dirVector>
+
+    <!-- JUICE_UVS +X -->
+    <dirVector name="JUICE_UVS_Xaxis" frame="SC">
+        <x>0.00075049</x>
+        <y>0.00000000</y>
+        <z>0.99999972</z>
     </dirVector>
 
     <!-- JUICE_PEP_JNA +X -->
@@ -170,6 +200,8 @@
         <y>0.17364818</y>
         <z>0.98480775</z>
     </dirVector>
+
+    <!-- Generated with pep-spice2agm notebook -->
 
     <!-- JUICE_PEP_JNA -->
     <dirVector name="JUICE_PEP_JNA" frame="SC">
@@ -355,84 +387,84 @@
 
     <!-- JUICE_PEP_JEI_00_L -->
     <dirVector name="JUICE_PEP_JEI_00_L" frame="SC">
-      <x>0.71730095</x>
+      <x>-0.71730095</x>
       <y>0.14268003</y>
       <z>0.68199836</z>
     </dirVector>
 
     <!-- JUICE_PEP_JEI_01_L -->
     <dirVector name="JUICE_PEP_JEI_01_L" frame="SC">
-      <x>0.60809838</x>
+      <x>-0.60809838</x>
       <y>0.40631835</y>
       <z>0.68199836</z>
     </dirVector>
 
     <!-- JUICE_PEP_JEI_02_L -->
     <dirVector name="JUICE_PEP_JEI_02_L" frame="SC">
-      <x>0.40631835</x>
+      <x>-0.40631835</x>
       <y>0.60809838</y>
       <z>0.68199836</z>
     </dirVector>
 
     <!-- JUICE_PEP_JEI_04_L -->
     <dirVector name="JUICE_PEP_JEI_04_L" frame="SC">
-      <x>-0.14268003</x>
+      <x>0.14268003</x>
       <y>0.71730095</y>
       <z>0.68199836</z>
     </dirVector>
 
     <!-- JUICE_PEP_JEI_05_L -->
     <dirVector name="JUICE_PEP_JEI_05_L" frame="SC">
-      <x>-0.40631835</x>
+      <x>0.40631835</x>
       <y>0.60809838</y>
       <z>0.68199836</z>
     </dirVector>
 
     <!-- JUICE_PEP_JEI_06_L -->
     <dirVector name="JUICE_PEP_JEI_06_L" frame="SC">
-      <x>-0.60809838</x>
+      <x>0.60809838</x>
       <y>0.40631835</y>
       <z>0.68199836</z>
     </dirVector>
 
     <!-- JUICE_PEP_JEI_10_L -->
     <dirVector name="JUICE_PEP_JEI_10_L" frame="SC">
-      <x>-0.40631835</x>
+      <x>0.40631835</x>
       <y>-0.60809838</y>
       <z>0.68199836</z>
     </dirVector>
 
     <!-- JUICE_PEP_JEI_11_L -->
     <dirVector name="JUICE_PEP_JEI_11_L" frame="SC">
-      <x>-0.14268003</x>
+      <x>0.14268003</x>
       <y>-0.71730095</y>
       <z>0.68199836</z>
     </dirVector>
 
     <!-- JUICE_PEP_JEI_12_L -->
     <dirVector name="JUICE_PEP_JEI_12_L" frame="SC">
-      <x>0.14268003</x>
+      <x>-0.14268003</x>
       <y>-0.71730095</y>
       <z>0.68199836</z>
     </dirVector>
 
     <!-- JUICE_PEP_JEI_13_L -->
     <dirVector name="JUICE_PEP_JEI_13_L" frame="SC">
-      <x>0.40631835</x>
+      <x>-0.40631835</x>
       <y>-0.60809838</y>
       <z>0.68199836</z>
     </dirVector>
 
     <!-- JUICE_PEP_JEI_14_L -->
     <dirVector name="JUICE_PEP_JEI_14_L" frame="SC">
-      <x>0.60809838</x>
+      <x>-0.60809838</x>
       <y>-0.40631835</y>
       <z>0.68199836</z>
     </dirVector>
 
     <!-- JUICE_PEP_JEI_15_L -->
     <dirVector name="JUICE_PEP_JEI_15_L" frame="SC">
-      <x>0.71730095</x>
+      <x>-0.71730095</x>
       <y>-0.14268003</y>
       <z>0.68199836</z>
     </dirVector>
@@ -444,48 +476,89 @@
       <z>0.98480775</z>
     </dirVector>
 
-    <!-- JUICE_PEP_JOEE -->
-    <dirVector name="JUICE_PEP_JOEE" frame="SC">
-        <x>-1.00000000</x>
-        <y>-0.00000000</y>
-        <z>0.00000000</z>
+    <!-- JUICE_PEP_JENI_FOR_PY -->
+    <dirVector name="JUICE_PEP_JENI_FOR_PY" frame="SC">
+      <x>0.00000000</x>
+      <y>0.68835457</y>
+      <z>0.72537437</z>
     </dirVector>
 
-    <!-- JUICE_PEP_JOEE_S1 -->
-    <dirVector name="JUICE_PEP_JOEE_S1" frame="SC">
+    <!-- JUICE_PEP_JENI_FOR_MY -->
+    <dirVector name="JUICE_PEP_JENI_FOR_MY" frame="SC">
+      <x>0.00000000</x>
+      <y>-0.39874906</y>
+      <z>0.91706007</z>
+    </dirVector>
+
+    <!-- JUICE_PEP_JENI_E_SLIT_PY -->
+    <dirVector name="JUICE_PEP_JENI_E_SLIT_PY" frame="SC">
+      <x>0.00000000</x>
+      <y>0.68835457</y>
+      <z>0.72537437</z>
+    </dirVector>
+
+    <!-- JUICE_PEP_JENI_E_SLIT_MY -->
+    <dirVector name="JUICE_PEP_JENI_E_SLIT_MY" frame="SC">
+      <x>0.00000000</x>
+      <y>-0.39874906</y>
+      <z>0.91706007</z>
+    </dirVector>
+
+    <!-- JUICE_PEP_JOEE_S01 -->
+    <dirVector name="JUICE_PEP_JOEE_S01" frame="SC">
       <x>-0.00000000</x>
-      <y>0.67719709</y>
-      <z>-0.73580167</z>
+      <y>0.86162916</y>
+      <z>-0.50753836</z>
     </dirVector>
 
-    <!-- JUICE_PEP_JOEE_S2 -->
-    <dirVector name="JUICE_PEP_JOEE_S2" frame="SC">
+    <!-- JUICE_PEP_JOEE_S02 -->
+    <dirVector name="JUICE_PEP_JOEE_S02" frame="SC">
       <x>-0.00000000</x>
-      <y>-0.85377805</y>
-      <z>-0.52063715</z>
+      <y>0.60181502</y>
+      <z>-0.79863551</z>
     </dirVector>
 
-    <!-- JUICE_JUPITER_RTP +Z -->
-    <dirVector name="JUICE_JUPITER_RTP_Zaxis" frame="Jupiter">
-      <x>0.01406478</x>
-      <y>0.99990109</y>
-      <z>-0.00000000</z>
+    <!-- JUICE_PEP_JOEE_S03 -->
+    <dirVector name="JUICE_PEP_JOEE_S03" frame="SC">
+      <x>-0.00000000</x>
+      <y>0.25038000</y>
+      <z>-0.96814764</z>
     </dirVector>
 
-    <!-- JUICE_JUPITER_RTP +Y  -->
-    <dirVector name="JUICE_JUPITER_RTP_Yaxis" frame="Jupiter">
-      <x>-0.05907686</x>
-      <y>0.00083099</y>
-      <z>-0.99825309</z>
+    <!-- JUICE_PEP_JOEE_S04 -->
+    <dirVector name="JUICE_PEP_JOEE_S04" frame="SC">
+      <x>-0.00000000</x>
+      <y>-0.13917310</y>
+      <z>-0.99026807</z>
     </dirVector>
 
-    <!-- JUICE_JUPITER_RTP +X -->
-    <dirVector name="JUICE_JUPITER_RTP_Xaxis" frame="Jupiter">
-      <x>0.99815435</x>
-      <y>-0.01404021</y>
-      <z>-0.05908271</z>
+    <!-- JUICE_PEP_JOEE_S05 -->
+    <dirVector name="JUICE_PEP_JOEE_S05" frame="SC">
+      <x>-0.00000000</x>
+      <y>-0.50753836</y>
+      <z>-0.86162916</z>
     </dirVector>
 
+    <!-- JUICE_PEP_JOEE_S06 -->
+    <dirVector name="JUICE_PEP_JOEE_S06" frame="SC">
+      <x>-0.00000000</x>
+      <y>-0.79863551</y>
+      <z>-0.60181502</z>
+    </dirVector>
+
+    <!-- JUICE_PEP_JOEE_S07 -->
+    <dirVector name="JUICE_PEP_JOEE_S07" frame="SC">
+      <x>-0.00000000</x>
+      <y>-0.96814764</y>
+      <z>-0.25038000</z>
+    </dirVector>
+
+    <!-- JUICE_PEP_JOEE_S08 -->
+    <dirVector name="JUICE_PEP_JOEE_S08" frame="SC">
+      <x>0.00000000</x>
+      <y>-0.99026807</y>
+      <z>0.13917310</z>
+    </dirVector>
 
     <!-- ***************************************************   -->
     <!-- SPACECRAFT DIRECTIONS -->
@@ -809,7 +882,6 @@
             <z>1.</z>
         </axisC>
     </surface>
-
     <surface name="Callisto" frame="Callisto">
         <origin ref="Callisto"/>
         <a units="km">2410.3000</a>
@@ -831,7 +903,6 @@
             <z>1.</z>
         </axisC>
     </surface>
-
     <surface name="Europa" frame="Europa">
         <origin ref="Europa"/>
         <a units="km">1562.6</a>
@@ -853,7 +924,6 @@
             <z>1.</z>
         </axisC>
     </surface>
-
     <surface name="Ganymede" frame="Ganymede">
         <origin ref="Ganymede"/>
         <a units="km">2631.2</a>

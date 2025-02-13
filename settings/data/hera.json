@@ -52,8 +52,8 @@
         "name": "HERA_AFC-1",
         "fov_frame": "HERA_AFC-1",
         "color": [
-          0,
           0.6,
+          0,
           0
         ],
         "spacecraft": "HERA"
@@ -62,8 +62,8 @@
         "name": "HERA_AFC-2",
         "fov_frame": "HERA_AFC-2",
         "color": [
-          0,
           0.6,
+          0,
           0
         ],
         "spacecraft": "HERA"
@@ -72,9 +72,9 @@
         "name": "HERA_HSH",
         "fov_frame": "HERA_HSH",
         "color": [
-          0,
           0.6,
-          0
+          0.6,
+          0.6
         ],
         "spacecraft": "HERA"
       },
