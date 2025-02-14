@@ -6,7 +6,7 @@ import traceback
 
 cosmo = cosmoscripting.Cosmo()
 
-def my_except_hook(exctype, value, traceback):
+def my_except_hook(exctype, value, tb):
     print("Generic Handler")
     traceback.print_exc()
     cosmo.quit()
