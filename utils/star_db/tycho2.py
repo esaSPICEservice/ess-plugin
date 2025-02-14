@@ -21,8 +21,7 @@ class Record:
         seq.append(json_obj.get("bv"))
 
         return Record(seq)
-    def __str__(self) -> str:
-        return f"id: {self.id}, ra: {self.ra}, dec: {self.dec}, vmag: {self.vmag}, bv: {self.bv}"
+
 
 def _get(record, field):
     return getattr(record, field) if hasattr(record, field) else record.get(field)
