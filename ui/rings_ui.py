@@ -1,6 +1,6 @@
 
-from ui.design.moons_panel import Ui_Form
-from PyQt5.QtWidgets import QDialog, QSpacerItem, QSizePolicy
+from ui.design.style import common_style
+from PyQt5.QtWidgets import QDialog, QVBoxLayout
 from ui.tabbed_selector import TabbedSelector
 from actions.rings import get_rings, toggle_ring
 
@@ -14,12 +14,13 @@ class RingsDialog(QDialog):
 
     def init_ui(self):
         self.setObjectName(RingsDialog.id)
-        self.ui = Ui_Form()
-        self.ui.setupUi(self)
-        self.tabSelector = TabbedSelector(self, get_rings(), toggle_ring)
-        self.ui.label.setText('Jupiter Rings and Moon Torus')
-        self.ui.verticalLayout.addWidget(self.tabSelector)
-        self.ui.verticalLayout.addItem(QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding))
+        self.setStyleSheet(common_style)
+        layout = QVBoxLayout()
+        self.setLayout(layout)
+        self.tabSelector = TabbedSelector(self, get_rings(), toggle_ring, num_colums=1)
+        self.setWindowTitle('Jupiter Rings and Moon Torus')
+        layout.addWidget(self.tabSelector)
+
 
     def show_and_focus(self):
         self.hide()

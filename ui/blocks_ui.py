@@ -50,6 +50,7 @@ class BlocksDialog(QDialog):
     def __init__(self, main_window, ptr_path):
         QDialog.__init__(self, main_window, QtCore.Qt.WindowStaysOnTopHint)
         self.ptr_path = ptr_path
+        self.last_index = -1
         self.init_ui()
         self.timer0 = QTimer()
         self.timer0.setInterval(200)
@@ -131,6 +132,9 @@ class BlocksDialog(QDialog):
     def select_in_table(self, index):
         if index is None:
             return
+        if index == self.last_index:
+            return
+        self.last_index = index
         table = self.ui.tableWidget
         table.clearSelection()
         table.setRangeSelected(QTableWidgetSelectionRange(index, 0, index, 2), True)

@@ -113,13 +113,14 @@
        <property name="font">
         <font>
          <family>PT Mono</family>
+         <pointsize>10</pointsize>
         </font>
        </property>
        <property name="toolTip">
         <string>Current time</string>
        </property>
        <property name="text">
-        <string>time</string>
+        <string>2030-01-01T00:00:00</string>
        </property>
       </widget>
      </item>

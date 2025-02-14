@@ -423,6 +423,45 @@
        "label": {
                     "showText": false
        }
+      },
+      {
+         "class": "spacecraft",
+         "name": "JUICE_HGA",
+         "startTime": "2022-05-31 23:59:59.999 UTC",
+         "arcs": [
+            {
+               "center": "JUICE",
+               "trajectoryFrame": "ICRF",
+               "trajectory": {
+                  "type": "Spice",
+                  "target": "JUICE_HGA",
+                  "center": "JUICE_SPACECRAFT"
+               }
+            }
+         ],
+       "label": {
+                    "showText": false
+       }
+      },
+      {
+         "class": "spacecraft",
+         "name": "JUICE_MGA",
+         "startTime": "2022-05-31 23:59:59.999 UTC",
+         "arcs": [
+            {
+               "center": "JUICE",
+               "trajectoryFrame": "ICRF",
+               "trajectory": {
+                  "type": "Spice",
+                  "target": "JUICE_MGA_APM",
+                  "center": "JUICE_SPACECRAFT"
+               }
+            }
+         ],
+       "label": {
+                    "showText": false
+       }
       }
+
    ]
 }

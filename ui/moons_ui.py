@@ -1,6 +1,5 @@
-from ui.common import get_main_window, add_menu, MenuSpec, ActionSpec
-from ui.design.moons_panel import Ui_Form
-from PyQt5.QtWidgets import QSpacerItem, QDialog, QSizePolicy
+from ui.design.style import common_style
+from PyQt5.QtWidgets import QDialog, QVBoxLayout
 from ui.tabbed_selector import TabbedSelector
 from actions.moons import get_moons, toggle_moon
 
@@ -14,12 +13,12 @@ class MoonsDialog(QDialog):
 
     def init_ui(self):
         self.setObjectName(MoonsDialog.id)
-        self.ui = Ui_Form()
-        self.ui.setupUi(self)
-        self.tabSelector = TabbedSelector(self, get_moons(), toggle_moon)
-        self.ui.label.setText('Jupiter Moons')
-        self.ui.verticalLayout.addWidget(self.tabSelector)
-        self.ui.verticalLayout.addItem(QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding))
+        self.setStyleSheet(common_style)
+        layout = QVBoxLayout()
+        self.setLayout(layout)
+        self.tabSelector = TabbedSelector(self, get_moons(), toggle_moon, num_colums=5)
+        self.setWindowTitle ('Jupiter Moons')
+        layout.addWidget(self.tabSelector)
 
     def show_and_focus(self):
         self.hide()

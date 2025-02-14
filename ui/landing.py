@@ -1,4 +1,5 @@
 from PyQt5.QtWidgets import QDialog
+from PyQt5 import QtCore
 from ui.design.landing import Ui_landingWidget
 
 
@@ -7,7 +8,7 @@ class LandingDialog(QDialog):
     id = 'landing_dialog_window_id'
 
     def __init__(self, main_window):
-        QDialog.__init__(self, main_window)
+        QDialog.__init__(self, main_window, QtCore.Qt.WindowStaysOnTopHint)
         self.init_ui()
 
     def init_ui(self):

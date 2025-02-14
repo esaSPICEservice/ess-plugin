@@ -1,5 +1,6 @@
-from PyQt5.QtWidgets import qApp, QMenuBar, QAction, QMenu, QDialog, QPushButton, QVBoxLayout
-from PyQt5.QtGui import QIcon
+from PyQt5.QtWidgets import qApp, QMenuBar, QAction, QMenu, QApplication
+from PyQt5.QtGui import QIcon, QDesktopServices
+from PyQt5.QtCore import QUrl
 import datetime
 from settings.handler import PersistenceSettings, RuntimeSettings
 
@@ -148,3 +149,6 @@ def cosmo_time_to_utc(cosmo_time):
     delta = (32.5 + 37) # TDB to UTC delta
     date_utc = datetime.datetime.fromtimestamp(EPOCH_2000 + cosmo_time - delta, tz=datetime.timezone.utc)
     return date_utc.isoformat()
+
+def show_url_in_browser(url_str):
+    QDesktopServices.openUrl(QUrl(url_str, QUrl.TolerantMode))

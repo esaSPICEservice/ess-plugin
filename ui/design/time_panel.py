@@ -55,6 +55,7 @@ class Ui_Form(object):
         self.timeDisplay = QtWidgets.QLabel(Form)
         font = QtGui.QFont()
         font.setFamily("PT Mono")
+        font.setPointSize(10)
         self.timeDisplay.setFont(font)
         self.timeDisplay.setObjectName("timeDisplay")
         self.horizontalLayout.addWidget(self.timeDisplay)
@@ -76,5 +77,6 @@ class Ui_Form(object):
         self.play.setText(_translate("Form", "..."))
         self.pause.setText(_translate("Form", "..."))
         self.timeDisplay.setToolTip(_translate("Form", "Current time"))
-        self.timeDisplay.setText(_translate("Form", "time"))
+        self.timeDisplay.setText(_translate("Form", "2030-01-01T00:00:00"))
+
 from . import icons_rc

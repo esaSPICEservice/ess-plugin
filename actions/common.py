@@ -1,5 +1,5 @@
 
-from ui.common import get_main_window, ActionSpec, add_menu, MenuSpec
+from ui.common import get_main_window, ActionSpec, add_menu, MenuSpec, show_url_in_browser
 from ui.mars_ui import MarsDialog
 from ui.moons_ui import MoonsDialog
 from ui.navigation_ui import NavigationDialog
@@ -32,6 +32,18 @@ def add_juice_menu():
                                        ActionSpec('Sensors', 'Sensors', '', nv.show_and_focus),
                                        ActionSpec('Observations', 'Observations', '', obs.show_and_focus)
                                     ]))
+    add_menu(main_window, MenuSpec('Juice Help',
+                                   [
+                                       ActionSpec('Science Models', 'Browse Science Models Help', '', show_science_models_help),
+                                       ActionSpec('SPICE data for JUICE', 'Browse Science Models Help', '', show_spice_help)
+                                   ]
+                                   ))
+
+def show_science_models_help():
+    show_url_in_browser('https://juicesoc.esac.esa.int/help/scimod')
+
+def show_spice_help():
+    show_url_in_browser('https://www.cosmos.esa.int/web/spice/spice-for-juice')
     
 def add_tgo_menu():
     main_window = get_main_window()
@@ -70,3 +82,4 @@ def add_mmatisse_menu():
                                        ActionSpec('Sensors', 'Sensors', '', nv.show_and_focus),
                                        ActionSpec('Observations', 'Observations', '', obs.show_and_focus)
                                     ]))
+

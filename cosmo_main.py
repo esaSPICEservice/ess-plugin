@@ -2,11 +2,13 @@
 import cosmoscripting
 import os
 import sys
+import traceback
 
 cosmo = cosmoscripting.Cosmo()
 
 def my_except_hook(exctype, value, traceback):
     print("Generic Handler")
+    traceback.print_exc()
     cosmo.quit()
 sys.excepthook = my_except_hook
 
