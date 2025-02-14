@@ -14,7 +14,7 @@ from actions.time_navigation import faster2x, slower2x, reverseTime, unpause, pa
 
 from simulator.osve.utils import get_platform
 my_platform = get_platform()
-if (my_platform.startswith("linux")):
+if (my_platform.startswith("windows")):
     from utils.re_block_parser import BlockParser
     print('Regular Expression Parser')
 else:
