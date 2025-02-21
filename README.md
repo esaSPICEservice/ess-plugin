@@ -9,11 +9,19 @@ The ESA Spice Service cosmographia plugin
 https://www.cosmos.esa.int/web/spice/operational-kernels
 
 
-### Usage
+### Multi Mission Usage
 
 * Open Cosmographia
 * In the main menu, navigate to the option `File > Run Script...`
-* Select the `cosmo_main.py` script
-* In the landing page, select the mission you want to work with (currently JUICE/)
-* Extra option `Scenes` is added to the main menu. This will be your entry point to interact with the plugin ...
+* Select the `cosmo_main.py` script.
+* In the landing page, select the mission you want to work with.
+* A configuration dialog will guide you with the required entries to create an
+scene.
 
+### JUICE PTR Usage
+
+* Open Cosmographia
+* In the main menu, navigate to the option `File > Run Script...`
+* Select the `juice_ptr.py` script.
+* A PTR editor dialog will appear allowing to introduce a pointing requests 
+that can be visualized, using the OSVE software in the background.
