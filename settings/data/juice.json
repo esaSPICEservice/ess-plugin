@@ -2,6 +2,7 @@
   "mission": "JUICE",
   "spacecraft": "JUICE",
   "spacecraft_frame": "JUICE_SPACECRAFT",
+  "use_ptr": true,
   "models": [
     "spacecraft_JUICE_arcs.json",
     "spacecraft_JUICE_MGA_arcs.json",
@@ -540,6 +541,26 @@
       {
         "name": "JUICE_PEP_JENI_FOR_PY",
         "fov_frame": "JUICE_PEP_JENI_FOR_PY",
+        "color": [
+          0.9,
+          0.7,
+          0.5
+        ],
+        "spacecraft": "JUICE_PEP_JENI"
+      },
+      {
+        "name": "JUICE_PEP_JENI_E_SLIT_MY",
+        "fov_frame": "JUICE_PEP_JENI_E_SLIT_MY",
+        "color": [
+          0.9,
+          0.7,
+          0.5
+        ],
+        "spacecraft": "JUICE_PEP_JENI"
+      },
+      {
+        "name": "JUICE_PEP_JENI_E_SLIT_PY",
+        "fov_frame": "JUICE_PEP_JENI_E_SLIT_PY",
         "color": [
           0.9,
           0.7,

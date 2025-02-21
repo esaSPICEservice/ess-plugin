@@ -27,14 +27,16 @@
             "startTime": "2024-10-08 00:00:00.000",
             "geometry": {
               "type": "Mesh",
-              "source": "./models/3ds/juventas_cruise_v01.3ds"
+              "size": 0.00019,
+              "source": "./models/obj/juventas_cruise_v02.obj"
          }
         },
         {
-           "startTime" : "2027-03-26 16:01:09.185",
+           "startTime" : "2027-01-16 13:30:17.841",
            "geometry": {
               "type": "Mesh",
-              "source": "./models/3ds/juventas_v01.3ds"
+              "size": 0.0016,
+              "source": "./models/obj/juventas_deployed_v01.obj"
          }
         }
       ]
@@ -58,6 +60,116 @@
         "fade": 0.25,
         "sampleCount": 1000
       }
-    }
-   ]
+    },
+    {
+       "class": "spacecraft",
+       "name": "JUVENTAS_NAVCAM",
+       "startTime": "2018-10-19 02:05:26.295 UTC",
+       "arcs": [
+         {
+           "center": "JUVENTAS",
+           "trajectory": {
+             "type": "Spice",
+             "target": "JUVENTAS_NAVCAM",
+             "center": "JUVENTAS"
+           },
+           "bodyFrame": {
+             "type": "Spice",
+             "name": "JUVENTAS_SPACECRAFT"
+           }
+         }
+       ],
+       "label": {
+                    "showText": false
+       }
+     },
+     {
+       "class": "spacecraft",
+       "name": "JUVENTAS_CCAM",
+       "startTime": "2018-10-19 02:05:26.295 UTC",
+       "arcs": [
+         {
+           "center": "JUVENTAS",
+           "trajectory": {
+             "type": "Spice",
+             "target": "JUVENTAS_CCAM",
+             "center": "JUVENTAS"
+           },
+           "bodyFrame": {
+             "type": "Spice",
+             "name": "JUVENTAS_SPACECRAFT"
+           }
+         }
+       ],
+       "label": {
+                    "showText": false
+       }
+     },
+     {
+       "class": "spacecraft",
+       "name": "JUVENTAS_LIDAR",
+       "startTime": "2018-10-19 02:05:26.295 UTC",
+       "arcs": [
+         {
+           "center": "JUVENTAS",
+           "trajectory": {
+             "type": "Spice",
+             "target": "JUVENTAS_LIDAR",
+             "center": "JUVENTAS"
+           },
+           "bodyFrame": {
+             "type": "Spice",
+             "name": "JUVENTAS_SPACECRAFT"
+           }
+         }
+       ],
+       "label": {
+                    "showText": false
+       }
+     },
+     {
+       "class": "spacecraft",
+       "name": "JUVENTAS_STR-1",
+       "startTime": "2018-10-19 02:05:26.295 UTC",
+       "arcs": [
+         {
+           "center": "JUVENTAS",
+           "trajectory": {
+             "type": "Spice",
+             "target": "JUVENTAS_STR-1",
+             "center": "JUVENTAS"
+           },
+           "bodyFrame": {
+             "type": "Spice",
+             "name": "JUVENTAS_SPACECRAFT"
+           }
+         }
+       ],
+       "label": {
+                    "showText": false
+       }
+     },
+     {
+       "class": "spacecraft",
+       "name": "JUVENTAS_STR-2",
+       "startTime": "2018-10-19 02:05:26.295 UTC",
+       "arcs": [
+         {
+           "center": "JUVENTAS",
+           "trajectory": {
+             "type": "Spice",
+             "target": "JUVENTAS_STR-2",
+             "center": "JUVENTAS"
+           },
+           "bodyFrame": {
+             "type": "Spice",
+             "name": "JUVENTAS_SPACECRAFT"
+           }
+         }
+       ],
+       "label": {
+                    "showText": false
+       }
+     }
+  ]
 }

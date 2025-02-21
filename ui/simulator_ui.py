@@ -43,7 +43,7 @@ class PTREditorDialog(QDialog):
     id = 'ptr_editor_dialog_window_id'
 
     def __init__(self, main_window):
-        QDialog.__init__(self, main_window)
+        QDialog.__init__(self, main_window, Qt.WindowStaysOnTopHint)
         self.settings = get_settings()
         self.runtime = get_runtime()
         self.mission = self.runtime.get('mission')

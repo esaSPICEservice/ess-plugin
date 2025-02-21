@@ -1,63 +1,373 @@
 {
-   "version": "1.0",
-   "name": "Cosmographia Milani Example",
-   "items": [
-   {
-         "class": "spacecraft",
-         "name": "MILANI",
-         "startTime": "2022-01-01 01:00:00.000  UTC",
-         "arcs": [
-            {
-               "center": "DIDYMOS",
-               "trajectory": {
-                  "type": "Spice",
-                  "target": "MILANI",
-                  "center": "DIDYMOS"
-               },
-               "bodyFrame": {
-                  "type": "Spice",
-                  "name": "MILANI_SPACECRAFT"
-               }
-            }
-         ],
-         "geometry": {
-          "type": "TimeSwitched",
-          "sequence": [
-          {
-              "startTime": "2024-10-08 00:00:00.000",
-              "geometry": {
-                "type": "Mesh",
-                "source": "./models/3ds/milani_cruise_v01.3ds"
+  "version": "1.0",
+  "name": "Cosmographia Milani Example",
+  "items": [
+  {
+        "class": "spacecraft",
+        "name": "MILANI",
+        "startTime": "2022-01-01 01:00:00.000  UTC",
+        "arcs": [
+           {
+              "center": "DIDYMOS",
+              "trajectory": {
+                 "type": "Spice",
+                 "target": "MILANI",
+                 "center": "DIDYMOS"
+              },
+              "bodyFrame": {
+                 "type": "Spice",
+                 "name": "MILANI_SPACECRAFT"
+              }
            }
-          },
-          {
-             "startTime" : "2027-03-26 17:01:07.200",
-             "geometry": {
-                "type": "Mesh",
-                "source": "./models/3ds/milani_v01.3ds"
-           }
-          }
-        ]
-        },
-      "label": {
-        "color": [
-          1,
-          1,
-          1
-        ]
-      },
-      "trajectoryPlot": {
-        "color": [
-          0.3,
-          0.3,
-          1
         ],
-        "lineWidth": 1,
-        "duration": "7 d",
-        "lead": 0.0,
-        "fade": 0.25,
-        "sampleCount": 1000
-      }
-    }
-   ]
+        "geometry": {
+         "type": "TimeSwitched",
+         "sequence": [
+         {
+             "startTime": "2024-10-08 00:00:00.000",
+             "geometry": {
+               "type": "Mesh",
+               "size": 0.00019,
+               "source": "./models/obj/milani_cruise_v01.obj"
+          }
+         },
+         {
+            "startTime" : "2027-01-30 13:39:32.398",
+            "geometry": {
+               "type": "Mesh",
+               "size": 0.0008,
+               "source": "./models/obj/milani_deployed_v01.obj"
+          }
+         }
+       ]
+       },
+     "label": {
+       "color": [
+         1,
+         1,
+         1
+       ]
+     },
+     "trajectoryPlot": {
+       "color": [
+         0.3,
+         0.3,
+         1
+       ],
+       "lineWidth": 1,
+       "duration": "7 d",
+       "lead": 0.0,
+       "fade": 0.25,
+       "sampleCount": 1000
+     }
+   },
+   {
+     "class": "spacecraft",
+     "name": "MILANI_SA+Y",
+     "startTime": "2024-10-08 00:00:00.000 UTC",
+     "arcs": [
+       {
+         "center": "MILANI",
+         "trajectory": {
+           "type": "Spice",
+           "target": "MILANI_SA+Y",
+           "center": "MILANI"
+         },
+         "bodyFrame": {
+           "type": "Spice",
+           "name": "MILANI_SPACECRAFT"
+         }
+       }
+     ],
+     "label": {
+       "showText": false
+     }
+   },
+   {
+     "class": "spacecraft",
+     "name": "MILANI_SA-Y",
+     "startTime": "2024-10-08 00:00:00.000 UTC",
+     "arcs": [
+       {
+         "center": "MILANI",
+         "trajectory": {
+           "type": "Spice",
+           "target": "MILANI_SA-Y",
+           "center": "MILANI"
+         },
+         "bodyFrame": {
+           "type": "Spice",
+           "name": "MILANI_SPACECRAFT"
+         }
+       }
+     ],
+     "label": {
+       "showText": false
+     }
+   },
+   {
+     "class": "spacecraft",
+     "name": "MILANI_ASPECT_VIS",
+     "startTime": "2024-10-08 00:00:00.000 UTC",
+     "arcs": [
+       {
+         "center": "MILANI",
+         "trajectory": {
+           "type": "Spice",
+           "target": "MILANI_ASPECT_VIS",
+           "center": "MILANI"
+         },
+         "bodyFrame": {
+           "type": "Spice",
+           "name": "MILANI_SPACECRAFT"
+         }
+       }
+     ],
+     "label": {
+       "showText": false
+     }
+   },
+   {
+     "class": "spacecraft",
+     "name": "MILANI_ASPECT_NIR1",
+     "startTime": "2024-10-08 00:00:00.000 UTC",
+     "arcs": [
+       {
+         "center": "MILANI",
+         "trajectory": {
+           "type": "Spice",
+           "target": "MILANI_ASPECT_NIR1",
+           "center": "MILANI"
+         },
+         "bodyFrame": {
+           "type": "Spice",
+           "name": "MILANI_SPACECRAFT"
+         }
+       }
+     ],
+     "label": {
+       "showText": false
+     }
+   },
+   {
+     "class": "spacecraft",
+     "name": "MILANI_ASPECT_NIR2",
+     "startTime": "2024-10-08 00:00:00.000 UTC",
+     "arcs": [
+       {
+         "center": "MILANI",
+         "trajectory": {
+           "type": "Spice",
+           "target": "MILANI_ASPECT_NIR2",
+           "center": "MILANI"
+         },
+         "bodyFrame": {
+           "type": "Spice",
+           "name": "MILANI_SPACECRAFT"
+         }
+       }
+     ],
+     "label": {
+       "showText": false
+     }
+   },
+   {
+     "class": "spacecraft",
+     "name": "MILANI_ASPECT_SWIR",
+     "startTime": "2024-10-08 00:00:00.000 UTC",
+     "arcs": [
+       {
+         "center": "MILANI",
+         "trajectory": {
+           "type": "Spice",
+           "target": "MILANI_ASPECT_SWIR",
+           "center": "MILANI"
+         },
+         "bodyFrame": {
+           "type": "Spice",
+           "name": "MILANI_SPACECRAFT"
+         }
+       }
+     ],
+     "label": {
+       "showText": false
+     }
+   },
+   {
+     "class": "spacecraft",
+     "name": "MILANI_VISTA",
+     "startTime": "2024-10-08 00:00:00.000 UTC",
+     "arcs": [
+       {
+         "center": "MILANI",
+         "trajectory": {
+           "type": "Spice",
+           "target": "MILANI_VISTA",
+           "center": "MILANI"
+         },
+         "bodyFrame": {
+           "type": "Spice",
+           "name": "MILANI_SPACECRAFT"
+         }
+       }
+     ],
+     "label": {
+       "showText": false
+     }
+   },
+   {
+     "class": "spacecraft",
+     "name": "MILANI_NAVCAM",
+     "startTime": "2024-10-08 00:00:00.000 UTC",
+     "arcs": [
+       {
+         "center": "MILANI",
+         "trajectory": {
+           "type": "Spice",
+           "target": "MILANI_NAVCAM",
+           "center": "MILANI"
+         },
+         "bodyFrame": {
+           "type": "Spice",
+           "name": "MILANI_SPACECRAFT"
+         }
+       }
+     ],
+     "label": {
+       "showText": false
+     }
+   },
+   {
+     "class": "spacecraft",
+     "name": "MILANI_LIDAR",
+     "startTime": "2024-10-08 00:00:00.000 UTC",
+     "arcs": [
+       {
+         "center": "MILANI",
+         "trajectory": {
+           "type": "Spice",
+           "target": "MILANI_LIDAR",
+           "center": "MILANI"
+         },
+         "bodyFrame": {
+           "type": "Spice",
+           "name": "MILANI_SPACECRAFT"
+         }
+       }
+     ],
+     "label": {
+       "showText": false
+     }
+   },
+   {
+     "class": "spacecraft",
+     "name": "MILANI_MLRH_1",
+     "startTime": "2024-10-08 00:00:00.000 UTC",
+     "arcs": [
+       {
+         "center": "MILANI",
+         "trajectory": {
+           "type": "Spice",
+           "target": "MILANI_MLRH_1",
+           "center": "MILANI"
+         },
+         "bodyFrame": {
+           "type": "Spice",
+           "name": "MILANI_SPACECRAFT"
+         }
+       }
+     ],
+     "label": {
+       "showText": false
+     }
+   },
+   {
+     "class": "spacecraft",
+     "name": "MILANI_MLRH_2",
+     "startTime": "2024-10-08 00:00:00.000 UTC",
+     "arcs": [
+       {
+         "center": "MILANI",
+         "trajectory": {
+           "type": "Spice",
+           "target": "MILANI_MLRH_2",
+           "center": "MILANI"
+         },
+         "bodyFrame": {
+           "type": "Spice",
+           "name": "MILANI_SPACECRAFT"
+         }
+       }
+     ],
+     "label": {
+       "showText": false
+     }
+   },
+   {
+     "class": "spacecraft",
+     "name": "MILANI_STR",
+     "startTime": "2024-10-08 00:00:00.000 UTC",
+     "arcs": [
+       {
+         "center": "MILANI",
+         "trajectory": {
+           "type": "Spice",
+           "target": "MILANI_STR",
+           "center": "MILANI"
+         },
+         "bodyFrame": {
+           "type": "Spice",
+           "name": "MILANI_SPACECRAFT"
+         }
+       }
+     ],
+     "label": {
+       "showText": false
+     }
+   },
+   {
+     "class": "spacecraft",
+     "name": "MILANI_ILS+X",
+     "startTime": "2024-10-08 00:00:00.000 UTC",
+     "arcs": [
+       {
+         "center": "MILANI",
+         "trajectory": {
+           "type": "Spice",
+           "target": "MILANI_ILS+X",
+           "center": "MILANI"
+         },
+         "bodyFrame": {
+           "type": "Spice",
+           "name": "MILANI_SPACECRAFT"
+         }
+       }
+     ],
+     "label": {
+       "showText": false
+     }
+   },
+   {
+     "class": "spacecraft",
+     "name": "MILANI_ILS-X",
+     "startTime": "2024-10-08 00:00:00.000 UTC",
+     "arcs": [
+       {
+         "center": "MILANI",
+         "trajectory": {
+           "type": "Spice",
+           "target": "MILANI_ILS-X",
+           "center": "MILANI"
+         },
+         "bodyFrame": {
+           "type": "Spice",
+           "name": "MILANI_SPACECRAFT"
+         }
+       }
+     ],
+     "label": {
+       "showText": false
+     }
+   }
+  ]
 }
