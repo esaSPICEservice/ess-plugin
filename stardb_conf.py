@@ -27,25 +27,25 @@ settings = get_settings()
 def create_stars(candidates):
     settings.set('stardb', 'star_list', candidates)
     settings.save()
-    # dst_json = os.path.join(os.path.abspath('.'), 'starnames.json')
-    # dst_db = os.path.join(os.path.abspath('.'), 'tycho2.stars')
+    dst_json = os.path.join(os.path.abspath('.'), 'starnames.json')
+    dst_db = os.path.join(os.path.abspath('.'), 'tycho2.stars')
 
-    # if os.path.exists(dst_json) and os.path.exists(dst_db):
-    #     update_stars([], dst_db, dst_json)
-    #     QMessageBox.information(None, "Info", 
-    #             ("The star database has been updated\n"
-    #              "Cosmographia has to be restarted\n"
-    #              "for the changes to take effect."))
-    # else:
-    #     QMessageBox.warning(None, "Info", 
-    #             ("The star database does not exist\n"
-    #              "Check with the SPICE service\n"
-    #              "to get assistance.\n",
-    #              "spice@cosmos.esa.int"))
-    QMessageBox.information(None, "Info", 
+    if os.path.exists(dst_json) and os.path.exists(dst_db):
+        update_stars(candidates, dst_db, dst_json)
+        QMessageBox.information(None, "Info", 
                 ("The star database has been updated\n"
                  "Cosmographia has to be restarted\n"
                  "for the changes to take effect."))
+    else:
+        QMessageBox.warning(None, "Info", 
+                ("The star database does not exist\n"
+                 "Check with the SPICE service\n"
+                 "to get assistance.\n",
+                 "spice@cosmos.esa.int"))
+    # QMessageBox.information(None, "Info", 
+    #             ("The star database has been updated\n"
+    #              "Cosmographia has to be restarted\n"
+    #              "for the changes to take effect."))
     cosmo.quit()
 
 star_list = settings.get('stardb', 'star_list', [])

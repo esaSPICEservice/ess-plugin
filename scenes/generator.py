@@ -31,10 +31,12 @@ def generate_all_sensor(sensor_list, parent_path):
 
 def generate_custom_stars(parent_path):
     filename = "custom_stars.json"
+    run_time = get_runtime()
+    spacecraft = run_time.get('spacecraft', '')
     settings = get_settings()
     generator = CustomStarsGenerator()
     for star in settings.get('stardb', 'star_list', []):
-        generator.append(star.get('ra'), star.get('dec'), star.get('name'))
+        generator.append(star.get('ra'), star.get('dec'), star.get('name'), spacecraft)
 
     file_path = os.path.abspath(os.path.join(parent_path, filename))
     generator.save(file_path)

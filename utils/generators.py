@@ -115,13 +115,13 @@ class CustomStarsGenerator(Generator):
         self.name = 'ESS-Plugin Custom Star Catalog generated'
         self.items = items if items is not None else []
 
-    def append(self, ra, dec, name):
+    def append(self, ra, dec, name, spacecraft):
         distance = 1E11
         self.items.append(
         {
             "class": "spacecraft",
             "name": name,
-            "center": "Sun",
+            "center": spacecraft,
             "trajectory": {
                 "type": "FixedSpherical",
                 "latitude" : dec,
