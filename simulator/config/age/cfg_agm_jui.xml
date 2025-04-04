@@ -200,15 +200,15 @@
     </Param>
     <Param id="AC_RW_WMM_MOMENTUMMIN" type="PT_VECRW" description="This is the lower limit of the momentum that can be absorbed by the corresponding reaction wheel. This value is used when the 3 reaction wheels are active. In case of 3 reaction wheels there is only one solution to redistribute the momentum among the wheels. For that reason we can check each wheel individually. If the value is set to 0 it indicates that there should be no zero-crossing for the RW." unit="N*m*s">
       <!-- w1, w2, w3, w4 -->
-      0.0, 0.0, 0.0, 0.0
+      -60.0, -60.0, -60.0, 0.0
     </Param>
     <Param id="AC_RW_WMM_MOMENTUMMAX" type="PT_VECRW" description="This is the upper limit of the momentum that can be absorbed by the corresponding reaction wheel. This value is used when the 3 reaction wheels are active. In case of 3 reaction wheels there is only one solution to redistribute the momentum among the wheels. For that reason we can check each wheel individually." unit="N*m*s">
       <!-- w1, w2, w3, w4 -->
-      50.0, 50.0, 50.0, 0.0
+      60.0, 60.0, 60.0, 0.0
     </Param>
     <Param id="AC_RW_WMM_MOMENTUMINIT" type="PT_VECRW" description="Initial wheel momentum state for each RW" unit="N*m*s">
       <!-- w1, w2, w3, w4 -->
-      25.0, 25.0, 25.0, 0.0
+      0.0, 0.0, 0.0, 0.0
     </Param>
     <Param id="AC_RW_WMM_MAXASSMOMENTUM" type="PT_DOUBLE" description="This is the absolute maximum momentum that the combination of all the wheels can handle. This value is used when the 4 reaction wheels are active. In fact in this case there is no one solution that allows to distribute the momentum among the wheels. We assume a total value that is less than the optimal but makes sure that there is a valid combination available." unit="N*m*s">
       88.0
@@ -476,6 +476,7 @@
     <Frame parserName="EUROPA" mnemonic="CBE" spiceName="IAU_EUROPA" bufferAtt="false" bufferAttTimeStep="0"/>
     <Frame parserName="GANYMEDE" mnemonic="CBE" spiceName="IAU_GANYMEDE" bufferAtt="false" bufferAttTimeStep="0"/>
     <Frame parserName="CALLISTO" mnemonic="CBE" spiceName="IAU_CALLISTO" bufferAtt="false" bufferAttTimeStep="0"/>
+    <Frame parserName="IO" mnemonic="CBE" spiceName="IAU_IO" bufferAtt="false" bufferAttTimeStep="0"/>
   </Frames>
 
 </AGMConfig>

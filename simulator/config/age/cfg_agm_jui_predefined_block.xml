@@ -24,7 +24,7 @@
 				<y>1.0</y>
 				<z>0.0</z>
 			</SCAxis>
-			<inertialAxis ref="SC2EarthSun"/>
+			<inertialAxis ref="SC2SunEarth"/>
 		</phaseAngle>
 		<target ref="Sun"/>
 	</attitude>
@@ -331,7 +331,7 @@
   <metadata>
     <comment>HGA Downlink Slot</comment>
     <planning isMaintenance="false" hasInternalSlews="false" allowAttitude="true" allowHgaRequest="false" />
-   </metadata>
+  </metadata>
   <attitude ref="track">
      <boresight ref="SC_HGA" />
      <phaseAngle ref="powerOptimised">
@@ -347,7 +347,7 @@
 <block name="MTCM" ref="OBS">
   <metadata>
     <comment>Trajectory Control Manouver</comment>
-    <planning isMaintenance="true" hasInternalSlews="true" allowAttitude="true" allowHgaRequest="false">
+    <planning isMaintenance="true" hasInternalSlews="true" allowAttitude="false" allowHgaRequest="false">
 		<intSlewDurationBefore units="min">30</intSlewDurationBefore>
     	<intSlewDurationAfter units="min">30</intSlewDurationAfter>
     </planning>
@@ -362,7 +362,7 @@
 </block>
 
 <!-- Navigation Camera Slot -->
-<block name="MNAV_GAN" ref="OBS">
+<block name="NAV_GAN" ref="OBS">
   <metadata>
     <comment>Navigation Slot Pointing to Ganymede</comment>
     <planning isMaintenance="false" hasInternalSlews="false" allowAttitude="false" allowHgaRequest="false"/>
@@ -377,7 +377,7 @@
 </block>
 
 <!-- Navigation Camera Slot -->
-<block name="MNAV_CAL" ref="OBS">
+<block name="NAV_CAL" ref="OBS">
   <metadata>
     <comment>Navigation Slot Pointing to Callisto</comment>
     <planning isMaintenance="false" hasInternalSlews="false" allowAttitude="false" allowHgaRequest="false"/>
@@ -392,7 +392,7 @@
 </block>
 
 <!-- Navigation Camera Slot -->
-<block name="MNAV_EUR" ref="OBS">
+<block name="NAV_EUR" ref="OBS">
   <metadata>
     <comment>Navigation Slot Pointing to Europa</comment>
     <planning isMaintenance="false" hasInternalSlews="false" allowAttitude="false" allowHgaRequest="false"/>

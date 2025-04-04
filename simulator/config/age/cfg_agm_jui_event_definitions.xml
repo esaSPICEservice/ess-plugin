@@ -10,7 +10,7 @@ Date:        30 May 2022
 <eventDefinition>
 
    <!-- Definition of event panel_illumination_mx -->
-   <event name="-X Panel Illumination" type="PANEL_ILLUMINATION">
+   <event name="+X Panel Illumination" type="PANEL_ILLUMINATION">
       <panelType> +x </panelType>
 	  <minValue> 0 </minValue>
 	  <maxValue> 90 </maxValue>
