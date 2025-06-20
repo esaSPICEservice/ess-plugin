@@ -13,7 +13,6 @@ class TabbedSelector(QWidget):
         self.setup(items, num_colums)
 
     def setup(self, items, num_colums):
-
         n_items = max([len(value) for value in items.values()]) 
         items_per_row = math.ceil(n_items / num_colums)
         main_layout = QVBoxLayout()

@@ -1,0 +1,53 @@
+{
+  "sensors": {
+    "ENVISION": [
+      {
+        "name": "ENVISION_VENSPEC_H",
+        "fov_frame": "ENVISION_VENSPEC_H",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "ENVISION"
+      },
+      {
+        "name": "ENVISION_VENSPEC_M",
+        "fov_frame": "ENVISION_VENSPEC_M",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "ENVISION"
+      },
+      {
+        "name": "ENVISION_VENSPEC_U",
+        "fov_frame": "ENVISION_VENSPEC_U",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "ENVISION"
+      }
+    ]
+  },
+  "boresights": [
+    {
+      "name": "ENVISION_VENSPEC_H",
+      "fov_frame": "ENVISION_VENSPEC_H",
+      "size": 6.59
+    },
+    {
+      "name": "ENVISION_VENSPEC_M",
+      "fov_frame": "ENVISION_VENSPEC_M",
+      "size": 46.4
+    },
+    {
+      "name": "ENVISION_VENSPEC_U",
+      "fov_frame": "ENVISION_VENSPEC_U",
+      "size": 20.09
+    }
+  ]
+}

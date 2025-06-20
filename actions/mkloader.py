@@ -1,4 +1,9 @@
-from actions.common import add_hera_menu, add_juice_menu, add_tgo_menu, add_mmatisse_menu
+from actions.common import (add_hera_menu, 
+                            add_juice_menu,
+                            add_tgo_menu,
+                            add_mmatisse_menu,
+                            add_bepi_menu,
+                            add_envision_menu)
 import cosmoscripting
 from scenes.generator import create_cosmo_scene, generate_working_dir
 from actions.time_navigation import goto_date
@@ -25,11 +30,13 @@ def after_load():
     main_window = get_main_window()
     runtime = get_runtime()
     mission = runtime.get('mission')
-
+    print(mission)
     if mission is None:
         return
     elif mission.lower() == 'tgo':
         add_tgo_menu()
+    elif mission.lower() == 'bepi':
+        add_bepi_menu()
     elif mission.lower() == 'hera':
         add_hera_menu()
     elif mission.lower() == 'm-matisse':
@@ -37,3 +44,5 @@ def after_load():
     elif mission.lower() == 'juice' or mission.lower() == 'juice_ptr':
         add_juice_menu()
         remove_menu(main_window, 'Pointing')
+    elif mission.lower() == 'envision':
+        add_envision_menu()
