@@ -34,7 +34,7 @@
 	<metadata>
 		<comment>This is the default pointing for the Hot Cruise with -Xsc pointed at the sun,</comment>
 		<comment>the earth in the Xsc/Zsc plane and with +Ysc pointing towards the ecliptic south</comment>
-		<comment>(for solar conunctions to ensure Earth in the +Zsc side for the MGA).</comment>
+		<comment>(for solar conjunctions to ensure Earth in the +Zsc side for the MGA).</comment>
 		<planning isMaintenance="false" hasInternalSlews="false" allowAttitude="false" allowHgaRequest="false"/>
 	</metadata>
 	<attitude ref="track">
@@ -50,6 +50,51 @@
 		<target ref="Sun"/>
 	</attitude>
 </block>
+
+
+<block name="Cold_Cruise_North" ref="OBS">
+	<metadata>
+		<comment>This is the default pointing for the Cold Cruise with -Xsc pointed at the Earth,</comment>
+		<comment>the Sun in the Xsc/Zsc plane and with +Ysc pointing towards the ecliptic north</comment>
+		<comment>in such a way that the Sun is in the -Zsc has a component to the Sun.</comment>
+		<planning isMaintenance="false" hasInternalSlews="false" allowAttitude="false" allowHgaRequest="false"/>
+	</metadata>
+    <attitude ref="track">
+    	<boresight ref="SC_HGA" />
+        <phaseAngle ref="align">
+            <SCAxis frame="SC">
+                <x>0.0</x>
+                <y>1.0</y>
+                <z>0.0</z>
+            </SCAxis>
+            <inertialAxis ref="SC2Sun_orbPole"/>
+        </phaseAngle>
+		<target ref="Earth"/>
+	</attitude>
+</block>
+
+
+<block name="Cold_Cruise_South" ref="OBS">
+	<metadata>
+		<comment>This is the default pointing for the Cold Cruise with -Xsc pointed at the Earth,</comment>
+		<comment>the Sun in the Xsc/Zsc plane and with +Ysc pointing towards the ecliptic south</comment>
+		<comment>in such a way that the Sun is in the -Zsc has a component to the Sun.</comment>
+		<planning isMaintenance="false" hasInternalSlews="false" allowAttitude="false" allowHgaRequest="false"/>
+	</metadata>
+    <attitude ref="track">
+    	<boresight ref="SC_HGA" />
+        <phaseAngle ref="align">
+            <SCAxis frame="SC">
+                <x>0.0</x>
+                <y>1.0</y>
+                <z>0.0</z>
+            </SCAxis>
+            <inertialAxis ref="SC2Sun_orbPole"/>
+        </phaseAngle>
+		<target ref="Earth"/>
+	</attitude>
+</block>
+
 
 <!-- ================================= -->
 <!-- |            JUPITER            | -->

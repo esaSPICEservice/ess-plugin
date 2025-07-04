@@ -1024,4 +1024,25 @@
             <z>1.</z>
         </axisC>
     </surface>
+        <surface name="Sun" frame="Sun">
+        <origin ref="Sun"/>
+        <a units="km">695700.0</a>
+        <b units="km">695700.0</b>
+        <c units="km">6957004.0</c>
+        <axisA frame="sun">
+            <x>1.</x>
+            <y>0.</y>
+            <z>0.</z>
+        </axisA>
+        <axisB frame="Sun">
+            <x>0.</x>
+            <y>1.</y>
+            <z>0.</z>
+        </axisB>
+        <axisC frame="Sun">
+            <x>0.</x>
+            <y>0.</y>
+            <z>1.</z>
+        </axisC>
+    </surface>
 </definition>

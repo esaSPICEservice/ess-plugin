@@ -365,7 +365,6 @@
     <Object parserName="Venus" mnemonic="VENUS" spiceName="VENUS" isBody="true" bufferPos="true" bufferPosTimeStep="300.0" bufferVel="true" bufferVelTimeStep="300.0" gravity="3.2485880000E+14" orbitingName="Sun"/>
     <Object parserName="Earth" mnemonic="EARTH" spiceName="EARTH" isBody="true" bufferPos="true" bufferPosTimeStep="300.0" bufferVel="true" bufferVelTimeStep="300.0" gravity="3.9860120000E+14" orbitingName="Sun"/>
     <Object parserName="Moon" mnemonic="MOON" spiceName="MOON" isBody="true" bufferPos="false" bufferPosTimeStep="300.0" bufferVel="false" bufferVelTimeStep="300.0" gravity="0" orbitingName="Earth" eclipseEvt="SUN_OCC_MOON_TRANSIT" penumbraEvt="SUN_PEN_MOON_TRANSIT" penumbraFactor="0.5"/>
-    <Object parserName="Mars" mnemonic="MARS" spiceName="MARS" isBody="true" bufferPos="false" bufferPosTimeStep="300.0" bufferVel="false" bufferVelTimeStep="300.0" gravity="4.2828372200E+13" orbitingName="Sun"/>
     <Object parserName="Saturn" mnemonic="SATURN" spiceName="SATURN BARYCENTER" isBody="true" bufferPos="false" bufferPosTimeStep="600.0" bufferVel="false" bufferVelTimeStep="1200.0" gravity="0" orbitingName="Sun"/>
     <Object parserName="Uranus" mnemonic="URANUS" spiceName="URANUS BARYCENTER" isBody="true" bufferPos="false" bufferPosTimeStep="600.0" bufferVel="false" bufferVelTimeStep="1200.0" gravity="0" orbitingName="Sun"/>
     <Object parserName="Neptune" mnemonic="NEPTUNE" spiceName="NEPTUNE BARYCENTER" isBody="true" bufferPos="false" bufferPosTimeStep="600.0" bufferVel="false" bufferVelTimeStep="1200.0" gravity="0" orbitingName="Sun"/>
@@ -466,11 +465,23 @@
     <Object parserName="Carpo" mnemonic="CARPO" spiceName="CARPO" isBody="true" bufferPos="true" bufferPosTimeStep="60.0" bufferVel="true" bufferVelTimeStep="60.0" gravity="0"/>
     <Object parserName="S2018_J4" mnemonic="S2018_J4" spiceName="S2018_J4" isBody="true" bufferPos="true" bufferPosTimeStep="60.0" bufferVel="true" bufferVelTimeStep="60.0" gravity="0"/>
     <Object parserName="Valetudo" mnemonic="VALETUDO" spiceName="VALETUDO" isBody="true" bufferPos="true" bufferPosTimeStep="60.0" bufferVel="true" bufferVelTimeStep="60.0" gravity="0"/>
+    <Object parserName="88P" mnemonic="88P" spiceName="88P" isBody="true" bufferPos="true" bufferPosTimeStep="60.0" bufferVel="true" bufferVelTimeStep="60.0" gravity="0"/>
+    <Object parserName="218P" mnemonic="218P" spiceName="218P" isBody="true" bufferPos="true" bufferPosTimeStep="60.0" bufferVel="true" bufferVelTimeStep="60.0" gravity="0"/>
+    <Object parserName="24P" mnemonic="24P" spiceName="24P" isBody="true" bufferPos="true" bufferPosTimeStep="60.0" bufferVel="true" bufferVelTimeStep="60.0" gravity="0"/>
+    <Object parserName="22P" mnemonic="22P" spiceName="22P" isBody="true" bufferPos="true" bufferPosTimeStep="60.0" bufferVel="true" bufferVelTimeStep="60.0" gravity="0"/>
+    <Object parserName="19P" mnemonic="19P" spiceName="19P" isBody="true" bufferPos="true" bufferPosTimeStep="60.0" bufferVel="true" bufferVelTimeStep="60.0" gravity="0"/>
+    <Object parserName="2P" mnemonic="2P" spiceName="2P" isBody="true" bufferPos="true" bufferPosTimeStep="60.0" bufferVel="true" bufferVelTimeStep="60.0" gravity="0"/>
+    <Object parserName="10P" mnemonic="10P" spiceName="10P" isBody="true" bufferPos="true" bufferPosTimeStep="60.0" bufferVel="true" bufferVelTimeStep="60.0" gravity="0"/>
+    <Object parserName="C_2021_G2" mnemonic="C_2021_G2" spiceName="C_2021_G2" isBody="true" bufferPos="true" bufferPosTimeStep="60.0" bufferVel="true" bufferVelTimeStep="60.0" gravity="0"/>
+    <Object parserName="C_2023_H5" mnemonic="C_2023_H5" spiceName="C_2023_H5" isBody="true" bufferPos="true" bufferPosTimeStep="60.0" bufferVel="true" bufferVelTimeStep="60.0" gravity="0"/>
+    <Object parserName="C_2023_R1" mnemonic="C_2023_R1" spiceName="C_2023_R1" isBody="true" bufferPos="true" bufferPosTimeStep="60.0" bufferVel="true" bufferVelTimeStep="60.0" gravity="0"/>
+    <Object parserName="C_2024_E1" mnemonic="C_2024_E1" spiceName="C_2024_E1" isBody="true" bufferPos="true" bufferPosTimeStep="60.0" bufferVel="true" bufferVelTimeStep="60.0" gravity="0"/>
   </Objects>
 
 
   <Frames>
     <Frame parserName="EME2000" mnemonic="EME" spiceName="J2000" bufferAtt="false" bufferAttTimeStep="0" isReferenceFrame="true"/>
+    <Frame parserName="SUN" mnemonic="CBE" spiceName="IAU_SUN" bufferAtt="true" bufferAttTimeStep="120.0"/>
     <Frame parserName="JUPITER" mnemonic="CBE" spiceName="IAU_JUPITER" bufferAtt="true" bufferAttTimeStep="120.0"/>
     <Frame parserName="SC" mnemonic="SBF" spiceName="JUICE_SPACECRAFT" bufferAtt="false" bufferAttTimeStep="0"/>
     <Frame parserName="EUROPA" mnemonic="CBE" spiceName="IAU_EUROPA" bufferAtt="false" bufferAttTimeStep="0"/>

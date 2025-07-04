@@ -69,6 +69,9 @@ def build_lib_path():
 
     if_shared_lib_name = None
     my_platform = get_platform()
+
+    print("Platform: " + my_platform)
+
     if (my_platform.startswith("linux")):
         if_shared_lib_name = os.path.join("lin", "libosve-if.so")
 
