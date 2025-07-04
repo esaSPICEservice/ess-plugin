@@ -75,7 +75,7 @@ class MkLoaderDialog(QDialog):
     def browse_extra(self):
         default_folder = self.settings.get(self.mission, last_repo_key, '')
         file_name, _ = QFileDialog.getOpenFileName(
-            self, "Select Extra Kernel", default_folder, "Kernel files (*.*)")
+            self, "Select Extra Kernel", default_folder)
         if file_name:
             self.mk_loader.extraInput.setText(file_name)
         self.focus()
