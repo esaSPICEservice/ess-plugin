@@ -5,6 +5,7 @@ from ui.moons_ui import MoonsDialog
 from ui.navigation_ui import NavigationDialog
 from ui.observations_ui import ObservationsDialog
 from ui.rings_ui import RingsDialog
+from .jupiter_science import trigger_aurora
 
 
 
@@ -16,7 +17,8 @@ def add_juice_menu():
         'Jupiter structures', 
         [
             ActionSpec('Jovian Moons', 'Control Jovian Moons', '', jm.show_and_focus),
-            ActionSpec('Rings and Torus', 'Control Rings and Torus', '', rd.show_and_focus)
+            ActionSpec('Rings and Torus', 'Control Rings and Torus', '', rd.show_and_focus),
+            ActionSpec('Jupiter Aurora', 'Show Jupiter Aurora', '', trigger_aurora),
          ]
         ))
 

@@ -1,3 +1,3 @@
 {
-    "files": ["mk-loader.ui","landing.ui","observations-panel.ui","ptr-editor.ui","console.ui","navigator-panel.ui","power-panel.ui","moons-panel.ui","icons.qrc","block-panel.ui","time-panel.ui"]
+    "files": ["block-panel.ui","mk-loader.ui","ptr-editor.ui","time-panel.ui","landing.ui","navigator-panel.ui","power-panel.ui","console.ui","observations-panel.ui","moons-panel.ui","icons.qrc","catalogs.ui"]
 }

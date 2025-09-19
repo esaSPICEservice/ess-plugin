@@ -1,6 +1,6 @@
 import cosmoscripting
 from utils.generators import SENSOR_SUFFIX, SENSOR_FRUSTUM_ON_OPACITY
-from ui.common import get_runtime
+from ui.common import get_runtime, get_catalog_handler
 from utils.generators import append_observation
 import json
 
@@ -91,9 +91,9 @@ def reconfigure_catalogue():
         
         # temporary solution - we shall garantee that the last
         # catalog is the sensor
-
-        cosmo.unloadLastCatalog()
-        cosmo.loadCatalogFile(sensors_file_path)
+        handler = get_catalog_handler()
+        handler.remove_catalog(sensors_file_path)
+        handler.add_catalog(sensors_file_path)
 
         # Reset sensor status
         if state is not None:

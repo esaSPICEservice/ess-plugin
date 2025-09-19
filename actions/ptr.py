@@ -15,10 +15,11 @@ import json
 
 from PyQt5.QtWidgets import QMessageBox
 
-from ui.common import get_main_window, ActionSpec, add_menu, MenuSpec
+from ui.common import get_main_window, ActionSpec, add_menu, MenuSpec, get_catalog_handler
 from ui.moons_ui import MoonsDialog
 from ui.rings_ui import RingsDialog
 from ui.power_ui import PowerDialog
+
 
 def dump_error(log_path):
     with open(log_path, 'r') as log_file:
@@ -35,8 +36,9 @@ def execute_ptr(mk, content, calculate_power, calculate_sa, calculate_mga):
         mk, content, 
         not calculate_power, not calculate_sa, not calculate_mga)
     if success:
-        cosmo.loadCatalogFile(catalog)
-        cosmo.loadCatalogFile(sensor_catalog)
+        handler = get_catalog_handler()
+        handler.add_catalog(catalog)
+        handler.add_catalog(sensor_catalog)
         after_load(root_scenario)
         goto_date(start_time + ' UTC')
     else:
