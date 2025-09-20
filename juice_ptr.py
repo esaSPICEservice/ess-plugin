@@ -8,7 +8,6 @@ cosmo = cosmoscripting.Cosmo()
 
 def my_except_hook(exctype, value, tb):
     print("[EXCEPTION HANDLER] " + value)
-    breakpoint()
     traceback.print_exc()
     cosmo.quit()
 sys.excepthook = my_except_hook

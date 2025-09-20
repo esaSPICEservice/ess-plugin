@@ -4,6 +4,7 @@ from PyQt5.QtCore import QUrl
 import datetime
 from settings.handler import PersistenceSettings, RuntimeSettings
 from catalog.handler import CatalogHandler
+from functools import partial
 
 WINDOW_TYPES = [
     'Qt.Widget', 
@@ -27,6 +28,19 @@ class ActionSpec:
         self.tooltip = tooltip
         self.shortcut = shortcut
         self.cmd = cmd
+        self.checkable = False
+    def get_cmd(self, action):
+        return self.cmd
+
+class ExtendedActionSpec:
+    def __init__(self, id, tooltip, shortcut, cmd):
+        self.id = id
+        self.tooltip = tooltip
+        self.shortcut = shortcut
+        self.cmd = cmd
+        self.checkable = True
+    def get_cmd(self, action):
+        return partial(self.cmd, action)
 
 class MenuSpec:
     def __init__(self, id, actions):
@@ -77,10 +91,10 @@ def add_menu(main_window, menu_spec: MenuSpec):
         new_menu.clear()
 
     for action_spec in menu_spec.actions:
-        action = QAction(QIcon(), action_spec.id, main_window)
+        action = QAction(QIcon(), action_spec.id, main_window, checkable=action_spec.checkable)
         action.setShortcut(action_spec.shortcut)
         action.setStatusTip(action_spec.tooltip)
-        action.triggered.connect(action_spec.cmd)
+        action.triggered.connect(action_spec.get_cmd(action))
         new_menu.addAction(action)
 
 def widgets_recursive(d, widget = None, doPrint =False ):
