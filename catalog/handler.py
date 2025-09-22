@@ -39,4 +39,4 @@ class CatalogHandler:
         for i in range(len(self.catalogs)):
             self.cosmo.unloadLastCatalog()
         self.catalogs = []
-        print('[CH] Cleaned catalog State: ' + ','.join(self.catalogs))
+        print('[CH] Cleaned catalog')

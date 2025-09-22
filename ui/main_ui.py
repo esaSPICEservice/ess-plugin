@@ -6,7 +6,7 @@ from ui.landing import LandingDialog
 from ui.mk_ui import MkLoaderDialog
 from ui.simulator_ui import PTREditorDialog
 
-def create_ui(settings_filename, use_ptr=False):
+def create_ui(settings_filename, ptr_as_default=False):
 
     set_settings_handler()
     rt = get_runtime()
@@ -18,7 +18,7 @@ def create_ui(settings_filename, use_ptr=False):
     mk = MkLoaderDialog(main_window)
     actions.append(ActionSpec('Metakernel Load', 'Build a basic scene', '', mk.show_and_focus))
     
-    # use_ptr = rt.get('use_ptr', False)
+    use_ptr = rt.get('use_ptr', False)
 
     if use_ptr:
         bd = PTREditorDialog(main_window)
@@ -34,7 +34,7 @@ def create_ui(settings_filename, use_ptr=False):
             ActionSpec('Catalogs', 'Runtime catalogs', '', cat.show_and_focus)
             ]))
     
-    if use_ptr:
+    if ptr_as_default:
         bd.show_and_focus()
     else:
         mk.show_and_focus()
