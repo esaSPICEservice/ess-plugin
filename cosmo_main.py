@@ -19,11 +19,12 @@ sys.excepthook = my_except_hook
 sys.path.append(os.path.abspath(cosmo.scriptDir()))
 from ui.main_ui import get_main_window, create_ui
 from ui.landing import LandingDialog
+from ui.common import get_catalog_handler
 
 main_window = get_main_window()
 landing = LandingDialog(main_window)
 landing.show_and_focus(create_ui)
 
 cosmo.showInfoText()
-cosmo.unloadLastCatalog()
-
+ch = get_catalog_handler()
+ch.clean_catalogs()

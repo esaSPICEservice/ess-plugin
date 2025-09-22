@@ -31,7 +31,8 @@ def dump_error(log_path):
 def execute_ptr(mk, content, calculate_power, calculate_sa, calculate_mga):
     start_time = validate_ptr(content)
     cosmo = cosmoscripting.Cosmo()
-    cosmo.unloadLastCatalog()
+    handler = get_catalog_handler()
+    handler.clean_catalogs()
     success, catalog, sensor_catalog, root_scenario = simulate(
         mk, content, 
         not calculate_power, not calculate_sa, not calculate_mga)

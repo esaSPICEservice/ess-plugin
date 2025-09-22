@@ -13,9 +13,9 @@ def execute(mk, extra_kernels, date):
     catalog, sensor_catalog = create_cosmo_scene(working_dir, mk, extra_kernels)
 
     cosmo = cosmoscripting.Cosmo()
-    cosmo.unloadLastCatalog()
 
     handler = get_catalog_handler()
+    handler.clean_catalogs()
     handler.add_catalog(catalog)
     handler.add_catalog(sensor_catalog)
 
