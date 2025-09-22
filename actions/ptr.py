@@ -63,7 +63,7 @@ def after_load(root_scenario):
         if os.path.exists(resolved_ptr):
             bp = BlocksDialog(main_window, resolved_ptr)
             menu.append(
-                ActionSpec('Blocks', 'Show pointing blocks', '', bp.show_and_focus)
+                ActionSpec('Timeline', 'Show pointing timeline', 'Alt+t', bp.show_and_focus)
             )
             bp.show_and_focus()
 

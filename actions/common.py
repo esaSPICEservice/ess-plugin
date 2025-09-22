@@ -35,15 +35,10 @@ def add_juice_menu():
         ))
 
     nv = NavigationDialog(main_window)
-    add_menu(main_window, MenuSpec('Navigation', 
-                                   [
-                                       ActionSpec('Sensors', 'Sensors', '', nv.show_and_focus)
-                                    ]))
-    nv = NavigationDialog(main_window)
     obs = ObservationsDialog(main_window)
     add_menu(main_window, MenuSpec('Navigation', 
                                    [
-                                       ActionSpec('Sensors', 'Sensors', '', nv.show_and_focus),
+                                       ActionSpec('Sensors', 'Sensors', 'Alt+s', nv.show_and_focus),
                                        ActionSpec('Observations', 'Observations', '', obs.show_and_focus)
                                     ]))
     
@@ -72,7 +67,7 @@ def add_tgo_menu():
     obs = ObservationsDialog(main_window)
     add_menu(main_window, MenuSpec('Navigation', 
                                    [
-                                       ActionSpec('Sensors', 'Sensors', '', nv.show_and_focus),
+                                       ActionSpec('Sensors', 'Sensors', 'Alt+s', nv.show_and_focus),
                                        ActionSpec('Observations', 'Observations', '', obs.show_and_focus)
                                     ]))
 
@@ -82,7 +77,7 @@ def add_hera_menu():
     obs = ObservationsDialog(main_window)
     add_menu(main_window, MenuSpec('Navigation', 
                                    [
-                                       ActionSpec('Sensors', 'Sensors', '', nv.show_and_focus),
+                                       ActionSpec('Sensors', 'Sensors', 'Alt+s', nv.show_and_focus),
                                        ActionSpec('Observations', 'Observations', '', obs.show_and_focus)
                                     ]))
 
@@ -100,7 +95,7 @@ def add_mmatisse_menu():
     obs = ObservationsDialog(main_window)
     add_menu(main_window, MenuSpec('Navigation', 
                                    [
-                                       ActionSpec('Sensors', 'Sensors', '', nv.show_and_focus),
+                                       ActionSpec('Sensors', 'Sensors', 'Alt+s', nv.show_and_focus),
                                        ActionSpec('Observations', 'Observations', '', obs.show_and_focus)
                                     ]))
 
