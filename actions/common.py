@@ -7,7 +7,7 @@ from ui.observations_ui import ObservationsDialog
 from ui.rings_ui import RingsDialog
 from .jupiter_science import trigger_structure
 from functools import partial
-
+from simulator.osve import __version__
 
 def add_juice_menu():
     main_window = get_main_window()
@@ -46,10 +46,14 @@ def add_juice_menu():
                                        ActionSpec('Sensors', 'Sensors', '', nv.show_and_focus),
                                        ActionSpec('Observations', 'Observations', '', obs.show_and_focus)
                                     ]))
+    
+    osve_version = 'OSVE v' + __version__
+
     add_menu(main_window, MenuSpec('Juice Help',
                                    [
                                        ActionSpec('Science Models', 'Browse Science Models Help', '', show_science_models_help),
-                                       ActionSpec('SPICE data for JUICE', 'Browse Science Models Help', '', show_spice_help)
+                                       ActionSpec('SPICE data for JUICE', 'Browse Science Models Help', '', show_spice_help),
+                                       ActionSpec(osve_version, 'OSVE help', '', show_osve_help)
                                    ]
                                    ))
 
@@ -58,6 +62,9 @@ def show_science_models_help():
 
 def show_spice_help():
     show_url_in_browser('https://www.cosmos.esa.int/web/spice/spice-for-juice')
+
+def show_osve_help():
+    show_url_in_browser('https://juicesoc.esac.esa.int/help/osve')
     
 def add_tgo_menu():
     main_window = get_main_window()
