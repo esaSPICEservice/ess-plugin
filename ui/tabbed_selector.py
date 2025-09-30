@@ -1,4 +1,4 @@
-from PyQt5.QtWidgets import QTabWidget, QGridLayout, QCheckBox, QPushButton, QWidget, QVBoxLayout
+from PyQt5.QtWidgets import QTabWidget, QGridLayout, QCheckBox, QPushButton, QWidget, QVBoxLayout, QSpacerItem, QSizePolicy
 from PyQt5.QtCore import Qt
 import math
 
@@ -60,6 +60,10 @@ class TabbedSelector(QWidget):
 
             layout = tabmm_map[group_name]
             checkboxes = group_checkboxes[group_name]
+            # Add a vertical spacer with a size of 10 pixels
+            spacer = QSpacerItem(0, 10, QSizePolicy.Minimum, QSizePolicy.Expanding)
+            layout.addItem(spacer)
+
             select_all = QPushButton('Select group')
             select_all.clicked.connect(lambda state, group=checkboxes: self.toggle_group(group, True))
             layout.addWidget(select_all, layout.rowCount() + 1, 0, 1, layout.columnCount())

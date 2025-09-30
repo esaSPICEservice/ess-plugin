@@ -211,310 +211,2434 @@
         "spacecraft": "JUICE_NAVCAM2"
       }
     ],
-    "PJNA": [
+"PJDC": [
       {
-        "name": "JUICE_PEP_JNA_SECTOR_01",
-        "fov_frame": "JUICE_PEP_JNA_SECTOR_01",
+        "name": "JUICE_PEP_JDC",
+        "fov_frame": "JUICE_PEP_JDC",
         "color": [
-          0.82,
-          0.71,
-          0.55
+          0,
+          0.6,
+          0
         ],
-        "spacecraft": "JUICE_PEP_JNA"
+        "spacecraft": "JUICE"
       },
-      {
-        "name": "JUICE_PEP_JNA_SECTOR_02",
-        "fov_frame": "JUICE_PEP_JNA_SECTOR_02",
-        "color": [
-          0.82,
-          0.71,
-          0.55
-        ],
-        "spacecraft": "JUICE_PEP_JNA"
-      },
-      {
-        "name": "JUICE_PEP_JNA_SECTOR_03",
-        "fov_frame": "JUICE_PEP_JNA_SECTOR_03",
-        "color": [
-          0.82,
-          0.71,
-          0.55
-        ],
-        "spacecraft": "JUICE_PEP_JNA"
-      },
-      {
-        "name": "JUICE_PEP_JNA_SECTOR_04",
-        "fov_frame": "JUICE_PEP_JNA_SECTOR_04",
-        "color": [
-          0.82,
-          0.71,
-          0.55
-        ],
-        "spacecraft": "JUICE_PEP_JNA"
-      },
-      {
-        "name": "JUICE_PEP_JNA_SECTOR_05",
-        "fov_frame": "JUICE_PEP_JNA_SECTOR_05",
-        "color": [
-          0.82,
-          0.71,
-          0.55
-        ],
-        "spacecraft": "JUICE_PEP_JNA"
-      },
-      {
-        "name": "JUICE_PEP_JNA_SECTOR_06",
-        "fov_frame": "JUICE_PEP_JNA_SECTOR_06",
-        "color": [
-          0.82,
-          0.71,
-          0.55
-        ],
-        "spacecraft": "JUICE_PEP_JNA"
-      },
-      {
-        "name": "JUICE_PEP_JNA_SECTOR_07",
-        "fov_frame": "JUICE_PEP_JNA_SECTOR_07",
-        "color": [
-          0.82,
-          0.71,
-          0.55
-        ],
-        "spacecraft": "JUICE_PEP_JNA"
-      },
-      {
-        "name": "JUICE_PEP_JNA_SECTOR_08",
-        "fov_frame": "JUICE_PEP_JNA_SECTOR_08",
-        "color": [
-          0.82,
-          0.71,
-          0.55
-        ],
-        "spacecraft": "JUICE_PEP_JNA"
-      },
-      {
-        "name": "JUICE_PEP_JNA_SECTOR_09",
-        "fov_frame": "JUICE_PEP_JNA_SECTOR_09",
-        "color": [
-          0.82,
-          0.71,
-          0.55
-        ],
-        "spacecraft": "JUICE_PEP_JNA"
-      }
-    ],
-    "PJOEE": [
-      {
-        "name": "JUICE_PEP_JOEE_S00",
-        "fov_frame": "JUICE_PEP_JOEE_S00",
-        "color": [
-          0.8,
-          0.5,
-          0.3
-        ],
-        "spacecraft": "JUICE_PEP_JOEE"
-      },
-      {
-        "name": "JUICE_PEP_JOEE_S01",
-        "fov_frame": "JUICE_PEP_JOEE_S01",
-        "color": [
-          0.8,
-          0.5,
-          0.3
-        ],
-        "spacecraft": "JUICE_PEP_JOEE"
-      },
-      {
-        "name": "JUICE_PEP_JOEE_S02",
-        "fov_frame": "JUICE_PEP_JOEE_S02",
-        "color": [
-          0.8,
-          0.5,
-          0.3
-        ],
-        "spacecraft": "JUICE_PEP_JOEE"
-      },
-      {
-        "name": "JUICE_PEP_JOEE_S03",
-        "fov_frame": "JUICE_PEP_JOEE_S03",
-        "color": [
-          0.8,
-          0.5,
-          0.3
-        ],
-        "spacecraft": "JUICE_PEP_JOEE"
-      },
-      {
-        "name": "JUICE_PEP_JOEE_S04",
-        "fov_frame": "JUICE_PEP_JOEE_S04",
-        "color": [
-          0.8,
-          0.5,
-          0.3
-        ],
-        "spacecraft": "JUICE_PEP_JOEE"
-      },
-      {
-        "name": "JUICE_PEP_JOEE_S05",
-        "fov_frame": "JUICE_PEP_JOEE_S05",
-        "color": [
-          0.8,
-          0.5,
-          0.3
-        ],
-        "spacecraft": "JUICE_PEP_JOEE"
-      },
-      {
-        "name": "JUICE_PEP_JOEE_S06",
-        "fov_frame": "JUICE_PEP_JOEE_S06",
-        "color": [
-          0.8,
-          0.5,
-          0.3
-        ],
-        "spacecraft": "JUICE_PEP_JOEE"
-      },
-      {
-        "name": "JUICE_PEP_JOEE_S07",
-        "fov_frame": "JUICE_PEP_JOEE_S07",
-        "color": [
-          0.8,
-          0.5,
-          0.3
-        ],
-        "spacecraft": "JUICE_PEP_JOEE"
-      },
-      {
-        "name": "JUICE_PEP_JOEE_S08",
-        "fov_frame": "JUICE_PEP_JOEE_S08",
-        "color": [
-          0.8,
-          0.5,
-          0.3
-        ],
-        "spacecraft": "JUICE_PEP_JOEE"
-      }
-    ],
-    "PJDC": [
       {
         "name": "JUICE_PEP_JDC_PIXEL_000",
-        "fov_frame": "JUICE_PEP_JDC_PIXEL_000",
+        "fov_frame": "JUICE_PEP_JDC",
         "color": [
+          0,
           0.6,
-          0.5,
-          0.4
+          0
         ],
-        "spacecraft": "JUICE_PEP_JDC"
+        "spacecraft": "JUICE"
       },
       {
-        "name": "JUICE_PEP_JDC_PIXEL_080",
-        "fov_frame": "JUICE_PEP_JDC_PIXEL_080",
+        "name": "JUICE_PEP_JDC_PIXEL_001",
+        "fov_frame": "JUICE_PEP_JDC",
         "color": [
+          0,
           0.6,
-          0.5,
-          0.4
+          0
         ],
-        "spacecraft": "JUICE_PEP_JDC"
+        "spacecraft": "JUICE"
       },
       {
-        "name": "JUICE_PEP_JDC_PIXEL_176",
-        "fov_frame": "JUICE_PEP_JDC_PIXEL_176",
+        "name": "JUICE_PEP_JDC_PIXEL_002",
+        "fov_frame": "JUICE_PEP_JDC",
         "color": [
+          0,
           0.6,
-          0.5,
-          0.4
+          0
         ],
-        "spacecraft": "JUICE_PEP_JDC"
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_003",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
       },
       {
         "name": "JUICE_PEP_JDC_PIXEL_004",
-        "fov_frame": "JUICE_PEP_JDC_PIXEL_004",
+        "fov_frame": "JUICE_PEP_JDC",
         "color": [
+          0,
           0.6,
-          0.5,
-          0.4
+          0
         ],
-        "spacecraft": "JUICE_PEP_JDC"
+        "spacecraft": "JUICE"
       },
       {
-        "name": "JUICE_PEP_JDC_PIXEL_084",
-        "fov_frame": "JUICE_PEP_JDC_PIXEL_084",
+        "name": "JUICE_PEP_JDC_PIXEL_005",
+        "fov_frame": "JUICE_PEP_JDC",
         "color": [
+          0,
           0.6,
-          0.5,
-          0.4
+          0
         ],
-        "spacecraft": "JUICE_PEP_JDC"
+        "spacecraft": "JUICE"
       },
       {
-        "name": "JUICE_PEP_JDC_PIXEL_180",
-        "fov_frame": "JUICE_PEP_JDC_PIXEL_180",
+        "name": "JUICE_PEP_JDC_PIXEL_006",
+        "fov_frame": "JUICE_PEP_JDC",
         "color": [
+          0,
           0.6,
-          0.5,
-          0.4
+          0
         ],
-        "spacecraft": "JUICE_PEP_JDC"
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_007",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
       },
       {
         "name": "JUICE_PEP_JDC_PIXEL_008",
-        "fov_frame": "JUICE_PEP_JDC_PIXEL_008",
+        "fov_frame": "JUICE_PEP_JDC",
         "color": [
+          0,
           0.6,
-          0.5,
-          0.4
+          0
         ],
-        "spacecraft": "JUICE_PEP_JDC"
+        "spacecraft": "JUICE"
       },
       {
-        "name": "JUICE_PEP_JDC_PIXEL_088",
-        "fov_frame": "JUICE_PEP_JDC_PIXEL_088",
+        "name": "JUICE_PEP_JDC_PIXEL_009",
+        "fov_frame": "JUICE_PEP_JDC",
         "color": [
+          0,
           0.6,
-          0.5,
-          0.4
+          0
         ],
-        "spacecraft": "JUICE_PEP_JDC"
+        "spacecraft": "JUICE"
       },
       {
-        "name": "JUICE_PEP_JDC_PIXEL_184",
-        "fov_frame": "JUICE_PEP_JDC_PIXEL_184",
+        "name": "JUICE_PEP_JDC_PIXEL_010",
+        "fov_frame": "JUICE_PEP_JDC",
         "color": [
+          0,
           0.6,
-          0.5,
-          0.4
+          0
         ],
-        "spacecraft": "JUICE_PEP_JDC"
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_011",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
       },
       {
         "name": "JUICE_PEP_JDC_PIXEL_012",
-        "fov_frame": "JUICE_PEP_JDC_PIXEL_012",
+        "fov_frame": "JUICE_PEP_JDC",
         "color": [
+          0,
           0.6,
-          0.5,
-          0.4
+          0
         ],
-        "spacecraft": "JUICE_PEP_JDC"
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_013",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_014",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_015",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_016",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_017",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_018",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_019",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_020",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_021",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_022",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_023",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_024",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_025",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_026",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_027",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_028",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_029",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_030",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_031",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_032",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_033",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_034",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_035",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_036",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_037",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_038",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_039",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_040",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_041",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_042",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_043",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_044",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_045",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_046",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_047",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_048",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_049",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_050",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_051",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_052",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_053",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_054",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      }
+    ],
+    "PJDC01": [
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_055",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_056",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_057",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_058",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_059",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_060",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_061",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_062",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_063",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_064",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_065",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_066",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_067",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_068",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_069",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_070",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_071",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_072",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_073",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_074",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_075",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_076",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_077",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_078",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_079",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_080",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_081",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_082",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_083",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_084",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_085",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_086",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_087",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_088",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_089",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_090",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_091",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
       },
       {
         "name": "JUICE_PEP_JDC_PIXEL_092",
-        "fov_frame": "JUICE_PEP_JDC_PIXEL_092",
+        "fov_frame": "JUICE_PEP_JDC",
         "color": [
+          0,
           0.6,
-          0.5,
-          0.4
+          0
         ],
-        "spacecraft": "JUICE_PEP_JDC"
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_093",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_094",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_095",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_096",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_097",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_098",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_099",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_100",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_101",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_102",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_103",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_104",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_105",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_106",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_107",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_108",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_109",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      }
+    ],
+    "PJDC02": [
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_110",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_111",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_112",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_113",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_114",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_115",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_116",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_117",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_118",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_119",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_120",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_121",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_122",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_123",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_124",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_125",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_126",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_127",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_128",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_129",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_130",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_131",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_132",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_133",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_134",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_135",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_136",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_137",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_138",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_139",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_140",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_141",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_142",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_143",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_144",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_145",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_146",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_147",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_148",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_149",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_150",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_151",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_152",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_153",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_154",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_155",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_156",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_157",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_158",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_159",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_160",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_161",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_162",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_163",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_164",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_165",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      }
+    ],
+    "PJDC03": [
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_166",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_167",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_168",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_169",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_170",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_171",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_172",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_173",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_174",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_175",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_176",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_177",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_178",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_179",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_180",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_181",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_182",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_183",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_184",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_185",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_186",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_187",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
       },
       {
         "name": "JUICE_PEP_JDC_PIXEL_188",
-        "fov_frame": "JUICE_PEP_JDC_PIXEL_188",
+        "fov_frame": "JUICE_PEP_JDC",
         "color": [
+          0,
           0.6,
-          0.5,
-          0.4
+          0
         ],
-        "spacecraft": "JUICE_PEP_JDC"
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_189",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_190",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JDC_PIXEL_191",
+        "fov_frame": "JUICE_PEP_JDC",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      }
+    ],
+    "PJEI": [
+      {
+        "name": "JUICE_PEP_JEI",
+        "fov_frame": "JUICE_PEP_JEI",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JEI_00_H",
+        "fov_frame": "JUICE_PEP_JEI",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JEI_00_L",
+        "fov_frame": "JUICE_PEP_JEI",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JEI_00_M",
+        "fov_frame": "JUICE_PEP_JEI",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JEI_01_H",
+        "fov_frame": "JUICE_PEP_JEI",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JEI_01_L",
+        "fov_frame": "JUICE_PEP_JEI",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JEI_01_M",
+        "fov_frame": "JUICE_PEP_JEI",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JEI_02_H",
+        "fov_frame": "JUICE_PEP_JEI",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JEI_02_L",
+        "fov_frame": "JUICE_PEP_JEI",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JEI_02_M",
+        "fov_frame": "JUICE_PEP_JEI",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JEI_03_H",
+        "fov_frame": "JUICE_PEP_JEI",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JEI_03_L",
+        "fov_frame": "JUICE_PEP_JEI",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JEI_03_M",
+        "fov_frame": "JUICE_PEP_JEI",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JEI_04_H",
+        "fov_frame": "JUICE_PEP_JEI",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JEI_04_L",
+        "fov_frame": "JUICE_PEP_JEI",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JEI_04_M",
+        "fov_frame": "JUICE_PEP_JEI",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JEI_05_H",
+        "fov_frame": "JUICE_PEP_JEI",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JEI_05_L",
+        "fov_frame": "JUICE_PEP_JEI",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JEI_05_M",
+        "fov_frame": "JUICE_PEP_JEI",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JEI_06_H",
+        "fov_frame": "JUICE_PEP_JEI",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JEI_06_L",
+        "fov_frame": "JUICE_PEP_JEI",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JEI_06_M",
+        "fov_frame": "JUICE_PEP_JEI",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JEI_07_H",
+        "fov_frame": "JUICE_PEP_JEI",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JEI_07_L",
+        "fov_frame": "JUICE_PEP_JEI",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JEI_07_M",
+        "fov_frame": "JUICE_PEP_JEI",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JEI_08_H",
+        "fov_frame": "JUICE_PEP_JEI",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JEI_08_L",
+        "fov_frame": "JUICE_PEP_JEI",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JEI_08_M",
+        "fov_frame": "JUICE_PEP_JEI",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JEI_09_H",
+        "fov_frame": "JUICE_PEP_JEI",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JEI_09_L",
+        "fov_frame": "JUICE_PEP_JEI",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JEI_09_M",
+        "fov_frame": "JUICE_PEP_JEI",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JEI_10_H",
+        "fov_frame": "JUICE_PEP_JEI",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JEI_10_L",
+        "fov_frame": "JUICE_PEP_JEI",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JEI_10_M",
+        "fov_frame": "JUICE_PEP_JEI",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JEI_11_H",
+        "fov_frame": "JUICE_PEP_JEI",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JEI_11_L",
+        "fov_frame": "JUICE_PEP_JEI",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JEI_11_M",
+        "fov_frame": "JUICE_PEP_JEI",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JEI_12_H",
+        "fov_frame": "JUICE_PEP_JEI",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JEI_12_L",
+        "fov_frame": "JUICE_PEP_JEI",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JEI_12_M",
+        "fov_frame": "JUICE_PEP_JEI",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JEI_13_H",
+        "fov_frame": "JUICE_PEP_JEI",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JEI_13_L",
+        "fov_frame": "JUICE_PEP_JEI",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JEI_13_M",
+        "fov_frame": "JUICE_PEP_JEI",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JEI_14_H",
+        "fov_frame": "JUICE_PEP_JEI",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JEI_14_L",
+        "fov_frame": "JUICE_PEP_JEI",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JEI_14_M",
+        "fov_frame": "JUICE_PEP_JEI",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JEI_15_H",
+        "fov_frame": "JUICE_PEP_JEI",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JEI_15_L",
+        "fov_frame": "JUICE_PEP_JEI",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JEI_15_M",
+        "fov_frame": "JUICE_PEP_JEI",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
       }
     ],
     "PJENI": [
@@ -522,223 +2646,517 @@
         "name": "JUICE_PEP_JENI",
         "fov_frame": "JUICE_PEP_JENI",
         "color": [
-          0.9,
-          0.7,
-          0.5
+          0,
+          0.6,
+          0
         ],
-        "spacecraft": "JUICE_PEP_JENI"
-      },
-      {
-        "name": "JUICE_PEP_JENI_FOR_MY",
-        "fov_frame": "JUICE_PEP_JENI_FOR_MY",
-        "color": [
-          0.9,
-          0.7,
-          0.5
-        ],
-        "spacecraft": "JUICE_PEP_JENI"
-      },
-      {
-        "name": "JUICE_PEP_JENI_FOR_PY",
-        "fov_frame": "JUICE_PEP_JENI_FOR_PY",
-        "color": [
-          0.9,
-          0.7,
-          0.5
-        ],
-        "spacecraft": "JUICE_PEP_JENI"
-      },
-      {
-        "name": "JUICE_PEP_JENI_E_SLIT_MY",
-        "fov_frame": "JUICE_PEP_JENI_E_SLIT_MY",
-        "color": [
-          0.9,
-          0.7,
-          0.5
-        ],
-        "spacecraft": "JUICE_PEP_JENI"
-      },
-      {
-        "name": "JUICE_PEP_JENI_E_SLIT_PY",
-        "fov_frame": "JUICE_PEP_JENI_E_SLIT_PY",
-        "color": [
-          0.9,
-          0.7,
-          0.5
-        ],
-        "spacecraft": "JUICE_PEP_JENI"
-      },
-      {
-        "name": "JUICE_PEP_JENI_PH_SLIT",
-        "fov_frame": "JUICE_PEP_JENI_PH_SLIT",
-        "color": [
-          0.9,
-          0.7,
-          0.5
-        ],
-        "spacecraft": "JUICE_PEP_JENI"
-      },
-      {
-        "name": "JUICE_PEP_JENI_E_SLIT",
-        "fov_frame": "JUICE_PEP_JENI_E_SLIT",
-        "color": [
-          0.9,
-          0.7,
-          0.5
-        ],
-        "spacecraft": "JUICE_PEP_JENI"
+        "spacecraft": "JUICE"
       },
       {
         "name": "JUICE_PEP_JENI_E_PINHOLE",
-        "fov_frame": "JUICE_PEP_JENI_E_PINHOLE",
+        "fov_frame": "JUICE_PEP_JENI",
         "color": [
-          0.9,
-          0.7,
-          0.5
+          0,
+          0.6,
+          0
         ],
-        "spacecraft": "JUICE_PEP_JENI"
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JENI_E_PINHOLE_MY",
+        "fov_frame": "JUICE_PEP_JENI",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JENI_E_PINHOLE_PY",
+        "fov_frame": "JUICE_PEP_JENI",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JENI_E_SLIT",
+        "fov_frame": "JUICE_PEP_JENI",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JENI_E_SLIT_MY",
+        "fov_frame": "JUICE_PEP_JENI",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JENI_E_SLIT_PY",
+        "fov_frame": "JUICE_PEP_JENI",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JENI_FOR_MY",
+        "fov_frame": "JUICE_PEP_JENI",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JENI_FOR_PY",
+        "fov_frame": "JUICE_PEP_JENI",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
       },
       {
         "name": "JUICE_PEP_JENI_PH_PINHOLE",
-        "fov_frame": "JUICE_PEP_JENI_PH_PINHOLE",
+        "fov_frame": "JUICE_PEP_JENI",
         "color": [
-          0.9,
-          0.7,
-          0.5
+          0,
+          0.6,
+          0
         ],
-        "spacecraft": "JUICE_PEP_JENI"
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JENI_PH_PINHOLE_MY",
+        "fov_frame": "JUICE_PEP_JENI",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JENI_PH_PINHOLE_PY",
+        "fov_frame": "JUICE_PEP_JENI",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JENI_PH_SLIT",
+        "fov_frame": "JUICE_PEP_JENI",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JENI_PH_SLIT_MY",
+        "fov_frame": "JUICE_PEP_JENI",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JENI_PH_SLIT_PY",
+        "fov_frame": "JUICE_PEP_JENI",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      }
+    ],
+    "PJNA": [
+      {
+        "name": "JUICE_PEP_JNA",
+        "fov_frame": "JUICE_PEP_JNA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JNA_CONVERSION",
+        "fov_frame": "JUICE_PEP_JNA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JNA_SECTOR_00",
+        "fov_frame": "JUICE_PEP_JNA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JNA_SECTOR_01",
+        "fov_frame": "JUICE_PEP_JNA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JNA_SECTOR_02",
+        "fov_frame": "JUICE_PEP_JNA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JNA_SECTOR_03",
+        "fov_frame": "JUICE_PEP_JNA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JNA_SECTOR_04",
+        "fov_frame": "JUICE_PEP_JNA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JNA_SECTOR_05",
+        "fov_frame": "JUICE_PEP_JNA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JNA_SECTOR_06",
+        "fov_frame": "JUICE_PEP_JNA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JNA_SECTOR_07",
+        "fov_frame": "JUICE_PEP_JNA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JNA_SECTOR_08",
+        "fov_frame": "JUICE_PEP_JNA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JNA_SECTOR_09",
+        "fov_frame": "JUICE_PEP_JNA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JNA_SECTOR_10",
+        "fov_frame": "JUICE_PEP_JNA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      }
+    ],
+    "PJOEE": [
+      {
+        "name": "JUICE_PEP_JOEE_S00",
+        "fov_frame": "JUICE_PEP_JOEE",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JOEE_S01",
+        "fov_frame": "JUICE_PEP_JOEE",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JOEE_S02",
+        "fov_frame": "JUICE_PEP_JOEE",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JOEE_S03",
+        "fov_frame": "JUICE_PEP_JOEE",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JOEE_S04",
+        "fov_frame": "JUICE_PEP_JOEE",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JOEE_S05",
+        "fov_frame": "JUICE_PEP_JOEE",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JOEE_S06",
+        "fov_frame": "JUICE_PEP_JOEE",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JOEE_S07",
+        "fov_frame": "JUICE_PEP_JOEE",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_JOEE_S08",
+        "fov_frame": "JUICE_PEP_JOEE",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
       }
     ],
     "PNIM": [
       {
+        "name": "JUICE_PEP_NIM_NEUION_S0",
+        "fov_frame": "JUICE_PEP_NIM",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_NIM_NEUION_S1",
+        "fov_frame": "JUICE_PEP_NIM",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_NIM_NEUION_S2",
+        "fov_frame": "JUICE_PEP_NIM",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_NIM_NEUION_S3",
+        "fov_frame": "JUICE_PEP_NIM",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_NIM_NEUION_S4",
+        "fov_frame": "JUICE_PEP_NIM",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_NIM_NEUION_S5",
+        "fov_frame": "JUICE_PEP_NIM",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_PEP_NIM_S0",
+        "fov_frame": "JUICE_PEP_NIM_S0",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
         "name": "JUICE_PEP_NIM_S1",
         "fov_frame": "JUICE_PEP_NIM_S1",
         "color": [
-          0.9,
-          0.8,
-          0.2
+          0,
+          0.6,
+          0
         ],
-        "spacecraft": "JUICE_PEP_NIM"
+        "spacecraft": "JUICE"
       },
       {
         "name": "JUICE_PEP_NIM_S2",
         "fov_frame": "JUICE_PEP_NIM_S2",
         "color": [
-          0.9,
-          0.8,
-          0.2
+          0,
+          0.6,
+          0
         ],
-        "spacecraft": "JUICE_PEP_NIM"
+        "spacecraft": "JUICE"
       },
       {
         "name": "JUICE_PEP_NIM_S3",
         "fov_frame": "JUICE_PEP_NIM_S3",
         "color": [
-          0.9,
-          0.8,
-          0.2
+          0,
+          0.6,
+          0
         ],
-        "spacecraft": "JUICE_PEP_NIM"
+        "spacecraft": "JUICE"
       },
       {
         "name": "JUICE_PEP_NIM_S4",
         "fov_frame": "JUICE_PEP_NIM_S4",
         "color": [
-          0.9,
-          0.8,
-          0.2
+          0,
+          0.6,
+          0
         ],
-        "spacecraft": "JUICE_PEP_NIM"
+        "spacecraft": "JUICE"
       },
       {
         "name": "JUICE_PEP_NIM_S5",
         "fov_frame": "JUICE_PEP_NIM_S5",
         "color": [
-          0.9,
-          0.8,
-          0.2
+          0,
+          0.6,
+          0
         ],
-        "spacecraft": "JUICE_PEP_NIM"
-      },
-      {
-        "name": "JUICE_PEP_NIM_NEUION_S0",
-        "fov_frame": "JUICE_PEP_NIM_NEUION_S0",
-        "color": [
-          0.9,
-          0.8,
-          0.2
-        ],
-        "spacecraft": "JUICE_PEP_NIM"
-      },
-      {
-        "name": "JUICE_PEP_NIM_NEUION_S1",
-        "fov_frame": "JUICE_PEP_NIM_NEUION_S1",
-        "color": [
-          0.9,
-          0.8,
-          0.2
-        ],
-        "spacecraft": "JUICE_PEP_NIM"
-      },
-      {
-        "name": "JUICE_PEP_NIM_NEUION_S2",
-        "fov_frame": "JUICE_PEP_NIM_NEUION_S2",
-        "color": [
-          0.9,
-          0.8,
-          0.2
-        ],
-        "spacecraft": "JUICE_PEP_NIM"
-      },
-      {
-        "name": "JUICE_PEP_NIM_NEUION_S3",
-        "fov_frame": "JUICE_PEP_NIM_NEUION_S3",
-        "color": [
-          0.9,
-          0.8,
-          0.2
-        ],
-        "spacecraft": "JUICE_PEP_NIM"
-      },
-      {
-        "name": "JUICE_PEP_NIM_NEUION_S4",
-        "fov_frame": "JUICE_PEP_NIM_NEUION_S4",
-        "color": [
-          0.9,
-          0.8,
-          0.2
-        ],
-        "spacecraft": "JUICE_PEP_NIM"
-      },
-      {
-        "name": "JUICE_PEP_NIM_NEUION_S5",
-        "fov_frame": "JUICE_PEP_NIM_NEUION_S5",
-        "color": [
-          0.9,
-          0.8,
-          0.2
-        ],
-        "spacecraft": "JUICE_PEP_NIM"
+        "spacecraft": "JUICE"
       },
       {
         "name": "JUICE_PEP_NIM_THERMAL-1",
-        "fov_frame": "JUICE_PEP_NIM_THERMAL-1",
+        "fov_frame": "JUICE_PEP_NIM",
         "color": [
-          0.9,
-          0.8,
-          0.2
+          0,
+          0.6,
+          0
         ],
-        "spacecraft": "JUICE_PEP_NIM"
+        "spacecraft": "JUICE"
       },
       {
         "name": "JUICE_PEP_NIM_THERMAL-2",
-        "fov_frame": "JUICE_PEP_NIM_THERMAL-2",
+        "fov_frame": "JUICE_PEP_NIM",
         "color": [
-          0.9,
-          0.8,
-          0.2
+          0,
+          0.6,
+          0
         ],
-        "spacecraft": "JUICE_PEP_NIM"
+        "spacecraft": "JUICE"
       }
     ],
     "RAD": [
@@ -1043,6 +3461,158 @@
         "spacecraft": "JUICE"
       }
     ],
+    "RIM": [
+      {
+        "name": "JUICE_RIME_FREPUL_0200_1000",
+        "fov_frame": "JUICE_RIME",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_RIME_FREPUL_0200_2800",
+        "fov_frame": "JUICE_RIME",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_RIME_FREPUL_0500_1000",
+        "fov_frame": "JUICE_RIME",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_RIME_FREPUL_0500_2800",
+        "fov_frame": "JUICE_RIME",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_RIME_FREPUL_1000_1000",
+        "fov_frame": "JUICE_RIME",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_RIME_FREPUL_1000_2800",
+        "fov_frame": "JUICE_RIME",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_RIME_PENLIM_0200_04000",
+        "fov_frame": "JUICE_RIME",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_RIME_PENLIM_0200_09000",
+        "fov_frame": "JUICE_RIME",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_RIME_PENLIM_0200_15000",
+        "fov_frame": "JUICE_RIME",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_RIME_PENLIM_0500_04000",
+        "fov_frame": "JUICE_RIME",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_RIME_PENLIM_0500_09000",
+        "fov_frame": "JUICE_RIME",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_RIME_PENLIM_0500_15000",
+        "fov_frame": "JUICE_RIME",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_RIME_PENLIM_1000_04000",
+        "fov_frame": "JUICE_RIME",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_RIME_PENLIM_1000_09000",
+        "fov_frame": "JUICE_RIME",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_RIME_PENLIM_1000_15000",
+        "fov_frame": "JUICE_RIME",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      }
+    ],
     "STR": [
       {
         "name": "JUICE_STR-OH1",
@@ -1075,6 +3645,50 @@
         "spacecraft": "JUICE_STR3"
       }
     ],
+"SWI": [
+      {
+        "name": "JUICE_SWI_CH1",
+        "fov_frame": "JUICE_SWI_SCANNER",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_SWI_CH2",
+        "fov_frame": "JUICE_SWI_SCANNER",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_SWI_FULL",
+        "fov_frame": "JUICE_SWI_BASE",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_SWI_FULL_GCO500",
+        "fov_frame": "JUICE_SWI_BASE",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      }
+    ],
+
+
     "UVS": [
       {
         "name": "JUICE_UVS_AP_HP",

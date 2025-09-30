@@ -803,6 +803,12 @@
         <dirVector ref="SC2Sun"/>
     </dirVector>
 
+    <!-- Earth North Pole -->
+    <dirVector frame="EARTH" name="EarthNorthPole">
+        <lon units="deg">0.000</lon>
+        <lat units="deg">90.000</lat>
+    </dirVector>
+
     <!-- wrt Moon -->
 
     <!-- SC2Moon -->
@@ -1040,6 +1046,27 @@
             <z>0.</z>
         </axisB>
         <axisC frame="Sun">
+            <x>0.</x>
+            <y>0.</y>
+            <z>1.</z>
+        </axisC>
+    </surface>
+        <surface name="Earth" frame="Sun">
+        <origin ref="Sun"/>
+        <a units="km">6378.1366</a>
+        <b units="km">6378.1366</b>
+        <c units="km">6356.7519</c>
+        <axisA frame="sun">
+            <x>1.</x>
+            <y>0.</y>
+            <z>0.</z>
+        </axisA>
+        <axisB frame="Earth">
+            <x>0.</x>
+            <y>1.</y>
+            <z>0.</z>
+        </axisB>
+        <axisC frame="Earth">
             <x>0.</x>
             <y>0.</y>
             <z>1.</z>

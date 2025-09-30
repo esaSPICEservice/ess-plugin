@@ -71,26 +71,45 @@ if __name__ == "__main__":
     definitions = sorted(list(map(get_definition, instrument_ids)), key=lambda x: x.get('name'))
 
     sensors = {}
+    sensors_counter = {}
     boresights = []
+    LIMIT = 56
 
     for definition in definitions:
-        name = definition.get('name')
-        size = definition.get('size')
-        parts = name.split('_')
-        if len(parts) >= 2:
-            key = parts[0]
-            definition['spacecraft'] = key
-            del definition['size']
-            if key not in sensors:
-                sensors[key] = []
-            sensors[key].append(definition)
-        boresights.append({
-            "name": name,
-            "fov_frame": name,
-            "size": size
-        })
+        if 'PEP' in definition.get('name'):
+            name = definition.get('name')
+            size = definition.get('size')
+            fov_name = definition.get('fov_frame')
+            parts = name.split('_')
+            if len(parts) >= 2:
+                sc = parts[0]
+                definition['spacecraft'] = sc
+                del definition['size']
+                
+                key = '_'.join(fov_name.split('_')[0:3])
+                counter_key = key
+                if counter_key not in sensors_counter:
+                    sensors_counter[counter_key] = 0
+                sensors_counter[counter_key] += 1
+                counter = sensors_counter[counter_key]
 
-    cnf = {"sensors": sensors, "boresights": boresights}
+                if counter > LIMIT:
+                    key = f'{key}{counter // LIMIT:02d}'
+                    
+                    
+                key = key.replace('JUICE_PEP_', 'P').upper()
+                
+                if key not in sensors:
+                    sensors[key] = []
+                sensors[key].append(definition)
+                
+            boresights.append({
+                "name": name,
+                "fov_frame": fov_name,
+                "size": size
+            })
+
+    cnf = { "sensors": sensors}
     with open('sensor_section.json', 'w') as sensor_file:
         json.dump(cnf, sensor_file, indent=2)
     

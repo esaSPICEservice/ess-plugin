@@ -3,10 +3,12 @@ from PyQt5.QtGui import QIcon, QDesktopServices
 from PyQt5.QtCore import QUrl
 import datetime
 from settings.handler import PersistenceSettings, RuntimeSettings
+from catalog.handler import CatalogHandler
+from functools import partial
 
 WINDOW_TYPES = [
     'Qt.Widget', 
-'Qt.Window', 
+'Qt.Window',  
 'Qt.Dialog', 
 'Qt.Sheet', 
 'Qt.Drawer', 
@@ -26,6 +28,19 @@ class ActionSpec:
         self.tooltip = tooltip
         self.shortcut = shortcut
         self.cmd = cmd
+        self.checkable = False
+    def get_cmd(self, action):
+        return self.cmd
+
+class ExtendedActionSpec:
+    def __init__(self, id, tooltip, shortcut, cmd):
+        self.id = id
+        self.tooltip = tooltip
+        self.shortcut = shortcut
+        self.cmd = cmd
+        self.checkable = True
+    def get_cmd(self, action):
+        return partial(self.cmd, action)
 
 class MenuSpec:
     def __init__(self, id, actions):
@@ -76,10 +91,10 @@ def add_menu(main_window, menu_spec: MenuSpec):
         new_menu.clear()
 
     for action_spec in menu_spec.actions:
-        action = QAction(QIcon(), action_spec.id, main_window)
+        action = QAction(QIcon(), action_spec.id, main_window, checkable=action_spec.checkable)
         action.setShortcut(action_spec.shortcut)
         action.setStatusTip(action_spec.tooltip)
-        action.triggered.connect(action_spec.cmd)
+        action.triggered.connect(action_spec.get_cmd(action))
         new_menu.addAction(action)
 
 def widgets_recursive(d, widget = None, doPrint =False ):
@@ -132,6 +147,13 @@ def get_runtime():
         set_settings_handler()
     return main_window.runtime_settings
 
+def get_catalog_handler():
+    main_window = get_main_window()
+    if not hasattr(main_window, 'catalog_handler'):
+        set_settings_handler()
+    return main_window.catalog_handler
+
+
 def set_rt_settings(rt_settings):
     rt = get_runtime()
     rt.update(rt_settings)
@@ -141,6 +163,7 @@ def set_settings_handler():
     main_window = get_main_window()
     main_window.__setattr__('persistence_settings', PersistenceSettings())
     main_window.__setattr__('runtime_settings', RuntimeSettings())
+    main_window.__setattr__('catalog_handler', CatalogHandler())
 
 
 EPOCH_2000 = datetime.datetime(2000, 1, 1, 12, 0, tzinfo=datetime.timezone.utc).timestamp()

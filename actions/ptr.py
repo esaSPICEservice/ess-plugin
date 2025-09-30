@@ -15,10 +15,11 @@ import json
 
 from PyQt5.QtWidgets import QMessageBox
 
-from ui.common import get_main_window, ActionSpec, add_menu, MenuSpec
+from ui.common import get_main_window, ActionSpec, add_menu, MenuSpec, get_catalog_handler
 from ui.moons_ui import MoonsDialog
 from ui.rings_ui import RingsDialog
 from ui.power_ui import PowerDialog
+
 
 def dump_error(log_path):
     with open(log_path, 'r') as log_file:
@@ -30,13 +31,15 @@ def dump_error(log_path):
 def execute_ptr(mk, content, calculate_power, calculate_sa, calculate_mga):
     start_time = validate_ptr(content)
     cosmo = cosmoscripting.Cosmo()
-    cosmo.unloadLastCatalog()
+    handler = get_catalog_handler()
+    handler.clean_catalogs()
     success, catalog, sensor_catalog, root_scenario = simulate(
         mk, content, 
         not calculate_power, not calculate_sa, not calculate_mga)
     if success:
-        cosmo.loadCatalogFile(catalog)
-        cosmo.loadCatalogFile(sensor_catalog)
+        handler = get_catalog_handler()
+        handler.add_catalog(catalog)
+        handler.add_catalog(sensor_catalog)
         after_load(root_scenario)
         goto_date(start_time + ' UTC')
     else:
@@ -61,7 +64,7 @@ def after_load(root_scenario):
         if os.path.exists(resolved_ptr):
             bp = BlocksDialog(main_window, resolved_ptr)
             menu.append(
-                ActionSpec('Blocks', 'Show pointing blocks', '', bp.show_and_focus)
+                ActionSpec('Timeline', 'Show pointing timeline', 'Alt+t', bp.show_and_focus)
             )
             bp.show_and_focus()
 

@@ -476,12 +476,14 @@
     <Object parserName="C_2023_H5" mnemonic="C_2023_H5" spiceName="C_2023_H5" isBody="true" bufferPos="true" bufferPosTimeStep="60.0" bufferVel="true" bufferVelTimeStep="60.0" gravity="0"/>
     <Object parserName="C_2023_R1" mnemonic="C_2023_R1" spiceName="C_2023_R1" isBody="true" bufferPos="true" bufferPosTimeStep="60.0" bufferVel="true" bufferVelTimeStep="60.0" gravity="0"/>
     <Object parserName="C_2024_E1" mnemonic="C_2024_E1" spiceName="C_2024_E1" isBody="true" bufferPos="true" bufferPosTimeStep="60.0" bufferVel="true" bufferVelTimeStep="60.0" gravity="0"/>
+    <Object parserName="3I/ATLAS" mnemonic="3I/ATLAS" spiceName="3I/ATLAS" isBody="true" bufferPos="true" bufferPosTimeStep="60.0" bufferVel="true" bufferVelTimeStep="60.0" gravity="0"/>
   </Objects>
 
 
   <Frames>
     <Frame parserName="EME2000" mnemonic="EME" spiceName="J2000" bufferAtt="false" bufferAttTimeStep="0" isReferenceFrame="true"/>
     <Frame parserName="SUN" mnemonic="CBE" spiceName="IAU_SUN" bufferAtt="true" bufferAttTimeStep="120.0"/>
+    <Frame parserName="EARTH" mnemonic="CBE" spiceName="IAU_EARTH" bufferAtt="true" bufferAttTimeStep="120.0"/>
     <Frame parserName="JUPITER" mnemonic="CBE" spiceName="IAU_JUPITER" bufferAtt="true" bufferAttTimeStep="120.0"/>
     <Frame parserName="SC" mnemonic="SBF" spiceName="JUICE_SPACECRAFT" bufferAtt="false" bufferAttTimeStep="0"/>
     <Frame parserName="EUROPA" mnemonic="CBE" spiceName="IAU_EUROPA" bufferAtt="false" bufferAttTimeStep="0"/>

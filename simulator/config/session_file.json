@@ -43,7 +43,7 @@
             "ckConfig":
             {
                 "ckFrameId":  -28001,
-                "ckTimeStep": 5
+                "ckTimeStep": 15
             },
             "attitudeXmlPtr": "ptr_resolved.ptx",
             "txtAttitudeFilePath": "quaternions.csv",
