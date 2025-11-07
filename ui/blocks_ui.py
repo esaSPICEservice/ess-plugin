@@ -86,9 +86,6 @@ class BlocksDialog(QDialog):
             self.ui.tableWidget.clicked.connect(self.show_block)
             self.block_contents = {}
             row_number = 0
-            print('*********************')
-            print(parser.start_times)
-            print('*********************')
             for index, start_time in enumerate(parser.start_times):
                 if start_time:
                     end_time = parser.end_times[index]

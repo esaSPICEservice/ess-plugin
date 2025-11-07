@@ -11,14 +11,14 @@
                 "baselineRelPath":"kernel",
                 "fileList": []
             },
-            "baselineRelPath":"config/age",
+            "baselineRelPath":"config/agm",
             "ageConfigFileName": "cfg_agm_jui.xml",
             "fixedDefinitionsFile": "cfg_agm_jui_fixed_definitions.xml",
             "predefinedBlockFile": "cfg_agm_jui_predefined_block.xml",
             "eventDefinitionsFile": "cfg_agm_jui_event_definitions.xml"
         },
         "instrumentSimulationConfiguration": {
-           "baselineRelPath":  "config/ise",
+           "baselineRelPath":  "config/eps",
            "unitFileName":     "units.def",
            "configFileName":   "eps.cfg",
            "eventDefFileName": "events.juice.def"

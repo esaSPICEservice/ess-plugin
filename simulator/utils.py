@@ -20,43 +20,43 @@ def create_structure(parent_path, metakernel_path='input_mk.tm', ptr_content='in
     )
 
     agm_config_filepath = os.path.join(
-        os.path.dirname(__file__), "config/age", "cfg_agm_jui.xml"
+        os.path.dirname(__file__), "config/agm", "cfg_agm_jui.xml"
     )
 
     fixed_definitions_filepath = os.path.join(
-        os.path.dirname(__file__), "config/age", "cfg_agm_jui_fixed_definitions.xml"
+        os.path.dirname(__file__), "config/agm", "cfg_agm_jui_fixed_definitions.xml"
     )
 
     predefine_blocks_filepath = os.path.join(
-        os.path.dirname(__file__), "config/age", "cfg_agm_jui_predefined_block.xml"
+        os.path.dirname(__file__), "config/agm", "cfg_agm_jui_predefined_block.xml"
     )
 
     event_definitions_filepath = os.path.join(
-        os.path.dirname(__file__), "config/age", "cfg_agm_jui_event_definitions.xml"
+        os.path.dirname(__file__), "config/agm", "cfg_agm_jui_event_definitions.xml"
     )
 
     bit_rate_filepath = os.path.join(
-        os.path.dirname(__file__), "config/ise", "BRF_MAL_SGICD_2_1_300101_351005.brf"
+        os.path.dirname(__file__), "config/eps", "BRF_MAL_SGICD_2_1_300101_351005.brf"
     )
 
     eps_config_filepath = os.path.join(
-        os.path.dirname(__file__), "config/ise", "eps.cfg"
+        os.path.dirname(__file__), "config/eps", "eps.cfg"
     )
 
     eps_events_filepath = os.path.join(
-        os.path.dirname(__file__), "config/ise", "events.juice.def"
+        os.path.dirname(__file__), "config/eps", "events.juice.def"
     )
 
     sa_cells_count_filepath = os.path.join(
-        os.path.dirname(__file__), "config/ise", "phs_com_res_sa_cells_count.asc"
+        os.path.dirname(__file__), "config/eps", "phs_com_res_sa_cells_count.asc"
     )
 
     sa_cells_efficiency_filepath = os.path.join(
-        os.path.dirname(__file__), "config/ise", "RES_C50_SA_CELLS_EFFICIENCY_310101_351003.csv"
+        os.path.dirname(__file__), "config/eps", "RES_C50_SA_CELLS_EFFICIENCY_310101_351003.csv"
     )
 
     eps_units_filepath = os.path.join(
-        os.path.dirname(__file__), "config/ise", "units.def"
+        os.path.dirname(__file__), "config/eps", "units.def"
     )
 
     itl_downlink_filepath = os.path.join(
@@ -114,8 +114,8 @@ def create_structure(parent_path, metakernel_path='input_mk.tm', ptr_content='in
     with open(session_json_filepath, "r") as session_json_file:
         session_json = json.load(session_json_file)
 
-    age_config_path = os.path.join(parent_path, "config/age")
-    ise_config_path = os.path.join(parent_path, "config/ise")
+    age_config_path = os.path.join(parent_path, "config/agm")
+    ise_config_path = os.path.join(parent_path, "config/eps")
     os.makedirs(age_config_path, exist_ok=True)
     os.makedirs(ise_config_path, exist_ok=True)
 

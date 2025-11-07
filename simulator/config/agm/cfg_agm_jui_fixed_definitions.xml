@@ -588,6 +588,15 @@
         <z>0.13917310</z>
     </dirVector>
 
+   <!-- Added manually, GALA input for FD for PCW4 -->
+
+    <!-- JUICE_GALA_TXL_MAIN +Z -->
+    <dirVector name="JUICE_GALA_TXL_MAIN_PZ" frame="SC">
+        <x> -0.0005</x>
+        <y> 0.0004</y>
+        <z> 0.999999795</z>
+    </dirVector>
+
     <!-- ***************************************************   -->
     <!-- SPACECRAFT DIRECTIONS -->
 
