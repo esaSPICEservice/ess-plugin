@@ -1,0 +1,473 @@
+{
+   "version": "1.0",
+   "name": "Cosmographia MPO Example",
+   "items": [
+      {
+         "class": "spacecraft",
+         "name": "MPO",
+         "startTime": "2018-10-19 02:05:26.295 UTC",
+         "arcs": [
+            {
+              "endTime": "2026-11-16 23:58:50.815 UTC",
+              "center": "Sun",
+               "trajectory": {
+                  "type": "Spice",
+                  "target": "MPO_SPACECRAFT",
+                  "center": "Sun"
+               },
+               "bodyFrame": {
+                  "type": "Spice",
+                  "name": "MPO_SPACECRAFT"
+               }
+            },
+            {
+               "center": "Mercury",
+               "trajectory": {
+                  "type": "Spice",
+                  "target": "MPO_SPACECRAFT",
+                  "center": "Mercury"
+               },
+               "bodyFrame": {
+                  "type": "Spice",
+                  "name": "MPO_SPACECRAFT"
+               }
+            }
+         ],
+      "geometry": {
+        "type": "Mesh",
+        "size": 0.0032,
+        "meshOffset": [0, 0, 0.0002],
+        "source": "./models/mpo.3ds"
+      },
+      "label": {
+        "color": [
+          1,
+          1,
+          1
+        ]
+      },
+      "trajectoryPlot": {
+        "color": [
+          1,
+          0,
+          0
+        ],
+        "lineWidth": 2,
+        "duration": "2 d",
+        "lead": 0.0,
+        "fade": 0.0,
+        "sampleCount": 5000
+      }
+    },
+     {
+         "class": "spacecraft",
+         "name": "MPO_SA",
+         "startTime": "2018-10-19 02:05:26.295 UTC",
+         "arcs": [
+            {
+              "center": "MPO",
+               "trajectory": {
+                  "type": "Spice",
+                  "target": "MPO_SA_GIMBAL",
+                  "center": "MPO"
+               },
+               "bodyFrame": {
+                  "type": "Spice",
+                  "name": "MPO_SA"
+               }
+            }
+         ],
+      "geometry": {
+        "type": "Mesh",
+        "size": 0.0029,
+        "source": "./models/mpo_sa.3ds"
+      },
+      "label": {
+        "color": [
+          1,
+          1,
+          1
+        ]
+      },
+      "trajectoryPlot": {
+        "color": [
+          1,
+          0,
+          0
+        ],
+        "lineWidth": 5,
+        "duration": "2 d",
+        "lead": 0.25,
+        "fade": 0.0,
+        "sampleCount": 500
+      }
+    },
+     {
+         "class": "spacecraft",
+         "name": "MPO_MGA",
+         "startTime": "2018-10-19 02:05:26.295 UTC",
+         "arcs": [
+            {
+              "center": "MPO",
+               "trajectory": {
+                  "type": "Spice",
+                  "target": "MPO_MGA_BOOM-H",
+                  "center": "MPO"
+               },
+               "bodyFrame": {
+                  "type": "Spice",
+                  "name": "MPO_MGA"
+               }
+            }
+         ],
+      "geometry": {
+        "type": "Mesh",
+        "size": 0.0012,
+        "source": "./models/mpo_mga.3ds"
+      },
+      "label": {
+        "color": [
+          1,
+          1,
+          1
+        ]
+      },
+      "trajectoryPlot": {
+        "color": [
+          1,
+          0,
+          0
+        ],
+        "lineWidth": 5,
+        "duration": "2 d",
+        "lead": 0.25,
+        "fade": 0.0,
+        "sampleCount": 500
+      }
+    },
+     {
+         "class": "spacecraft",
+         "name": "MPO_HGA",
+         "startTime": "2018-10-19 02:05:26.295 UTC",
+         "arcs": [
+            {
+              "center": "MPO",
+               "trajectory": {
+                  "type": "Spice",
+                  "target": "MPO_HGA_APM_APM-DGN",
+                  "center": "MPO"
+               },
+               "bodyFrame": {
+                  "type": "Spice",
+                  "name": "MPO_HGA"
+               }
+            }
+         ],
+      "geometry": {
+        "type": "Mesh",
+        "size": 0.0006,
+        "source": "./models/mpo_hga.3ds"
+      },
+      "label": {
+        "color": [
+          1,
+          1,
+          1
+        ]
+      },
+      "trajectoryPlot": {
+        "color": [
+          1,
+          0,
+          0
+        ],
+        "lineWidth": 5,
+        "duration": "2 d",
+        "lead": 0.25,
+        "fade": 0.0,
+        "sampleCount": 500
+      }
+    },
+    {
+         "class": "spacecraft",
+         "name": "MMO",
+         "startTime": "2018-10-19 02:05:26.295 UTC",
+         "arcs": [
+            {
+               "center": "Sun",
+               "endTime": "2026-11-16 23:58:50.815 UTC",
+               "trajectory": {
+                  "type": "Spice",
+                  "target": "MMO",
+                  "center": "Sun"
+               },
+               "bodyFrame": {
+                  "type": "Spice",
+                  "name": "MMO_SPACECRAFT"
+               }
+            },
+            {
+               "center": "Mercury",
+               "trajectory": {
+                  "type": "Spice",
+                  "target": "MMO",
+                  "center": "Mercury"
+               },
+               "bodyFrame": {
+                  "type": "Spice",
+                  "name": "MMO_SPACECRAFT"
+               }
+            }
+         ],
+      "geometry": {
+        "type": "TimeSwitched",
+        "sequence": [
+        {
+            "startTime": "2018-10-19 02:05:26.295 UTC",
+            "geometry": {
+              "type": "Mesh",
+              "meshOffset": [0, 0, -0.2],
+              "size": 0.001,
+              "source": "./models/mmo.3ds"
+         }
+        },
+        {
+           "startTime" : "2026-12-07 09:57:11.937 UTC",
+           "geometry": {
+              "type": "Mesh",
+              "size": 0.015,
+              "source": "./models/mmo_m.3ds"
+         }
+        }
+      ]
+
+      },
+      "label": {
+        "color": [
+          1,
+          1,
+          1
+        ]
+      },
+      "trajectoryPlot": {
+        "color": [
+          0,
+          1,
+          0
+        ],
+        "lineWidth": 2,
+        "duration": "2 d",
+        "lead": 0.0,
+        "fade": 0.0,
+        "sampleCount": 5000
+      }
+    },
+      {
+         "class": "spacecraft",
+         "name": "MTM",
+         "startTime": "2018-10-19 02:05:26.295 UTC",
+         "arcs": [
+           {
+             "center": "Sun",
+             "endTime": "2026-11-16 21:31:23.193 UTC",
+             "trajectory": {
+               "type": "Spice",
+               "target": "MTM",
+               "center": "Sun"
+             },
+             "bodyFrame": {
+               "type": "Spice",
+               "name": "MTM_SPACECRAFT"
+             }
+           }
+         ],
+      "geometry": {
+        "type": "Mesh",
+        "size": 0.00175,
+        "meshOffset": [0, 0, 0.0002],
+        "source": "./models/mtm.3ds"
+      },
+      "label": {
+        "color": [
+          1,
+          1,
+          1
+        ]
+      },
+      "trajectoryPlot": {
+        "color": [
+          1,
+          0,
+          0
+        ],
+        "lineWidth": 5,
+        "duration": "2 d",
+        "lead": 0.25,
+        "fade": 0.0,
+        "sampleCount": 500
+      }
+    },
+     {
+         "class": "spacecraft",
+         "name": "MTM_SAMX",
+         "startTime": "2018-10-19 02:05:26.295 UTC",
+         "arcs": [
+           {
+             "center": "Sun",
+             "endTime": "2026-11-16 21:31:23.193 UTC",
+             "trajectory": {
+               "type": "Spice",
+               "target": "MTM_SA-X",
+               "center": "Sun"
+             },
+             "bodyFrame": {
+               "type": "Spice",
+               "name": "MTM_SA-X"
+             }
+           }
+         ],
+      "geometry": {
+        "type": "Mesh",
+        "size": 0.006,
+        "meshOffset": [-0.0003, 0, 0],
+        "source": "./models/mtm_samx.3ds"
+      },
+      "label": {
+        "color": [
+          1,
+          1,
+          1
+        ]
+      },
+      "trajectoryPlot": {
+        "color": [
+          1,
+          0,
+          0
+        ],
+        "lineWidth": 5,
+        "duration": "2 d",
+        "lead": 0.25,
+        "fade": 0.0,
+        "sampleCount": 500
+      }
+    },
+     {
+         "class": "spacecraft",
+         "name": "MTM_SAPX",
+         "startTime": "2018-10-19 02:05:26.295 UTC",
+         "arcs": [
+           {
+             "center": "Sun",
+             "endTime": "2026-11-16 21:31:23.193 UTC",
+             "trajectory": {
+               "type": "Spice",
+               "target": "MTM_SA+X",
+               "center": "Sun"
+             },
+             "bodyFrame": {
+               "type": "Spice",
+               "name": "MTM_SA+X"
+             }
+           }
+         ],
+      "geometry": {
+        "type": "Mesh",
+        "size": 0.006,
+        "meshOffset": [0.0003, 0, 0],
+        "source": "./models/mtm_sapx.3ds"
+      },
+      "label": {
+        "color": [
+          1,
+          1,
+          1
+        ]
+      },
+      "trajectoryPlot": {
+        "color": [
+          1,
+          0,
+          0
+        ],
+        "lineWidth": 5,
+        "duration": "2 d",
+        "lead": 0.25,
+        "fade": 0.0,
+        "sampleCount": 500
+      }
+    },
+    {
+         "class": "spacecraft",
+         "name": "MOSIF",
+         "startTime": "2018-10-19 02:05:26.295 UTC",
+         "arcs": [
+           {
+             "center": "MPO",
+             "endTime": "2026-12-07 09:57:11.937 UTC",
+             "trajectory": {
+               "type": "Spice",
+               "target": "MPO_MOSIF",
+               "center": "MPO"
+             },
+             "bodyFrame": {
+               "type": "Spice",
+               "name": "MPO_SPACECRAFT"
+             }
+           }
+         ],
+      "geometry": {
+        "type": "Mesh",
+        "size": 0.0013,
+        "source": "./models/shield.3ds",
+        "meshOffset": [0, 0, -0.1]
+      },
+      "label": {
+        "color": [
+          1,
+          1,
+          1
+        ]
+      },
+      "trajectoryPlot": {
+        "color": [
+          1,
+          0,
+          0
+        ],
+        "lineWidth": 5,
+        "duration": "2 d",
+        "lead": 0.25,
+        "fade": 0.0,
+        "sampleCount": 500
+      }
+    },
+    {
+      "class": "spacecraft",
+      "name": "MPO_MERTIS",
+      "startTime": "2018-10-19 02:05:26.295 UTC",
+      "arcs": [
+        {
+          "center": "MPO",
+          "trajectory": {
+            "type": "Spice",
+            "target": "MPO_MERTIS",
+            "center": "MPO_SPACECRAFT"
+          },
+          "bodyFrame": {
+            "type": "Spice",
+            "name": "MPO_SPACECRAFT"
+          }
+        }
+      ],
+      "label": {
+        "color": [
+          1,
+          1,
+          1
+        ]
+      }
+    }
+
+  ]
+}

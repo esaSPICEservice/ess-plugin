@@ -1,0 +1,49 @@
+{
+   "version": "1.0",
+   "name": "Cosmographia EnVision Example",
+   "items": [
+      {
+         "class": "spacecraft",
+         "name": "ENVISION",
+         "arcs": [
+            {
+               "endTime": "2040-03-25T02:50:00 UTC",
+               "center": "Venus",
+               "trajectory": {
+                  "type": "Spice",
+                  "target": "ENVISION",
+                  "center": "Venus"
+               },
+               "bodyFrame": {
+                  "type": "Spice",
+                  "name": "ENVISION_SPACECRAFT"
+               }
+            }
+         ],
+      "geometry": {
+        "type": "Mesh",
+        "size": 0.006,
+        "source": "./models/envision.3ds"
+      },
+      "label": {
+        "color": [
+          1,
+          1,
+          1
+        ]
+      },
+      "trajectoryPlot": {
+        "color": [
+          1,
+          0,
+          0
+        ],
+        "lineWidth": 5,
+        "duration": "1 d",
+        "lead": 0.0,
+        "fade": 0.2,
+        "sampleCount": 1000
+      }
+    }
+  ]
+}
