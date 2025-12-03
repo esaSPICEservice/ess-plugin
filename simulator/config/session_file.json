@@ -2,7 +2,7 @@
     "sessionConfiguration": {
 		"simulationConfiguration":
         {
-            "timeStep":1
+            "timeStep": 5
         },
         "attitudeSimulationConfiguration":
         {

@@ -2733,36 +2733,6 @@
         "spacecraft": "JUICE"
       },
       {
-        "name": "JUICE_PEP_JENI_PH_PINHOLE",
-        "fov_frame": "JUICE_PEP_JENI",
-        "color": [
-          0,
-          0.6,
-          0
-        ],
-        "spacecraft": "JUICE"
-      },
-      {
-        "name": "JUICE_PEP_JENI_PH_PINHOLE_MY",
-        "fov_frame": "JUICE_PEP_JENI",
-        "color": [
-          0,
-          0.6,
-          0
-        ],
-        "spacecraft": "JUICE"
-      },
-      {
-        "name": "JUICE_PEP_JENI_PH_PINHOLE_PY",
-        "fov_frame": "JUICE_PEP_JENI",
-        "color": [
-          0,
-          0.6,
-          0
-        ],
-        "spacecraft": "JUICE"
-      },
-      {
         "name": "JUICE_PEP_JENI_PH_SLIT",
         "fov_frame": "JUICE_PEP_JENI",
         "color": [
