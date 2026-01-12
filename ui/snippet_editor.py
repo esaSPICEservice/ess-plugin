@@ -56,7 +56,7 @@ class SnippetTextEdit(QPlainTextEdit):
             self.completer.popup().hide()
             return  # Do not pass to base
 
-        # Trigger completion on '<'
+        # Trigger completion on '@'
         super().keyPressEvent(event)
         if event.text() == "@":
             QTimer.singleShot(0,self.show_completer)
@@ -76,5 +76,5 @@ class SnippetTextEdit(QPlainTextEdit):
         cursor = self.textCursor()
         cursor.movePosition(cursor.Left, cursor.KeepAnchor, 1)
         cursor.removeSelectedText()
-        snippet = self.snippets.get(key, f"<{key}>")
+        snippet = self.snippets.get(key, key)
         cursor.insertText(snippet)

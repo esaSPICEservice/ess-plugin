@@ -189,7 +189,7 @@ class JsonTreeDialog(QDialog):
 
         field_col = headers.index(field)
         metrics = QFontMetrics(self.tree.font())
-        width = metrics.horizontalAdvance("X" * length)
+        width = metrics.width("X" * length)
         self.tree.setColumnWidth(field_col, width)
 
 
