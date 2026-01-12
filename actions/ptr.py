@@ -14,6 +14,8 @@ else:
 import json
 
 from PyQt5.QtWidgets import QMessageBox
+from PyQt5.QtCore import QUrl
+from PyQt5.QtGui import QDesktopServices
 
 from ui.common import get_main_window, ActionSpec, add_menu, MenuSpec, get_catalog_handler
 from ui.moons_ui import MoonsDialog
@@ -21,6 +23,10 @@ from ui.rings_ui import RingsDialog
 from ui.power_ui import PowerDialog
 from ui.log_viewer import JsonTreeDialog
 
+
+def reveal_file(file_path):
+    url = QUrl.fromLocalFile(file_path)
+    QDesktopServices.openUrl(url)
 
 def dump_error(log_path):
     with open(log_path, 'r') as log_file:
@@ -56,19 +62,19 @@ def validate_ptr(content):
 def after_load(root_scenario):
     main_window = get_main_window()
 
+    result_dir = os.path.join(root_scenario, 'output')
     resolved_ptr = os.path.join(root_scenario, 'output', 'ptr_resolved.ptx')
     power_file  = os.path.join(root_scenario, 'output', 'power.csv')
     log_file  = os.path.join(root_scenario, 'output', 'log.json')
+    ck_file  = os.path.join(root_scenario, 'output', 'juice_sc_ptr.bc')
 
-
-    
     menu = []
 
     if not my_platform.startswith("windows"):
         if os.path.exists(resolved_ptr):
             bp = BlocksDialog(main_window, resolved_ptr)
             menu.append(
-                ActionSpec('Timeline', 'Show pointing timeline', 'Alt+t', bp.show_and_focus)
+                ActionSpec('Pointing Timeline', 'Show pointing timeline', 'Alt+t', bp.show_and_focus)
             )
             bp.show_and_focus()
 
@@ -81,8 +87,14 @@ def after_load(root_scenario):
     if os.path.exists(log_file):
         lp = JsonTreeDialog(main_window, log_file)
         menu.append(
-            ActionSpec('Log', 'Show log', 'Alt+l', lp.show_and_focus)
+            ActionSpec('OSVE Log viewer', 'Show log', 'Alt+l', lp.show_and_focus)
         )
+
+    if os.path.exists(ck_file):
+        menu.append(
+            ActionSpec('OSVE result folder', 'Find results location', 'Alt+r', lambda: reveal_file(result_dir))
+        )
+
 
     add_menu(main_window, MenuSpec('Pointing', menu))
 
