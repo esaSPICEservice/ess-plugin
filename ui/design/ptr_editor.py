@@ -9,6 +9,7 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+from ui.snippet_editor import SnippetTextEdit
 
 
 class Ui_ptrEditorWidget(object):
@@ -76,7 +77,7 @@ class Ui_ptrEditorWidget(object):
         spacerItem = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
         self.horizontalLayout_2.addItem(spacerItem)
         self.verticalLayout.addLayout(self.horizontalLayout_2)
-        self.ptrEditor = QtWidgets.QPlainTextEdit(ptrEditorWidget)
+        self.ptrEditor = SnippetTextEdit(ptrEditorWidget)
         self.ptrEditor.setObjectName("ptrEditor")
         self.verticalLayout.addWidget(self.ptrEditor)
         self.horizontalLayout_3 = QtWidgets.QHBoxLayout()
