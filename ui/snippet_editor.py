@@ -1,38 +1,8 @@
 from PyQt5.QtWidgets import QPlainTextEdit, QCompleter
 from PyQt5.QtCore import QStringListModel, Qt, QTimer
+from ui.snippet import SNIPPETS
 
 
-
-SNIPPETS = {
-    "base": """<prm>
-<body>
-    <segment>
-    <data>
-        <timeline frame="SC">
-        </timeline>
-    </data>    
-    </segment>    
-</body>
-</prm>""",
-
-    "track": """
-               <block ref="OBS">
-                  <startTime> 2032-12-26T10:15:31 </startTime>
-                  <endTime> 2032-12-26T11:29:10 </endTime>
-                  <attitude ref="track">
-                     <boresight ref="SC_Zaxis" />
-                     <phaseAngle ref="powerOptimised">
-                        <yDir> false </yDir>
-                        <angle units="deg"> 90 </angle>
-                     </phaseAngle>
-                     <target ref="Jupiter" />
-                  </attitude>
-               </block>
-""",
-    "slew": """
-               <block ref="SLEW" />
-"""
-}
 
 class SnippetTextEdit(QPlainTextEdit):
     def __init__(self, parent=None, snippets=SNIPPETS):
@@ -69,7 +39,7 @@ class SnippetTextEdit(QPlainTextEdit):
             popup.setCurrentIndex(popup.model().index(0, 0))
 
         rect = self.cursorRect(cursor)
-        rect.setWidth(100)
+        rect.setWidth(120)
         self.completer.complete(rect)
 
     def insert_completion(self, key):

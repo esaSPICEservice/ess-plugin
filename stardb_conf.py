@@ -42,15 +42,14 @@ def create_stars(candidates):
                  "Check with the SPICE service\n"
                  "to get assistance.\n",
                  "spice@cosmos.esa.int"))
-    # QMessageBox.information(None, "Info", 
-    #             ("The star database has been updated\n"
-    #              "Cosmographia has to be restarted\n"
-    #              "for the changes to take effect."))
+    cosmo.quit()
+
+def cancel():
     cosmo.quit()
 
 star_list = settings.get('stardb', 'star_list', [])
 main_window = get_main_window()
 landing = StarDBDialog(main_window)
 landing.addFromList(star_list)
-landing.show_and_focus(create_stars)
+landing.show_and_focus(create_stars, cancel)
 

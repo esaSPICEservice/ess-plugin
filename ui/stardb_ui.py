@@ -34,45 +34,56 @@ class StarDBDialog(QDialog):
         self.tableWidget = QTableWidget()
         self.tableWidget.setRowCount(0)
         self.tableWidget.setColumnCount(3)
-        self.tableWidget.setHorizontalHeaderLabels(['RA', 'DEC', 'Name'])
+        self.tableWidget.setHorizontalHeaderLabels(['RA J2000 (deg)', 'DEC J2000 (deg)', 'Star Name'])
         self.tableWidget.setEditTriggers(QAbstractItemView.AllEditTriggers)
         self.tableWidget.horizontalHeader().setStretchLastSection(True)
+        self.tableWidget.cellChanged.connect(self.validateCell)
         layout.addWidget(self.tableWidget)
 
-        formLayout = QFormLayout()
-        self.raInput = QLineEdit()
-        self.decInput = QLineEdit()
-        self.nameInput = QLineEdit()
-        formLayout.addRow(QLabel('Right Ascension (J2000)'), self.raInput)
-        formLayout.addRow(QLabel('Declination (J2000)'), self.decInput)
-        formLayout.addRow(QLabel('Name'), self.nameInput)
-
         buttonLayout = QHBoxLayout()
-       
+        cancelButton = QPushButton('Cancel')
+        cancelButton.clicked.connect(self.cancel)
+        buttonLayout.addWidget(cancelButton)
         saveStarsButton = QPushButton('Save stars')
         saveStarsButton.clicked.connect(self.saveStars)
         buttonLayout.addWidget(saveStarsButton)
 
-        layout.addLayout(formLayout)
+        # layout.addLayout(formLayout)
         layout.addLayout(buttonLayout)
 
         self.setLayout(layout)
 
+
+    def validateCell(self, row, column):
+        # Only check RA (0) and DEC (1) columns
+        if column in (0, 1):
+            item = self.tableWidget.item(row, column)
+            text = item.text()
+            try:
+                value = float(text)
+                if column == 0 and not (0 <= value < 360):
+                    raise ValueError("RA must be 0-360°")
+                elif column == 1 and not (-90 <= value <= 90):
+                    raise ValueError("DEC must be -90° to 90°")
+            except ValueError:
+                QMessageBox.warning(
+                    self, "Invalid Input",
+                    f"Invalid value for {'RA' if column == 0 else 'DEC'}: {text}"
+                )
+                self.tableWidget.blockSignals(True) 
+                item.setText('')  # Clear invalid input
+                self.tableWidget.blockSignals(False) 
+
     def addRow(self):
-        ra = self.raInput.text()
-        dec = self.decInput.text()
-        name = self.nameInput.text()
-        if self.isValidRaDec(ra, dec):
-            rowPosition = self.tableWidget.rowCount()
-            self.tableWidget.insertRow(rowPosition)
-            self.tableWidget.setItem(rowPosition, 0, QTableWidgetItem(ra))
-            self.tableWidget.setItem(rowPosition, 1, QTableWidgetItem(dec))
-            self.tableWidget.setItem(rowPosition, 2, QTableWidgetItem(name))
-            self.raInput.clear()
-            self.decInput.clear()
-            self.nameInput.clear()
-        else:
-            QMessageBox.warning(self, "Invalid Input", "RA and DEC must be valid float numbers")
+        """Add an empty row to the table."""
+        rowPosition = self.tableWidget.rowCount()
+        self.tableWidget.insertRow(rowPosition)
+        self.tableWidget.blockSignals(True) 
+        # Insert empty cells
+        self.tableWidget.setItem(rowPosition, 0, QTableWidgetItem(''))
+        self.tableWidget.setItem(rowPosition, 1, QTableWidgetItem(''))
+        self.tableWidget.setItem(rowPosition, 2, QTableWidgetItem(''))
+        self.tableWidget.blockSignals(False) 
 
     def removeRow(self):
         rowPosition = self.tableWidget.currentRow()
@@ -126,7 +137,12 @@ class StarDBDialog(QDialog):
         self.callback(self.getContents())
         self.close()
 
-    def show_and_focus(self, callback):
+    def cancel(self):
+        self.cancel_callback()
+        self.close()
+
+    def show_and_focus(self, callback, cancel_callback):
         self.callback = callback
+        self.cancel_callback = cancel_callback
         self.hide()
         self.show()
