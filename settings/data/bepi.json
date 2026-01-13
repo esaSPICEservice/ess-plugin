@@ -226,6 +226,26 @@
     ],
     "MPO": [
       {
+        "name": "MPO_BERM",
+        "fov_frame": "MPO_BERM",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_BERM_PLAN",
+        "fov_frame": "MPO_BERM_PLAN",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
         "name": "MPO_BELA_RX",
         "fov_frame": "MPO_BELA_RX",
         "color": [
