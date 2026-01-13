@@ -68,7 +68,7 @@ class StarDBDialog(QDialog):
             except ValueError:
                 QMessageBox.warning(
                     self, "Invalid Input",
-                    f"Invalid value for {'RA' if column == 0 else 'DEC'}: {text}"
+                    "Invalid value for " +  'Right Ascension' if column == 0 else 'Declination'
                 )
                 self.tableWidget.blockSignals(True) 
                 item.setText('')  # Clear invalid input
