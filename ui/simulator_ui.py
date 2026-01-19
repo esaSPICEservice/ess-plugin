@@ -89,6 +89,9 @@ class PTREditorDialog(QDialog):
         except ValueError as error:
             QMessageBox.warning(self, 'PTR editor',
                                 'PTR not valid ' + str(error))
+        except Exception:
+            QMessageBox.warning(self, 'PTR editor',
+                                'PTR not valid ')
 
     def browse_mk(self):
         default_folder = self.settings.get(self.mission, last_repo_key, '')
