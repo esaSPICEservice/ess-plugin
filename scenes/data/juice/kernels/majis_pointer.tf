@@ -1,0 +1,29 @@
+    \begindata
+
+         INS-1234567_NAME              = 'JUICE_MAJIS_POINTER'
+         INS-1234567_BORESIGHT         = ( 0.000   0.000   1.000 )
+         INS-1234567_FOV_FRAME         = 'JUICE_MAJIS_POINTER'
+         INS-1234567_FOV_SHAPE         = 'RECTANGLE'
+         INS-1234567_FOV_CLASS_SPEC    = 'ANGLES'
+         INS-1234567_FOV_REF_VECTOR    = ( 0.000   1.000   0.000 )
+         INS-1234567_FOV_REF_ANGLE     = ( 0.03              )
+         INS-1234567_FOV_CROSS_ANGLE   = ( 0.03              )
+         INS-1234567_FOV_ANGLE_UNITS   = 'RADIANS'
+
+
+        FRAME_JUICE_MAJIS_POINTER = 1234567
+        FRAME_1234567_NAME       = 'JUICE_MAJIS_POINTER'
+        FRAME_1234567_CLASS      = 4
+        FRAME_1234567_CLASS_ID   = 1234567
+        FRAME_1234567_CENTER     = -28400
+    
+        TKFRAME_1234567_SPEC     = 'ANGLES'
+        TKFRAME_1234567_RELATIVE = 'JUICE_MAJIS_BASE'
+        TKFRAME_1234567_ANGLES   = ( 0, 0, 0 )
+        TKFRAME_1234567_AXES     = ( 1, 2, 3 )
+        TKFRAME_1234567_UNITS    = 'DEGREES'
+
+        NAIF_BODY_NAME += ( 'JUICE_MAJIS_POINTER')
+        NAIF_BODY_CODE += ( -1234567             )
+
+    \begintext

@@ -24,7 +24,7 @@
          "geometry": {
            "type": "DSK",
            "kernel": "./models/juice_europa_plasma_torus_v02.bds",
-           "opacity": 1,
+           "opacity": 0.5,
            "color": [ 1, 0.6, 0 ]
        },
        "label": {
@@ -70,7 +70,7 @@
        "geometry": {
          "type": "DSK",
          "kernel": "./models/juice_io_plasma_torus_v04.bds",
-         "opacity": 1,
+         "opacity": 0.5,
          "color": [ 0.6, 1, 0 ]
      },
      "label": {

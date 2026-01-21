@@ -157,6 +157,16 @@
         "spacecraft": "JUICE_MAJIS"
       },
       {
+        "name": "JUICE_MAJIS_POINTER",
+        "fov_frame": "JUICE_MAJIS_BASE",
+        "color": [
+          0.6,
+          0,
+          0
+        ],
+        "spacecraft": "JUICE_MAJIS"
+      },
+      {
         "name": "JUICE_MAJIS_IR_B4",
         "fov_frame": "JUICE_MAJIS_IR_B4",
         "color": [
@@ -3738,6 +3748,11 @@
       "name": "JUICE_MAJIS_ENVELOPE",
       "fov_frame": "JUICE_MAJIS_BASE",
       "size": 3.4
+    },
+    {
+      "name": "JUICE_MAJIS_POINTER",
+      "fov_frame": "JUICE_MAJIS_POINTER",
+      "size": 6.0
     },
     {
       "name": "JUICE_MAJIS_IR",

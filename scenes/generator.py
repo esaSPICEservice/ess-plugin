@@ -47,6 +47,8 @@ def create_cosmo_scene(parent_path, metakernel, extra):
 
 
     run_time = get_runtime()
+    run_time.set('working_dir', parent_path)
+
     data_folder = os.path.join(os.path.dirname(__file__), 'data',  run_time.get('spacecraft', '').lower())
 
     scene_json = {
@@ -80,6 +82,9 @@ def create_cosmo_scene(parent_path, metakernel, extra):
     }
     spice_json.get('spiceKernels').extend(extra)
 
+    mission_kernels = get_mission_kernels(data_folder)
+    spice_json.get('spiceKernels').extend(mission_kernels)
+
     spice_file_path = os.path.abspath(os.path.join(parent_path, "spice.json"))
     with open(spice_file_path, "w") as spice_json_file:
         json.dump(spice_json, spice_json_file, indent=2)
@@ -95,3 +100,9 @@ def generate_working_dir():
     working_dir = os.path.join(os.path.dirname(__file__), '..', 'tmp', timestamp())
     os.makedirs(working_dir)
     return working_dir
+
+def get_mission_kernels(data_folder):
+    mission_kernels = []
+    for file in os.listdir(os.path.join(data_folder, 'kernels')):
+        mission_kernels.append(os.path.join(data_folder, 'kernels', file))
+    return mission_kernels

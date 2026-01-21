@@ -2,6 +2,8 @@
 # cosmographia.sh
 # Runs Cosmographia with selectable subcommands and persistent COSMO_PATH.
 
+export LC_ALL="en_US.UTF-8"
+
 CONFIG_FILE="$HOME/.cosmo_path"
 
 show_help() {
