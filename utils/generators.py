@@ -49,7 +49,7 @@ class SensorGenerator(Generator):
                 'range': 12000,
                 'rangeTracking': True,
                 'frustumColor':  sensor.frustum_color,
-                'frustumOpacity': SENSOR_FRUSTUM_ON_OPACITY,
+                'frustumOpacity': 0,
                 'gridOpacity': 0.2,
                 'footprintOpacity': 0.5,
                 'sideDivisions': 125,
@@ -57,7 +57,7 @@ class SensorGenerator(Generator):
             }
 
         }
-        
+
         if sensor.sensor_position:
             sensor_json['trajectory'] = {
                 "type": "FixedPoint",
@@ -105,7 +105,7 @@ def append_observation(items, index, body, sensor_name, start, end, color):
             "fillInObservations": False
         }
     }
-    
+
     items.append(obs_json)
 
 

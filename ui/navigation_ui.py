@@ -29,7 +29,7 @@ class NavigationDialog(QDialog):
         self.navigation_panel.setupUi(self)
         self.navigation_panel.sensorViewButton.clicked.connect(self.sensor_view)
         self.frustrumCheckbox = self.navigation_panel.frustrumCheckbox
-        self.frustrumCheckbox.setChecked(True)
+        self.frustrumCheckbox.setChecked(False)
         self.frustrumCheckbox.stateChanged.connect(self.frustrumChange)
         self.spacecrafts_tab()
         self.tabSelector = TabbedSelector(self, get_sensor_names(), self.toggle_sensor)
