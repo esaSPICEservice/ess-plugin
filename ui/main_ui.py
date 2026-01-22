@@ -15,15 +15,15 @@ def create_ui(settings_filename, ptr_as_default=False):
 
     main_window = get_main_window()
     actions = []
-    
+
     mk = MkLoaderDialog(main_window)
     actions.append(ActionSpec('Metakernel Load', 'Build a basic scene', '', mk.show_and_focus))
-    
+
     use_ptr = rt.get('use_ptr', False)
 
     if use_ptr:
         bd = PTREditorDialog(main_window)
-        actions.append(ActionSpec('PTR simulation', 'Execute OSVE', '', bd.show_and_focus))
+        actions.append(ActionSpec('PTR simulation', 'Execute OSVE', 'alt+p', bd.show_and_focus))
 
     add_menu(main_window, MenuSpec('Scenes', actions))
 
@@ -35,13 +35,12 @@ def create_ui(settings_filename, ptr_as_default=False):
             ActionSpec('Catalogs', 'Runtime catalogs', '', cat.show_and_focus),
             ActionSpec('ESS plugin v' + __version__, 'Version of the tool', '', show_plugin_repository)
             ]))
-    
+
     if ptr_as_default:
         bd.show_and_focus()
     else:
         mk.show_and_focus()
 
 
-def show_plugin_repository(): 
+def show_plugin_repository():
     show_url_in_browser('https://s2e2.cosmos.esa.int/bitbucket/projects/SPICE/repos/ess-plugin')
-
