@@ -66,8 +66,8 @@
         "name": "JUICE_JANUS",
         "fov_frame": "JUICE_JANUS",
         "color": [
-          0.6,
-          0,
+          1.0,
+          0.5,
           0
         ],
         "spacecraft": "JUICE_JANUS"
@@ -97,8 +97,8 @@
     ],
     "MAJ": [
       {
-        "name": "JUICE_MAJIS_ENVELOPE",
-        "fov_frame": "JUICE_MAJIS_ENVELOPE",
+        "name": "JUICE_MAJIS_EXTENDED",
+        "fov_frame": "JUICE_MAJIS_EXTENDED",
         "color": [
           0,
           0.6,
@@ -111,28 +111,8 @@
         "fov_frame": "JUICE_MAJIS_VISNIR",
         "color": [
           0,
-          0.6,
-          0
-        ],
-        "spacecraft": "JUICE_MAJIS"
-      },
-      {
-        "name": "JUICE_MAJIS_VISNIR_B2",
-        "fov_frame": "JUICE_MAJIS_VISNIR_B2",
-        "color": [
           0,
-          0.6,
-          0
-        ],
-        "spacecraft": "JUICE_MAJIS"
-      },
-      {
-        "name": "JUICE_MAJIS_VISNIR_B4",
-        "fov_frame": "JUICE_MAJIS_VISNIR_B4",
-        "color": [
-          0,
-          0.6,
-          0
+          0.6
         ],
         "spacecraft": "JUICE_MAJIS"
       },
@@ -140,38 +120,8 @@
         "name": "JUICE_MAJIS_IR",
         "fov_frame": "JUICE_MAJIS_IR",
         "color": [
-          0,
-          0.6,
-          0
-        ],
-        "spacecraft": "JUICE_MAJIS"
-      },
-      {
-        "name": "JUICE_MAJIS_IR_B2",
-        "fov_frame": "JUICE_MAJIS_IR_B2",
-        "color": [
-          0,
-          0.6,
-          0
-        ],
-        "spacecraft": "JUICE_MAJIS"
-      },
-      {
-        "name": "JUICE_MAJIS_POINTER",
-        "fov_frame": "JUICE_MAJIS_BASE",
-        "color": [
           0.6,
           0,
-          0
-        ],
-        "spacecraft": "JUICE_MAJIS"
-      },
-      {
-        "name": "JUICE_MAJIS_IR_B4",
-        "fov_frame": "JUICE_MAJIS_IR_B4",
-        "color": [
-          0,
-          0.6,
           0
         ],
         "spacecraft": "JUICE_MAJIS"
@@ -3705,6 +3655,16 @@
   ],
   "boresights": [
     {
+      "name": "JUICE_MAJIS_EXTENDED",
+      "fov_frame": "JUICE_MAJIS_BASE",
+      "size": 8.5
+    },
+    {
+      "name": "JUICE_JANUS",
+      "fov_frame": "JUICE_JANUS",
+      "size": 1.72
+    },
+    {
       "name": "JUICE_GALA_RXT",
       "fov_frame": "JUICE_GALA_RXT",
       "size": 0.03323155211758775
@@ -3730,11 +3690,6 @@
       "size": 2.0
     },
     {
-      "name": "JUICE_JANUS",
-      "fov_frame": "JUICE_JANUS",
-      "size": 1.72
-    },
-    {
       "name": "JUICE_JMC-1",
       "fov_frame": "JUICE_JMC-1",
       "size": 93.0
@@ -3743,16 +3698,6 @@
       "name": "JUICE_JMC-2",
       "fov_frame": "JUICE_JMC-2",
       "size": 93.0
-    },
-    {
-      "name": "JUICE_MAJIS_ENVELOPE",
-      "fov_frame": "JUICE_MAJIS_BASE",
-      "size": 3.4
-    },
-    {
-      "name": "JUICE_MAJIS_POINTER",
-      "fov_frame": "JUICE_MAJIS_POINTER",
-      "size": 6.0
     },
     {
       "name": "JUICE_MAJIS_IR",
