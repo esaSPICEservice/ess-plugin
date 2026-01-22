@@ -5,49 +5,46 @@ from PyQt5.QtWidgets import (
 )
 from PyQt5.QtCore import Qt
 from utils.frame_generator import MajisFrameGenerator
-from actions.sensors import toggle_sensor
+from ui.common import get_runtime
+from actions.sensors import toggle_sensor, reconfigure_catalogue
+from actions.time_navigation import sensor_view
 
 class MajisPointerDialog(QDialog):
+    mj = MajisFrameGenerator()
+    SLIT_STEPS = 0.008_594  # degrees
 
     def __init__(self, parent=None):
         super().__init__(parent)
 
-        self.x_angle = 0
-        self.y_angle = 0
-        self.delta = 1
- 
-        self.setWindowTitle("MAJIS Pointer")
+        self.slit_offset = 0
+        self.delta = 128
+
+        self.setWindowTitle("MAJIS Scanner")
 
          # Buttons
-        self.up_btn = QPushButton("Up")
-        self.down_btn = QPushButton("Down")
-        self.left_btn = QPushButton("Left")
-        self.right_btn = QPushButton("Right")
-        self.center_btn = QPushButton("Center")
+        self.up_btn = QPushButton("⬆️ Slit up")
+        self.down_btn = QPushButton("⬇️ Slit down")
+        self.reset_btn = QPushButton("✖️ Reset")
 
         for btn in (
             self.up_btn,
             self.down_btn,
-            self.left_btn,
-            self.right_btn,
-            self.center_btn,
+            self.reset_btn,
         ):
-            btn.setFixedSize(80, 40)
+            btn.setFixedSize(300, 40)
 
         # Cross layout
-        cross_layout = QGridLayout()
-        cross_layout.addWidget(self.up_btn, 0, 1)
-        cross_layout.addWidget(self.left_btn, 1, 0)
-        cross_layout.addWidget(self.center_btn, 1, 1)
-        cross_layout.addWidget(self.right_btn, 1, 2)
-        cross_layout.addWidget(self.down_btn, 2, 1)
+        arrows_layout = QVBoxLayout()
+        arrows_layout.addWidget(self.up_btn)
+        arrows_layout.addWidget(self.reset_btn)
+        arrows_layout.addWidget(self.down_btn)
 
         # Delta input
-        delta_label = QLabel("Delta (deg):")
+        delta_label = QLabel("Slits offset:")
         self.delta_spin = QDoubleSpinBox()
-        self.delta_spin.setRange(-1e6, 1e6)
-        self.delta_spin.setDecimals(4)
-        self.delta_spin.setSingleStep(0.1)
+        self.delta_spin.setRange(0, 1e3)
+        self.delta_spin.setDecimals(0)
+        self.delta_spin.setSingleStep(1)
         self.delta_spin.setValue(self.delta)
 
         self.delta_spin.valueChanged.connect(self.on_delta_changed)
@@ -59,15 +56,12 @@ class MajisPointerDialog(QDialog):
 
         # Main layout
         main_layout = QVBoxLayout()
-        main_layout.addLayout(cross_layout)
+        main_layout.addLayout(arrows_layout)
         main_layout.addLayout(delta_layout)
-
 
         self.up_btn.clicked.connect(self.on_up)
         self.down_btn.clicked.connect(self.on_down)
-        self.left_btn.clicked.connect(self.on_left)
-        self.right_btn.clicked.connect(self.on_right)
-        self.center_btn.clicked.connect(self.on_center)
+        self.reset_btn.clicked.connect(self.on_reset)
 
         # ---- Status label at the end ----
         self.status_label = QLabel("")
@@ -77,34 +71,34 @@ class MajisPointerDialog(QDialog):
         self.setLayout(main_layout)
 
     def on_up(self):
-        self.update(0, self.delta)
+        self.update(self.delta)
 
     def on_down(self):
-        self.update(0, -self.delta)
+        self.update(-self.delta)
 
-    def on_left(self):
-        self.update(-self.delta, 0)
-
-    def on_right(self):
-        self.update(self.delta, 0)
-
-    def on_center(self):
-        self.x_angle = 0
-        self.y_angle = 0
-        self.update(0, 0)
+    def on_reset(self):
+        self.slit_offset = 0
+        self.update(0)
 
     def on_delta_changed(self, value: float):
         self.delta = value
 
-    def update(self, delta_x, delta_y):
-        toggle_sensor(True,'JUICE_MAJIS_POINTER')
-        self.x_angle += delta_x
-        self.y_angle += delta_y
-        label = "X: {:.2f} (deg) Y: {:.2f} (deg)".format(self.x_angle, self.y_angle)
+    def update(self, delta_y):
+        self.slit_offset += delta_y
+        label = "ΔSlits: {:.0f} | Scan angle: {:.2f}° | Mirror position: {:.2f}°".format(
+            self.slit_offset,
+            self.slit_offset * self.SLIT_STEPS,
+            self.slit_offset * self.SLIT_STEPS / 2,
+        )
         self.status_label.setText(label)
-        mj = MajisFrameGenerator()
-        mj.update([self.x_angle, self.y_angle, 0])
+        self.mj.update([self.slit_offset * self.SLIT_STEPS, 0, 0])
 
     def show_and_focus(self):
         self.hide()
+
+        toggle_sensor(True,'JUICE_JANUS')
+        toggle_sensor(True,'JUICE_MAJIS_EXTENDED')
+        toggle_sensor(True, 'JUICE_MAJIS_VISNIR')
+
+        sensor_view('JUICE_MAJIS_EXTENDED', 8.5)
         self.show()
