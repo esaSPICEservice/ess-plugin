@@ -6,6 +6,7 @@ from ui.navigation_ui import NavigationDialog
 from ui.observations_ui import ObservationsDialog
 from ui.rings_ui import RingsDialog
 from ui.majis import MajisPointerDialog
+from ui.juice import SpacecraftPointerDialog
 from .jupiter_science import trigger_structure
 from functools import partial
 from simulator.osve import __version__
@@ -15,7 +16,7 @@ def add_juice_menu():
     jm = MoonsDialog(main_window)
     rd = RingsDialog(main_window)
     add_menu(main_window, MenuSpec(
-        'Jupiter structures', 
+        'Jupiter structures',
         [
             ActionSpec('Jovian Moons', 'Control Jovian Moons', '', jm.show_and_focus),
             ActionSpec('Rings and Torus', 'Control Rings and Torus', '', rd.show_and_focus),
@@ -31,20 +32,22 @@ def add_juice_menu():
             ExtendedActionSpec('Jupiter Belt Outer 45 double', '', '', partial(trigger_structure,'jupiter_belts_outer_45deg_double.json', 'Dipole_outer_45deg_double')),
             ExtendedActionSpec('Jupiter Belt Outer 45', '', '', partial(trigger_structure,'jupiter_belts_outer_45deg.json', 'Dipole_outer_45deg')),
             ExtendedActionSpec('Jupiter Belt Outer 90', '', '', partial(trigger_structure,'jupiter_belts_outer_90deg.json', 'Dipole_outer_90deg')),
-            ExtendedActionSpec('Jupiter Belt Outer', '', '', partial(trigger_structure,'jupiter_belts_outer.json', 'Dipole_outer'))            
+            ExtendedActionSpec('Jupiter Belt Outer', '', '', partial(trigger_structure,'jupiter_belts_outer.json', 'Dipole_outer'))
          ]
         ))
 
     nv = NavigationDialog(main_window)
     obs = ObservationsDialog(main_window)
-    majis =MajisPointerDialog(main_window)
-    add_menu(main_window, MenuSpec('Navigation', 
+    sc = SpacecraftPointerDialog(main_window)
+    majis = MajisPointerDialog(main_window)
+    add_menu(main_window, MenuSpec('Navigation',
                                    [
                                        ActionSpec('Sensors', 'Sensors', 'Alt+s', nv.show_and_focus),
                                        ActionSpec('Observations', 'Observations', '', obs.show_and_focus),
-                                       ActionSpec('Majis Pointer', 'Majis Pointer', 'Alt+m', majis.show_and_focus)
+                                       ActionSpec('Spacecraft pointer', 'Spacecraft pointer', 'Alt+j', sc.show_and_focus),
+                                       ActionSpec('Majis Scanner', 'Majis Scanner', 'Alt+m', majis.show_and_focus),
                                     ]))
-    
+
     osve_version = 'OSVE v' + __version__
 
     add_menu(main_window, MenuSpec('Juice Help',
@@ -63,12 +66,12 @@ def show_spice_help():
 
 def show_osve_help():
     show_url_in_browser('https://juicesoc.esac.esa.int/help/osve')
-    
+
 def add_tgo_menu():
     main_window = get_main_window()
     nv = NavigationDialog(main_window)
     obs = ObservationsDialog(main_window)
-    add_menu(main_window, MenuSpec('Navigation', 
+    add_menu(main_window, MenuSpec('Navigation',
                                    [
                                        ActionSpec('Sensors', 'Sensors', 'Alt+s', nv.show_and_focus),
                                        ActionSpec('Observations', 'Observations', '', obs.show_and_focus)
@@ -78,7 +81,7 @@ def add_hera_menu():
     main_window = get_main_window()
     nv = NavigationDialog(main_window)
     obs = ObservationsDialog(main_window)
-    add_menu(main_window, MenuSpec('Navigation', 
+    add_menu(main_window, MenuSpec('Navigation',
                                    [
                                        ActionSpec('Sensors', 'Sensors', 'Alt+s', nv.show_and_focus),
                                        ActionSpec('Observations', 'Observations', '', obs.show_and_focus)
@@ -88,7 +91,7 @@ def add_mmatisse_menu():
     main_window = get_main_window()
     ms = MarsDialog(main_window)
     add_menu(main_window, MenuSpec(
-        'Mars', 
+        'Mars',
         [
             ActionSpec('Mars Structures', 'Control Mars Structure', '', ms.show_and_focus),
          ]
@@ -96,9 +99,8 @@ def add_mmatisse_menu():
 
     nv = NavigationDialog(main_window)
     obs = ObservationsDialog(main_window)
-    add_menu(main_window, MenuSpec('Navigation', 
+    add_menu(main_window, MenuSpec('Navigation',
                                    [
                                        ActionSpec('Sensors', 'Sensors', 'Alt+s', nv.show_and_focus),
                                        ActionSpec('Observations', 'Observations', '', obs.show_and_focus)
                                     ]))
-
