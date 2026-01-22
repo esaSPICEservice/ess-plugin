@@ -1,6 +1,8 @@
 import os
 from actions.common import add_juice_menu
 from actions.time_navigation import goto_date
+from actions.sensors import toggle_sensor
+
 import cosmoscripting
 from simulator.wrapper import simulate
 from ui.blocks_ui import BlocksDialog
@@ -41,7 +43,7 @@ def execute_ptr(mk, content, calculate_power, calculate_sa, calculate_mga):
     handler = get_catalog_handler()
     handler.clean_catalogs()
     success, catalog, sensor_catalog, root_scenario = simulate(
-        mk, content, 
+        mk, content,
         not calculate_power, not calculate_sa, not calculate_mga)
     if success:
         handler = get_catalog_handler()
@@ -49,6 +51,11 @@ def execute_ptr(mk, content, calculate_power, calculate_sa, calculate_mga):
         handler.add_catalog(sensor_catalog)
         after_load(root_scenario)
         goto_date(start_time + ' UTC')
+
+        # Enforce Majis extended and Janus FOV geometries
+        toggle_sensor(True, 'JUICE_JANUS', )
+        toggle_sensor(True, 'JUICE_MAJIS_EXTENDED')
+
     else:
         dump_error(catalog)
 
@@ -60,6 +67,8 @@ def validate_ptr(content):
     return parser.start_times[0]
 
 def after_load(root_scenario):
+    add_juice_menu()
+
     main_window = get_main_window()
 
     result_dir = os.path.join(root_scenario, 'output')
@@ -95,10 +104,4 @@ def after_load(root_scenario):
             ActionSpec('OSVE result folder', 'Find results location', 'Alt+r', lambda: reveal_file(result_dir))
         )
 
-
     add_menu(main_window, MenuSpec('Pointing', menu))
-
-    add_juice_menu()
-
-
-

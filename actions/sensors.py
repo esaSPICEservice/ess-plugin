@@ -70,16 +70,14 @@ def reconfigure_catalogue():
 
     sensors_file_path = run_time.get('sensors_file_path')
     state = run_time.get('sensors_state')
-    
 
-    
     if sensors_file_path:
         cosmo = cosmoscripting.Cosmo()
         with open(sensors_file_path, 'r') as sensors_file:
             sensors_json = json.load(sensors_file)
 
         items, current_sensors = reconfigure_sensors(sensors_json.get('items'))
-        
+
         # We remove the observations in this step
         sensors_json['items'] = items
 
@@ -88,7 +86,7 @@ def reconfigure_catalogue():
 
         with open(sensors_file_path, 'w') as sensors_file:
             json.dump(sensors_json, sensors_file, indent=2)
-        
+
         # temporary solution - we shall garantee that the last
         # catalog is the sensor
         handler = get_catalog_handler()
