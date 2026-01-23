@@ -110,9 +110,9 @@
         "name": "JUICE_MAJIS_VISNIR",
         "fov_frame": "JUICE_MAJIS_VISNIR",
         "color": [
-          0,
-          0,
-          0.9
+          0.25,
+          0.75,
+          1.00
         ],
         "spacecraft": "JUICE_MAJIS"
       },
