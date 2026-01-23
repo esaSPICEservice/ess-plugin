@@ -99,6 +99,7 @@ class MajisPointerDialog(QDialog):
         toggle_sensor(True,'JUICE_JANUS')
         toggle_sensor(True,'JUICE_MAJIS_EXTENDED')
         toggle_sensor(True, 'JUICE_MAJIS_VISNIR')
+        toggle_sensor(True, 'JUICE_UVS_AP_HP')
 
         sensor_view('JUICE_MAJIS_EXTENDED', 8.5)
         self.show()
