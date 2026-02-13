@@ -29,7 +29,6 @@ class CatalogHandler:
             self.catalogs = self.catalogs[:index]
             for i in range(undo_required):
                 self.cosmo.unloadLastCatalog()
-                pass
             for cat in to_be_reloaded:
                 self.cosmo.loadCatalogFile(cat)
                 self.catalogs.append(cat)

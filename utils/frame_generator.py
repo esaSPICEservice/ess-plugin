@@ -57,3 +57,12 @@ class MajisFrameGenerator(SpacecraftFrameGenerator):
       TKFRAME_-28410_ANGLES = ( {angles} )
 \\begintext
 """
+
+
+class SwiFrameGenerator(SpacecraftFrameGenerator):
+    name = 'swi'
+    template = """\\begindata
+      TKFRAME_1234567_AXES   = ( 1, 2, 3 )
+      TKFRAME_1234567_ANGLES = ( {angles} )
+\\begintext
+"""

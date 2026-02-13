@@ -103,6 +103,8 @@ def generate_working_dir():
 
 def get_mission_kernels(data_folder):
     mission_kernels = []
-    for file in os.listdir(os.path.join(data_folder, 'kernels')):
-        mission_kernels.append(os.path.join(data_folder, 'kernels', file))
+    kernels_path = os.path.join(data_folder, 'kernels')
+    if os.path.exists(kernels_path):
+        for file in os.listdir(os.path.join(data_folder, 'kernels')):
+            mission_kernels.append(os.path.join(data_folder, 'kernels', file))
     return mission_kernels

@@ -3597,6 +3597,26 @@
         "spacecraft": "JUICE"
       },
       {
+        "name": "JUICE_SWI_CH1P",
+        "fov_frame": "JUICE_SWI_POINTER",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
+        "name": "JUICE_SWI_CH2P",
+        "fov_frame": "JUICE_SWI_POINTER",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "JUICE"
+      },
+      {
         "name": "JUICE_SWI_FULL",
         "fov_frame": "JUICE_SWI_BASE",
         "color": [

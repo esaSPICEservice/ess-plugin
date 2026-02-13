@@ -7,6 +7,7 @@ from ui.observations_ui import ObservationsDialog
 from ui.rings_ui import RingsDialog
 from ui.majis import MajisPointerDialog
 from ui.juice import SpacecraftPointerDialog
+from ui.swi import SwiPointerDialog
 from .jupiter_science import trigger_structure
 from functools import partial
 from simulator.osve import __version__
@@ -40,12 +41,14 @@ def add_juice_menu():
     obs = ObservationsDialog(main_window)
     sc = SpacecraftPointerDialog(main_window)
     majis = MajisPointerDialog(main_window)
+    swi = SwiPointerDialog(main_window)
     add_menu(main_window, MenuSpec('Navigation',
                                    [
                                        ActionSpec('Sensors', 'Sensors', 'Alt+s', nv.show_and_focus),
                                        ActionSpec('Observations', 'Observations', '', obs.show_and_focus),
                                        ActionSpec('Spacecraft pointer', 'Spacecraft pointer', 'Alt+j', sc.show_and_focus),
                                        ActionSpec('Majis Scanner', 'Majis Scanner', 'Alt+m', majis.show_and_focus),
+                                       ActionSpec('SWI Pointer', 'SWI Pointer', 'Alt+w', swi.show_and_focus),
                                     ]))
 
     osve_version = 'OSVE v' + __version__
