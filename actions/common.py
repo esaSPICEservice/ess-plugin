@@ -107,3 +107,23 @@ def add_mmatisse_menu():
                                        ActionSpec('Sensors', 'Sensors', 'Alt+s', nv.show_and_focus),
                                        ActionSpec('Observations', 'Observations', '', obs.show_and_focus)
                                     ]))
+
+def add_bepi_menu():
+    main_window = get_main_window()
+    nv = NavigationDialog(main_window)
+    obs = ObservationsDialog(main_window)
+    add_menu(main_window, MenuSpec('Navigation', 
+                                   [
+                                       ActionSpec('Sensors', 'Sensors', '', nv.show_and_focus),
+                                       ActionSpec('Observations', 'Observations', '', obs.show_and_focus)
+                                    ]))
+    
+def add_envision_menu():
+    main_window = get_main_window()
+    nv = NavigationDialog(main_window)
+    obs = ObservationsDialog(main_window)
+    add_menu(main_window, MenuSpec('Navigation', 
+                                   [
+                                       ActionSpec('Sensors', 'Sensors', '', nv.show_and_focus),
+                                       ActionSpec('Observations', 'Observations', '', obs.show_and_focus)
+                                    ]))

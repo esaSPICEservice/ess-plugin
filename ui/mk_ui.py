@@ -61,8 +61,8 @@ class MkLoaderDialog(QDialog):
             execute(mk, extra_kernels, date)
             self.hide()
         except ValueError as error:
-            QMessageBox.warning(self, 'PTR editor',
-                                'PTR not valid' + error)
+            QMessageBox.warning(self, 'MK Loader',
+                                'Problems loading MK: ' + str(error))
 
     def browse_mk(self):
         default_folder = self.settings.get(self.mission, last_repo_key, '')

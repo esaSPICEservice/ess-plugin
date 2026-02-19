@@ -1,0 +1,2529 @@
+{
+  "mission": "bepi",
+  "spacecraft": "bepi",
+  "spacecraft_frame": "MPO_SPACECRAFT",
+  "models": [
+    "spacecraft_BEPIC_arcs.json"
+  ],
+  "spacecrafts": [
+    {
+      "spacecraft": "MPO",
+      "spacecraft_frame": "MPO_SPACECRAFT",
+      "initial_offset": [
+        0,
+        1e-3,
+        -10e-3
+      ]
+    },
+    {
+      "spacecraft": "MMO",
+      "spacecraft_frame": "MMO_SPACECRAFT",
+      "initial_offset": [
+        0,
+        1e-3,
+        -10e-3
+      ]
+    },
+    {
+      "spacecraft": "MTM",
+      "spacecraft_frame": "MTM_SPACECRAFT",
+      "initial_offset": [
+        0,
+        1e-3,
+        -10e-3
+      ]
+    }
+  ],
+  "central_body": "Mercury",
+  "targets": [
+    "Mercury",
+    "Venus",
+    "Earth",
+    "Moon"
+  ],
+  "sensors": {
+    "MMO": [
+      {
+        "name": "MMO_MPPE-LEP",
+        "fov_frame": "MMO_MPPE-LEP",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MMO"
+      },
+      {
+        "name": "MMO_MPPE_ENA",
+        "fov_frame": "MMO_MPPE_ENA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MMO"
+      },
+      {
+        "name": "MMO_MPPE_ENA_CRUISE",
+        "fov_frame": "MMO_MPPE_ENA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MMO"
+      },
+      {
+        "name": "MMO_MPPE_HEP-ELE",
+        "fov_frame": "MMO_MPPE_HEP-ELE",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MMO"
+      },
+      {
+        "name": "MMO_MPPE_HEP-ELE_CRUISE",
+        "fov_frame": "MPO_SPACECRAFT",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MMO"
+      },
+      {
+        "name": "MMO_MPPE_HEP-ELE_LOWER",
+        "fov_frame": "MMO_MPPE_HEP-ELE",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MMO"
+      },
+      {
+        "name": "MMO_MPPE_HEP-ELE_UPPER",
+        "fov_frame": "MMO_MPPE_HEP-ELE",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MMO"
+      },
+      {
+        "name": "MMO_MPPE_HEP-ION",
+        "fov_frame": "MMO_MPPE_HEP-ION",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MMO"
+      },
+      {
+        "name": "MMO_MPPE_MEA1",
+        "fov_frame": "MMO_MPPE_MEA1",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MMO"
+      },
+      {
+        "name": "MMO_MPPE_MEA1_CRUISE",
+        "fov_frame": "MPO_SPACECRAFT",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MMO"
+      },
+      {
+        "name": "MMO_MPPE_MEA2",
+        "fov_frame": "MMO_MPPE_MEA2",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MMO"
+      },
+      {
+        "name": "MMO_MPPE_MEA2_CRUISE",
+        "fov_frame": "MPO_SPACECRAFT",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MMO"
+      },
+      {
+        "name": "MMO_MPPE_MIA",
+        "fov_frame": "MMO_MPPE_MIA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MMO"
+      },
+      {
+        "name": "MMO_MPPE_MIA_CRUISE",
+        "fov_frame": "MPO_SPACECRAFT",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MMO"
+      },
+      {
+        "name": "MMO_MPPE_MSA",
+        "fov_frame": "MMO_MPPE_MSA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MMO"
+      },
+      {
+        "name": "MMO_MPPE_MSA_CRUISE",
+        "fov_frame": "MPO_SPACECRAFT",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MMO"
+      },
+      {
+        "name": "MMO_MSASI_SLIT",
+        "fov_frame": "MMO_MSASI",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MMO"
+      },
+      {
+        "name": "MMO_PWI_MEF1",
+        "fov_frame": "MMO_SSAS",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MMO"
+      }
+    ],
+    "MPO": [
+      {
+        "name": "MPO_BERM",
+        "fov_frame": "MPO_BERM",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_BERM_PLAN",
+        "fov_frame": "MPO_BERM_PLAN",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_BELA_RX",
+        "fov_frame": "MPO_BELA_RX",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_BELA_TX_MAIN",
+        "fov_frame": "MPO_BELA_TX_MAIN",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_BELA_TX_RED",
+        "fov_frame": "MPO_BELA_TX_RED",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_HGA",
+        "fov_frame": "MPO_HGA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_MERTIS_TIR_A",
+        "fov_frame": "MPO_MERTIS_TIR_A",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_MERTIS_TIR_A_PLANET",
+        "fov_frame": "MPO_MERTIS_TIR_A_PLANET",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_MERTIS_TIR_A_SPACE",
+        "fov_frame": "MPO_MERTIS_TIR_A_SPACE",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_MERTIS_TIR_B",
+        "fov_frame": "MPO_MERTIS_TIR_B",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_MERTIS_TIR_B_PLANET",
+        "fov_frame": "MPO_MERTIS_TIR_B_PLANET",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_MERTIS_TIR_B_SPACE",
+        "fov_frame": "MPO_MERTIS_TIR_B_SPACE",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_MERTIS_TIS",
+        "fov_frame": "MPO_MERTIS",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_MERTIS_TIS_PLANET",
+        "fov_frame": "MPO_MERTIS_PLANET",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_MERTIS_TIS_SPACE",
+        "fov_frame": "MPO_MERTIS_SPACE",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_MGNS",
+        "fov_frame": "MPO_MGNS",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_MIXS-C",
+        "fov_frame": "MPO_MIXS-C",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_MIXS-T",
+        "fov_frame": "MPO_MIXS-T",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_PHEBUS_100",
+        "fov_frame": "MPO_PHEBUS",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_PHEBUS_75",
+        "fov_frame": "MPO_PHEBUS",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_PHEBUS_SLIT_100",
+        "fov_frame": "MPO_PHEBUS",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_PHEBUS_SLIT_75",
+        "fov_frame": "MPO_PHEBUS",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SERENA_ELENA",
+        "fov_frame": "MPO_SERENA_ELENA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SERENA_ELENA_AN_01",
+        "fov_frame": "MPO_SERENA_ELENA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SERENA_ELENA_AN_02",
+        "fov_frame": "MPO_SERENA_ELENA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SERENA_ELENA_AN_03",
+        "fov_frame": "MPO_SERENA_ELENA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SERENA_ELENA_AN_04",
+        "fov_frame": "MPO_SERENA_ELENA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SERENA_ELENA_AN_05",
+        "fov_frame": "MPO_SERENA_ELENA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SERENA_ELENA_AN_06",
+        "fov_frame": "MPO_SERENA_ELENA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SERENA_ELENA_AN_07",
+        "fov_frame": "MPO_SERENA_ELENA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SERENA_ELENA_AN_08",
+        "fov_frame": "MPO_SERENA_ELENA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SERENA_ELENA_AN_09",
+        "fov_frame": "MPO_SERENA_ELENA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SERENA_ELENA_AN_10",
+        "fov_frame": "MPO_SERENA_ELENA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SERENA_ELENA_AN_11",
+        "fov_frame": "MPO_SERENA_ELENA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SERENA_ELENA_AN_12",
+        "fov_frame": "MPO_SERENA_ELENA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SERENA_ELENA_AN_13",
+        "fov_frame": "MPO_SERENA_ELENA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SERENA_ELENA_AN_14",
+        "fov_frame": "MPO_SERENA_ELENA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SERENA_ELENA_AN_15",
+        "fov_frame": "MPO_SERENA_ELENA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SERENA_ELENA_AN_16",
+        "fov_frame": "MPO_SERENA_ELENA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SERENA_ELENA_AN_17",
+        "fov_frame": "MPO_SERENA_ELENA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SERENA_ELENA_AN_18",
+        "fov_frame": "MPO_SERENA_ELENA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SERENA_ELENA_AN_19",
+        "fov_frame": "MPO_SERENA_ELENA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SERENA_ELENA_AN_20",
+        "fov_frame": "MPO_SERENA_ELENA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SERENA_ELENA_AN_21",
+        "fov_frame": "MPO_SERENA_ELENA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SERENA_ELENA_AN_22",
+        "fov_frame": "MPO_SERENA_ELENA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SERENA_ELENA_AN_23",
+        "fov_frame": "MPO_SERENA_ELENA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SERENA_ELENA_AN_24",
+        "fov_frame": "MPO_SERENA_ELENA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SERENA_ELENA_AN_25",
+        "fov_frame": "MPO_SERENA_ELENA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SERENA_ELENA_AN_26",
+        "fov_frame": "MPO_SERENA_ELENA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SERENA_ELENA_AN_27",
+        "fov_frame": "MPO_SERENA_ELENA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SERENA_ELENA_AN_28",
+        "fov_frame": "MPO_SERENA_ELENA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SERENA_ELENA_AN_29",
+        "fov_frame": "MPO_SERENA_ELENA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SERENA_ELENA_AN_30",
+        "fov_frame": "MPO_SERENA_ELENA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SERENA_ELENA_AN_31",
+        "fov_frame": "MPO_SERENA_ELENA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SERENA_ELENA_AN_32",
+        "fov_frame": "MPO_SERENA_ELENA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SERENA_MIPA",
+        "fov_frame": "MPO_SERENA_MIPA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SERENA_MIPA_00",
+        "fov_frame": "MPO_SERENA_MIPA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SERENA_MIPA_01",
+        "fov_frame": "MPO_SERENA_MIPA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SERENA_MIPA_02",
+        "fov_frame": "MPO_SERENA_MIPA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SERENA_MIPA_03",
+        "fov_frame": "MPO_SERENA_MIPA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SERENA_MIPA_04",
+        "fov_frame": "MPO_SERENA_MIPA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SERENA_MIPA_05",
+        "fov_frame": "MPO_SERENA_MIPA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SERENA_MIPA_06",
+        "fov_frame": "MPO_SERENA_MIPA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SERENA_MIPA_07",
+        "fov_frame": "MPO_SERENA_MIPA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SERENA_MIPA_08",
+        "fov_frame": "MPO_SERENA_MIPA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SERENA_MIPA_09",
+        "fov_frame": "MPO_SERENA_MIPA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SERENA_MIPA_10",
+        "fov_frame": "MPO_SERENA_MIPA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SERENA_MIPA_11",
+        "fov_frame": "MPO_SERENA_MIPA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SERENA_MIPA_12",
+        "fov_frame": "MPO_SERENA_MIPA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SERENA_MIPA_13",
+        "fov_frame": "MPO_SERENA_MIPA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SERENA_MIPA_14",
+        "fov_frame": "MPO_SERENA_MIPA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SERENA_MIPA_15",
+        "fov_frame": "MPO_SERENA_MIPA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SERENA_MIPA_16",
+        "fov_frame": "MPO_SERENA_MIPA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SERENA_MIPA_17",
+        "fov_frame": "MPO_SERENA_MIPA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SERENA_MIPA_18",
+        "fov_frame": "MPO_SERENA_MIPA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SERENA_MIPA_19",
+        "fov_frame": "MPO_SERENA_MIPA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SERENA_MIPA_20",
+        "fov_frame": "MPO_SERENA_MIPA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SERENA_MIPA_21",
+        "fov_frame": "MPO_SERENA_MIPA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SERENA_MIPA_22",
+        "fov_frame": "MPO_SERENA_MIPA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SERENA_MIPA_23",
+        "fov_frame": "MPO_SERENA_MIPA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SERENA_MIPA_24",
+        "fov_frame": "MPO_SERENA_MIPA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SERENA_MIPA_25",
+        "fov_frame": "MPO_SERENA_MIPA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SERENA_MIPA_26",
+        "fov_frame": "MPO_SERENA_MIPA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SERENA_MIPA_27",
+        "fov_frame": "MPO_SERENA_MIPA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SERENA_MIPA_28",
+        "fov_frame": "MPO_SERENA_MIPA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SERENA_MIPA_29",
+        "fov_frame": "MPO_SERENA_MIPA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SERENA_MIPA_30",
+        "fov_frame": "MPO_SERENA_MIPA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SERENA_MIPA_31",
+        "fov_frame": "MPO_SERENA_MIPA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SERENA_MIPA_32",
+        "fov_frame": "MPO_SERENA_MIPA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SERENA_MIPA_33",
+        "fov_frame": "MPO_SERENA_MIPA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SERENA_MIPA_34",
+        "fov_frame": "MPO_SERENA_MIPA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SERENA_MIPA_35",
+        "fov_frame": "MPO_SERENA_MIPA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SERENA_MIPA_36",
+        "fov_frame": "MPO_SERENA_MIPA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SERENA_MIPA_37",
+        "fov_frame": "MPO_SERENA_MIPA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SERENA_MIPA_38",
+        "fov_frame": "MPO_SERENA_MIPA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SERENA_MIPA_39",
+        "fov_frame": "MPO_SERENA_MIPA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SERENA_MIPA_40",
+        "fov_frame": "MPO_SERENA_MIPA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SERENA_MIPA_41",
+        "fov_frame": "MPO_SERENA_MIPA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SERENA_MIPA_42",
+        "fov_frame": "MPO_SERENA_MIPA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SERENA_MIPA_43",
+        "fov_frame": "MPO_SERENA_MIPA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SERENA_MIPA_44",
+        "fov_frame": "MPO_SERENA_MIPA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SERENA_MIPA_45",
+        "fov_frame": "MPO_SERENA_MIPA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SERENA_MIPA_46",
+        "fov_frame": "MPO_SERENA_MIPA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SERENA_MIPA_47",
+        "fov_frame": "MPO_SERENA_MIPA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SERENA_MIPA_48",
+        "fov_frame": "MPO_SERENA_MIPA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SERENA_MIPA_49",
+        "fov_frame": "MPO_SERENA_MIPA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SERENA_MIPA_50",
+        "fov_frame": "MPO_SERENA_MIPA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SERENA_PICAM",
+        "fov_frame": "MPO_SERENA_PICAM",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SERENA_STROFIO",
+        "fov_frame": "MPO_SERENA_STROFIO",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SERENA_STROFIO+X",
+        "fov_frame": "MPO_SERENA_STROFIO+X",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SERENA_STROFIO+X_SUN",
+        "fov_frame": "MPO_SERENA_STROFIO+X",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SERENA_STROFIO-X",
+        "fov_frame": "MPO_SERENA_STROFIO-X",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SERENA_STROFIO-X_SUN",
+        "fov_frame": "MPO_SERENA_STROFIO-X",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SIMBIO-SYS_HRIC_F550",
+        "fov_frame": "MPO_SIMBIO-SYS_HRIC_F550",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SIMBIO-SYS_HRIC_F750",
+        "fov_frame": "MPO_SIMBIO-SYS_HRIC_F750",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SIMBIO-SYS_HRIC_F880",
+        "fov_frame": "MPO_SIMBIO-SYS_HRIC_F880",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SIMBIO-SYS_HRIC_FPA",
+        "fov_frame": "MPO_SIMBIO-SYS_HRIC_FPA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SIMBIO-SYS_HRIC_FPAN",
+        "fov_frame": "MPO_SIMBIO-SYS_HRIC_FPAN",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SIMBIO-SYS_STC-H",
+        "fov_frame": "MPO_SIMBIO-SYS_STC-H",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SIMBIO-SYS_STC-H_F420",
+        "fov_frame": "MPO_SIMBIO-SYS_STC-H_F420",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SIMBIO-SYS_STC-H_F750",
+        "fov_frame": "MPO_SIMBIO-SYS_STC-H_F750",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SIMBIO-SYS_STC-H_P700",
+        "fov_frame": "MPO_SIMBIO-SYS_STC-H_P700",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SIMBIO-SYS_STC-L",
+        "fov_frame": "MPO_SIMBIO-SYS_STC-L",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SIMBIO-SYS_STC-L_F550",
+        "fov_frame": "MPO_SIMBIO-SYS_STC-L_F550",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SIMBIO-SYS_STC-L_F920",
+        "fov_frame": "MPO_SIMBIO-SYS_STC-L_F920",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SIMBIO-SYS_STC-L_P700",
+        "fov_frame": "MPO_SIMBIO-SYS_STC-L_P700",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SIMBIO-SYS_VIHI_FPA",
+        "fov_frame": "MPO_SIMBIO-SYS_VIHI_FPA",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SIXS-P-0",
+        "fov_frame": "MPO_SIXS-P-0",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SIXS-P-1",
+        "fov_frame": "MPO_SIXS-P-1",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SIXS-P-2",
+        "fov_frame": "MPO_SIXS-P-2",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SIXS-P-3",
+        "fov_frame": "MPO_SIXS-P-3",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SIXS-P-4",
+        "fov_frame": "MPO_SIXS-P-4",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SIXS-X-1",
+        "fov_frame": "MPO_SIXS-X-1",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SIXS-X-1_PLAN",
+        "fov_frame": "MPO_SIXS-X-1",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SIXS-X-1_THRESHOLD",
+        "fov_frame": "MPO_SIXS-X-1",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SIXS-X-2",
+        "fov_frame": "MPO_SIXS-X-2",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SIXS-X-2_PLAN",
+        "fov_frame": "MPO_SIXS-X-2",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SIXS-X-2_THRESHOLD",
+        "fov_frame": "MPO_SIXS-X-2",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SIXS-X-3",
+        "fov_frame": "MPO_SIXS-X-3",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SIXS-X-3_PLAN",
+        "fov_frame": "MPO_SIXS-X-3",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_SIXS-X-3_THRESHOLD",
+        "fov_frame": "MPO_SIXS-X-3",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_STR-1",
+        "fov_frame": "MPO_STR-1",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_STR-2",
+        "fov_frame": "MPO_STR-2",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
+        "name": "MPO_STR-3",
+        "fov_frame": "MPO_STR-3",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      }
+    ],
+    "MTM": [
+      {
+        "name": "MTM_MCAM1",
+        "fov_frame": "MTM_MCAM1",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MTM"
+      },
+      {
+        "name": "MTM_MCAM2",
+        "fov_frame": "MTM_MCAM2",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MTM"
+      },
+      {
+        "name": "MTM_MCAM3",
+        "fov_frame": "MTM_MCAM3",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MTM"
+      }
+    ]
+  },
+  "boresights": [
+    {
+      "name": "-68336",
+      "fov_frame": "-68336",
+      "size": 42.5
+    },
+    {
+      "name": "-68337",
+      "fov_frame": "-68337",
+      "size": 42.5
+    },
+    {
+      "name": "MMO_MPPE-LEP",
+      "fov_frame": "MMO_MPPE-LEP",
+      "size": 10.0
+    },
+    {
+      "name": "MMO_MPPE_ENA",
+      "fov_frame": "MMO_MPPE_ENA",
+      "size": 0
+    },
+    {
+      "name": "MMO_MPPE_ENA_CRUISE",
+      "fov_frame": "MMO_MPPE_ENA_CRUISE",
+      "size": 0
+    },
+    {
+      "name": "MMO_MPPE_HEP-ELE",
+      "fov_frame": "MMO_MPPE_HEP-ELE",
+      "size": 130.0
+    },
+    {
+      "name": "MMO_MPPE_HEP-ELE_CRUISE",
+      "fov_frame": "MMO_MPPE_HEP-ELE_CRUISE",
+      "size": 0
+    },
+    {
+      "name": "MMO_MPPE_HEP-ELE_LOWER",
+      "fov_frame": "MMO_MPPE_HEP-ELE_LOWER",
+      "size": 57.0
+    },
+    {
+      "name": "MMO_MPPE_HEP-ELE_UPPER",
+      "fov_frame": "MMO_MPPE_HEP-ELE_UPPER",
+      "size": 57.0
+    },
+    {
+      "name": "MMO_MPPE_HEP-ION",
+      "fov_frame": "MMO_MPPE_HEP-ION",
+      "size": 110.0
+    },
+    {
+      "name": "MMO_MPPE_MEA1",
+      "fov_frame": "MMO_MPPE_MEA1",
+      "size": 0
+    },
+    {
+      "name": "MMO_MPPE_MEA1_CRUISE",
+      "fov_frame": "MMO_MPPE_MEA1_CRUISE",
+      "size": 0
+    },
+    {
+      "name": "MMO_MPPE_MEA2",
+      "fov_frame": "MMO_MPPE_MEA2",
+      "size": 0
+    },
+    {
+      "name": "MMO_MPPE_MEA2_CRUISE",
+      "fov_frame": "MMO_MPPE_MEA2_CRUISE",
+      "size": 0
+    },
+    {
+      "name": "MMO_MPPE_MIA",
+      "fov_frame": "MMO_MPPE_MIA",
+      "size": 0
+    },
+    {
+      "name": "MMO_MPPE_MIA_CRUISE",
+      "fov_frame": "MMO_MPPE_MIA_CRUISE",
+      "size": 0
+    },
+    {
+      "name": "MMO_MPPE_MSA",
+      "fov_frame": "MMO_MPPE_MSA",
+      "size": 0
+    },
+    {
+      "name": "MMO_MPPE_MSA_CRUISE",
+      "fov_frame": "MMO_MPPE_MSA_CRUISE",
+      "size": 0
+    },
+    {
+      "name": "MMO_MSASI_SLIT",
+      "fov_frame": "MMO_MSASI_SLIT",
+      "size": 30.0
+    },
+    {
+      "name": "MMO_PWI_MEF1",
+      "fov_frame": "MMO_PWI_MEF1",
+      "size": 128.0
+    },
+    {
+      "name": "MPO_BELA_RX",
+      "fov_frame": "MPO_BELA_RX",
+      "size": 0.03036676314193363
+    },
+    {
+      "name": "MPO_BELA_TX_MAIN",
+      "fov_frame": "MPO_BELA_TX_MAIN",
+      "size": 0.002864788975654116
+    },
+    {
+      "name": "MPO_BELA_TX_RED",
+      "fov_frame": "MPO_BELA_TX_RED",
+      "size": 0.002864788975654116
+    },
+    {
+      "name": "MPO_HGA",
+      "fov_frame": "MPO_HGA",
+      "size": 5.0
+    },
+    {
+      "name": "MPO_MERTIS_TIR_A",
+      "fov_frame": "MPO_MERTIS_TIR_A",
+      "size": 4.06593
+    },
+    {
+      "name": "MPO_MERTIS_TIR_A_PLANET",
+      "fov_frame": "MPO_MERTIS_TIR_A_PLANET",
+      "size": 4.06593
+    },
+    {
+      "name": "MPO_MERTIS_TIR_A_SPACE",
+      "fov_frame": "MPO_MERTIS_TIR_A_SPACE",
+      "size": 4.06593
+    },
+    {
+      "name": "MPO_MERTIS_TIR_B",
+      "fov_frame": "MPO_MERTIS_TIR_B",
+      "size": 4.06593
+    },
+    {
+      "name": "MPO_MERTIS_TIR_B_PLANET",
+      "fov_frame": "MPO_MERTIS_TIR_B_PLANET",
+      "size": 4.06593
+    },
+    {
+      "name": "MPO_MERTIS_TIR_B_SPACE",
+      "fov_frame": "MPO_MERTIS_TIR_B_SPACE",
+      "size": 4.06593
+    },
+    {
+      "name": "MPO_MERTIS_TIS",
+      "fov_frame": "MPO_MERTIS_TIS",
+      "size": 4.0
+    },
+    {
+      "name": "MPO_MERTIS_TIS_PLANET",
+      "fov_frame": "MPO_MERTIS_TIS_PLANET",
+      "size": 4.0
+    },
+    {
+      "name": "MPO_MERTIS_TIS_SPACE",
+      "fov_frame": "MPO_MERTIS_TIS_SPACE",
+      "size": 4.0
+    },
+    {
+      "name": "MPO_MGNS",
+      "fov_frame": "MPO_MGNS",
+      "size": 179.99988
+    },
+    {
+      "name": "MPO_MIXS-C",
+      "fov_frame": "MPO_MIXS-C",
+      "size": 10.0
+    },
+    {
+      "name": "MPO_MIXS-T",
+      "fov_frame": "MPO_MIXS-T",
+      "size": 1.1
+    },
+    {
+      "name": "MPO_PHEBUS_100",
+      "fov_frame": "MPO_PHEBUS_100",
+      "size": 3.3
+    },
+    {
+      "name": "MPO_PHEBUS_75",
+      "fov_frame": "MPO_PHEBUS_75",
+      "size": 2.42
+    },
+    {
+      "name": "MPO_PHEBUS_SLIT_100",
+      "fov_frame": "MPO_PHEBUS_SLIT_100",
+      "size": 2.3
+    },
+    {
+      "name": "MPO_PHEBUS_SLIT_75",
+      "fov_frame": "MPO_PHEBUS_SLIT_75",
+      "size": 2.0
+    },
+    {
+      "name": "MPO_SERENA_ELENA",
+      "fov_frame": "MPO_SERENA_ELENA",
+      "size": 0
+    },
+    {
+      "name": "MPO_SERENA_ELENA_AN_01",
+      "fov_frame": "MPO_SERENA_ELENA_AN_01",
+      "size": 4.0304
+    },
+    {
+      "name": "MPO_SERENA_ELENA_AN_02",
+      "fov_frame": "MPO_SERENA_ELENA_AN_02",
+      "size": 3.1356
+    },
+    {
+      "name": "MPO_SERENA_ELENA_AN_03",
+      "fov_frame": "MPO_SERENA_ELENA_AN_03",
+      "size": 3.218
+    },
+    {
+      "name": "MPO_SERENA_ELENA_AN_04",
+      "fov_frame": "MPO_SERENA_ELENA_AN_04",
+      "size": 3.3
+    },
+    {
+      "name": "MPO_SERENA_ELENA_AN_05",
+      "fov_frame": "MPO_SERENA_ELENA_AN_05",
+      "size": 3.3838
+    },
+    {
+      "name": "MPO_SERENA_ELENA_AN_06",
+      "fov_frame": "MPO_SERENA_ELENA_AN_06",
+      "size": 3.5732
+    },
+    {
+      "name": "MPO_SERENA_ELENA_AN_07",
+      "fov_frame": "MPO_SERENA_ELENA_AN_07",
+      "size": 3.7052
+    },
+    {
+      "name": "MPO_SERENA_ELENA_AN_08",
+      "fov_frame": "MPO_SERENA_ELENA_AN_08",
+      "size": 3.8866
+    },
+    {
+      "name": "MPO_SERENA_ELENA_AN_09",
+      "fov_frame": "MPO_SERENA_ELENA_AN_09",
+      "size": 4.071
+    },
+    {
+      "name": "MPO_SERENA_ELENA_AN_10",
+      "fov_frame": "MPO_SERENA_ELENA_AN_10",
+      "size": 4.2572
+    },
+    {
+      "name": "MPO_SERENA_ELENA_AN_11",
+      "fov_frame": "MPO_SERENA_ELENA_AN_11",
+      "size": 4.444
+    },
+    {
+      "name": "MPO_SERENA_ELENA_AN_12",
+      "fov_frame": "MPO_SERENA_ELENA_AN_12",
+      "size": 4.6294
+    },
+    {
+      "name": "MPO_SERENA_ELENA_AN_13",
+      "fov_frame": "MPO_SERENA_ELENA_AN_13",
+      "size": 4.6856
+    },
+    {
+      "name": "MPO_SERENA_ELENA_AN_14",
+      "fov_frame": "MPO_SERENA_ELENA_AN_14",
+      "size": 5.0418
+    },
+    {
+      "name": "MPO_SERENA_ELENA_AN_15",
+      "fov_frame": "MPO_SERENA_ELENA_AN_15",
+      "size": 5.2028
+    },
+    {
+      "name": "MPO_SERENA_ELENA_AN_16",
+      "fov_frame": "MPO_SERENA_ELENA_AN_16",
+      "size": 5.2168
+    },
+    {
+      "name": "MPO_SERENA_ELENA_AN_17",
+      "fov_frame": "MPO_SERENA_ELENA_AN_17",
+      "size": 5.478
+    },
+    {
+      "name": "MPO_SERENA_ELENA_AN_18",
+      "fov_frame": "MPO_SERENA_ELENA_AN_18",
+      "size": 5.5146
+    },
+    {
+      "name": "MPO_SERENA_ELENA_AN_19",
+      "fov_frame": "MPO_SERENA_ELENA_AN_19",
+      "size": 5.5248
+    },
+    {
+      "name": "MPO_SERENA_ELENA_AN_20",
+      "fov_frame": "MPO_SERENA_ELENA_AN_20",
+      "size": 7.0912
+    },
+    {
+      "name": "MPO_SERENA_ELENA_AN_21",
+      "fov_frame": "MPO_SERENA_ELENA_AN_21",
+      "size": 8.553
+    },
+    {
+      "name": "MPO_SERENA_ELENA_AN_22",
+      "fov_frame": "MPO_SERENA_ELENA_AN_22",
+      "size": 7.0122
+    },
+    {
+      "name": "MPO_SERENA_ELENA_AN_23",
+      "fov_frame": "MPO_SERENA_ELENA_AN_23",
+      "size": 5.5126
+    },
+    {
+      "name": "MPO_SERENA_ELENA_AN_24",
+      "fov_frame": "MPO_SERENA_ELENA_AN_24",
+      "size": 5.4982
+    },
+    {
+      "name": "MPO_SERENA_ELENA_AN_25",
+      "fov_frame": "MPO_SERENA_ELENA_AN_25",
+      "size": 5.4572
+    },
+    {
+      "name": "MPO_SERENA_ELENA_AN_26",
+      "fov_frame": "MPO_SERENA_ELENA_AN_26",
+      "size": 5.192
+    },
+    {
+      "name": "MPO_SERENA_ELENA_AN_27",
+      "fov_frame": "MPO_SERENA_ELENA_AN_27",
+      "size": 5.1112
+    },
+    {
+      "name": "MPO_SERENA_ELENA_AN_28",
+      "fov_frame": "MPO_SERENA_ELENA_AN_28",
+      "size": 4.95
+    },
+    {
+      "name": "MPO_SERENA_ELENA_AN_29",
+      "fov_frame": "MPO_SERENA_ELENA_AN_29",
+      "size": 4.6562
+    },
+    {
+      "name": "MPO_SERENA_ELENA_AN_30",
+      "fov_frame": "MPO_SERENA_ELENA_AN_30",
+      "size": 4.655
+    },
+    {
+      "name": "MPO_SERENA_ELENA_AN_31",
+      "fov_frame": "MPO_SERENA_ELENA_AN_31",
+      "size": 4.4678
+    },
+    {
+      "name": "MPO_SERENA_ELENA_AN_32",
+      "fov_frame": "MPO_SERENA_ELENA_AN_32",
+      "size": 3.8352
+    },
+    {
+      "name": "MPO_SERENA_MIPA",
+      "fov_frame": "MPO_SERENA_MIPA",
+      "size": 179.99988
+    },
+    {
+      "name": "MPO_SERENA_MIPA_00",
+      "fov_frame": "MPO_SERENA_MIPA_00",
+      "size": 0
+    },
+    {
+      "name": "MPO_SERENA_MIPA_01",
+      "fov_frame": "MPO_SERENA_MIPA_01",
+      "size": 0
+    },
+    {
+      "name": "MPO_SERENA_MIPA_02",
+      "fov_frame": "MPO_SERENA_MIPA_02",
+      "size": 0
+    },
+    {
+      "name": "MPO_SERENA_MIPA_03",
+      "fov_frame": "MPO_SERENA_MIPA_03",
+      "size": 0
+    },
+    {
+      "name": "MPO_SERENA_MIPA_04",
+      "fov_frame": "MPO_SERENA_MIPA_04",
+      "size": 0
+    },
+    {
+      "name": "MPO_SERENA_MIPA_05",
+      "fov_frame": "MPO_SERENA_MIPA_05",
+      "size": 0
+    },
+    {
+      "name": "MPO_SERENA_MIPA_06",
+      "fov_frame": "MPO_SERENA_MIPA_06",
+      "size": 0
+    },
+    {
+      "name": "MPO_SERENA_MIPA_07",
+      "fov_frame": "MPO_SERENA_MIPA_07",
+      "size": 0
+    },
+    {
+      "name": "MPO_SERENA_MIPA_08",
+      "fov_frame": "MPO_SERENA_MIPA_08",
+      "size": 0
+    },
+    {
+      "name": "MPO_SERENA_MIPA_09",
+      "fov_frame": "MPO_SERENA_MIPA_09",
+      "size": 0
+    },
+    {
+      "name": "MPO_SERENA_MIPA_10",
+      "fov_frame": "MPO_SERENA_MIPA_10",
+      "size": 0
+    },
+    {
+      "name": "MPO_SERENA_MIPA_11",
+      "fov_frame": "MPO_SERENA_MIPA_11",
+      "size": 0
+    },
+    {
+      "name": "MPO_SERENA_MIPA_12",
+      "fov_frame": "MPO_SERENA_MIPA_12",
+      "size": 0
+    },
+    {
+      "name": "MPO_SERENA_MIPA_13",
+      "fov_frame": "MPO_SERENA_MIPA_13",
+      "size": 0
+    },
+    {
+      "name": "MPO_SERENA_MIPA_14",
+      "fov_frame": "MPO_SERENA_MIPA_14",
+      "size": 0
+    },
+    {
+      "name": "MPO_SERENA_MIPA_15",
+      "fov_frame": "MPO_SERENA_MIPA_15",
+      "size": 0
+    },
+    {
+      "name": "MPO_SERENA_MIPA_16",
+      "fov_frame": "MPO_SERENA_MIPA_16",
+      "size": 0
+    },
+    {
+      "name": "MPO_SERENA_MIPA_17",
+      "fov_frame": "MPO_SERENA_MIPA_17",
+      "size": 0
+    },
+    {
+      "name": "MPO_SERENA_MIPA_18",
+      "fov_frame": "MPO_SERENA_MIPA_18",
+      "size": 0
+    },
+    {
+      "name": "MPO_SERENA_MIPA_19",
+      "fov_frame": "MPO_SERENA_MIPA_19",
+      "size": 0
+    },
+    {
+      "name": "MPO_SERENA_MIPA_20",
+      "fov_frame": "MPO_SERENA_MIPA_20",
+      "size": 0
+    },
+    {
+      "name": "MPO_SERENA_MIPA_21",
+      "fov_frame": "MPO_SERENA_MIPA_21",
+      "size": 0
+    },
+    {
+      "name": "MPO_SERENA_MIPA_22",
+      "fov_frame": "MPO_SERENA_MIPA_22",
+      "size": 0
+    },
+    {
+      "name": "MPO_SERENA_MIPA_23",
+      "fov_frame": "MPO_SERENA_MIPA_23",
+      "size": 0
+    },
+    {
+      "name": "MPO_SERENA_MIPA_24",
+      "fov_frame": "MPO_SERENA_MIPA_24",
+      "size": 0
+    },
+    {
+      "name": "MPO_SERENA_MIPA_25",
+      "fov_frame": "MPO_SERENA_MIPA_25",
+      "size": 0
+    },
+    {
+      "name": "MPO_SERENA_MIPA_26",
+      "fov_frame": "MPO_SERENA_MIPA_26",
+      "size": 0
+    },
+    {
+      "name": "MPO_SERENA_MIPA_27",
+      "fov_frame": "MPO_SERENA_MIPA_27",
+      "size": 0
+    },
+    {
+      "name": "MPO_SERENA_MIPA_28",
+      "fov_frame": "MPO_SERENA_MIPA_28",
+      "size": 0
+    },
+    {
+      "name": "MPO_SERENA_MIPA_29",
+      "fov_frame": "MPO_SERENA_MIPA_29",
+      "size": 0
+    },
+    {
+      "name": "MPO_SERENA_MIPA_30",
+      "fov_frame": "MPO_SERENA_MIPA_30",
+      "size": 0
+    },
+    {
+      "name": "MPO_SERENA_MIPA_31",
+      "fov_frame": "MPO_SERENA_MIPA_31",
+      "size": 0
+    },
+    {
+      "name": "MPO_SERENA_MIPA_32",
+      "fov_frame": "MPO_SERENA_MIPA_32",
+      "size": 0
+    },
+    {
+      "name": "MPO_SERENA_MIPA_33",
+      "fov_frame": "MPO_SERENA_MIPA_33",
+      "size": 0
+    },
+    {
+      "name": "MPO_SERENA_MIPA_34",
+      "fov_frame": "MPO_SERENA_MIPA_34",
+      "size": 0
+    },
+    {
+      "name": "MPO_SERENA_MIPA_35",
+      "fov_frame": "MPO_SERENA_MIPA_35",
+      "size": 0
+    },
+    {
+      "name": "MPO_SERENA_MIPA_36",
+      "fov_frame": "MPO_SERENA_MIPA_36",
+      "size": 0
+    },
+    {
+      "name": "MPO_SERENA_MIPA_37",
+      "fov_frame": "MPO_SERENA_MIPA_37",
+      "size": 0
+    },
+    {
+      "name": "MPO_SERENA_MIPA_38",
+      "fov_frame": "MPO_SERENA_MIPA_38",
+      "size": 0
+    },
+    {
+      "name": "MPO_SERENA_MIPA_39",
+      "fov_frame": "MPO_SERENA_MIPA_39",
+      "size": 0
+    },
+    {
+      "name": "MPO_SERENA_MIPA_40",
+      "fov_frame": "MPO_SERENA_MIPA_40",
+      "size": 0
+    },
+    {
+      "name": "MPO_SERENA_MIPA_41",
+      "fov_frame": "MPO_SERENA_MIPA_41",
+      "size": 0
+    },
+    {
+      "name": "MPO_SERENA_MIPA_42",
+      "fov_frame": "MPO_SERENA_MIPA_42",
+      "size": 0
+    },
+    {
+      "name": "MPO_SERENA_MIPA_43",
+      "fov_frame": "MPO_SERENA_MIPA_43",
+      "size": 0
+    },
+    {
+      "name": "MPO_SERENA_MIPA_44",
+      "fov_frame": "MPO_SERENA_MIPA_44",
+      "size": 0
+    },
+    {
+      "name": "MPO_SERENA_MIPA_45",
+      "fov_frame": "MPO_SERENA_MIPA_45",
+      "size": 0
+    },
+    {
+      "name": "MPO_SERENA_MIPA_46",
+      "fov_frame": "MPO_SERENA_MIPA_46",
+      "size": 0
+    },
+    {
+      "name": "MPO_SERENA_MIPA_47",
+      "fov_frame": "MPO_SERENA_MIPA_47",
+      "size": 0
+    },
+    {
+      "name": "MPO_SERENA_MIPA_48",
+      "fov_frame": "MPO_SERENA_MIPA_48",
+      "size": 0
+    },
+    {
+      "name": "MPO_SERENA_MIPA_49",
+      "fov_frame": "MPO_SERENA_MIPA_49",
+      "size": 0
+    },
+    {
+      "name": "MPO_SERENA_MIPA_50",
+      "fov_frame": "MPO_SERENA_MIPA_50",
+      "size": 0
+    },
+    {
+      "name": "MPO_SERENA_PICAM",
+      "fov_frame": "MPO_SERENA_PICAM",
+      "size": 130.0
+    },
+    {
+      "name": "MPO_SERENA_STROFIO",
+      "fov_frame": "MPO_SERENA_STROFIO",
+      "size": 20.0
+    },
+    {
+      "name": "MPO_SERENA_STROFIO+X",
+      "fov_frame": "MPO_SERENA_STROFIO+X",
+      "size": 20.0
+    },
+    {
+      "name": "MPO_SERENA_STROFIO+X_SUN",
+      "fov_frame": "MPO_SERENA_STROFIO+X_SUN",
+      "size": 40.0
+    },
+    {
+      "name": "MPO_SERENA_STROFIO-X",
+      "fov_frame": "MPO_SERENA_STROFIO-X",
+      "size": 20.0
+    },
+    {
+      "name": "MPO_SERENA_STROFIO-X_SUN",
+      "fov_frame": "MPO_SERENA_STROFIO-X_SUN",
+      "size": 40.0
+    },
+    {
+      "name": "MPO_SIMBIO-SYS_HRIC_F550",
+      "fov_frame": "MPO_SIMBIO-SYS_HRIC_F550",
+      "size": 1.47
+    },
+    {
+      "name": "MPO_SIMBIO-SYS_HRIC_F750",
+      "fov_frame": "MPO_SIMBIO-SYS_HRIC_F750",
+      "size": 1.47
+    },
+    {
+      "name": "MPO_SIMBIO-SYS_HRIC_F880",
+      "fov_frame": "MPO_SIMBIO-SYS_HRIC_F880",
+      "size": 1.47
+    },
+    {
+      "name": "MPO_SIMBIO-SYS_HRIC_FPA",
+      "fov_frame": "MPO_SIMBIO-SYS_HRIC_FPA",
+      "size": 1.47
+    },
+    {
+      "name": "MPO_SIMBIO-SYS_HRIC_FPAN",
+      "fov_frame": "MPO_SIMBIO-SYS_HRIC_FPAN",
+      "size": 1.47
+    },
+    {
+      "name": "MPO_SIMBIO-SYS_STC-H",
+      "fov_frame": "MPO_SIMBIO-SYS_STC-H",
+      "size": 5.39
+    },
+    {
+      "name": "MPO_SIMBIO-SYS_STC-H_F420",
+      "fov_frame": "MPO_SIMBIO-SYS_STC-H_F420",
+      "size": 5.39
+    },
+    {
+      "name": "MPO_SIMBIO-SYS_STC-H_F750",
+      "fov_frame": "MPO_SIMBIO-SYS_STC-H_F750",
+      "size": 5.39
+    },
+    {
+      "name": "MPO_SIMBIO-SYS_STC-H_P700",
+      "fov_frame": "MPO_SIMBIO-SYS_STC-H_P700",
+      "size": 5.39
+    },
+    {
+      "name": "MPO_SIMBIO-SYS_STC-L",
+      "fov_frame": "MPO_SIMBIO-SYS_STC-L",
+      "size": 5.39
+    },
+    {
+      "name": "MPO_SIMBIO-SYS_STC-L_F550",
+      "fov_frame": "MPO_SIMBIO-SYS_STC-L_F550",
+      "size": 5.39
+    },
+    {
+      "name": "MPO_SIMBIO-SYS_STC-L_F920",
+      "fov_frame": "MPO_SIMBIO-SYS_STC-L_F920",
+      "size": 5.39
+    },
+    {
+      "name": "MPO_SIMBIO-SYS_STC-L_P700",
+      "fov_frame": "MPO_SIMBIO-SYS_STC-L_P700",
+      "size": 5.39
+    },
+    {
+      "name": "MPO_SIMBIO-SYS_VIHI_FPA",
+      "fov_frame": "MPO_SIMBIO-SYS_VIHI_FPA",
+      "size": 3.66
+    },
+    {
+      "name": "MPO_SIXS-P-0",
+      "fov_frame": "MPO_SIXS-P-0",
+      "size": 50.0
+    },
+    {
+      "name": "MPO_SIXS-P-1",
+      "fov_frame": "MPO_SIXS-P-1",
+      "size": 50.0
+    },
+    {
+      "name": "MPO_SIXS-P-2",
+      "fov_frame": "MPO_SIXS-P-2",
+      "size": 50.0
+    },
+    {
+      "name": "MPO_SIXS-P-3",
+      "fov_frame": "MPO_SIXS-P-3",
+      "size": 50.0
+    },
+    {
+      "name": "MPO_SIXS-P-4",
+      "fov_frame": "MPO_SIXS-P-4",
+      "size": 50.0
+    },
+    {
+      "name": "MPO_SIXS-X-1",
+      "fov_frame": "MPO_SIXS-X-1",
+      "size": 103.12170328
+    },
+    {
+      "name": "MPO_SIXS-X-1_PLAN",
+      "fov_frame": "MPO_SIXS-X-1_PLAN",
+      "size": 104.0
+    },
+    {
+      "name": "MPO_SIXS-X-1_THRESHOLD",
+      "fov_frame": "MPO_SIXS-X-1_THRESHOLD",
+      "size": 93.53434794
+    },
+    {
+      "name": "MPO_SIXS-X-2",
+      "fov_frame": "MPO_SIXS-X-2",
+      "size": 106.63125344
+    },
+    {
+      "name": "MPO_SIXS-X-2_PLAN",
+      "fov_frame": "MPO_SIXS-X-2_PLAN",
+      "size": 104.0
+    },
+    {
+      "name": "MPO_SIXS-X-2_THRESHOLD",
+      "fov_frame": "MPO_SIXS-X-2_THRESHOLD",
+      "size": 95.27970502
+    },
+    {
+      "name": "MPO_SIXS-X-3",
+      "fov_frame": "MPO_SIXS-X-3",
+      "size": 103.58220622
+    },
+    {
+      "name": "MPO_SIXS-X-3_PLAN",
+      "fov_frame": "MPO_SIXS-X-3_PLAN",
+      "size": 104.0
+    },
+    {
+      "name": "MPO_SIXS-X-3_THRESHOLD",
+      "fov_frame": "MPO_SIXS-X-3_THRESHOLD",
+      "size": 93.50305096
+    },
+    {
+      "name": "MPO_STR-1",
+      "fov_frame": "MPO_STR-1",
+      "size": 32.0
+    },
+    {
+      "name": "MPO_STR-2",
+      "fov_frame": "MPO_STR-2",
+      "size": 32.0
+    },
+    {
+      "name": "MPO_STR-3",
+      "fov_frame": "MPO_STR-3",
+      "size": 32.0
+    },
+    {
+      "name": "MTM_MCAM1",
+      "fov_frame": "MTM_MCAM1",
+      "size": 60.36
+    },
+    {
+      "name": "MTM_MCAM2",
+      "fov_frame": "MTM_MCAM2",
+      "size": 60.36
+    },
+    {
+      "name": "MTM_MCAM3",
+      "fov_frame": "MTM_MCAM3",
+      "size": 60.36
+    }
+  ]
+}
