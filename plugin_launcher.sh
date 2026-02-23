@@ -65,13 +65,13 @@ fi
 CMD="$1"
 
 case "$CMD" in
-    juice_ptr|"")
+    juice_ptr)
         PY_SCRIPT="juice_ptr.py"
         ;;
     juice_mk)
         PY_SCRIPT="juice_mk.py"
         ;;
-    cosmo_main)
+    cosmo_main|"")
         PY_SCRIPT="cosmo_main.py"
         ;;
     stardb)

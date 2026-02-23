@@ -1,13 +1,19 @@
 import cosmoscripting
 
 
+
 class CatalogHandler:
     cosmo = cosmoscripting.Cosmo()
     catalogs = []
     session_catalogs = []
 
     def __init__(self):
-        pass
+       self.sensor_reload_cb = None
+
+    def set_sensor_reload_cb(self, callback):
+        if self.sensor_reload_cb is None:
+            self.sensor_reload_cb = callback
+
 
     def get_catalogs(self):
         return self.catalogs
@@ -32,6 +38,9 @@ class CatalogHandler:
             for cat in to_be_reloaded:
                 self.cosmo.loadCatalogFile(cat)
                 self.catalogs.append(cat)
+                if 'sensors.json' in cat and self.sensor_reload_cb:
+                    print('[CH] SENSOR ' + cat + ' NEEDS as sensor reprocessing')
+                    self.sensor_reload_cb()
             print('[CH] Loaded removed: ' + catalog + ' State: ' + ','.join(self.catalogs))
 
     def clean_catalogs(self):

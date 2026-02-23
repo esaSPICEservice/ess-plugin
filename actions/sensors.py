@@ -90,6 +90,7 @@ def reconfigure_catalogue():
         # temporary solution - we shall garantee that the last
         # catalog is the sensor
         handler = get_catalog_handler()
+        handler.set_sensor_reload_cb(reset_sensors)
         handler.remove_catalog(sensors_file_path)
         handler.add_catalog(sensors_file_path)
 
@@ -101,6 +102,13 @@ def reconfigure_catalogue():
             for sensor_id in current_sensors:
                 hide_sensor(sensor_id)
 
+def reset_sensors():
+    run_time = get_runtime()
+    state = run_time.get('sensors_state')
+    # Reset sensor status
+    if state is not None:
+        for name, state in state.items():
+            toggle_sensor(state, name)
 
 def reconfigure_sensors(items):
     run_time = get_runtime()

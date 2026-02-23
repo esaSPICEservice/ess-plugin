@@ -444,14 +444,14 @@
     },
     {
       "class": "spacecraft",
-      "name": "MPO_MERTIS",
+      "name": "MPO_PHEBUS",
       "startTime": "2018-10-19 02:05:26.295 UTC",
       "arcs": [
         {
           "center": "MPO",
           "trajectory": {
             "type": "Spice",
-            "target": "MPO_MERTIS",
+            "target": "MPO_PHEBUS",
             "center": "MPO_SPACECRAFT"
           },
           "bodyFrame": {

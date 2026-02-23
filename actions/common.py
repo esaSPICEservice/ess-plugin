@@ -8,6 +8,7 @@ from ui.rings_ui import RingsDialog
 from ui.majis import MajisPointerDialog
 from ui.juice import SpacecraftPointerDialog
 from ui.swi import SwiPointerDialog
+from ui.phebus import PhebusPointerDialog
 from .jupiter_science import trigger_structure
 from functools import partial
 from simulator.osve import __version__
@@ -112,10 +113,12 @@ def add_bepi_menu():
     main_window = get_main_window()
     nv = NavigationDialog(main_window)
     obs = ObservationsDialog(main_window)
+    phe = PhebusPointerDialog(main_window)
     add_menu(main_window, MenuSpec('Navigation', 
                                    [
-                                       ActionSpec('Sensors', 'Sensors', '', nv.show_and_focus),
-                                       ActionSpec('Observations', 'Observations', '', obs.show_and_focus)
+                                       ActionSpec('Sensors', 'Sensors', 'Alt+s', nv.show_and_focus),
+                                       ActionSpec('Observations', 'Observations', '', obs.show_and_focus),
+                                       ActionSpec('Phebus Pointer', 'Phebus Pointer', 'Alt+p', phe.show_and_focus)
                                     ]))
     
 def add_envision_menu():
@@ -124,6 +127,6 @@ def add_envision_menu():
     obs = ObservationsDialog(main_window)
     add_menu(main_window, MenuSpec('Navigation', 
                                    [
-                                       ActionSpec('Sensors', 'Sensors', '', nv.show_and_focus),
+                                       ActionSpec('Sensors', 'Sensors', 'Alt+s', nv.show_and_focus),
                                        ActionSpec('Observations', 'Observations', '', obs.show_and_focus)
                                     ]))

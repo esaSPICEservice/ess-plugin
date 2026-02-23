@@ -20,8 +20,8 @@ def generate_all_sensor(sensor_list, parent_path):
         sc = sensor.get('spacecraft', run_time.get('spacecraft', ''))
         sensor = Sensor(
                 instrument, run_time.get('central_body', ''), 
-                color, None)
-       
+                color, sensor.get('fov_center', None))
+
         generator.append(sensor, sc)
 
     file_path = os.path.abspath(os.path.join(parent_path, "sensors.json"))

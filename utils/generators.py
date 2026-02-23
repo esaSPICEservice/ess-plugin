@@ -59,10 +59,8 @@ class SensorGenerator(Generator):
         }
 
         if sensor.sensor_position:
-            sensor_json['trajectory'] = {
-                "type": "FixedPoint",
-                "position": sensor.sensor_position
-        }
+            sensor_json['center'] = sensor.sensor_position
+            sensor_json['trajectoryFrame']['body'] = sensor.sensor_position
 
         self.items.append(sensor_json)
 

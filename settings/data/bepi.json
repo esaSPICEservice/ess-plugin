@@ -413,7 +413,8 @@
           0.6,
           0
         ],
-        "spacecraft": "MPO"
+        "spacecraft": "MPO",
+        "fov_center": "MPO_PHEBUS"
       },
       {
         "name": "MPO_PHEBUS_75",
@@ -423,7 +424,8 @@
           0.6,
           0
         ],
-        "spacecraft": "MPO"
+        "spacecraft": "MPO",
+        "fov_center": "MPO_PHEBUS"
       },
       {
         "name": "MPO_PHEBUS_SLIT_100",
@@ -433,17 +435,19 @@
           0.6,
           0
         ],
-        "spacecraft": "MPO"
+        "spacecraft": "MPO",
+        "fov_center": "MPO_PHEBUS"
       },
       {
-        "name": "MPO_PHEBUS_SLIT_75",
-        "fov_frame": "MPO_PHEBUS",
+        "name": "MPO_PHEBUS_SLIT_75_P",
+        "fov_frame": "MPO_PHEBUS_POINTER",
         "color": [
           0,
           0.6,
           0
         ],
-        "spacecraft": "MPO"
+        "spacecraft": "MPO",
+        "fov_center": "MPO_PHEBUS"
       },
       {
         "name": "MPO_SERENA_ELENA",
@@ -1898,6 +1902,11 @@
     {
       "name": "MPO_PHEBUS_SLIT_75",
       "fov_frame": "MPO_PHEBUS_SLIT_75",
+      "size": 2.0
+    },
+    {
+      "name": "MPO_PHEBUS_SLIT_75_P",
+      "fov_frame": "MPO_PHEBUS_SLIT_75_P",
       "size": 2.0
     },
     {
