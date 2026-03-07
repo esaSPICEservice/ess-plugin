@@ -86,9 +86,9 @@ class MajisPointerDialog(QDialog):
     def update(self, delta_y):
         self.slit_offset += delta_y
         label = "ΔSlits: {:.0f} | Scan angle: {:.2f}° | Mirror position: {:.2f}°".format(
-            self.slit_offset,
-            self.slit_offset * self.SLIT_STEPS,
-            self.slit_offset * self.SLIT_STEPS / 2,
+            -self.slit_offset,
+            -self.slit_offset * self.SLIT_STEPS,
+            -self.slit_offset * self.SLIT_STEPS / 2,
         )
         self.status_label.setText(label)
         self.mj.update([self.slit_offset * self.SLIT_STEPS, 0, 0])
@@ -99,6 +99,7 @@ class MajisPointerDialog(QDialog):
         toggle_sensor(True,'JUICE_JANUS')
         toggle_sensor(True,'JUICE_MAJIS_EXTENDED')
         toggle_sensor(True, 'JUICE_MAJIS_VISNIR')
+        toggle_sensor(True, 'JUICE_UVS_AP_HP')
 
         sensor_view('JUICE_MAJIS_EXTENDED', 8.5)
         self.show()
