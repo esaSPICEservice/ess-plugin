@@ -52,9 +52,6 @@ def execute_ptr(mk, content, calculate_power, calculate_sa, calculate_mga):
         after_load(root_scenario)
         goto_date(start_time + ' UTC')
 
-        # Enforce Majis extended and Janus FOV geometries
-        toggle_sensor(True, 'JUICE_JANUS', )
-        toggle_sensor(True, 'JUICE_MAJIS_EXTENDED')
 
     else:
         dump_error(catalog)
