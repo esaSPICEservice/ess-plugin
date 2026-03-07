@@ -11,7 +11,7 @@ from actions.time_navigation import sensor_view
 
 class MajisPointerDialog(QDialog):
     mj = MajisFrameGenerator()
-    SLIT_STEPS = 0.008_594  # degrees
+    SLIT_STEPS = 0.008594  # degrees
 
     def __init__(self, parent=None):
         super().__init__(parent)
