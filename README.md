@@ -13,7 +13,7 @@ https://www.cosmos.esa.int/web/spice/operational-kernels
 
 * Clone this repository
 
-`git clone https://s2e2.cosmos.esa.int/bitbucket/scm/spice/ess-plugin.git`
+`git clone https://github.com/esaSPICEservice/ess-plugin.git`
 
 ### Plugin launcher (linux/macos)
 
@@ -36,4 +36,6 @@ As example, if we want to launch the JUICE pointing request plugin, we will exec
 `./plugin_launcher.sh juice_ptr`
 
 
+### Tutorial and resources
 
+* https://github.com/esaSPICEservice/ess-plugin-ws-202601
