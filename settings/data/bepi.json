@@ -346,6 +346,16 @@
         "spacecraft": "MPO"
       },
       {
+        "name": "MPO_MERTIS_TIR_ENVELOPE",
+        "fov_frame": "MPO_MERTIS_TIR_ENVELOPE",
+        "color": [
+          0,
+          0.6,
+          0
+        ],
+        "spacecraft": "MPO"
+      },
+      {
         "name": "MPO_MERTIS_TIS",
         "fov_frame": "MPO_MERTIS",
         "color": [
@@ -1852,6 +1862,11 @@
     {
       "name": "MPO_MERTIS_TIR_B_SPACE",
       "fov_frame": "MPO_MERTIS_TIR_B_SPACE",
+      "size": 4.06593
+    },
+    {
+      "name": "MPO_MERTIS_TIR_ENVELOPE",
+      "fov_frame": "MPO_MERTIS_TIR_ENVELOPE",
       "size": 4.06593
     },
     {
