@@ -84,11 +84,7 @@
         "scale": 0.001
       },
       "label": {
-        "color": [
-          1,
-          1,
-          1
-        ]
+                             "showText": false
       }
     },
     {
@@ -116,11 +112,7 @@
         "scale": 0.001
       },
       "label": {
-        "color": [
-          1,
-          1,
-          1
-        ]
+                    "showText": false
       }
     },
     {
@@ -137,9 +129,20 @@
                   "center": "TGO_SPACECRAFT"
                },
                "bodyFrame": {
-                  "type": "Spice",
-                  "name": "TGO_HGA"
-               }
+                   "type": "TwoVector",
+                   "primaryAxis": "x",
+                   "primary": {
+                      "type": "RelativePosition",
+                      "observer":"TGO",
+                      "target":"TGO_HGA"
+                   },
+                   "secondaryAxis": "-y",
+                   "secondary": {
+                      "type": "RelativePosition",
+                      "observer":"TGO_SAPZ",
+                      "target":"TGO_SAMZ"
+                   }
+                }
             }
          ],
       "geometry": {
@@ -148,12 +151,8 @@
         "scale": 0.001
       },
       "label": {
-        "color": [
-          1,
-          1,
-          1
-        ]
-      }
+                    "showText": false
+       }
     }
    ]
 }

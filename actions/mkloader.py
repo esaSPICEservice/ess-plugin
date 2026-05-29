@@ -4,12 +4,9 @@ from actions.common import (add_hera_menu,
                             add_mmatisse_menu,
                             add_bepi_menu,
                             add_envision_menu)
-import cosmoscripting
 from scenes.generator import create_cosmo_scene, generate_working_dir
 from actions.time_navigation import goto_date
-from ui.common import get_main_window, ActionSpec, add_menu, MenuSpec, get_runtime, remove_menu, get_catalog_handler 
-from ui.moons_ui import MoonsDialog
-from ui.rings_ui import RingsDialog
+from ui.common import get_main_window, get_runtime, remove_menu, get_catalog_handler 
 
 def execute(mk, extra_kernels, date):
 
@@ -17,7 +14,6 @@ def execute(mk, extra_kernels, date):
 
     catalog, sensor_catalog = create_cosmo_scene(working_dir, mk, extra_kernels)
 
-    cosmo = cosmoscripting.Cosmo()
 
     handler = get_catalog_handler()
     handler.clean_catalogs()
@@ -33,7 +29,7 @@ def after_load():
     main_window = get_main_window()
     runtime = get_runtime()
     mission = runtime.get('mission')
-    print(mission)
+
     if mission is None:
         return
     elif mission.lower() == 'tgo':

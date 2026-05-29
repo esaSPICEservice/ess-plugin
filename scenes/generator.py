@@ -3,7 +3,6 @@ import json
 from actions.sensors import get_sensor_list
 from utils.generators import Sensor, SensorGenerator, CustomStarsGenerator
 from ui.common import get_runtime, get_settings
-import cosmoscripting
 
 from datetime import datetime
 
@@ -47,6 +46,7 @@ def create_cosmo_scene(parent_path, metakernel, extra):
 
 
     run_time = get_runtime()
+    mission = run_time.get('mission')
     run_time.set('working_dir', parent_path)
 
     data_folder = os.path.join(os.path.dirname(__file__), 'data',  run_time.get('spacecraft', '').lower())
@@ -60,6 +60,11 @@ def create_cosmo_scene(parent_path, metakernel, extra):
     }
 
     for model in run_time.get('models', []):
+        # Model replacement based on the meta kernel
+        # TGO
+        if mission == "TGO":
+            model = tgo_mkernel_model_replacements(model, metakernel)
+
         scene_json.get('require').append("{data_folder}/{model}".format(data_folder=data_folder,model=model))
 
     # Custom stars added
@@ -108,3 +113,15 @@ def get_mission_kernels(data_folder):
         for file in os.listdir(os.path.join(data_folder, 'kernels')):
             mission_kernels.append(os.path.join(data_folder, 'kernels', file))
     return mission_kernels
+
+def tgo_mkernel_model_replacements(model, metakernel):
+
+    if model.startswith('spacecraft_EM16'):
+        if 'plan' in metakernel:
+            model = 'spacecraft_EM16_tgo_arcs_plan.json'
+        elif 'ops' in metakernel:
+            model = 'spacecraft_EM16_tgo_arcs.json'
+        elif 'flip' in metakernel:
+            model = 'spacecraft_EM16_tgo_arcs_plan.json'
+
+    return model
