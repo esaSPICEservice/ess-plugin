@@ -9,12 +9,12 @@
          "arcs": [
             {
                "endTime": "2033-06-04 02:49:00 UTC",
-               "center": "Sun",
+               "center": "Earth",
                "trajectoryFrame": "ICRF",
                "trajectory": {
                   "type": "Spice",
                   "target": "JUICE",
-                  "center": "Sun"
+                  "center": "Earth"
                },
                "bodyFrame": {
                  "type": "Spice",
@@ -454,6 +454,120 @@
                "trajectory": {
                   "type": "Spice",
                   "target": "JUICE_MGA_APM",
+                  "center": "JUICE_SPACECRAFT"
+               }
+            }
+         ],
+       "label": {
+                    "showText": false
+       }
+      },
+      {
+         "class": "spacecraft",
+         "name": "JUICE_PEP_NIM_NEUION_S0",
+         "startTime": "2022-05-31 23:59:59.999 UTC",
+         "arcs": [
+            {
+               "center": "JUICE",
+               "trajectoryFrame": "ICRF",
+               "trajectory": {
+                  "type": "Spice",
+                  "target": "-28531",
+                  "center": "JUICE_SPACECRAFT"
+               }
+            }
+         ],
+       "label": {
+                    "showText": false
+       }
+      },
+      {
+         "class": "spacecraft",
+         "name": "JUICE_PEP_NIM_NEUION_S1",
+         "startTime": "2022-05-31 23:59:59.999 UTC",
+         "arcs": [
+            {
+               "center": "JUICE",
+               "trajectoryFrame": "ICRF",
+               "trajectory": {
+                  "type": "Spice",
+                  "target": "-28532",
+                  "center": "JUICE_SPACECRAFT"
+               }
+            }
+         ],
+       "label": {
+                    "showText": false
+       }
+      },
+      {
+         "class": "spacecraft",
+         "name": "JUICE_PEP_NIM_NEUION_S2",
+         "startTime": "2022-05-31 23:59:59.999 UTC",
+         "arcs": [
+            {
+               "center": "JUICE",
+               "trajectoryFrame": "ICRF",
+               "trajectory": {
+                  "type": "Spice",
+                  "target": "-28533",
+                  "center": "JUICE_SPACECRAFT"
+               }
+            }
+         ],
+       "label": {
+                    "showText": false
+       }
+      },
+      {
+         "class": "spacecraft",
+         "name": "JUICE_PEP_NIM_NEUION_S3",
+         "startTime": "2022-05-31 23:59:59.999 UTC",
+         "arcs": [
+            {
+               "center": "JUICE",
+               "trajectoryFrame": "ICRF",
+               "trajectory": {
+                  "type": "Spice",
+                  "target": "-28534",
+                  "center": "JUICE_SPACECRAFT"
+               }
+            }
+         ],
+       "label": {
+                    "showText": false
+       }
+      },
+      {
+         "class": "spacecraft",
+         "name": "JUICE_PEP_NIM_NEUION_S4",
+         "startTime": "2022-05-31 23:59:59.999 UTC",
+         "arcs": [
+            {
+               "center": "JUICE",
+               "trajectoryFrame": "ICRF",
+               "trajectory": {
+                  "type": "Spice",
+                  "target": "-28535",
+                  "center": "JUICE_SPACECRAFT"
+               }
+            }
+         ],
+       "label": {
+                    "showText": false
+       }
+      },
+      {
+         "class": "spacecraft",
+         "name": "JUICE_PEP_NIM_NEUION_S5",
+         "startTime": "2022-05-31 23:59:59.999 UTC",
+         "arcs": [
+            {
+               "center": "JUICE",
+               "trajectoryFrame": "ICRF",
+               "trajectory": {
+                  "type": "Spice",
+                  "target": "-28536",
                   "center": "JUICE_SPACECRAFT"
                }
             }

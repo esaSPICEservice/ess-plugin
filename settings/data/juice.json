@@ -2956,7 +2956,7 @@
           0.6,
           0
         ],
-        "spacecraft": "JUICE"
+        "spacecraft": "JUICE_PEP_NIM_NEUION_S0"
       },
       {
         "name": "JUICE_PEP_NIM_NEUION_S1",
@@ -2966,7 +2966,7 @@
           0.6,
           0
         ],
-        "spacecraft": "JUICE"
+        "spacecraft": "JUICE_PEP_NIM_NEUION_S1"
       },
       {
         "name": "JUICE_PEP_NIM_NEUION_S2",
@@ -2976,7 +2976,7 @@
           0.6,
           0
         ],
-        "spacecraft": "JUICE"
+        "spacecraft": "JUICE_PEP_NIM_NEUION_S2"
       },
       {
         "name": "JUICE_PEP_NIM_NEUION_S3",
@@ -2986,7 +2986,7 @@
           0.6,
           0
         ],
-        "spacecraft": "JUICE"
+        "spacecraft": "JUICE_PEP_NIM_NEUION_S3"
       },
       {
         "name": "JUICE_PEP_NIM_NEUION_S4",
@@ -2996,7 +2996,7 @@
           0.6,
           0
         ],
-        "spacecraft": "JUICE"
+        "spacecraft": "JUICE_PEP_NIM_NEUION_S4"
       },
       {
         "name": "JUICE_PEP_NIM_NEUION_S5",
@@ -3006,7 +3006,7 @@
           0.6,
           0
         ],
-        "spacecraft": "JUICE"
+        "spacecraft": "JUICE_PEP_NIM_NEUION_S5"
       },
       {
         "name": "JUICE_PEP_NIM_S0",
