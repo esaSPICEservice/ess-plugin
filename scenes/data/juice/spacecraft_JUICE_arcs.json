@@ -9,12 +9,12 @@
          "arcs": [
             {
                "endTime": "2033-06-04 02:49:00 UTC",
-               "center": "Earth",
+               "center": "Sun",
                "trajectoryFrame": "ICRF",
                "trajectory": {
                   "type": "Spice",
                   "target": "JUICE",
-                  "center": "Earth"
+                  "center": "Sun"
                },
                "bodyFrame": {
                  "type": "Spice",
